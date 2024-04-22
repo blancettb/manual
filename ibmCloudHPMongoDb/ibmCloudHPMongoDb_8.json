@@ -1,0 +1,37 @@
+{
+  "name": "Percentage of disk space used is too high",
+  "description": "Checks whether the percentage of disk space used exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+    "container",
+    "docker",
+    "podman",
+    "cpu",
+    "diagnostic",
+    "watsonx"
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the current disk usage and free space on your MongoDB server. You can use the command `df -h` in the terminal to view the disk usage for the entire system or `mongod --dbpath /path/to/your/database --checkpoint` to check the disk usage for a specific database.
+2. If the disk usage is close to or over the threshold, consider increasing the size of the data files or adding more disks to the volume group. This can help alleviate the issue by providing additional disk space.
+3. Monitor the disk usage regularly to ensure that it remains below the threshold. You can set up alerts or notifications to notify you when the disk usage reaches a certain level.
+4. Optimize your MongoDB configuration settings, such as tuning the buffer pool size, journal size, or maxFileSize parameters, to reduce the amount of disk I/O required for each operation. This can help minimize the impact of high disk usage on performance.
+5. If the issue persists despite your efforts, you may need to consider scaling out your MongoDB deployment by adding more nodes or shards to distribute the workload across multiple servers. This can help improve performance and prevent any single server from becoming a bottleneck.
+
+By following these steps, you should be able to resolve the Percentage of disk space used is too high issue and ensure that your MongoDB server has sufficient disk space to operate efficiently.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["jqTpyUrUq57BuX9pk9boeThjLXk"]
+      }
+    ]
+  }
+}
