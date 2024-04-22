@@ -1,0 +1,35 @@
+{
+  "name": "ACE Message Flow Thread Utilization",
+  "description": "Monitor the thread utilization in each message flow",
+  "type": "MANUAL",
+  "tags": [
+    "container",
+    "docker",
+    "podman",
+    "cpu",
+    "diagnostic",
+    "watsonx"
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the number of active threads in your message flows by navigating to the "Monitoring" section and looking at the "Active Threads" metric for each message flow.
+2. If the number of active threads is consistently high, it might indicate that your message flows are not efficiently utilizing resources. You can analyze the "Throughput" and "Error Rate" metrics to identify any bottlenecks or issues.
+3. To optimize resource utilization, consider increasing the number of message flows based on your system's capacity. This will help distribute the workload more evenly and reduce the pressure on individual threads.
+4. Additionally, ensure that your message flows are properly configured and optimized for performance. This may include adjusting buffer sizes, enabling compression, or optimizing data processing logic.
+5. Lastly, monitor the system regularly to detect and address any potential issues before they become critical. Regular monitoring will help you maintain optimal thread utilization and overall system performance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["zxjVUoEMOnNukFj2fJeQBjv9xNs"]
+      }
+    ]
+  }
+}
