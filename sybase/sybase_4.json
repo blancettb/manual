@@ -1,0 +1,58 @@
+{
+  "name": "Available server connections are at limit",
+  "description": "Ratio between Used and Connections limit is greater than the configured ratio threshold",
+  "type": "MANUAL",
+  "tags": [
+    "container",
+    "docker",
+    "podman",
+    "cpu",
+    "diagnostic",
+    "watsonx"
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the current number of connections used by your application or user. You can use the following T-SQL command in SQL Server Management Studio or any other tool that supports T-SQL:
+
+   ```sql
+   SELECT sum(used_connections) FROM sys.dm_os_performance_counters 
+   WHERE counter_name = 'Current Server Connections'
+   ```
+
+   This will give you the total number of connections currently being used.
+
+2. Verify if there are any active transactions consuming excessive resources. You can check this by querying the following system view in SQL Server Management Studio or another tool that supports Transact-SQL:
+
+   ```sql
+   SELECT * FROM sys.dm_os_active_transactions
+   ```
+
+   If there are any long-running transactions, consider ending them to free up connections.
+
+3. If the problem persists, review your connection pooling settings. Ensure that the connection pool size is sufficient and that the Max Pool Size value is set higher than the current number of concurrent users. Additionally, verify that the Timeout value is set appropriately to avoid timeouts and unnecessary connection rejections.
+
+4. Lastly, consider increasing the maximum number of connections for your SQL Server instance. This can be done by running the following T-SQL command in SQL Server Management Studio or another tool that supports Transact-SQL:
+
+   ```sql
+   ALTER DATABASE <database\_name> MODIFY MAXDOP 1;
+   ```
+
+   However, this should be considered as a last resort since it may negatively impact performance and resource utilization for other applications or users.
+
+By following these steps, you should be able to resolve the "Available server connections are at limit" issue in Sybase.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["N35z8J34-YngfJqxP6pks_i4r1g"]
+      }
+    ]
+  }
+}
