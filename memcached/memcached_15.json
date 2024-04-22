@@ -1,0 +1,55 @@
+{
+  "name": "High key eviction",
+  "description": "Detects high number of key evictions",
+  "type": "MANUAL",
+  "tags": [
+    "container",
+    "docker",
+    "podman",
+    "cpu",
+    "diagnostic",
+    "watsonx"
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Increase the maximum number of keys allowed**: By default, Memcached has a limit of around 250,000 keys per server. You can increase this limit by modifying the `max_keys` parameter in your Memcached configuration file. However, keep in mind that a higher value may impact performance and stability.
+
+   Example configuration change for Memcached on Unix-based systems (e.g., Linux):
+
+   ```
+   memcached -d -m 512 -M 4096 -l 2048 -p 256 -u 65536 -x 50 -y 50 -K max_keys=500000
+   ```
+
+   This example sets the maximum number of keys to 500,000.
+
+   For Windows, modify the `memcached.conf` file instead.
+
+2. **Reduce the time before an evicted key is removed from the cache**: The default eviction delay is 60 seconds. You can reduce this delay to allow more keys to remain in the cache temporarily. However, be cautious not to set it too low, as it may lead to increased memory usage and potential performance issues.
+
+   Example configuration change for Memcached on Unix-based systems (e.g., Linux):
+
+   ```
+   memcached -d -m 512 -M 4096 -l 2048 -p 256 -u 65536 -x 50 -y 50 -E 5
+   ```
+
+   In this example, the eviction delay is set to 5 seconds.
+
+3. **Optimize your application's data access patterns**: If your application frequently evicts keys but does not add new ones, consider optimizing your data access patterns. For example, use caching strategies like Least Recently Used (LRU) or First-In-First-Out (FIFO) to manage the cache more efficiently.
+
+4. **Monitor cache hit rates and adjust accordingly**: Regularly monitor your cache hit rates to ensure that your Memcached",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["tveYI9cpZ8CuHt5U9JC5ZnuXTew"]
+      }
+    ]
+  }
+}
