@@ -1,0 +1,39 @@
+{
+  "name": "Available replicas is less than desired replicas",
+  "description": "Checks whether the total number of available replicas is less than the number of desired replicas. This indicates that the Kubernetes Deployment is missing replica pods.",
+  "type": "MANUAL",
+  "tags": [
+    "container",
+    "docker",
+    "podman",
+    "cpu",
+    "diagnostic",
+    "watsonx"
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Examine the pod status**: Use the command `kubectl get pods` to view the status of all pods in the deployment. Look for any pods with a status other than "Running". You may need to use the command `kubectl describe pod <pod-name>` to get more detailed information about a specific pod.
+
+ 2. **Identify and address the cause**: If there are pods with a status other than "Running", investigate the reason for their failure. Common causes include resource exhaustion, network issues, or application errors. Once the root cause has been identified, take appropriate action to resolve the issue.
+
+ 3. **Resize the deployment**: If the issue persists after addressing the underlying cause, you can resize the deployment by changing the number of desired replicas. Use the command `kubectl scale deployment <deployment-name> --replicas=<desired-replicas>` to update the number of replicas in the deployment. Be sure to verify that the new replica count is sufficient to handle your workload before proceeding.
+
+ 4. **Monitor the deployment**: After resizing the deployment, monitor its performance to ensure that it is stable and meeting your expectations. You should also continue to check for any pods with a status other than "Running" and address them promptly.
+
+By following these steps, you should be able to resolve the issue of Available replicas being less than desired replicas in your Kubernetes Deployment.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["n_uKaE23Kp523Xg0Nav_Tei4UMA"]
+      }
+    ]
+  }
+}

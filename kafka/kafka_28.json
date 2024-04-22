@@ -1,0 +1,38 @@
+{
+  "name": "Producers and consumer are blocked",
+  "description": "Checks whether producers and consumer are blocked due to partitions being offline.",
+  "type": "MANUAL",
+  "tags": [
+    "container",
+    "docker",
+    "podman",
+    "cpu",
+    "diagnostic",
+    "watsonx"
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the status of your Kafka brokers using the command `kafka-topics.sh --bootstrap-server <broker_ip>:9092 --topic <topic_name> --describe`. This command will show you the status of all topics and partitions in your Kafka cluster.
+2. Identify any partitions that are in the "ISR" (In-Sync Replicas) state but have not received any updates for a long time. These partitions might be responsible for the blocking issue.
+3. To delete these partitions, use the command `kafka-topics.sh --alter --topic <topic_name> --partitions <partition_number> --delete`. Be cautious when deleting partitions, as it may impact the overall performance and availability of your Kafka cluster.
+4. After deleting the problematic partitions, check if the producer and consumer operations start working properly again.
+5. If the issue persists, consider increasing the number of partitions in your topic. By default, Kafka has a limit of around 2048 partitions per topic. Increasing this limit can help accommodate more data and potentially resolve the blocking issue.
+6. Lastly, ensure that your Kafka clients and producers are up-to-date with the latest version. Outdated versions might cause compatibility issues that lead to the observed problem.
+
+By following these steps, you should be able to diagnose and resolve the Producers and consumer are blocked issue in your Kafka cluster.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Gk4eOlYEkO8w7KME3fnux_MPr7A"]
+      }
+    ]
+  }
+}

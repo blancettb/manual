@@ -1,0 +1,41 @@
+{
+  "name": "ConnectionPool is running out of connections",
+  "description": "This detector establishes a processing pipeline to detect the used connections ratio and checks if it is about to reach the threshold value.",
+  "type": "MANUAL",
+  "tags": [
+    "container",
+    "docker",
+    "podman",
+    "cpu",
+    "diagnostic",
+    "watsonx"
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Increase the maximum number of connections in the Connection Pool: You can do this by modifying the `maxConnections` parameter in the `<connection-pool>` element of your configuration file. The default value is usually around 100. If you need to allow more concurrent users, you can increase this value accordingly. However, keep in mind that a higher value may also increase the risk of resource contention and potential performance issues.
+
+ 2. Adjust the connection timeout: By increasing the connection timeout, you can give the application more time to establish a connection before it times out. This can help prevent connection pool exhaustion due to long-lasting requests. The default timeout value is typically 30 seconds. You can modify the timeout value in the `<connection-pool>` element using the `connectionTimeout` attribute.
+
+ 3. Monitor the connection usage: Regularly monitor the number of active and total connections in the Connection Pool to identify any patterns or trends that might indicate an issue. Tools like JMX or VisualVM can provide detailed information about the connection pool's behavior.
+
+ 4. Implement connection pooling best practices: To minimize the risk of connection pool exhaustion, follow connection pooling best practices such as limiting the number of threads that can acquire connections simultaneously (using the `minEvictableIdleTimeMillis` and `maxEvictableIdleTimeMillis` attributes) and testing for connection availability before acquiring them (using the `testWhileIdle` attribute).
+
+ 5. Consider using a connection pool monitoring tool: Specialized tools can help you monitor connection pools and track metrics like connection usage, throughput, and latency. These tools can provide valuable insights into the health of your connection pool and help you identify potential bottlenecks or issues before they become critical.
+
+By following these steps, you can effectively manage your ConnectionPool and prevent connection pool exhaustion issues in your jBossAsApplicationContainer environment.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["2XxzwtHuw77ayGKtP0Lp-HRVC2c"]
+      }
+    ]
+  }
+}
