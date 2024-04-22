@@ -1,0 +1,37 @@
+{
+  "name": "IBM MQ event - Queue Full",
+  "description": "Queue Full From MQ Events",
+  "type": "MANUAL",
+  "tags": [
+    "container",
+    "docker",
+    "podman",
+    "cpu",
+    "diagnostic",
+    "watsonx"
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the queue depth and adjust it if necessary. The queue depth is the maximum number of messages that can be stored in a queue. If the queue depth is set too high, it could lead to a queue full condition. You can reduce the queue depth by using the CHANGE QDEPTH command.
+2. Monitor the queue usage and take appropriate actions when the queue reaches a critical level. This can help prevent future queue full conditions.
+3. Implement message prioritization to ensure that important messages are processed first, even if the queue becomes full.
+4. Use a message retrieval mechanism, such as a listener or a trigger, to monitor the queue and process messages automatically when they become available.
+5. Consider increasing the size of the queue if it consistently reaches its maximum capacity.
+6. Review your application's messaging patterns and make any necessary adjustments to reduce the likelihood of queue overflow.
+7. If the problem persists, consult the IBM MQ documentation or contact IBM Support for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["KsDDqy_CaumhLrSf1R6E9fbH6-M"]
+      }
+    ]
+  }
+}
