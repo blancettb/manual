@@ -1,0 +1,37 @@
+{
+  "name": "Threads number reached maximum",
+  "description": "Detects if number of busy threads of specific connector is reaching its maximum configured value",
+  "type": "MANUAL",
+  "tags": [
+    "container",
+    "docker",
+    "podman",
+    "cpu",
+    "diagnostic",
+    "watsonx"
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check your application's configuration and ensure that it does not create an excessive number of threads. You can use tools like JMC or VisualVM to monitor thread usage and identify any potential bottlenecks.
+2. If the problem persists, consider increasing the maximum number of threads for your connector in the server.xml file. To do this, locate the Connector element in the file and add the maxThreads attribute with a higher value, such as 2048.
+3. Restart the Apache Tomcat service after making these changes to apply the new settings.
+4. Monitor the Tomcat server closely after restarting it to ensure that the number of busy threads does not exceed the new maximum limit.
+
+By following these steps, you should be able to resolve the Threads number reached maximum issue and ensure that your Apache Tomcat server operates efficiently.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["XvLAY2Av2NOVzCV0hnti0SdO8xA"]
+      }
+    ]
+  }
+}
