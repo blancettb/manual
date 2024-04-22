@@ -1,0 +1,37 @@
+{
+  "name": "You will run out of disk space soon",
+  "description": "Detects short-term capacity problems of a disk and fires when the disk is likely to run out of capacity within the next hour. The detector is not firing when the disk freed up a considerable amount of space (>=100MB) in the recent past, or when the remaining disk space is more than 20% of the total capacity. However, it will fire when the disk space would fill up within the next hour based on the current trend. This trend is computed based on a linear regression model fitted on the data points of the current sliding window.",
+  "type": "MANUAL",
+  "tags": [
+    "container",
+    "docker",
+    "podman",
+    "cpu",
+    "diagnostic",
+    "watsonx"
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Analyze your disk usage and identify any large files or directories that are consuming excessive space.
+ 2. Consider deleting unnecessary files or moving them to an external storage device to free up disk space.
+ 3. If the issue persists, you may want to adjust the system's swap space settings. Increasing the swap space can help alleviate memory pressure and prevent out-of-memory errors.
+ 4. Monitor your disk usage over time to identify any patterns or trends that might be contributing to the issue.
+ 5. If the issue continues despite your efforts, consider contacting your system administrator or seeking additional guidance for your specific environment.
+
+By following these steps, you should be able to address the "You will run out of disk space soon" warning and improve your system's overall performance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["APz5uY3AmXq9qDfR_s0rbnalzMw"]
+      }
+    ]
+  }
+}
