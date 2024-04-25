@@ -1,0 +1,34 @@
+{
+  "name": "CPU usage too high",
+  "description": "Checks whether the CPU usage exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Monitor CPU usage: Use tools like top or htop to monitor the current CPU usage of your system. This will help you identify if any process is consuming a significant amount of CPU resources.
+ 2. Identify the problematic process: Once you have identified that a process is causing the high CPU usage, you can use the command `ps aux` to view the list of running processes along with their CPU usage and memory consumption.
+ 3. Terminate or limit the resource-intensive process: If the process is determined to be resource-intensive, you can terminate it using the command `kill -9 <process_id>`. However, before doing so, make sure to have a backup strategy in place to prevent data loss. Alternatively, you can use the `nice` command to limit the CPU priority of the process, allowing other processes to run smoothly.
+ 4. Adjust system settings: You can adjust system settings such as process scheduling, memory limits, or I/O priorities to optimize CPU usage. For example, you can change the process scheduling policy to favor I/O over CPU-bound tasks or set memory limits for specific applications.
+ 5. Update software: Ensure that all your software, including the operating system and any third-party dependencies, are up-to-date. Outdated software may cause performance issues, including high CPU usage.
+ 6. Review system logs: Check system logs for any error messages or warnings related to high CPU usage. These logs can provide valuable insights into the root cause of the problem.
+ 7. Consult documentation or seek assistance: If you are unable to resolve the issue yourself, consult the official documentation or seek assistance from the cloud provider's support team. They can provide more specialized guidance based on your environment and infrastructure.
+
+By following these steps, you should be able to diagnose and address high CPU usage issues in your IBM Cloud Rabbit MQ setup.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["981aNp6-BWBLDxmIZGo8fjO_pmY"]
+      }
+    ]
+  }
+}
