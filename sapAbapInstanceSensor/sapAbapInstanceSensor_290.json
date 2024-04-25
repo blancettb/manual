@@ -1,0 +1,32 @@
+{
+  "name": "Error(s) detected in Outbound IDOC",
+  "description": "Outbound IDOC error detected.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the SAP ERP system for any error messages or warnings related to the IDOC.
+2. Verify that the sender and receiver parameters in the IDOC are correct and properly formatted.
+3. Ensure that the data fields in the IDOC are filled correctly and meet the required format.
+4. If the issue persists, check if there is an ABAP report or program generating the IDOC. Review the report or program for any errors or exceptions.
+5. If the problem still cannot be resolved, consider contacting SAP Support for further assistance.
+
+For more information on troubleshooting SAP IDOC issues, refer to the SAP Help Portal or the SAP Basis Guide.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["8lXO9zWvP9YjtJjHIm0-Ms93NZ8"]
+      }
+    ]
+  }
+}
