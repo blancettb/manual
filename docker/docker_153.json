@@ -1,0 +1,43 @@
+{
+  "name": "Memory exhausted",
+  "description": "Detects high memory usage",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check for running background processes that are consuming excessive memory. You can use the command `top` or `htop` to view the currently running processes and their memory usage. If any process is using more than its fair share of memory, consider stopping or limiting its resource consumption.
+2. Limit the amount of memory allocated to your Docker container. This can be done by modifying the Docker configuration file (`/etc/docker/daemon.json`). Add the following lines to limit the memory allocated to the container:
+
+   ```javascript
+   {
+       "default-ulimit": {
+           "nofile": 1024,
+           "memlock": true,
+           "soft": "4G",
+           "hard": "8G"
+       }
+   }
+   ```
+
+   This example sets the soft and hard limits for both the number of open files and memory to 4 GB and 8 GB respectively. Make sure to adjust these values according to your system's requirements.
+3. Monitor your system's memory usage over time. If the memory usage continues to rise even after implementing the above steps, it might indicate a more serious issue with your system's memory management. In this case, you may want to consider increasing the available physical memory on your system or investigating other potential causes of high memory usage.
+
+By following these steps, you should be able to resolve the Memory exhausted error in most cases. However, if the problem persists, it is recommended to consult the official Docker documentation or seek assistance from a system administrator.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["HgqFa0Lxrg0pLPagCDfYCD_ZneI"]
+      }
+    ]
+  }
+}
