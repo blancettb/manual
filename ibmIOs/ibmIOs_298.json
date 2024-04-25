@@ -1,0 +1,32 @@
+{
+  "name": "IbmIOs events",
+  "description": "IbmIOsMessageQueueEvents From IbmIOs",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check if there are any error messages or codes associated with the event in the system log or IBM Spectrum LSF logs. These messages can provide valuable information about the cause of the problem and help you diagnose it further.
+2. Investigate whether the job is stuck or not progressing as expected. You can check the status of the job using the command 'bjobs -l'. If the job is stuck, you may need to intervene manually to resolve the issue.
+3. Ensure that the IBM Spectrum LSF cluster and the IBM Spectrum LSF portals are up-to-date. Sometimes, outdated software can cause issues with IBM IO System events.
+4. Verify that the IBM Spectrum LSF cluster has sufficient resources (CPU, memory, and storage) to run the job. If the cluster is overloaded, it might not be able to handle the workload efficiently, leading to performance issues or errors.
+5. If the issue persists, consider checking the IBM Knowledge Center for any known issues or solutions related to the specific IBM IO System version and release you are using. The IBM Knowledge Center provides detailed documentation, including troubleshooting guides, user manuals, and other resources to help you resolve common issues and optimize your IBM IO System experience.
+
+If you continue to experience problems after trying these steps, please consult the IBM Support team for further assistance. They can provide more specialized guidance and direct you to additional resources or tools that may be necessary to resolve the issue.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["63xy4zS9hg0R6m7tUk_m1K7J9eg"]
+      }
+    ]
+  }
+}
