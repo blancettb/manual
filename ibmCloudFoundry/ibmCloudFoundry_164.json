@@ -1,0 +1,33 @@
+{
+  "name": "Memory usage too high",
+  "description": "Checks whether the application container is low on memory",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the current memory usage of your app by running the command `cf icr spaces <space-name> -q`. This will provide you with the total memory used by all instances in that space.
+2. If the memory usage is consistently high, consider stopping any unnecessary applications or processes within your app to free up memory. You can use the command `cf stop <app-name>` to stop an individual app, or `cf ps` to view and stop running instances.
+3. If the memory usage continues to be an issue, you may need to scale down the number of instances for your app. You can do this by running the command `cf scale <app-name>=<number-of-instances>`. Be cautious when scaling down, as it may impact the performance and availability of your app.
+4. If you are using persistent storage, ensure that it is properly configured and not consuming excessive memory. You can check the disk usage by running the command `cf storage <storage-service> ls`.
+5. Review your application logs for any error messages or warnings related to memory consumption. These may provide insights into how to optimize your app's memory usage.
+6. If none of the above steps resolve the issue, you may need to investigate further by checking system logs, increasing the memory limit for your app, or contacting IBM Cloud Support for assistance.
+
+By following these steps, you should be able to identify and address the root cause of the high memory usage issue, ensuring optimal performance and stability for your app.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["3SFHZob1PEgV6GmYikTCvuDSgHo"]
+      }
+    ]
+  }
+}
