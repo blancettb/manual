@@ -1,0 +1,30 @@
+{
+  "name": "Proposal ratio analysis",
+  "description": "Detects unusual fall of applied proposals as well as unusual rise of pending and failed proposals",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. First, check if there are any unusually high numbers of pending or failed proposals. This could indicate an issue with the proposal approval process or the quality of the proposals being submitted.
+2. Next, review the proposal ratios to ensure that they are within normal ranges. If the proposal ratio is significantly higher than expected, it could suggest issues with proposal quality or the effectiveness of the proposal evaluation process.
+3. Investigate any discrepancies between the proposal ratios and the number of proposals received. This could indicate issues with data collection or reporting.
+4. Take corrective action as necessary to address any issues identified in the proposal ratio analysis. This may include adjusting the proposal approval process, improving proposal quality, or providing additional training for proposal evaluators.
+5. Regularly monitor the proposal ratio analysis to ensure that it remains within normal ranges. This will help identify any trends or patterns that may require further investigation and correction.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["jbFfbVmbOCKA_6fFL2RAPCpnEFA"]
+      }
+    ]
+  }
+}
