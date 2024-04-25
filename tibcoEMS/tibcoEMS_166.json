@@ -1,0 +1,31 @@
+{
+  "name": "Connections exceeds max available connections",
+  "description": "The max number of connections is almost used up",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the current number of active connections using the command `netstat -an | grep tibmems`. This will display the number of active tibco EMS connections.
+2. If the number of active connections is close to or greater than the maximum allowed connections, consider increasing the maximum number of connections by editing the /etc/services file and adding a new line for tibco-ems with a higher value (e.g., 1024) for the MaxClients parameter.
+3. Restart the tibco EMS service for the changes to take effect using the command `service tibco-ems restart`.
+4. Monitor the Tibco EMS server's performance after increasing the maximum number of connections. If the issue persists, consider reducing the number of concurrent requests or limiting the duration of each request to avoid overwhelming the server.
+
+These steps should help you manage and optimize the number of connections in your tibcoEMS environment.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["R_a0cyKzEnnzoOiPZaDaAEJi6wg"]
+      }
+    ]
+  }
+}
