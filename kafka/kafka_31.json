@@ -1,0 +1,33 @@
+{
+  "name": "Kafka network thread is under high load",
+  "description": "Checks whether the Kafka network thread is under high load.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Increase the number of partitions in your Kafka topic: By increasing the number of partitions, you can distribute the data across more threads, reducing the load on each individual thread. This can be done by modifying the `topic.partitions` configuration in your Kafka server.properties file.
+2. Adjust the replication factor: The replication factor determines how many copies of each message are stored in the cluster. A higher replication factor can improve fault tolerance but may also increase the load on the network thread. You can adjust the replication factor by modifying the `replication.factor` configuration in your Kafka server.properties file.
+3. Monitor the network thread's CPU usage: If the network thread is consistently using a high percentage of the CPU, it could indicate that the thread is under high load. You can monitor the CPU usage by running the command `top` or `htop` and looking at the CPU utilization of the `kafka-network-thread` process.
+4. Check for network connectivity issues: Ensure that the Kafka broker and clients have proper network connectivity. You can use tools like `ping`, `telnet`, or `nc` to check if there are any connectivity issues between the components.
+5. Tune the producer and consumer configurations: You can tune the producer and consumer configurations to reduce the load on the network thread. For example, you can set a lower buffer size for producers or increase the fetch size for consumers. These settings can be adjusted by modifying the corresponding configurations in the producer and consumer client configurations files.
+6. Upgrade your Kafka version: If none of the above steps resolve the issue, you might consider upgrading your Kafka version. Newer versions of Kafka may include performance improvements and bug fixes that could help address the high network thread load.
+
+By following these steps, you should be able to identify and resolve the high network thread load issue in Kafka.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["XtIiW51m-bZCtdIjsnYmHyadCkE"]
+      }
+    ]
+  }
+}
