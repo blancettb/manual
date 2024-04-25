@@ -1,0 +1,32 @@
+{
+  "name": "Elasticsearch is in split-brain situation",
+  "description": "This rules checks whether an Elasticsearch cluster has more than 1 master node.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the number of master nodes in your Elasticsearch cluster using the command `GET /_nodes/master`. If there are multiple master nodes, you will need to take further actions to merge them back into one.
+2. To merge the master nodes back into one, you can use the `forcemerge` API. This API merges all data from one master node into another. Before running the forcemerge, it's recommended to create a backup of your data. You can do this by running the `PUT _snapshot/<snapshot\_name>` command.
+3. After merging the master nodes back into one, you may need to update the configuration settings for your Elasticsearch cluster to ensure that it functions properly. This may include updating the number of master and data nodes, as well as any other relevant settings.
+4. It's also important to check the health of your Elasticsearch cluster after resolving the split-brain situation. You can do this by running the `GET /_cluster/health` command. If there are any issues with the cluster, you should address them before continuing to use the system.
+
+By following these steps, you should be able to resolve the Elasticsearch is in split-brain situation and restore your cluster to a healthy state.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["3kPTPW5WWxrPh53P-4HuuRdqYns"]
+      }
+    ]
+  }
+}
