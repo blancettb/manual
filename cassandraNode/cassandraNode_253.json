@@ -1,0 +1,35 @@
+{
+  "name": "Pending request responses",
+  "description": "This rule checks whether the thread pool handling responses for requests made is queueing up operations.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the load on your Cassandra nodes. If the nodes are overloaded, it might result in pending request responses. You can monitor the load using tools like nodetool or cqlsh.
+2. Verify that your application is not experiencing any connection issues. A slow or failing network connection can lead to pending request responses.
+3. Inspect the query logs for any error messages or warnings related to timeouts or other issues. These messages can help you identify the root cause of the problem.
+4. If the issue persists, consider increasing the number of threads in your application's thread pool. Increasing the number of threads can help improve the responsiveness of your application and reduce the likelihood of pending request responses.
+5. If possible, distribute your read and write operations more evenly across the cluster. Overloading a single node with too many read or write operations can lead to performance degradation and pending request responses.
+6. Review your application's code for potential bottlenecks or inefficiencies. Identifying and addressing these issues can help improve overall performance and reduce pending request responses.
+7. Keep your Cassandra software up-to-date. Running the latest version of Cassandra can help ensure that you have access to the most recent bug fixes and improvements, which may address the issue of pending request responses.
+8. If the issue continues to persist, consider contacting the Cassandra community or reaching out to the support team for assistance. Provide as much detailed information about the issue as possible, including any relevant error messages or log entries.
+
+By following these steps, you should be able to diagnose and resolve the issue of pending request responses in your Cassandra environment.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["3VRirIp2QH3fGEQMrzY_9vGXdO0"]
+      }
+    ]
+  }
+}
