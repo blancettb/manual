@@ -1,0 +1,36 @@
+{
+  "name": "Sudden drop in requests to IIS-site",
+  "description": "This rule checks for a sudden drop in the requests for an IIS-site
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the application pool settings: Ensure that the application pool is set up correctly and has sufficient resources. You can check the application pool's configuration by navigating to the "Advanced Settings" section in the application pool's properties.
+2. Review the website's traffic pattern: Analyze the website's traffic pattern to identify any unusual spikes or drops in traffic. You may use tools like Google Analytics or other web analytics software to monitor the website's traffic.
+3. Investigate server resource utilization: Monitor the server's CPU, memory, and disk usage. If the server is experiencing high resource utilization, it could lead to a decrease in request processing speed, resulting in a perceived drop in requests.
+4. Validate the website's health: Use tools like Fiddler or Charles Proxy to validate the website's health and ensure that there are no connectivity issues or errors.
+5. Review recent changes: Identify if there have been any recent changes to the website, such as updates, patches, or configuration changes. Sometimes, these changes can introduce new issues that might cause a sudden drop in requests.
+6. Check for third-party plugins or extensions: Some third-party plugins or extensions can interfere with the website's functionality, causing unexpected issues. Make sure all third-party plugins and extensions are up-to-date and compatible with the website's platform.
+7. Restart the IIS service: If none of the above steps resolve the issue, consider restarting the IIS service to reset the connection pool and potentially resolve any transient issues.
+
+If the problem persists after trying these steps, you may want to contact your network or system administrator for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["-fQGzOOjuN_V0XXhquano1s4b98"]
+      }
+    ]
+  }
+}
