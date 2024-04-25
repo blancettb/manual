@@ -1,0 +1,32 @@
+{
+  "name": "ReplicaSet monitoring status",
+  "description": "This rule monitors the health of all the members of MongoDB Replica Set",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the connectivity between primary and secondary nodes by running the command `netstat -anp | grep 27017` on the primary node. If the port is open, it indicates that there are no connectivity issues.
+2. Check the logs of the mongod process on both the primary and secondary nodes for any error messages or warnings related to network connectivity or other replication-related issues.
+3. Ensure that the configuration settings for the Replica Set are correct. Specifically, check that the `bind_ip` parameter in the `mongod.conf` file is set to 0.0.0.0, allowing connections from any IP address.
+4. If the problem persists, consider increasing the `networkTimeoutMS` parameter in the `mongod.conf` file to allow for more timeouts during communication between nodes. The default value is 100 ms, which may not be sufficient for high latency networks.
+5. Lastly, if none of these steps resolve the issue, you may need to restart the mongod process on one or more of the nodes in the Replica Set.
+
+By following these steps, you should be able to diagnose and resolve most ReplicaSet monitoring issues.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Xgb8xj2scsgVfnEUycUwHT3YNz0"]
+      }
+    ]
+  }
+}
