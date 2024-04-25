@@ -1,0 +1,34 @@
+{
+  "name": "IBM DataPower Appliance percentage of memory usage",
+  "description": "IBM DataPower appliance percentage of memory usage.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check for any running jobs or long-running transactions that may be consuming excessive memory resources. You can use the command "netstat -an | grep 644" to check if there are any active network connections using port 644, which is typically used by IBM DataPower appliances. If there are any, you can consider terminating these processes to free up memory.
+
+ 2. Review the system logs for any error messages related to memory usage. You can access the system logs by navigating to the "logs" directory in the IBM DataPower appliance's configuration directory. Look for any entries indicating high memory usage or potential issues.
+
+ 3. Adjust the maximum memory allocation for the IBM DataPower appliance. By default, the maximum memory allocation is set to around 70% of the available memory. You can modify this value by editing the "services.xml" file located in the IBM DataPower appliance's configuration directory. Locate the <maxMemoryAllocation> element and change its value to a lower percentage, such as 50%. Be cautious when making this adjustment, as it may impact the appliance's performance.
+
+ 4. Monitor the IBM DataPower appliance's memory usage over time to identify any trends or patterns. If the memory usage consistently remains above a certain threshold, it might indicate an issue with the appliance's configuration or workload. In this case, you may need to consider implementing additional measures to optimize memory usage or consult the IBM DataPower documentation for further guidance.
+
+By following these steps, you should be able to address the IBM DataPower Appliance percentage of memory usage issue and ensure optimal performance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["y3ze-ExY8NGS5nKoTaBz83ATFE4"]
+      }
+    ]
+  }
+}
