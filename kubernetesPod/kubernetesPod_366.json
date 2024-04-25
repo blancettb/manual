@@ -1,0 +1,33 @@
+{
+  "name": "Kubernetes Pod condition status",
+  "description": "When any condition associated with a Kubernetes pod contains a status of 'False' for more than one minute",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Identify the specific pod with the False status condition by running the command `kubectl get pods` and examining the output.
+2. Check the events associated with the identified pod by running the command `kubectl describe pod <pod_name> -n <namespace>` and looking for any events related to the condition.
+3. If an event is found, investigate the cause of the issue and address it accordingly. This could involve restarting the pod, updating its configuration, or addressing resource exhaustion issues.
+4. If no events are found, consider increasing the time threshold for the pod's condition status before triggering an alert or taking further action. The default value is 5 minutes, which can be adjusted using the `--min-container-status-age=<duration>` flag in the `kubectl` command.
+5. Once the issue has been resolved, you can manually update the pod's condition status back to True by running the command `kubectl set image <pod_name> --image=<new_image_name> --force-update-containers` if the problem was due to an outdated container image.
+6. To ensure that the issue does not recur, implement appropriate monitoring and maintenance strategies for the affected system components.
+
+By following these steps, you should be able to diagnose and resolve most Kubernetes pod condition status issues.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Fchslsc3goOV1yIhpCTiqEuHMlg"]
+      }
+    ]
+  }
+}
