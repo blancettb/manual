@@ -1,0 +1,30 @@
+{
+  "name": "Average Connection Usage",
+  "description": "Availability is less than the configured ratio threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Review your application's connection patterns and ensure that they are consistent with the expected usage pattern. If the usage pattern is not consistent, it could lead to high average connection usage.
+2. Optimize your application's connection management to reduce the number of connections or increase the connection pool size. This can help maintain a more stable connection usage pattern.
+3. Monitor your application's performance and resource utilization over time to identify any trends or spikes in connection usage. If you notice any abnormal behavior, take appropriate action to address the issue.
+4. Check for any known issues or updates related to the AliCloud OSS service or the libraries used by your application. Make sure that your application is up-to-date and running the latest version.
+5. If the problem persists, consider contacting the Alibaba Cloud support team for further assistance. They can provide more specific guidance based on your application and environment configuration.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["_KvoQJPXAm4B2qtn6UMH2yFTq1Q"]
+      }
+    ]
+  }
+}
