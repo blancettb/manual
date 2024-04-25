@@ -1,0 +1,31 @@
+{
+  "name": "Consul cluster health",
+  "description": "Detects if consul cluster is unhealthy",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the Consul agent logs for any error messages or warnings related to the unhealthy node.
+ 2. Verify that the Consul agent is running on all nodes in the cluster and that it is configured correctly.
+ 3. Check the network connectivity between nodes in the cluster to ensure that there are no issues with communication.
+ 4. If the problem persists, you may need to restart the Consul agent on the unhealthy node or remove and re-add it to the cluster.
+
+If you are still experiencing issues, you may want to consider checking the Consul documentation or reaching out to the Consul support team for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["UBJR-WBC-M8KiFbk9Pi-66jyBvk"]
+      }
+    ]
+  }
+}
