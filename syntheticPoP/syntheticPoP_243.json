@@ -1,0 +1,32 @@
+{
+  "name": "Synthetic PoP result queue depth is high",
+  "description": "Detects when result queue is filling with playback results that are not sent out.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the network connectivity between the Synthetic PoP and the target application or service. Ensure there are no network-related issues causing delays in sending out the playback results.
+2. Analyze the Synthetic PoP configuration settings. Make sure that the number of probes and the frequency of checks are appropriate for your use case. If necessary, adjust these settings to optimize the performance and reduce the load on the result queue.
+3. Review the Synthetic PoP's monitoring metrics. Look for any patterns or spikes in error rates, response times, or other key performance indicators (KPIs). Identifying these trends early on can help you diagnose and address potential issues before they lead to high result queue depths.
+4. Implement proper error handling and retry mechanisms within the Synthetic PoP framework. This will help manage transient errors and prevent them from accumulating in the result queue.
+5. Monitor the Synthetic PoP result queue depth over time. By tracking this metric, you can identify trends and correlations between specific events or activities and increased queue depths. This information can be used to proactively address potential issues and optimize the Synthetic PoP's performance.
+
+By following these steps, you should be able to effectively manage high result queue depths in your Synthetic PoP environment and ensure smooth and reliable operation.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["2RAptsJl1UNfJ7P32xZt3e4lW6o"]
+      }
+    ]
+  }
+}
