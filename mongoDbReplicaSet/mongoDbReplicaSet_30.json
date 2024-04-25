@@ -1,0 +1,32 @@
+{
+  "name": "Replication lag is growing",
+  "description": "This detector monitors all the members of MongoDB Replica Sets and identifies if the replication lag is increasing too fast.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check for network connectivity issues between nodes in the replica set.
+ 2. Ensure that the primary node has sufficient resources (CPU, memory) to handle the workload.
+ 3. Monitor the status of the secondary nodes to ensure they are not falling behind too much.
+ 4. If necessary, add more secondary nodes to balance the load and reduce the replication lag.
+ 5. Regularly check the replication lag and take corrective actions as needed.
+
+Additionally, it's important to note that MongoDB provides various tools and commands to monitor and manage the replication process, such as `rs.status()` and `rs.oplog().find()`. By regularly using these tools, you can quickly identify and address any issues that may arise during the replication process.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["9o2p9OoX8l0muwgvaXsDfGdUmUY"]
+      }
+    ]
+  }
+}
