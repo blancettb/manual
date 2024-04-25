@@ -1,0 +1,31 @@
+{
+  "name": "Node status",
+  "description": "Checks the node status of Hazelcast.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the network and ensure that all nodes are connected properly.
+ 2. Verify that the Hazelcast configuration is correct, including the network topology and member settings.
+ 3. If the problem persists, consider checking the logs for any error messages or warnings related to the node status.
+ 4. In some cases, restarting the Hazelcast service on the affected node may be necessary to resolve the issue.
+
+If you continue to experience issues with Hazelcast node status, please provide more information about the environment in which it is running (e.g., version numbers, hardware specifications, etc.) so we can better assist you.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["_6MZV83Q5GuFHW7gWkWW5U_SaXc"]
+      }
+    ]
+  }
+}
