@@ -1,0 +1,30 @@
+{
+  "name": "Missing Metrics",
+  "description": "Missing metrics for entity",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "   1. Check the entity and its related attributes to ensure they are not empty or null.
+   2. Verify that the metric is enabled in the system settings.
+   3. If the problem persists, consider checking the SAP HANA Studio logs for any error messages or warnings related to the missing metric.
+
+These steps should help you identify and address the root cause of the Missing Metrics issue.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["3d9WSvRM2hew8llwQ3kZsGoqu7c"]
+      }
+    ]
+  }
+}
