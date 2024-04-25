@@ -1,0 +1,35 @@
+{
+  "name": "Nginx has a problem with offline peers",
+  "description": "Nginx has a problem with offline peers",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your system's time settings: Ensure that your system's clock is set accurately and synchronized with an NTP server. This is crucial for proper communication between nodes in a P2P network.
+ 2. Verify your firewall configuration: Sometimes, firewalls can block incoming connections from peer nodes. Make sure that your firewall rules allow traffic on the required ports (typically TCP/UDP 8333 and 9051).
+ 3. Inspect log files: Look for any error messages or warnings related to offline peers in your Nginx logs. These logs can provide valuable information about the cause of the issue and help you diagnose it more effectively.
+ 4. Update Nginx and its dependencies: Make sure that your Nginx installation and all its dependencies are up-to-date. An outdated version might cause compatibility issues or bugs that could lead to problems with offline peers.
+ 5. Review your Peer Exchange configuration: If you're using a Peer Exchange module for managing offline peers, review its configuration settings. Ensure that the settings are correctly configured and that the required modules and plugins are installed and enabled.
+ 6. Test your network connectivity: Perform a connectivity test to ensure that your network infrastructure is functioning properly. This can include testing your internet connection, checking if other services are accessible, and verifying that your Nginx server can communicate with other nodes in the network.
+ 7. Check for third-party interference: If you're experiencing this issue on a multi-user system, check if any third-party applications or services are interfering with the Peer Exchange functionality. Temporarily disable these applications to see if the issue persists.
+ 8. Consult the Nginx documentation and community forums: If none of the above steps resolve the issue, consider consulting the official Nginx documentation and community forums for further assistance. The community may have encountered similar issues and can provide helpful insights and solutions.
+
+By following these steps, you should be able to identify and resolve the N",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["D6xoK7CXo_Y9xQ7mDOu53epv_5s"]
+      }
+    ]
+  }
+}
