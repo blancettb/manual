@@ -1,0 +1,34 @@
+{
+  "name": "Percentage of memory used is too high",
+  "description": "Checks whether the percentage of memory used exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the MongoDB instance's memory usage: Use the command `db.runCommand({ command: "memoryInfo" })` in your MongoDB shell to view the current memory usage. This will help you identify if any single database is consuming a disproportionate amount of memory.
+2. Optimize slow-performing queries: Analyze and optimize slow-performing queries using tools like Explain Plan or the built-in profiling feature in MongoDB. This can help reduce resource-intensive operations and improve overall performance.
+3. Adjust the journal size: If your MongoDB instance uses journaling, you can adjust the journal size to prevent it from consuming excessive memory. Youchaos 0.6 or later versions support changing the journal size using the `--journalSize` option during startup.
+4. Increase the maximum file size limit: By default, MongoDB has a limit on the maximum file size that can be used for data files. Increasing this limit can help prevent issues related to large documents causing high memory usage. To increase the limit, modify the `maxFileSize` parameter in the MongoDB configuration file.
+5. Monitor and manage sharding: If your MongoDB instance is set up with sharding, ensure that the shards are properly sized and balanced. Overly large shards can consume significant amounts of memory.
+6. Regularly check for and apply MongoDB updates: Keeping your MongoDB instance up-to-date with the latest patches and updates can help address known memory consumption issues and improve overall stability.
+7. Adjust the application's behavior: If none of the above steps resolve the issue, consider adjusting the application's behavior to reduce memory usage. This could include implementing pagination, optimizing data retrieval patterns, or reducing the number of concurrent connections.
+
+By following these steps, you should be able to resolve the Percentage of memory used is too high issue in your MongoDB instance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["z3QCtGwYe0zK-5qAL3orh4hnAUU"]
+      }
+    ]
+  }
+}
