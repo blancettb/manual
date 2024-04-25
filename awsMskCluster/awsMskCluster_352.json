@@ -1,0 +1,32 @@
+{
+  "name": "Number of active controllers",
+  "description": "Checks for an unusual number of active controllers in the Kafka cluster.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. **Check the number of active controllers**: You can check the number of active controllers by running the command `kafka-topics.sh --topic <topic> --describe` and looking at the value of 'Controller' for the desired topic. If there is only one controller with a value of 'true', then everything is fine. However, if there are multiple controllers listed, it might indicate an issue.
+2. **Inspect the leader election process**: If there are multiple controllers, it's important to inspect the leader election process to ensure that there are no conflicts or issues with the controller elections. You can use tools like `kafka-topics.sh --topic <topic> --describe` and `kafka-topics.sh --topic <topic> --alter` to monitor the leader election process.
+3. **Restart the problematic controller(s)**: If you identify any problematic controller(s), you can restart them using the command `kafka-server-stop.sh <controller-id>`. After restarting the controller(s), wait a few minutes and then check the number of active controllers again.
+4. **Update the configuration**: If the issue persists after trying the above steps, you may need to update the configuration of the Kafka cluster. This could include adjusting the number of partitions, replication factor, or other parameters. You may also want to review the logs of the Kafka nodes to look for any error messages or warnings that could provide more information about the cause of the issue.
+
+By following these steps, you should be able to diagnose and resolve the issue with the number of active controllers in your Kafka cluster.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["xSKL2PM0mdS9rUIPXRhRmJ1OKi4"]
+      }
+    ]
+  }
+}
