@@ -1,0 +1,33 @@
+{
+  "name": "Sudden drop in all calls",
+  "description": "Detects a rapid drop in the values of the calls KPI metric relative to the values in the last 30 minutes. The magnitude of the drop in calls should also exceed the relative and absolute threshold parameters below.
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Review the call data and identify the specific time period when the drop occurred.
+2. Investigate the root cause of the issue, such as network problems, server issues, or application bugs, during that time period.
+3. Once the root cause has been identified, take appropriate action to address it, such as restarting the affected system, fixing any bugs, or implementing network optimization measures.
+4. After the issue has been resolved, monitor the call data closely to ensure that the drop has been fully recovered and that no new issues have arisen.
+5. If the issue persists after taking these steps, consider increasing the relative and absolute threshold parameters in the rule configuration to allow for more sensitive detection of drops in the call data.
+
+By following these steps, you can effectively diagnose and resolve the Sudden drop in all calls issue, minimizing the impact on your business operations.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["p5VeKK-g9fnjCSKPUgQH3rnB_ZI"]
+      }
+    ]
+  }
+}
