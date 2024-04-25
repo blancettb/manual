@@ -1,0 +1,31 @@
+{
+  "name": "Potential data loss due to unclean leader election",
+  "description": "Checks for potential data loss due to unclean leader elections",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Increase the replication factor: By increasing the replication factor, you ensure that there are more than one leader candidates in the cluster. This increases the likelihood of a clean leader election and reduces the risk of data loss.
+2. Implement idempotency in your producer code: Idempotency ensures that messages are processed only once, even if there are network failures or other issues. This can help prevent duplicate messages and reduce the risk of data loss.
+3. Use a consumer group coordinator: A consumer group coordinator helps manage the consumption of messages within a consumer group. By using a coordinator, you can ensure that messages are consumed in the correct order and that duplicates are avoided.
+4. Monitor the status of the cluster: Regularly monitor the status of the Kafka cluster, including the number of partitions, the status of the leaders, and the amount of data being produced and consumed. This can help you identify any potential issues before they become a problem.
+5. Implement error handling and recovery mechanisms: Error handling and recovery mechanisms can help you recover from issues such as network failures or leader elections that do not go cleanly. These mechanisms can help prevent data loss and ensure that your Kafka cluster remains available and operational.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["A9aN_WMDh-Cff_hiQxPlqzcf6ZI"]
+      }
+    ]
+  }
+}
