@@ -1,0 +1,33 @@
+{
+  "name": "Percentage of disk space used is too high",
+  "description": "Checks whether the percentage of disk space used exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Identify the source of the issue: Check if any large objects or temporary files are consuming excessive disk space. You can use the command `pg_lsclusters` to list all the clusters and their usage.
+2. Delete unnecessary objects or files: If any large objects or temporary files are found to be consuming excessive disk space, delete them to free up space. Be cautious while deleting as it may impact your application's functionality.
+3. Adjust the PostgreSQL configuration: You can adjust the PostgreSQL configuration settings such as max\_worker\_processes, shared\_buffers, and work\_mem to optimize disk I/O and reduce disk space usage. However, these changes should be made with caution as they can affect the overall performance of the database.
+4. Monitor disk space usage regularly: Regularly monitor the disk space usage to ensure that it remains within the configured threshold. You can use commands like `df`, `du`, or `iotop` to check the disk space usage.
+5. Set up alerts for disk space usage: To avoid running out of disk space unexpectedly, set up alerts for when the disk space usage reaches a certain threshold. This will help you take proactive measures to prevent data loss or service disruptions.
+6. Consider increasing the size of the database cluster: If the disk space usage continues to be an issue even after implementing the above steps, consider increasing the size of the database cluster. This will provide more disk space for storing data and improve the overall performance of the database.
+
+By following these steps, you can effectively resolve the Percentage of disk space used is too high issue and ensure that your PostgreSQL database runs smoothly without any disruptions due to disk space constraints.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["3OBHAAV15wjZj4V21KX8iXnqeBc"]
+      }
+    ]
+  }
+}
