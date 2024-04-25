@@ -1,0 +1,33 @@
+{
+  "name": "Percentage of memory used is too high",
+  "description": "Checks whether the percentage of memory used exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the MongoDB instance's configuration and ensure that it has sufficient resources (CPU, RAM) to handle the workload.
+2. Monitor the MongoDB instance's performance metrics, such as CPU utilization, memory usage, and disk I/O, to identify any potential bottlenecks or spikes in resource consumption.
+3. If necessary, adjust the MongoDB instance's configuration settings, such as the maximum heap size, buffer pool size, or connection pool size, to optimize its performance and reduce memory usage.
+4. Regularly review and analyze the MongoDB instance's logs to detect any anomalies or errors that may be contributing to high memory usage.
+5. Implement proper data indexing strategies to improve query performance and reduce the amount of data stored in memory.
+6. Consider using third-party tools or plugins for monitoring and optimizing MongoDB instances, such as MongoDB Atlas, Cerebro, or MongoDB Compass.
+7. If the issue persists, consider scaling out the MongoDB cluster by adding more nodes to distribute the workload and increase overall capacity.
+8. Keep your MongoDB software up-to-date with the latest patches and updates to ensure that it is running on the most stable and efficient version available.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["TPoOIOS753Hhkwem9tzRLDKjfws"]
+      }
+    ]
+  }
+}
