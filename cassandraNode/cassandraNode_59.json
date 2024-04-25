@@ -1,0 +1,32 @@
+{
+  "name": "Dropped messages",
+  "description": "This rule checks whether there are thread pools which are dropping messages.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check for any configuration issues in the node's configuration file. Ensure that the message drop rate is set appropriately and that the node has sufficient resources to handle the traffic.
+ 2. Monitor the node's resource usage, such as CPU, memory, and disk space. If the node is overloaded, consider increasing the resources allocated to it or adding more nodes to distribute the workload.
+ 3. Investigate any ongoing or recent changes to the system, such as new software installations, updates, or hardware additions. These changes might impact the node's performance and cause dropped messages.
+ 4. Review the application logs for any error messages or warnings related to message drops. This information can help identify the root cause of the problem.
+ 5. If the issue persists, consider contacting the Cassandra team or seeking assistance from other experts in the field. They can provide further guidance and potential solutions based on your specific situation and environment.
+
+By following these steps, you should be able to diagnose and address the Dropped messages issue in your Cassandra node.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["FwUw9pngVWEbPJ4P6C032Hqhz1c"]
+      }
+    ]
+  }
+}
