@@ -1,0 +1,34 @@
+{
+  "name": "Db2 Server Status",
+  "description": "Checks the server status of Db2.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check if the database is in ARCHIVELOG mode. If it is, you will need to stop archiving before performing any maintenance or recovery operations. You can do this by running the command 'db2 terminate force' and then 'db2 start'.
+
+ 2. If the database is not in ARCHIVELOG mode, check if there are any active backups or restores. If so, you should first end these processes before proceeding with any maintenance tasks.
+
+ 3. Run the 'db2pd -db <database_name> -status' command to view the current status of the database. This command displays information about the database manager, buffer pools, and other relevant components.
+
+ 4. If necessary, take corrective action based on the results of the previous checks. For example, you may need to reconfigure the buffer pool, add more memory to the system, or repair corrupted data pages.
+
+By following these steps, you should be able to resolve most issues related to the Db2 Server Status. However, if the problem persists, you may need to contact IBM Support for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["EwlLtM4RRzAIAmE8DWa8-DtAKEY"]
+      }
+    ]
+  }
+}
