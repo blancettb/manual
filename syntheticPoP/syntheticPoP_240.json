@@ -1,0 +1,32 @@
+{
+  "name": "Reporting test results failed",
+  "description": "Detects backend communication problems.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your internet connection and ensure it is stable. A weak or unstable connection can cause connectivity issues between the client and the server.
+2. Verify that the proxy is running on the target machine by checking its status using the command `telnet <proxy-ip> 8080`. If the proxy is not running, start it using the command `./startProxy.sh`.
+3. Ensure that the correct proxy configuration file is being used. The proxy configuration file should be located in the same directory as the script that calls the proxy and should have the extension .cfg.
+4. If the problem persists, check the log files for any error messages. The log files are located in the same directory as the script that calls the proxy and have the extensions .log and .err.
+5. If you are still unable to resolve the issue, consider restarting the proxy and the client machine and trying again.
+
+If none of these steps resolve the issue, please provide more information about the environment in which the tests are being run (e.g., operating system, version of the proxy software) so that we can further assist you.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["CnkA1m0ndHkNDbew9ldOS4d1uiY"]
+      }
+    ]
+  }
+}
