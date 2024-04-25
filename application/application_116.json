@@ -1,0 +1,32 @@
+{
+  "name": "Sudden increase in erroneous call rate of inbound calls",
+  "description": "Detects a rapid increase in the values of the erroneous call rate metric relative to the values in the last 10 minutes. The magnitude of the increase in erroneous call rate should also exceed the relative and absolute threshold parameters below. This rule only applies for Applications configured to use Inbound Calls KPIs or that have not yet been configured to use by, default, either All Calls or Inbound Calls KPIs.
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Review the data for the last 10 minutes before the error occurred. Look for any unusual patterns or spikes in the erroneous call rate metric during this period.
+2. Investigate the root cause of the sudden increase in erroneous call rate. This could be due to issues with the application, network problems, or other factors.
+3. Once the root cause has been identified, take appropriate action to address it. This may involve implementing fixes, optimizing the application, or addressing network issues.
+4. After taking corrective actions, monitor the erroneous call rate metric closely to ensure that it returns to normal levels. If the erroneous call rate continues to rise after corrective actions have been taken, further investigation and corrective action may be necessary.
+
+By following these steps, you can effectively diagnose and resolve the issue of a sudden increase in erroneous call rate of inbound calls.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["BEmCuOJLX0mtPJ_My8OxwbAHT5w"]
+      }
+    ]
+  }
+}
