@@ -1,0 +1,32 @@
+{
+  "name": "Driver has failed",
+  "description": "Number of failed drivers exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the number of failed drivers and compare it to the configured threshold. If the number of failed drivers is greater than the threshold, it indicates that there are too many failures and the application may not function properly.
+2. Investigate the cause of the driver failures. This could be due to various reasons such as network issues, hardware problems, or configuration errors.
+3. Take appropriate action based on the root cause. For example, if the issue is due to network problems, you can restart the network service or check the network infrastructure. If the problem is related to hardware, you may need to replace the faulty component.
+4. Once the root cause is identified and resolved, restart the Spark Standalone cluster. This will allow the new drivers to join the cluster and take over for the failed ones.
+5. Monitor the Spark Standalone cluster closely after restarting it to ensure that all drivers are functioning correctly and there are no further driver failures.
+
+By following these steps, you should be able to resolve the "Driver has failed" issue in your Spark Standalone cluster.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["SHokr33dtHZGab_A7-4JE7iRrDM"]
+      }
+    ]
+  }
+}
