@@ -1,0 +1,35 @@
+{
+  "name": "Complete drop in all calls",
+  "description": "Detects a rapid drop to zero (essentially the service is not being called anymore) in the values of the calls KPI metric relative to the values in the last 30 minutes. The magnitude of the drop in calls should also exceed the relative and absolute threshold parameters below. This rule only applies for Applications configured to use All Calls KPIs or that have not yet been configured to use by, default, either All Calls or Inbound Calls KPIs.
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Access the Metric Detail page for the affected KPI.
+2. Review the Distribution Over Time chart.
+3. Look for any unusual spikes or drops in the data.
+4. If you find an unusual spike or drop, investigate the cause of the anomaly.
+5. Once the issue has been identified and resolved, monitor the KPI for a period of time to ensure that the issue has been fully resolved.
+
+If you are unable to identify the root cause of the issue, consider reaching out to your technical support team for further assistance. They may be able to provide additional insights or guidance based on your specific environment and configuration.
+
+Additionally, it's important to note that this rule is designed to detect significant changes in the call volume, so if you experience a gradual decrease in calls over time, this rule may not trigger an alert. However, it's still a good practice to monitor your KPIs regularly to catch any potential issues early on.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Koos-vRQVQk7gKP9PeXyKNAPORk"]
+      }
+    ]
+  }
+}
