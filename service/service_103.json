@@ -1,0 +1,33 @@
+{
+  "name": "Complete drop in all calls",
+  "description": "Detects a rapid drop to zero (essentially the service is not being called anymore) in the values of the calls KPI metric relative to the values in the last 30 minutes. The magnitude of the drop in calls should also exceed the relative and absolute threshold parameters below.
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Review the Calls KPI dashboard to identify the time period when the drop occurred.
+2. Analyze the data from that time period to determine if there are any underlying issues causing the drop in calls. This may include investigating potential errors, network problems, or changes in user behavior.
+3. Once you have identified the cause, take appropriate action to address it. This may involve resolving technical issues, updating configurations, or adjusting user workflows as needed.
+4. After taking corrective actions, monitor the Calls KPI dashboard to ensure that the issue has been resolved and that the call volume is stable again.
+5. If the issue persists, consider implementing additional monitoring and alerting mechanisms to detect similar issues in the future. This may include setting up custom alerts or integrating the Calls KPI metric with other monitoring tools.
+
+By following these steps, you can effectively diagnose and resolve the Complete drop in all calls issue, ensuring that your service remains available and performing optimally.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["8md4kTW1F20L-puBW3wD2jWTgHA"]
+      }
+    ]
+  }
+}
