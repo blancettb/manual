@@ -1,0 +1,33 @@
+{
+  "name": "Threads are deadlocked",
+  "description": "This detector monitors the JVM Runtime Platform and detects if there are any Deadlocked threads.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Analyze the application's code and identify potential synchronization issues or race conditions that may lead to deadlocks.
+ 2. Review the application's threading strategy and ensure that proper synchronization mechanisms are in place to avoid deadlocks.
+ 3. Monitor the JVM Runtime Platform for any signs of deadlock during normal operation. Tools like VisualVM or Java Mission Control can help with this.
+ 4. If a deadlock is detected, consider increasing the priority of one of the threads involved in the deadlock to allow it to complete its task first. However, be cautious as this approach can potentially lead to other issues.
+ 5. If the problem persists, consider reducing the number of active threads or limiting the resources available to each thread to prevent future deadlocks.
+ 6. If none of the above steps resolve the issue, you may need to consult the application's vendor or engage in further troubleshooting.
+
+It is important to note that resolving deadlock issues requires a deep understanding of the application's design, implementation, and runtime behavior. It is recommended to involve experienced developers or consultants who can provide guidance and assistance in identifying and addressing the root cause of the deadlock.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["ydhNKqWaa1KJUjCRBnpkuoBUais"]
+      }
+    ]
+  }
+}
