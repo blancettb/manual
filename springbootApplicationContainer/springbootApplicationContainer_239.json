@@ -1,0 +1,33 @@
+{
+  "name": "Spring Boot Application down",
+  "description": "This detector monitors the status of the SpringBoot Application.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the application log for any error messages or warnings. These messages may provide information on how to resolve the problem.
+2. Verify that the Spring Boot Application is running by checking the application's status in the command line or through the application's management interface.
+3. If the application is not running, check if there are any missing dependencies or conflicts between the dependencies. You can use tools like Maven or Gradle to identify and resolve these issues.
+4. Ensure that the application server is properly configured and started. If using a container-based application server like Docker or Kubernetes, ensure that the container is running and has the necessary resources allocated.
+5. Check for any timeout issues in the application code or configuration. Long-lasting operations can cause the application to time out, leading to an "Application down" state.
+6. If none of the above steps resolve the issue, consider increasing the logging level for the Spring Boot Application to get more detailed logs. This can help you identify the root cause of the problem.
+
+If you still encounter problems after trying these steps, please provide more context about your environment and the specific error message you are seeing, so I can better assist you.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Xa0RLHHxshAASeQZsD5hkGpHxr8"]
+      }
+    ]
+  }
+}
