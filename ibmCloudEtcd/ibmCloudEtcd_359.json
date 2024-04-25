@@ -1,0 +1,32 @@
+{
+  "name": "Percentage of memory used is too high",
+  "description": "Checks whether the percentage of memory used exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the system requirements and ensure that your environment meets them.
+ 2. Monitor the etcd server's memory usage using tools like `top`, `htop`, or `sar`.
+ 3. If the memory usage is consistently high, consider increasing the memory allocation for the etcd server. This can be done by modifying the `etcd.memory.limit` setting in the `etcd.conf` file.
+ 4. Restart the etcd server after making any changes to the configuration file.
+ 5. Verify that the issue has been resolved by monitoring the memory usage again.
+
+If the problem persists, you may need to contact IBM Cloud Support for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["yqO841OKQvBg26oKMeXo9gUTVaQ"]
+      }
+    ]
+  }
+}
