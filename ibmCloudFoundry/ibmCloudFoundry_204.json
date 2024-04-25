@@ -1,0 +1,31 @@
+{
+  "name": "Disk usage too high",
+  "description": "Checks whether the application container is low on disk space",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the current disk usage of your app by running the command `cf ic apps <your-app-name> df`. This will display the total and available disk space for your app.
+2. If the disk usage is consistently high, it might be due to large log files or temporary storage. You can investigate these areas by looking at the logs and removing any unnecessary files.
+3. Another potential cause could be the use of persistent volumes. Persistent volumes are used to mount data storage from an external source, such as a local disk or a cloud-based storage service. If not properly configured, they can consume significant disk space. To check the configuration of your persistent volumes, run the command `cf ic apps <your-app-name> vmc` and review the results.
+4. If the issue persists, you may need to increase the disk size for your app. To do this, contact IBM Cloud Support and request assistance with increasing the disk size for your app. They will guide you through the process and ensure that the increased disk size does not exceed the limits set by IBM Cloud.
+
+By following these steps, you should be able to resolve the Disk usage too high issue in your application container.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["PVJ1F_tsQeXQHHZz8H2Bi1QE-W8"]
+      }
+    ]
+  }
+}
