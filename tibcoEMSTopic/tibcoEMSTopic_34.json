@@ -1,0 +1,31 @@
+{
+  "name": "Topics pending messages exceeds the limit",
+  "description": "The max number of pending messages for topic is almost used up",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the current number of pending messages on the topic using the command `tibcoemstopic get`.
+2. If the number of pending messages is close to the limit, consider deleting some old messages to free up space. You can use the command `tibcoemstopic delete` followed by the message ID or timestamp to delete specific messages.
+3. If the problem persists, you may need to increase the maximum number of pending messages allowed for the topic. To do this, edit the topic's configuration file and modify the 'maxPendingMessages' setting.
+4. After making any necessary changes, restart the Tibco EMS server for the new settings to take effect.
+
+It is important to monitor the topic's pending message count regularly to avoid reaching the limit and encountering potential issues.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["szgctLS6VGZ8RLk9sMjwxp3ijW4"]
+      }
+    ]
+  }
+}
