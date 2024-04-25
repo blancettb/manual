@@ -1,0 +1,31 @@
+{
+  "name": "ACE Integration Server state",
+  "description": "Integration Server State check.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Stop the ACE Integration Server service.
+ 2. Delete the integration server's temporary directory (usually located at <ACE Installation Directory>/work/ace/servers/<server\_name>).
+ 3. Start the ACE Integration Server service.
+ 4. If the problem persists, you may need to restart the machine.
+
+These steps will help ensure that the ACE Integration Server has a clean state and can start correctly. If you continue to experience issues, please consult the ACE Integration Server documentation or contact support for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["x19-4H8JaC0vfXDwui7g72M63_g"]
+      }
+    ]
+  }
+}
