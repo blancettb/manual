@@ -1,0 +1,31 @@
+{
+  "name": "Missing Metrics",
+  "description": "Missing metrics for entity",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "   1. Check the connection between the data source and the CDH cluster by navigating to the "Data Warehouse" section in the Cloudera Manager. Ensure that the data source is properly connected and that there are no errors.
+   2. Verify the table schema in the CDH cluster by running the command `SELECT * FROM INFORMATION\_SCHEMA.TABLES;` in SQL. This will display all the tables in the database, including their schemas. Look for the table that corresponds to the missing metric.
+   3. If the table exists but still shows missing metrics, check the column names and data types. Ensure that the columns have the correct data types and that any required metrics are included.
+   4. If the problem persists, consider re-creating the table with the necessary metrics and data types. Be sure to back up any existing data before making any changes.
+
+If you continue to experience issues, please provide more context about the error or the specific query you are using to retrieve the data. This information may help me provide more targeted assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Cnff-CjjIyHxOog0zseDBqsjRLM"]
+      }
+    ]
+  }
+}
