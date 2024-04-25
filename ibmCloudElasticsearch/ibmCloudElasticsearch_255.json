@@ -1,0 +1,33 @@
+{
+  "name": "Percentage of disk space used is too high",
+  "description": "Checks whether the percentage of disk space used exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the current disk usage and free space on your ES nodes. You can use the command `df -h` in the terminal to check the disk usage for each node.
+2. If the disk usage is high, consider adding more disk space to the ES nodes. You can do this by increasing the size of the existing volume or creating a new volume with a larger capacity.
+3. Monitor the disk usage over time to ensure that it remains below the configured threshold. You can set up alerts or notifications to notify you if the disk usage exceeds a certain level.
+4. Optimize your Elasticsearch configuration. This may include adjusting index sizes, mapping settings, or data indexing policies. By optimizing the configuration, you can reduce the amount of disk space required to store your data.
+5. Regularly review and analyze your data retention policy. If you have unnecessary data that is taking up disk space, consider removing it to free up space.
+6. Consider using versioning or archiving tools to manage old data. This can help you keep your primary data online while still maintaining access to older versions or archived data.
+7. If the issue persists, you may need to contact IBM Support for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["5lQsdYBW6C-hPxQC6yPeIcB6o90"]
+      }
+    ]
+  }
+}
