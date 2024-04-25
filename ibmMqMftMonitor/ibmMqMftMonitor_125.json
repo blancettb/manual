@@ -1,0 +1,31 @@
+{
+  "name": "IBM MQ MFT monitor is not started",
+  "description": "Check the IBM MQ MFT monitor status.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check if the IBM MQ MFT monitor service is running by using the command `netstat -an | grep mqmftd`. If the service is not running, start it by typing `sudo systemctl start mqmftd`.
+2. Verify that the IBM MQ MFT monitor user has the necessary permissions to run the service. You can do this by running the command `ps -ef | grep mqmftd`. The user should be listed with a process ID (PID) and a terminal symbol (>).
+3. If the user does not have the necessary permissions, you can add them by running the command `sudo usermod -aG mqmft <user_name>`, replacing <user_name> with the actual user name.
+4. Restart the IBM MQ MFT monitor service for the changes to take effect by typing `sudo systemctl restart mqmftd`.
+
+If the problem persists after trying these steps, you may need to check the IBM MQ MFT monitor logs for more information. These logs are typically located in the /var/mqmft/logs directory.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["8nDViKMCUme09LXRtodOqVppoJg"]
+      }
+    ]
+  }
+}
