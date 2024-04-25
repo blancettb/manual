@@ -1,0 +1,32 @@
+{
+  "name": "IBM MQ Managed File Transfer Failed",
+  "description": "IBM MQ file transfer failed",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the connection settings: Ensure that the connection details (host, port, and channel) are correct and properly configured.
+2. Verify the message flow: Make sure that messages are being transferred between the sender and receiver queues correctly.
+3. Inspect the error logs: Review any error or exception logs generated during the file transfer process to identify the root cause of the failure.
+4. Check for missing or corrupted files: If the file transfer fails with an "Invalid Handle" error, it could be due to missing or corrupted files.
+5. Restart the IBM MQ queue manager: In some cases, restarting the queue manager can help resolve the issue.
+6. Update the IBM MQ software: Make sure that your IBM MQ software is up-to-date, as outdated versions may have bugs or compatibility issues that could cause file transfer failures.
+7. Consult the IBM MQ documentation: If you continue to experience issues, refer to the IBM MQ documentation for further troubleshooting guidance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["x4RfFjaSxYC4Bls61KDs0shuH7k"]
+      }
+    ]
+  }
+}
