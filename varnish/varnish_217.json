@@ -1,0 +1,40 @@
+{
+  "name": "Thread creation is failing",
+  "description": "Varnish too many thread creation failed.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Check Varnish version**: Ensure that your Varnish version is up-to-date. An outdated version may cause issues with thread management. You can check the version by running the command `varnishstat -v`.
+
+ 2. **Increase VCL timeout**: The default VCL timeout value might be insufficient for certain use cases. You can increase the timeout value in the VCL configuration file to avoid thread creation failures. For example, you can set the timeout to 60 seconds by adding the following line to the VCL: `timeout 60s;`.
+
+ 3. **Reduce number of parallel requests**: If your Varnish instance is handling a high volume of traffic, you can reduce the number of parallel requests to prevent overloading the system and causing thread creation failures. You can do this by adjusting the "reqsleep" parameter in the VCL configuration file. A lower value will result in fewer parallel requests, but it may also increase latency.
+
+ 4. **Improve system resources**: Ensure that your Varnish server has sufficient system resources, such as CPU, memory, and disk space. A heavily loaded system may not have enough resources to handle the requested load, leading to thread creation failures.
+
+ 5. **Review VCL code**: Check your Varnish Configuration Language (VCL) code for any potential issues or errors that could cause thread creation failures.
+
+ 6. **Update Varnish configuration**: Make sure that your Varnish configuration is up-to-date and free from deprecated features or settings that could cause thread creation failures.
+
+ 7. **Consult Varnish documentation**: If you are still experiencing issues, consult the official Varnish documentation for further troubleshooting guidance.
+
+By following these steps, you should be able to resolve the Thread creation is failing issue in Varnish.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["qLWCvWtX-Ehs1m3x3IYYdtf-dmQ"]
+      }
+    ]
+  }
+}
