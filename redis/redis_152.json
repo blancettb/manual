@@ -1,0 +1,40 @@
+{
+  "name": "Redis slave node can't connect to master node",
+  "description": "Redis slave node can't connect to master node",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Check network connectivity**: Ensure that both the master and slave nodes have proper network connectivity. This includes checking if the firewall is allowing traffic on the required ports.
+
+2. **Inspect Redis logs**: On the master node, check the Redis log for any error messages related to the connection attempt from the slave node. Look for messages like "Can't connect to MSTER_IP:6379" or similar. If such messages are present, they will provide more information about the cause of the problem.
+
+3. **Verify Redis configuration**: Ensure that the Redis configuration on both the master and slave nodes is consistent. Specifically, check that the bind address in the Redis configuration matches the IP address of the actual machine running the Redis instance. Additionally, ensure that the replication factor and port number are set correctly.
+
+4. **Restart Redis service**: On the slave node, restart the Redis service to ensure that it's using the latest configuration and has resolved any transient issues.
+
+5. **Update Redis version (if applicable)**: If you're using an older version of Redis, consider upgrading to the latest version as it might include bug fixes related to slave-master synchronization.
+
+6. **Check for conflicting configurations**: In some cases, third-party modules or plugins may interfere with the Redis replication process. Check for any conflicting configurations and disable or remove them if necessary.
+
+7. **Test the connection**: After making the necessary changes, test the connection between the master and slave nodes to ensure that the issue has been resolved.
+
+",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["SjtndzySnmQncnfOFjDdQOH0H-8"]
+      }
+    ]
+  }
+}
