@@ -1,0 +1,33 @@
+{
+  "name": "Allocatable pod count too low",
+  "description": "Allocated pods percentage is approaching the configured threshold. For a node pods in the phases 'Running' and 'Unknown' are counted as allocated.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the status of your nodes by running the command `kubectl get nodes`. This will show you the current status of your nodes, including any issues they might be experiencing.
+2. If there are any nodes with a status of "Unschedulable", address those first. You can do this by checking the logs of the affected nodes or by restarting the Kubernetes scheduler on that node.
+3. Once the Unschedulable nodes have been addressed, check the status of your pods again using the command `kubectl get pods`.
+4. If the Allocatable pod count is still too low, you may need to increase the number of allowed pods for your node. To do this, edit the `kubernetes.yml` file in your project's root directory and update the `node-selector` value for your node. The `node-selector` value specifies the minimum number of pods that should be scheduled onto the node.
+5. After updating the `kubernetes.yml` file, re-run the `kubectl apply -f <file>` command to apply the changes.
+6. Monitor the status of your nodes and pods after making these changes. If the Allocatable pod count remains high, you may need to further adjust the `node-selector` value or consider adding more nodes to your cluster.
+
+If you're still experiencing issues, it might be helpful to consult the official Kubernetes documentation or seek assistance from the community.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["zjAOdlxPjfZW4H9qV-8_haKr7aI"]
+      }
+    ]
+  }
+}
