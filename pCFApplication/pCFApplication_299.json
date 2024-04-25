@@ -1,0 +1,33 @@
+{
+  "name": "Not all instances of a Cloud Foundry Application are running",
+  "description": "The number of running instances of a Cloud Foundry Application are fewer than the required number of instances",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the application logs for any error messages or warnings that may provide more information about the problem.
+2. Verify that the application is properly configured and bound to the desired cloud foundry space.
+3. Ensure that there are enough free memory and CPU resources available on the cloud foundry platform for the application to run correctly.
+4. If the issue persists, consider increasing the number of instances for the application in the cloud foundry dashboard. This will ensure that there are sufficient instances running to handle the expected traffic.
+5. Restart the application instances if necessary, by navigating to the application's instance page in the cloud foundry dashboard and clicking the "Restart" button next to the desired instance(s).
+6. If none of these steps resolve the issue, it may be a good idea to contact the cloud foundry platform support team for further assistance.
+
+By following these steps, you should be able to resolve the Not all instances of a Cloud Foundry Application are running issue and ensure that your application is running smoothly on the cloud foundry platform.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["E7PPfUjB2J2cTGDhsDWCnUQcT34"]
+      }
+    ]
+  }
+}
