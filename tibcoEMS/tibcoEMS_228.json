@@ -1,0 +1,32 @@
+{
+  "name": "Messages memory usage exceeds the limit",
+  "description": "The maximum message memory is almost used up",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the current memory usage of the Messages region by running the command 'netstat -an | grep tibm'. This will show you the total number of messages currently in use.
+
+ 2. If the memory usage is close to the limit, consider reducing the number of messages being stored in the Messages region. You can do this by setting the 'max\_messages' parameter in the tibcoEMS configuration file. For example, if you want to set the maximum number of messages to 100, you would change the value of 'max\_messages' from its current value to 100.
+
+ 3. Restart the tibcoEMS server for the changes to take effect.
+
+ 4. Monitor the Messages memory usage after restarting the server to ensure that it remains below the limit. If necessary, adjust the 'max\_messages' parameter further.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["yI3viu3w8t9NmoXr6_hSMsjGwdg"]
+      }
+    ]
+  }
+}
