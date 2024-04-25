@@ -1,0 +1,33 @@
+{
+  "name": "Too many requests piling up in Listen Backlog",
+  "description": "This rule checks the size for various PHP-FPM worker queues and validates it against the threshold value.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your system's resources, such as memory and CPU usage, to ensure they are not at their maximum capacity. If they are, consider increasing the limits for your PHP-FPM workers or adding more resources to your server.
+2. Verify that your Apache configuration is properly set up for handling PHP-FPM requests. Specifically, check that the "listen" parameter in the Apache configuration points to the correct port and that the "accept_mutex" and "max_requests" settings are configured correctly.
+3. Inspect your PHP-FPM logs for any error messages or warnings related to the listen backlog. These messages may provide valuable information about the cause of the issue.
+4. If you are using Nginx as a reverse proxy, ensure that the upstream module is properly configured to handle the connection from Apache to PHP-FPM.
+5. Consider increasing the listen backlog limit in your PHP-FPM configuration. To do this, modify the `phpfpm.ini` file and locate the `listen_backlog` setting. The default value is typically 1024, but you can increase it to a higher number based on your server's resources and requirements.
+6. Restart both Apache and PHP-FPM services to apply the changes.
+
+By following these steps, you should be able to resolve the Too many requests piling up in Listen Backlog issue in your PHP-FPM environment.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["MuAjCsNlgX8kw4YLO2NVZakH0lw"]
+      }
+    ]
+  }
+}
