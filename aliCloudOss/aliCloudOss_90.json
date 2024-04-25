@@ -1,0 +1,29 @@
+{
+  "name": "Request valid rate",
+  "description": "Valid request is less than the configured ratio threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the configuration of the Alibaba Cloud OSS instance and ensure that the value of the `Valid-Rate` parameter is greater than or equal to the expected request rate.
+2. If the issue persists, you can contact AliCloud support for further assistance. They may need to investigate the specific configuration of your OSS instance or provide additional guidance based on your use case.
+
+For more information about Alibaba Cloud OSS, you can refer to their official documentation or consult with their technical support team.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["GXKTIL933OTdnAwcHFe02uXdpMM"]
+      }
+    ]
+  }
+}
