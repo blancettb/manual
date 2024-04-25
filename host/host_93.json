@@ -1,0 +1,33 @@
+{
+  "name": "Frequent TCP errors",
+  "description": "Checks whether the host has an unusual high number of TCP errors.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check network connectivity: Ensure that the host is properly connected to the network and that there are no physical issues with the cables or connections.
+ 2. Review system logs: Look for any error messages or warnings related to TCP in the system logs. These logs can provide more information about the cause of the problem.
+ 3. Update network drivers: Make sure that the network drivers on the host are up-to-date. Outdated drivers can sometimes cause connection issues and other network problems.
+ 4. Adjust firewall settings: If the host has a firewall, check its settings to ensure that it is not blocking or limiting traffic from the affected application or service.
+ 5. Restart the affected service: If none of the above steps resolve the issue, consider restarting the affected service on the host to see if this resolves the high TCP error rate.
+ 6. Monitor network performance: Keep an eye on network performance metrics such as latency, packet loss, and throughput to identify any trends or patterns that may indicate a deeper issue.
+
+By following these steps, you should be able to diagnose and address the root cause of the Frequent TCP errors on your host.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["yBGNFSh-pcKzZVBFnxoBu_36Yw4"]
+      }
+    ]
+  }
+}
