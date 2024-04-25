@@ -1,0 +1,33 @@
+{
+  "name": "Sudden drop in write requests",
+  "description": "This rule checks for a sudden drop in the number of cassandra write requests.
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Review the current and historical data for the 'cassandra.write_requests' metric.
+2. Investigate any spikes or anomalies in the data that may have caused the sudden drop.
+3. Check the Cassandra nodes for any issues, such as high disk usage, network latency, or node failures.
+4. If necessary, adjust the retention policy for the metric to ensure that it captures sufficient data for analysis.
+5. Implement monitoring and alerting mechanisms to detect similar issues in the future.
+
+By following these steps, you can effectively diagnose and address the Sudden drop in write requests issue in your Cassandra environment.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["7WAavlAaq2g2PiBOC1miuHDb7yM"]
+      }
+    ]
+  }
+}
