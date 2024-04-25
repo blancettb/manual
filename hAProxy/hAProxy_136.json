@@ -1,0 +1,40 @@
+{
+  "name": "HAProxy backend average queue size is high",
+  "description": "HAProxy backend average queue size is high",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Check system resources**: Ensure that your system has sufficient CPU, memory, and network resources available for the load. You can use tools like top, htop, or sar to monitor system resource usage.
+
+ 2. **Review server configuration**: Check the server's configuration settings, such as buffer sizes, connection limits, and timeouts. Make sure they are properly set according to your application's requirements.
+
+ 3. **Inspect backend configuration**: Examine the backend configuration in HAProxy. Look for settings related to queue length, aging, and eviction policies. Ensure that these settings are configured correctly to handle the expected traffic volume.
+
+ 4. **Use monitoring tools**: Implement monitoring tools like Prometheus, Grafana, or ELK Stack to track the health and performance of your HAProxy setup. These tools can help identify bottlenecks and other issues causing high queue times.
+
+ 5. **Implement load balancing strategies**: Utilize load balancing techniques such as least connections, random selection, or IP hash to distribute traffic more evenly across servers. This can help reduce the likelihood of any single server becoming overwhelmed.
+
+ 6. **Consider horizontal scaling**: If the issue persists despite addressing the above points, consider horizontally scaling your infrastructure by adding more servers to handle the increased load.
+
+ 7. **Update software and firmware**: Keep your HAProxy, operating system, and other relevant software up-to-date. Regular updates often include bug fixes and performance improvements that could help address the high queue size issue.
+
+By following these steps, you should be able to diagnose and resolve the high queue size issue in your HAProxy backend.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["S7fa93lzjsV3lBIhBWwsVL3yZJc"]
+      }
+    ]
+  }
+}
