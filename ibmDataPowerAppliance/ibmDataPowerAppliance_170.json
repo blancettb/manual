@@ -1,0 +1,29 @@
+{
+  "name": "IBM DataPower Appliance status",
+  "description": "Checks the DataPower Appliance status.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the appliance's power and network connections. Ensure that the appliance is properly plugged in and has a stable network connection.
+ 2. If the problem persists, try restarting the appliance. To do this, unplug the power cord, wait for about 30 seconds, and then plug it back in.
+ 3. If the issue continues after restarting the appliance, check if there are any firmware updates available for the device. Installing the latest firmware may help resolve the problem.
+ 4. If none of these steps resolve the issue, consider contacting IBM Support for further assistance. They can provide more specific guidance based on the appliance's configuration and current status.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["d4WlyXBgOmu9pMHIJXdm_pkIqtg"]
+      }
+    ]
+  }
+}
