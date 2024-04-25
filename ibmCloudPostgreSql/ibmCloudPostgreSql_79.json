@@ -1,0 +1,32 @@
+{
+  "name": "Percentage of memory used is too high",
+  "description": "Checks whether the percentage of memory used exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Identify the cause: Check if there are any long-running queries or processes that could be consuming excessive memory. You can use tools like pg_top or top command to identify these issues.
+2. Adjust query limits: If you find that a particular query is causing the high memory usage, you can adjust the query limits to reduce its impact. For example, you can set the max\_worker\_processes parameter to limit the number of concurrent connections.
+3. Optimize database schema: Review your database schema and optimize it by removing unnecessary tables, indexes, or views. This can help in reducing the overall memory footprint.
+4. Increase server resources: If the issue persists even after implementing the above steps, you may need to increase the server resources such as CPU, RAM, or storage. However, this should be done carefully considering the cost implications.
+5. Monitor memory usage: Regularly monitor the memory usage to ensure that it remains within the configured threshold. You can use tools like Prometheus or Grafana to set up alerts for when the memory usage exceeds the desired level.
+
+By following these steps, you can effectively address the Percentage of memory used is too high issue and ensure optimal performance of your PostgreSQL database.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["rluG9idu__9c26VGd9cK50oy-x0"]
+      }
+    ]
+  }
+}
