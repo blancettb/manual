@@ -1,0 +1,32 @@
+{
+  "name": "Increasing trend in erroneous call rate",
+  "description": "This rule checks a presence of an increasing trend in a given metric. The rule is tuned to detect weakly monotonous increases in the given metric. The detector is however not strict and tolerates certain amount of decreases in the metric value inside the trend candidate.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. **Define a proper threshold for the metric**: The first step in resolving this issue is to define a proper threshold for the metric that accurately captures the increasing trend. You may need to adjust the threshold based on your specific use case and data distribution.
+2. **Adjust the window size**: The window size used to calculate the trend is another factor that can influence the detection of the increasing trend. You can try adjusting the window size to ensure it is appropriate for your data and use case.
+3. **Consider using a different detector**: If adjusting the threshold and window size does not resolve the issue, you may want to consider using a different detector that is more suitable for your specific use case. There are several detectors available in the platform that might better detect increasing trends in your data.
+4. **Review the data quality**: It's also important to review the quality of your data and ensure that it is accurate and complete. Poor quality data can lead to incorrect detections, so cleaning and preprocessing your data can help improve the accuracy of the rule.
+
+By following these steps, you should be able to resolve the Increasing trend in erroneous call rate issue and improve the overall performance of the rule.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["O5s--gZDkatxoZ9DrlzMwLdC-Qw"]
+      }
+    ]
+  }
+}
