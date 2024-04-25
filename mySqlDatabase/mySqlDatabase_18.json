@@ -1,0 +1,32 @@
+{
+  "name": "MySQL SQL replication error occurred",
+  "description": "MySQL SQL replication error occurred",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the MySQL replication status using the command: `mysqlbinlog -uroot -p` and look for any errors in the binary log. This will help you identify if there are any issues with the replication process itself.
+2. If there are no errors in the binary log, check the MySQL server logs for any warnings or errors related to the replication process. You can do this by running the command: `grep "replication" /var/log/mysqld.log`.
+3. Ensure that the master and slave servers have compatible versions of MySQL. You can check the version on both servers by running the command: `mysql --version`. If there is a mismatch, you may need to upgrade or downgrade one of the servers accordingly.
+4. Check the firewall settings on both the master and slave servers to ensure that they are not blocking the replication process.
+5. If you are still experiencing issues, consider checking the network connectivity between the master and slave servers. Use the command: `ping <slave_server_ip>` to test the connection.
+6. If none of these steps resolve the issue, you may want to consider increasing the buffer size in the MySQL configuration file. To do this, add the following line to the [mysqld] section of the config file: `innodb_buffer_pool_size = <desired_value>M`. The default value is usually around 128M, so you may need to adjust this based on your specific requirements.
+7. Finally, if you continue to experience problems, you may want to consult the MySQL documentation or seek assistance from the MySQL community forums.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["77KyJgJ2mEwvzP6fd32-cEWimGs"]
+      }
+    ]
+  }
+}
