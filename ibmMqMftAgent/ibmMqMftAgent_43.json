@@ -1,0 +1,36 @@
+{
+  "name": "IBM MQ MFT Agent is not started or unreachable",
+  "description": "Check the IBM MQ MFT agent status.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check if the IBM MQ MFT agent is running by using the command `netstat -an | grep mqm`. If the agent is not running, start it by running the command `mqm`.
+
+ 2. Verify that the IBM MQ MFT agent is listening on the correct port (1434) by checking the value of the `PORT` environment variable in the agent's configuration file (`/var/mqm/mft/mft.ini`).
+
+ 3. Ensure that the user running the IBM MFT agent has the necessary permissions to access the queue manager and its associated objects.
+
+ 4. Check the IBM MFT agent logs for any error messages or warnings that may provide more information about the cause of the issue.
+
+ 5. If the problem persists, consider restarting the IBM MQ MFT agent or the entire IBM MQ infrastructure.
+
+If you are still experiencing issues with the IBM MQ MFT agent, you may want to consult the IBM Support team for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Na37Omgjhpllb7e7iGqVLzP3Ino"]
+      }
+    ]
+  }
+}
