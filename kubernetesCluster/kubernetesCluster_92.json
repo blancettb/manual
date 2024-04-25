@@ -1,0 +1,31 @@
+{
+  "name": "Kubernetes Cluster component status",
+  "description": "This rule checks the health status of the component.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the status of the Kubernetes API server by running the command `kubectl get nodes`. If any node is in the "Unreachable" state, it indicates an issue with the network connectivity or the node itself. In this case, check the network infrastructure and the node's status.
+2. Verify that the Kubernetes API server is running by running the command `kubectl get pods -w`. If there are no active pods, it might indicate that the API server has not been started or is not functioning properly. In this case, start the API server using the command `kubeadm init` and ensure that the necessary configurations have been set up correctly.
+3. Check the logs of the affected components by running the command `kubectl logs <pod_name>`. This will help you identify any specific issues related to the component status.
+4. If the problem persists, consider checking the cloud provider's documentation for any known issues or limitations related to the Kubernetes cluster setup.
+
+If none of these steps resolve the issue, it might be necessary to contact the Kubernetes support team for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["6yYboUTSMfekxiQgeyHk8SHzJNg"]
+      }
+    ]
+  }
+}
