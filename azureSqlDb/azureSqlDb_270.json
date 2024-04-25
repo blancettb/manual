@@ -1,0 +1,34 @@
+{
+  "name": "Database is running out of space",
+  "description": "Checks if Azure SQL Database is running out of space.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the current database size and usage: Use the "SELECT DATABASEPROPERTYEX(N'myDatabase', N'StorageSize')" query to check the total storage size of your database. You can also use the "SELECT DATABASEPROPERTYEX(N'myDatabase', N'StorageUsed')" query to see how much space is currently being used.
+
+ 2. Identify large objects (LOBs) that are consuming excessive space: LOBs such as images, videos, or documents can consume significant amounts of space in an Azure SQL Database. You can identify these objects by querying the "sys.tables" table and looking for tables with large row counts or large maximum row sizes. You can then investigate each table to determine which LOBs are causing the most space consumption.
+
+ 3. Delete unnecessary data or objects: If you find any large objects or other unnecessary data that is consuming excessive space, you can delete it to free up space. Be sure to follow proper data management practices and ensure that you do not delete important data accidentally.
+
+ 4. Adjust the database's storage allocation: If you have determined that your database is running out of space due to insufficient storage allocation, you can adjust the storage limit by modifying the "maxsize" parameter in the Azure SQL Database settings. However, be aware that changing the storage limit may impact the performance of your database, so it is important to test the new configuration thoroughly before making any changes.
+
+ 5. Monitor disk space usage regularly: To prevent future issues, it is important to monitor disk space usage regularly and take proactive measures to manage storage consumption. This can include setting up alerts or notifications when the database reaches a certain threshold, or implementing automated processes to clean up old or unused data.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["AmbNenAblWlPFDz9kdHzj6MJ7dY"]
+      }
+    ]
+  }
+}
