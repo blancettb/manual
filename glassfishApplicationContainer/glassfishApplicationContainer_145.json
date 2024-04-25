@@ -1,0 +1,34 @@
+{
+  "name": "Glassfish file cache hit rate is below 70%",
+  "description": "This detector establishes a  processing pipeline to check the File Cache Hit Rate of Glassfish and validates whether the hit rate is lower than the given threshold value.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the Glassfish configuration: Ensure that the file cache size and settings are properly configured in the Glassfish configuration file. You can adjust the cache size, buffer size, and other parameters to improve the file cache hit rate.
+2. Monitor the application's usage patterns: Analyze the application's usage patterns and identify any scenarios where the file cache may be overwhelmed or underutilized. Adjust the application's workload accordingly to optimize the file cache hit rate.
+3. Optimize the database connection pooling: Verify that the database connection pooling is optimized and not causing excessive overhead. Reduce the connection pool size or increase the connection timeout to prevent unnecessary connections from being created.
+4. Review the application code for potential issues: Inspect the application code for potential bottlenecks or inefficiencies that could impact the file cache hit rate. Look for areas where files are being accessed frequently but not cached efficiently.
+5. Implement caching strategies: Consider implementing caching strategies such as memcached or ehcache to improve the file cache performance. These solutions can help reduce the load on the file system and improve the overall response time.
+6. Monitor the file cache hit rate over time: After making changes to the configuration or implementing new caching strategies, monitor the file cache hit rate over time. Make adjustments as needed to maintain the desired hit rate.
+
+By following these steps, you should be able to improve the Glassfish file cache hit rate and address the issue of it being below 70%.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["hE3Sv1vaGCNKEZId1GoIZqXo2gI"]
+      }
+    ]
+  }
+}
