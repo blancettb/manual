@@ -1,0 +1,31 @@
+{
+  "name": "Caches not in the running state.",
+  "description": "This rule checks the ratios of number of caches created to the number of caches running in Jboss Data Grid. If the ratio is below a certain value, then it is considered as a violation.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the Jboss Data Grid configuration settings to ensure that the cache creation and running rates are within the recommended ranges for your specific use case.
+2. Monitor the Jboss Data Grid performance metrics to identify any potential bottlenecks or issues that may be causing caches to not run properly.
+3. Adjust the Jboss Data Grid settings, such as the maximum size of caches or the frequency of cache eviction, to optimize the cache performance and reduce the likelihood of caches being stuck in a non-running state.
+4. If necessary, consider increasing the heap size of the application server to accommodate more caches and improve overall system performance.
+5. Review the application code and ensure that it is designed to handle the expected cache usage patterns, avoiding excessive cache creations or deletions that could lead to cache instability.
+6. If the problem persists after attempting these steps, consider contacting the Jboss Data Grid support team for further assistance. They can help you diagnose and address any underlying issues with your specific setup.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["tHQG43aazQdVmF5ku0vatAkg6IE"]
+      }
+    ]
+  }
+}
