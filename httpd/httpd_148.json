@@ -1,0 +1,32 @@
+{
+  "name": "Number of busy workers is approaching max workers",
+  "description": "Detect high percentage of busy workers",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your server's resources and ensure that it has enough memory and CPU power to handle the current load. If necessary, increase the allocated resources for your Apache server.
+2. Analyze your Apache configuration settings. Specifically, review the MaxClients and ThreadsPerChild directives. Increasing these values can help accommodate more clients and reduce the number of busy workers. However, be cautious not to set them too high, as this may negatively impact performance.
+3. Investigate any potential issues with your application or modules. If your application is consuming excessive resources, consider optimizing it or scaling it down temporarily to alleviate the load on your Apache server.
+4. Monitor your Apache server's logs and look for any error messages or warnings related to worker management or resource exhaustion. Addressing these issues promptly can prevent further escalations in busy worker percentages.
+5. If the problem persists despite your efforts, consider increasing the number of Apache workers. This can be done by adding more Apache processes to your server, but keep in mind that this approach requires additional resources and careful monitoring to avoid overloading your system.
+
+By following these steps, you should be able to address the "Number of busy workers is approaching max workers" issue and maintain optimal performance levels for your Apache server.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["q4tOBOgKc4-k8MnBLqk5cSZJVKw"]
+      }
+    ]
+  }
+}
