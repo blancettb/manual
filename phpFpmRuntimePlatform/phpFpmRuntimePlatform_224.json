@@ -1,0 +1,33 @@
+{
+  "name": "Too many slow requests",
+  "description": "This rule checks the ratio of slow requests on all monitored PHP-FPM worker pools",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your application code for any bottlenecks or time-consuming operations that could be causing slow requests. Optimize or rewrite these sections to improve performance.
+ 2. Monitor your system's resources, such as CPU, memory, and disk usage. If any resource is consistently near its maximum capacity, it might indicate an underlying issue that needs to be addressed. You can use tools like top, htop, or sar to monitor resource usage.
+ 3. Adjust the timeout settings in your php.ini file. By increasing the timeout values, you can allow phpFpm to handle more requests before considering them slow. However, keep in mind that setting too high a value may impact overall system performance.
+ 4. Review your Nginx configuration. If you're using Nginx as a reverse proxy for your phpFpm server, ensure that the upstream timeout settings are appropriate. A too low upstream timeout value can lead to slow request issues.
+ 5. Consider implementing a caching solution, such as opcache or eAccelerator, to reduce the number of slow requests by storing frequently used data in memory.
+ 6. If the issue persists, you may want to investigate upgrading your hardware or cloud provider resources to support more concurrent requests.
+
+By following these steps, you should be able to address the Too many slow requests issue in your phpFpm environment.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["4TGszoI02N2aJzdqNA5MAl9a_EI"]
+      }
+    ]
+  }
+}
