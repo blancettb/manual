@@ -1,0 +1,33 @@
+{
+  "name": "Spark standalone master is reporting dead worker(s)",
+  "description": "Number of dead workers exceeds the configured threshold.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the number of dead workers and their statuses using the command `spark-worker --master spark://<spark_master_url>:7077`. This will display the number of dead workers and their last reported status.
+2. If there are indeed dead workers, check the driver logs for those workers to identify any issues that may have caused them to fail. You can access the driver logs by navigating to the worker's IP address in the cluster manager and looking for the log files.
+3. If necessary, restart the dead workers using the command `spark-worker --kill <worker_id>`. Replace <worker\_id> with the ID of the dead worker.
+4. Monitor the spark standalone master for further updates on the dead workers and ensure that the number of dead workers remains below the configured threshold.
+
+It is important to note that the specific error message "Number of dead workers exceeds the configured threshold" can be caused by various issues, such as network problems, configuration errors, or hardware failures. By following these steps, you should be able to diagnose and resolve the problem.
+
+If you continue to experience issues, consider checking the Spark documentation and community forums for additional troubleshooting tips and potential solutions.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["aer-L00aLfjzSps-Dryed-Av-N4"]
+      }
+    ]
+  }
+}
