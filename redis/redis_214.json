@@ -1,0 +1,40 @@
+{
+  "name": "Redis hit rate is low",
+  "description": "Redis hit rate is below the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "   1. **Increase the number of Redis instances**: By adding more Redis nodes to your cluster, you can improve the overall hit rate and distribute the read and write workload more evenly. This can be done by horizontally scaling your Redis deployment.
+
+   2. **Optimize Redis configuration**: Ensure that your Redis configuration is optimized for your specific use case. This includes tuning the number of connections, data structures, and memory usage. You can refer to the official Redis documentation for guidance on optimal configurations.
+
+   3. **Monitor Redis metrics**: Regularly monitor Redis metrics such as hit rate, miss rate, and latency. This will help you identify any potential bottlenecks or issues within your Redis cluster. Tools like RedisInsight or RedisLabs can assist with monitoring these metrics.
+
+   4. **Implement caching strategies**: Implement caching strategies to reduce the load on your Redis instance. This can include using in-memory caching solutions like Hazelcast or Infinispan, or implementing distributed caching using tools like Netflix Eureka or Spring Cloud Seda.
+
+   5. **Evaluate data partitioning**: If your Redis cluster is handling a large amount of data, consider evaluating your data partitioning strategy. Sharding your data across multiple Redis instances can help improve performance and increase the hit rate.
+
+   6. **Update Redis software**: Make sure that your Redis software is up-to-date. New versions often include performance improvements and bug fixes that could help improve your hit rate.
+
+   7. **Consider alternative caching solutions**: If none of the above steps seem to resolve the issue, you may want to consider alternative caching solutions like Apache Cassandra, Amazon ElastiCache, or Google Cloud Memorystore. These solutions offer various features and scalability options that might better suit your needs.
+
+By following these steps, you should be able to improve your Redis hit",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["h-wqN2FklljQYHij0Qjn2bBPE-U"]
+      }
+    ]
+  }
+}
