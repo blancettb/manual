@@ -1,0 +1,31 @@
+{
+  "name": "Memory usage too high",
+  "description": "Checks whether the memory usage exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check if there are any running long-lasting virtual machine snapshots or backups that are consuming excessive memory resources. You can identify these by monitoring the "Used" and "Total" memory values in the vSphere Client. If the "Used" value is significantly higher than the "Total" value, it could indicate the presence of long-lasting snapshots or backups.
+2. If such snapshots or backups are identified, consider deleting them to free up memory resources. It is important to ensure that you have proper backup strategies in place before proceeding with deletion.
+3. Monitor the overall memory usage trend over time. If the memory usage consistently remains high even after removing long-lasting snapshots or backups, you may need to consider increasing the memory allocation for the ESXi host or the vCenter Server Appliance (VCSA). This can be done by editing the configuration settings of the ESXi host or VCSA and adjusting the memory reservation and limit values accordingly.
+4. If the memory usage continues to be an issue even after increasing the memory allocation, you may want to review your virtual machine configurations. Ensure that the virtual machines are sized appropriately and do not consume excessive resources. You can also consider implementing resource pooling and dynamic memory reallocation to optimize memory usage across multiple virtual machines.
+5. Lastly, keep track of any recent changes to the environment, such as new software installations, patches, or updates. These changes might introduce compatibility issues with the existing memory configuration, leading to increased memory usage. Reviewing and addressing these potential conflicts can help prevent future occurrences of the issue.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["3UfN_Ai7G1fKSaiv5ZjN_RW0l5Q"]
+      }
+    ]
+  }
+}
