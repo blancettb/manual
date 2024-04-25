@@ -1,0 +1,38 @@
+{
+  "name": "Memory exhausted",
+  "description": "Garden Container memory usage too high",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Prune unnecessary plants and containers**: Remove any dead or dying plants and containers that are no longer needed. This will help reduce the overall memory consumption of your container garden.
+   
+2. **Adjust the watering schedule**: Overwatering can lead to excessive growth of plants, which in turn increases memory usage. Try adjusting your watering frequency based on the specific needs of each plant species. Also, ensure that your containers have proper drainage to prevent waterlogging.
+
+3. **Upgrade your hardware**: If you're still experiencing high memory usage despite pruning and adjusting watering schedules, consider upgrading your hardware. Adding more RAM (Random Access Memory) to your computer can help alleviate the issue.
+
+4. **Use a memory-intensive gardening app**: Some gardening apps may consume more memory than others due to their features and functionality. If you find that your computer is consistently running low on memory while using a particular app, consider looking for an alternative with fewer resource-intensive features.
+
+5. **Optimize your operating system**: Keeping your operating system up-to-date can help improve its performance and efficiency. Additionally, you can run disk cleanup tools to remove temporary files and other unnecessary data from your computer.
+
+6. **Consider cloud storage**: If you're dealing with large image files or other media related to your gardening hobby, consider using cloud storage services to offload some of the data. This can help reduce memory usage on your local machine.
+
+By following these steps, you should be able to resolve the Memory exhausted issue in your garden container and continue enjoying your gardening experience.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["A5_Xva-U3u3FgyvaJR57QSNtxEw"]
+      }
+    ]
+  }
+}
