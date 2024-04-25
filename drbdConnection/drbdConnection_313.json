@@ -1,0 +1,31 @@
+{
+  "name": "DRBD Connection Congested",
+  "description": "Check whether the TCP send buffer of the DRBD data connection is more than 80% filled.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. First, check if the TCP send buffer of the DRBD data connection is more than 80% filled. You can use the command "iotop" or "tcpdump" to view the current network traffic and identify any potential bottlenecks.
+2. If the TCP send buffer is indeed over 80%, consider increasing the size of the send buffer for the DRBD data connection. This can be done by modifying the `/etc/drbd.conf` file on both nodes and adjusting the `send_buffer` value. The recommended value is typically between 64KB and 128KB.
+3. After making the necessary changes, restart the DRBD service on both nodes for the changes to take effect.
+4. Once the DRBD service has been restarted, monitor the network traffic again using tools like iotop or tcpdump to ensure that the TCP send buffer remains below 80%.
+
+By following these steps, you should be able to resolve the DRBD Connection Congested issue and improve the overall performance of your DRBD setup.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["JBydU1Mr-besjlZjOx6Bc7lkPzk"]
+      }
+    ]
+  }
+}
