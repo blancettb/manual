@@ -1,0 +1,32 @@
+{
+  "name": "Retrieving tests failed",
+  "description": "Detects backend communication problems.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your internet connection and ensure that it is stable and functioning properly. A weak or unstable connection can cause connectivity issues between the system and the test environment.
+2. Verify if there are any known issues with the test environment by visiting the official status page or contacting their support team.
+3. If the problem persists, consider clearing your browser cache and cookies. This can help resolve any temporary issues that may be causing the communication failure.
+4. Ensure that no firewalls, antivirus software, or other security measures are blocking or restricting access to the test environment. These tools might interfere with the communication between the system and the test environment.
+5. If none of the above steps resolve the issue, consider reaching out to the support team for further assistance. They can investigate the root cause and provide guidance on how to proceed.
+
+By following these steps, you should be able to resolve the Retrieving tests failed issue and successfully run your tests in the desired environment.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["V3ZtvLPVmn47aeqGngzltjQVkl8"]
+      }
+    ]
+  }
+}
