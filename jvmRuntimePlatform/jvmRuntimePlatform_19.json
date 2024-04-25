@@ -1,0 +1,31 @@
+{
+  "name": "JVM Code Cache is full",
+  "description": "This detector establishes a processing pipeline to monitor the maximum Code Cache usage of JVM Runtime Platform.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Increase the size of the Code Cache: You can do this by modifying the `-Xscmx` option in the JVM arguments. The default value is typically around 8192 MB. To increase it, you can set `-Xscmx <size>`, where `<size>` is the desired cache size in MB. For example, if you want to set the cache size to 16384 MB, you would use `-Xscmx 16384`.
+2. Reduce the number of classes in your application: If your application has a large number of classes, consider reducing their count to free up space in the Code Cache. You can achieve this by removing unnecessary classes or moving them to a separate JAR file.
+3. Use the `-XX:+UseCodeCacheFlushing` option: This option forces the JVM to flush the Code Cache periodically, which can help alleviate memory pressure caused by a full Code Cache.
+4. Monitor the Code Cache usage over time: After implementing these changes, monitor the Code Cache usage using tools like VisualVM or the JVM command-line utilities. Adjust the settings as needed to maintain an optimal balance between performance and memory usage.
+
+By following these steps, you should be able to resolve the JVM Code Cache is full issue and ensure that your JVM Runtime Platform runs smoothly.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["2NZYupTvFgaQB6L8Yd7AiUSDaXY"]
+      }
+    ]
+  }
+}
