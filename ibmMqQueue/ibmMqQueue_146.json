@@ -1,0 +1,33 @@
+{
+  "name": "IBM MQ Queue full",
+  "description": "IBM MQ Queue depth percentage between current queue depth and max queue depth.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the current queue depth and maximum queue depth for the specified queue.
+2. If the current queue depth is close to or greater than the maximum queue depth, it indicates that the queue is close to being full.
+3. To free up space in the queue, you can either reduce the number of messages in the queue or increase the maximum queue depth.
+4. Reducing the number of messages in the queue can be done by processing or deleting messages as needed.
+5. Increasing the maximum queue depth can be done by modifying the queue definition in the IBM MQ configuration file.
+6. After making these changes, restart the IBM MQ queue manager to apply the new settings.
+
+It's important to note that increasing the maximum queue depth should be done with caution, as it can potentially lead to performance issues if not managed properly.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["0-w3xwP6O5IC1o9VXuze-XLesX0"]
+      }
+    ]
+  }
+}
