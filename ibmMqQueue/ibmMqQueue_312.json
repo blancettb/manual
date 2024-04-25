@@ -1,0 +1,39 @@
+{
+  "name": "IBM MQ Queue oldest message",
+  "description": "IBM MQ Queue oldest message.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. First, ensure that the queue manager is started and running properly. You can check this by navigating to the queue manager's home directory and running the 'mqm' command. If the queue manager is not running, start it using the appropriate command for your operating system.
+
+ 2. Next, check if there are any messages on the queue that have been waiting for too long. To do this, use the 'DISPLAY QLOCAL(your_queue)' command, which will show you the current status of your queue. Look for messages with an age greater than the maximum wait time (default is 4 days).
+
+ 3. If there are messages with an age greater than the maximum wait time, you can delete them using the 'CLOSE' command followed by the 'DELETEMSG' option and specifying the message identifier. For example, 'CLOSE(your_queue) DELETEMSG(message_identifier)'. Be careful when deleting messages, as it may impact the overall functionality of your application.
+
+ 4. If the problem persists, consider increasing the maximum wait time for messages on the queue. This can be done using the 'ALTER QLOCAL(your_queue)' command and setting the MAXWT parameter to a higher value. However, keep in mind that a longer wait time may increase the risk of message loss in case of high message arrival rates.
+
+ 5. Lastly, if none of the above steps resolve the issue, you may need to investigate further by checking the queue manager's logs, network connectivity, and other potential issues.
+
+Additional details:
+
+* The IBM MQ documentation provides more information on managing queues and handling message aging issues: <https://www.ibm.com/docs/en/ibmmq-9.6?topic=managing-queues-and-messages>
+* If you are using a third-party tool or library to interact with IBM MQ, consult their documentation",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["1IPZTMBHER7o6dXv1bOhqTfHDAk"]
+      }
+    ]
+  }
+}
