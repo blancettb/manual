@@ -1,0 +1,35 @@
+{
+  "name": "Available server connections are at limit",
+  "description": "Ratio between Used and Connections limit is greater than the configured ratio threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your application's connection settings: Ensure that your application is not opening too many connections simultaneously. This can be done by monitoring the number of active connections in your application code or through database monitoring tools.
+2. Adjust the MySQL max_connections variable: You can temporarily increase the maximum number of allowed connections by modifying the `max_connections` variable in your MySQL configuration file. However, keep in mind that increasing this value may pose a security risk if not properly managed.
+3. Monitor and manage slow queries: Long-running or inefficient queries can consume significant resources and impact available connections. Use query optimization techniques and monitoring tools to identify and address these issues.
+4. Review and update connection limits: If you find that the default connection limits are insufficient for your application, consider reviewing and adjusting the connection limits based on your specific requirements.
+5. Implement connection pooling: Connection pooling allows your application to reuse existing connections instead of creating new ones for each request. This can help reduce the overall number of connections required and improve performance.
+6. Optimize database schema and queries: Efficient database design and optimized queries can help minimize the resource usage and improve overall performance.
+7. Scale horizontally: If necessary, scale your database infrastructure by adding more servers to handle increased traffic and demand.
+8. Consider using alternative database solutions: If none of the above steps resolve the issue, you might need to evaluate alternative database solutions that better suit your application's needs.
+
+By following these steps, you should be able to resolve the "Available server connections are at limit" issue and ensure optimal performance for your MySQL database.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["z7cjPkDGeQnzfojmABCiLp0jqD4"]
+      }
+    ]
+  }
+}
