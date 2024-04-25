@@ -1,0 +1,38 @@
+{
+  "name": "Redis memory usage is getting closer to max memory limit",
+  "description": "Redis memory usage is getting closer to max memory limit",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Reduce Redis dataset size**: You can achieve this by removing unnecessary data from the Redis dataset. This can be done by evicting least recently used (LRU) entries or by expiring less frequently used data.
+   
+2. **Increase Redis maxmemory size**: By increasing the Redis maxmemory size, you can allow Redis to handle larger datasets before running out of memory. However, this should be done with caution as it may lead to performance issues if not managed properly.
+
+3. **Adjust Redis maxmemory-policy**: The Redis maxmemory-policy determines how Redis handles memory usage when it reaches its maxmemory limit. You can set it to "volatile-lru" to prioritize LRU entries over other data structures, which can help in managing memory usage more efficiently.
+
+4. **Monitor Redis memory usage**: Regularly monitor Redis memory usage to identify potential issues early on. Tools like RedisInsight or Redis Cluster Admin can help you with this.
+
+5. **Implement Redis clustering**: If your use case requires high availability and scalability, consider implementing Redis clustering. This can help distribute the dataset across multiple nodes, allowing you to handle larger datasets without running into memory limitations.
+
+6. **Evaluate alternative solutions**: If none of the above steps seem viable, evaluate alternative solutions that might better suit your requirements. This could include migrating to a different database system or optimizing your application's data access patterns.
+
+By following these steps, you can effectively manage Redis memory usage and prevent it from reaching the max memory limit.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["jm7NkJPAe_7o9i23uLLc35G9rc0"]
+      }
+    ]
+  }
+}
