@@ -1,0 +1,40 @@
+{
+  "name": "A sudden increase in total objects size",
+  "description": "Total objects size suddenly increased",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Check for any suspicious activities**: Ensure that there are no unauthorized access attempts or deletions of files in your bucket. You can use Google Cloud Console's Audit Logs to monitor and analyze these activities.
+   
+2. **Inspect storage usage**: Analyze the storage usage pattern to identify any unusual spikes or anomalies. This can help you determine if the sudden increase is due to legitimate data growth or malicious activities.
+
+3. **Resize existing objects**: If the sudden increase is due to legitimate data growth, consider resizing existing objects to reduce their overall size. You can use the `resumable upload` method to modify object metadata, including its size, without re-uploading the entire object.
+
+4. **Implement access control policies**: Strengthen your bucket's access control by creating new roles and permissions based on the principle of least privilege. This will help prevent unauthorized access and potential misuse of resources.
+
+5. **Monitor and alert**: Set up alerts for abnormal storage usage patterns so that you can take prompt action when such situations arise again. This will help minimize the impact of any potential security incidents.
+
+6. **Update your application**: Regularly update your application to ensure it is compatible with the latest Google Cloud Storage features and best practices. This may include updates to the API version or adjustments to data processing techniques.
+
+7. **Backup and disaster recovery plan**: Implement a robust backup and disaster recovery plan to protect your data and ensure business continuity in case of unforeseen circumstances.
+
+By following these steps, you can effectively address the sudden increase in total objects size and maintain the security and integrity of your data stored in Google Cloud Storage.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["DbBj7RrKhPRGnJPec0uu4VHUEao"]
+      }
+    ]
+  }
+}
