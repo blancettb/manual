@@ -1,0 +1,32 @@
+{
+  "name": "Active connections reached maximum",
+  "description": "Detects if number of connections of specific connector is reaching its maximum configured value",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the current number of active connections for the connector in question. You can use the command "netstat -an | grep <port_number>" to check the number of active connections on the specified port. Replace <port_number> with the actual port number used by your application.
+2. If the number of active connections is close to or exceeds the maximum limit, you can try increasing the maximum number of connections allowed for the connector. To do this, modify the `server.xml` file and locate the Connector element associated with the desired connector. Then, increase the maxConnections attribute to a higher value. For example, if the current value is 100 and you want to allow 200 concurrent connections, change the value to 200.
+3. After making the necessary changes, restart the Apache Tomcat service for the changes to take effect.
+4. Verify that the new maximum connection limit has been successfully applied by repeating step 1 after restarting the service.
+
+It's important to note that changing the maximum number of connections can have significant implications for system performance and resource utilization. Make sure to adjust the value based on your specific requirements and ensure that it does not exceed the recommended limits for your application server environment.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["3tpq0dovrbmTReMk-CHqlH6rEUc"]
+      }
+    ]
+  }
+}
