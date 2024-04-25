@@ -1,0 +1,40 @@
+{
+  "name": "Spark standalone master is reporting worker(s) in unknown state",
+  "description": "Number of workers in unknown state exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the number of workers in the UNKNOWN state and compare it to the maximum number of workers allowed by your configuration. If the number of workers in UNKNOWN state is greater than the maximum number of workers allowed, it might indicate that your cluster is overloaded or there are connectivity issues between workers and the master.
+
+2. Investigate network connectivity issues between the workers and the master. You can use tools like netstat or ss command on Linux/Unix systems or the Network tab in the Spark UI to check if there are any firewall rules blocking communication between the nodes.
+
+3. Ensure that the workers are running the same version of Spark as the master. If there is a mismatch in versions, it might cause compatibility issues and result in workers being stuck in the UNKNOWN state.
+
+4. Verify that the workers are registered with the master correctly. You can use the command `spark-submit --master spark://<spark-master-url>:7077 submit <app-id>` to submit an application and check if the worker is successfully registered with the master.
+
+5. If the problem persists, consider increasing the maximum number of workers allowed by your configuration. However, be cautious not to exceed the recommended limit for your hardware resources.
+
+6. Restart the affected workers to force them to re-register with the master. This can be done using the command `spark-worker restart`.
+
+7. If all else fails, consider rebuilding the Spark cluster from scratch. This should only be considered as a last resort, as it may require significant downtime and resource allocation efforts.
+
+By following these steps, you should be able to diagnose and resolve the issue of workers being stuck in the UNKNOWN state in your Spark standalone master.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["o034J3LizU9k4prEYezAxR7XKoc"]
+      }
+    ]
+  }
+}
