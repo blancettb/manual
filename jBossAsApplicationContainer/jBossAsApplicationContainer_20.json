@@ -1,0 +1,33 @@
+{
+  "name": "ThreadPool is running out of threads",
+  "description": "This detector establishes a processing pipeline to detect the number of max threads and checks if the current thread count is about to reach the threshold value.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Increase the maximum number of threads in the ThreadPool by modifying the `workerThreads` parameter in the `<jboss-as>` configuration file. The default value is 15. You can set it to a higher value, such as 50, to accommodate more concurrent tasks. However, keep in mind that a higher value may increase the risk of resource contention and longer response times for individual requests.
+2. Monitor the system's performance after increasing the maximum number of threads. If the ThreadPool continues to run out of threads under high load, consider implementing additional strategies to optimize your application's resource usage. These strategies might include:
+   - Implementing connection pooling to reduce the overhead of creating and tearing down connections for each request.
+   - Adjusting the size of objects used in your application to minimize memory consumption.
+   - Implementing asynchronous processing techniques to offload work from the main thread pool and improve overall throughput.
+
+By following these steps, you can help ensure that your JBoss AS application can handle high traffic loads without running into issues related to the ThreadPool running out of threads.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["bfFBKZy7D7-ylyKfxPD8-qUUVv4"]
+      }
+    ]
+  }
+}
