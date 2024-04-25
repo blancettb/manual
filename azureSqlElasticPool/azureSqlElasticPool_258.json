@@ -1,0 +1,36 @@
+{
+  "name": "The total eDTU utilization is getting closer to max eDTU limit",
+  "description": "Checks if Azure SQL Elastic Pool eDTU is reaching maximum eDTU limit.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Review your workload and usage patterns: Analyze how your application or workload utilizes the elastic pool resources. Identify any spikes in resource usage or unexpected consumption patterns that may be contributing to the high eDTU utilization.
+
+ 2. Adjust query performance or resource settings: Based on your analysis, consider optimizing query performance or adjusting resource settings for your elastic pool. This may include tuning queries, adding or removing databases within the pool, or scaling up or down the number of DTUs allocated to the pool.
+
+ 3. Monitor eDTU utilization regularly: Regularly monitor eDTU utilization to ensure it remains below the maximum limit. You can use Azure's built-in monitoring tools or third-party solutions to track eDTU usage over time.
+
+ 4. Consider increasing the eDTU limit: If you determine that your elastic pool consistently exceeds the current eDTU limit, you may need to request an increase in the eDTU limit from Microsoft Support. Keep in mind that increasing the eDTU limit may result in additional costs.
+
+ 5. Optimize storage and network configurations: Ensure that your storage and network configurations are optimized for your elastic pool workload. This may involve implementing caching strategies, using premium storage tiers, or adjusting network settings to improve data transfer rates.
+
+By following these steps, you should be able to address the The total eDTU utilization is getting closer to max eDTU limit issue and optimize the performance and cost efficiency of your Azure SQL Elastic Pool.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["-KYke0xGGM8xC9fubqPA_Q06Mk0"]
+      }
+    ]
+  }
+}
