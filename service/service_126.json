@@ -1,0 +1,35 @@
+{
+  "name": "Sudden increase in latency for a fraction of all requests",
+  "description": "Detects a rapid increase in the given latency KPI percentile relative to the KPIs values in the last 30 minutes. The magnitude of the increase in latency should also exceed the relative and absolute threshold parameters below.
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Identify the specific service or application experiencing the increased latency.
+ 2. Investigate the root cause of the latency increase, such as resource contention, network issues, or code bugs.
+ 3. Implement necessary fixes or optimizations to address the identified issues.
+ 4. Monitor the latency KPI closely to ensure that it returns to normal levels.
+ 5. If the issue persists, consider implementing additional monitoring and alerting mechanisms to detect and respond to similar issues more quickly.
+
+Additionally, you can use the Splunk platform's machine learning capabilities to identify patterns and anomalies in your data, which can help you detect and diagnose issues like this more effectively. By training models on historical data, you can create alerts for specific conditions that indicate an increase in latency, allowing you to take action before the issue becomes critical.
+
+For more information on using machine learning for monitoring and alerting, refer to the Splunk Platform Documentation on Machine Learning.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["xOwk7WfXkaAA_h2RGux-4v3yDww"]
+      }
+    ]
+  }
+}
