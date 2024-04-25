@@ -1,0 +1,32 @@
+{
+  "name": "Monitor quorum is not reached",
+  "description": "Monitor quorum is not reached",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the status of the Ceph monitors and MDS (Metadata Server) nodes. You can use the command "ceph monitor status" to check the status of the monitors and "ceph mds" to check the status of the MDS nodes.
+2. Ensure that there are enough monitors in the cluster. The minimum number of monitors required for a healthy Ceph cluster is three. If there are not enough monitors, add more monitors until the desired number is reached.
+3. Verify that the monitors are correctly connected to each other and the MDS nodes. Use the command "ip addr" to view the IP addresses of the network interfaces on the monitors and MDS nodes, and ensure that they are communicating with each other.
+4. Check the log files for any errors or warnings related to the Monitor quorum. Look for messages indicating that the Monitor quorum is not reached or that there are not enough monitors in the cluster.
+5. If the problem persists, you may need to restart some or all of the Ceph services. This should be done with caution, as it can disrupt the cluster.
+
+If you continue to experience issues, please consult the Ceph documentation or contact the support team for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Gn5c4e8Ms889DwhqftOaAz_Qfj8"]
+      }
+    ]
+  }
+}
