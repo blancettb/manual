@@ -1,0 +1,28 @@
+{
+  "name": "Continuously increasing background flushing latency",
+  "description": "Continuously monitors the MongoDB Background Flushing and validates its slope against the threshold value to see if the latency is increasing too fast.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check for Slow Queries: Identify and address slow-performing queries that may be contributing to high background flushing rates. You can use tools like Explain Plan or the built-in MongoDB profiler to identify these queries.
+2. Adjust Flush Stage Max Wait Time: By default, MongoDB uses a short flush stage max wait time (10 seconds). Increasing this value can help reduce background flushing. However, it's essential to set an appropriate value based on your specific workload and system resources.
+3. Optimize Database Configuration: Ensure that your MongoDB database configuration is optimized for performance. This includes tuning the buffer size, journal size, and other relevant settings. You",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["UviHKlJXy8_o0-dF5Y69HgvAyio"]
+      }
+    ]
+  }
+}
