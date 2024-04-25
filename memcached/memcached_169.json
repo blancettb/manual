@@ -1,0 +1,33 @@
+{
+  "name": "Number of yielded connections increases",
+  "description": "Detects high number of yielded connections",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Increase the value of max connections in your memcached configuration file. The default value is often around 512. You can increase this value to a higher number based on your system's resources and requirements.
+2. Monitor the number of yielded connections over time. If the number starts to consistently exceed the new max connections setting, it might indicate that the increased value is not sufficient. In this case, consider increasing the value further or implementing other strategies to reduce the number of yielded connections.
+3. Optimize your application's usage of memcached. This includes minimizing the use of multiple concurrent connections, reducing object sizes, and tuning your application's eviction policy to favor least recently used (LRU) behavior.
+4. Review your hardware resources. Ensure that your system has enough memory and CPU resources to handle the increased max connections setting. If necessary, upgrade your hardware to accommodate the higher load.
+5. Implement connection pooling or load balancing techniques. These methods can help manage the number of active connections more efficiently and prevent issues related to yielded connections.
+6. Keep your memcached server software up-to-date. Regularly update to the latest version to benefit from performance improvements and bug fixes that could potentially address connection management issues.
+
+By following these steps, you should be able to effectively manage the Number of yielded connections issue in your memcached setup.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["eaaqJ7xM7SdHn7wnodSKpewgGBs"]
+      }
+    ]
+  }
+}
