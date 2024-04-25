@@ -1,0 +1,32 @@
+{
+  "name": "The maximum number of databases is at limit",
+  "description": "Ratio between Used and Databases limit is greater than the configured ratio threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the current database usage by querying the 'sysdatabases' system view in T-SQL. This will help you identify which databases are consuming the most space and resources.
+2. Analyze the data in the 'sysdatabases' view to determine if any databases have excessive usage or are not being used at all. You may need to delete or archive unused databases to free up space.
+3. If necessary, adjust the database size limits for your instance by modifying the 'maxdbspace' parameter in the <sybsystemname>.ini file. Be cautious when making these changes, as they can significantly impact the overall performance and functionality of your SQL Server.
+4. Monitor the database usage regularly to ensure that the ratios remain within the specified limits. You can use the 'CHECKDB' command with the 'FILEGROUP' option to check for consistency issues and optimize database performance.
+5. If the issue persists, consider increasing the total database count limit by contacting Microsoft Support or reviewing the official Microsoft documentation for further assistance.
+
+It's important to note that these steps should be performed by a qualified IT professional to avoid causing unintended consequences or negatively impacting the SQL Server environment.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["pLv1un09yEAV1nAzhWgn_wNqRfU"]
+      }
+    ]
+  }
+}
