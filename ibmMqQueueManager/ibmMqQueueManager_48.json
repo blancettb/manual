@@ -1,0 +1,32 @@
+{
+  "name": "IBM MQ Queue Manager status",
+  "description": "Check the IBM MQ Queue Manager status.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Check the queue manager's connection:** Ensure that the queue manager is properly connected to the network and that there are no connectivity issues. You can use tools like `netstat` or `ping` to check if the queue manager is reachable.
+2. **Verify the queue manager's logs:** Look for any error messages or warnings in the queue manager's logs. These logs can provide valuable information about the cause of the problem.
+3. **Start the queue manager:** If the queue manager is not running, start it using the appropriate command for your operating system. For example, on Windows, you can use `mqsistart`, while on Linux, you can use `./startmqm`.
+4. **Check the queue manager's configuration:** Ensure that the queue manager's configuration is correct. This includes checking the queue manager's name, listening port, and authentication settings.
+5. **Restore the queue manager from backup:** If all else fails, you can restore the queue manager from a backup. This should only be done as a last resort, as it may result in data loss.
+
+If you continue to experience issues with your IBM MQ Queue Manager, consider contacting IBM Support for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["4Fh7ByhrT_2_MEMr6kfK9rvmf6s"]
+      }
+    ]
+  }
+}
