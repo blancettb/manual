@@ -1,0 +1,27 @@
+{
+  "name": "Azure Redis Cache memory usage is getting closer to max memory limit",
+  "description": " this rule checks if the Azure Redis Cache memory usage is getting closer to the maximum memory limit.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "   1. Identify the cause of the high memory usage: Check if there are any long-running tasks or applications that are consuming excessive amounts of memory. You can use the Azure portal or the Redis diagnostic logs to identify these issues.
+   2. Adjust the cache size and eviction policies: If high memory usage is due to a large number of objects in the cache, you can adjust the cache size and eviction policies to prevent the cache from growing too large. You",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["HTjRwYtwRtgRwXFUZJIGqofCMsw"]
+      }
+    ]
+  }
+}
