@@ -1,0 +1,39 @@
+{
+  "name": "Listen Backlog configured over capacity",
+  "description": "This rule checks whether the listen backlog of a worker pool is over the configured capacity",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your current listen backlog value by running the following command:
+   ```
+   grep -c ^worker_processes /etc/php-fpm.d/www.yourdomain.tld.conf
+   ```
+   This will give you the number of worker processes currently configured for your PHP-FPM pool.
+
+ 2. Calculate the maximum listen backlog value based on your system's resources and requirements. You can do this by multiplying the number of worker processes by the default listen backlog value for each worker process. The default listen backlog value is 64K. For example, if you have 10 worker processes, the maximum listen backlog value would be 10 * 64K = 640K.
+
+ 3. If the calculated value is higher than the current listen backlog value, you can increase the listen backlog value in the `php-fpm.d/www.yourdomain.tld.conf` file. To do this, locate the `listen_backlog` directive and change its value to the desired maximum listen backlog value. Make sure to restart php-fpm for the changes to take effect:
+   ```
+   sudo systemctl restart php-fpm
+   ```
+
+If increasing the listen backlog does not resolve the issue, you may need to adjust other configuration settings or consider scaling your application architecture to handle increased traffic. It's also recommended to monitor your server's performance and resource usage to ensure that the increased listen backlog value does not negatively impact other aspects of your system.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["ZSHnmg02elHxRAj-ohCUT00P1Ns"]
+      }
+    ]
+  }
+}
