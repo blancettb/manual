@@ -1,0 +1,31 @@
+{
+  "name": "Cluster status",
+  "description": "Checks the cluster status of Hazelcast.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the network and ensure that all nodes are connected and able to communicate with each other.
+ 2. Verify that the Hazelcast configuration is correct and up-to-date, including checking for any missing or incorrect properties.
+ 3. If the problem persists, consider increasing the logging level for the Hazelcast instance to get more detailed information about the issue.
+ 4. If none of these steps resolve the issue, you may need to restart the Hazelcast nodes and check if the Cluster status recovers.
+
+If you're still experiencing issues, it might be helpful to gather more information about the environment in which Hazelcast is running, such as the version of Hazelcast, the operating system, and any relevant JVM settings. This information can help support teams diagnose and address the problem more efficiently.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["ku7TxQVa4e8XzSPrmcCpwoY_ql4"]
+      }
+    ]
+  }
+}
