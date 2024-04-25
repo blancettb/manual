@@ -1,0 +1,33 @@
+{
+  "name": "A Lock Entry is generated.",
+  "description": "Lock Contention detected. Multiple thread/processes trying to access the resource simultaneously.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check if there are any duplicate instances of the same process running in parallel. If so, you can kill or stop the unnecessary instances to free up resources and avoid contention.
+2. Ensure that your application design avoids deep nesting of parallel processes. Deeply nested parallel processes can lead to increased contention for shared resources.
+3. Monitor system performance and identify any bottlenecks or resource-intensive operations that may be contributing to the lock contention. Address these issues by optimizing your code, tuning system parameters, or upgrading hardware as needed.
+4. Implement locking mechanisms appropriately within your application to ensure proper synchronization and minimize contention. This may involve using locks at appropriate levels of granularity, such as database transactions or individual data access operations.
+5. Use SAP's ABAP diagnostic tools, such as transaction SM30, to analyze the root cause of the lock contention and identify any specific issues related to your application or system configuration.
+6. If the problem persists after attempting the above steps, consider reaching out to SAP support for further assistance. Provide them with detailed information about the issue, including any error messages, stack traces, or logs related to the lock contention.
+
+By following these steps, you should be able to diagnose and resolve A Lock Entry is generated. issues in your SAP environment.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["iM1YzwUccQXby8OAsAh_rsWPNwE"]
+      }
+    ]
+  }
+}
