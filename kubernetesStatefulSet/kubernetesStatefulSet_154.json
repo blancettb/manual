@@ -1,0 +1,36 @@
+{
+  "name": "Available replicas is less than desired replicas",
+  "description": "Checks whether the total number of available replicas is less than the number of desired replicas. This indicates that the Kubernetes StatefulSet is missing replica pods.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Check the status of the StatefulSet:** Use the command `kubectl get statefulset <statefulset-name>` to view the current status of the StatefulSet. Look for any events or conditions that indicate issues with the replicas.
+
+2. **Inspect the pod logs:** If there are any failed pods, examine their logs to identify the cause of the problem. You may need to investigate the underlying infrastructure issues, such as resource exhaustion or network connectivity problems.
+
+3. **Scale the StatefulSet:** If there are sufficient resources available, you can scale up the StatefulSet to add more replicas. Use the command `kubectl scale statefulset <statefulset-name> --replicas=<number-of-replicas>` to adjust the number of replicas. Be sure to monitor the StatefulSet's status after scaling to ensure that the new replicas are healthy.
+
+4. **Update the StatefulSet configuration:** If the issue persists, you may need to update the StatefulSet configuration to allow for a smaller number of replicas. This might involve adjusting the pod template specification or other settings to reduce the resource requirements for each replica.
+
+5. **Investigate potential updates:** If none of the above steps resolve the issue, it could be due to an incompatible change in the application or infrastructure. Review any recent changes and consider updating the application or related components to ensure compatibility with the current setup.
+
+By following these steps, you should be able to diagnose and address the Available replicas is less than desired replicas issue in your Kubernetes StatefulSet.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["FODdgRAZiophHq-m-0NjWkOXVFc"]
+      }
+    ]
+  }
+}
