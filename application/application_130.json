@@ -1,0 +1,33 @@
+{
+  "name": "Erroneous call rate too high",
+  "description": "Detects a constantly high erroneous call rate when the average value within the last four minutes is above the given threshold value. This rule only applies for Applications configured to use All Calls KPIs or that have not yet been configured to use by, default, either All Calls or Inbound Calls KPIs.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the Application log for any error messages or warnings related to the erroneous call rate.
+2. Verify if there are any issues with the data sources feeding into the erroneous call rate calculation, such as missing or invalid data.
+3. Ensure that the time interval used for the erroneous call rate calculation is correct and not set too aggressively.
+4. If the issue persists, consider adjusting the threshold value for the erroneous call rate to a lower level to reduce false positives. However, be cautious not to set it too low, which may still result in overlooking genuine errors.
+5. Monitor the erroneous call rate metric over a longer period to determine if it is a temporary spike or a recurring issue. If it's a temporary spike, you might want to ignore it or adjust the threshold value accordingly.
+6. Consult the documentation or contact support for further assistance if necessary.
+
+By following these steps, you should be able to diagnose and address the erroneous call rate issue in your application.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["EGeli8Gbz33tZWrUeDZBX3WAM24"]
+      }
+    ]
+  }
+}
