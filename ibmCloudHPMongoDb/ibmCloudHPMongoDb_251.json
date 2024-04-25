@@ -1,0 +1,36 @@
+{
+  "name": "CPU usage too high",
+  "description": "Checks whether the CPU usage exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Monitor CPU usage: Use tools like top or htop to monitor the current CPU usage of your MongoDB instance. This will help you identify if any process is consuming a significant amount of CPU resources.
+2. Check for resource-intensive queries: If you notice a high CPU usage, analyze the query logs to find out if there are any resource-intensive queries. You can use tools like Explain Plan to understand the execution plan and optimize it accordingly.
+3. Adjust query limits: If you find that certain queries are causing high CPU usage, consider adjusting the query limits. For example, you can increase the maxScanSize or maxTimeMS parameters in the connection string to limit the size or duration of each query.
+4. Optimize data indexing: In some cases, poor data indexing can lead to high CPU usage. Make sure your indexes are up-to-date and optimized for the most frequently queried fields.
+5. Update MongoDB version: If the issue persists after trying the above steps, consider updating the MongoDB version to a newer one. Sometimes, compatibility issues with older versions can cause performance problems.
+6. Scale the cluster: If none of the above steps work, consider scaling the MongoDB cluster by adding more nodes. This can distribute the workload across multiple machines, reducing the overall CPU usage.
+
+Additional context:
+
+ibmCloudHPMongoDb is an IBM Cloud service that provides managed MongoDB as a service. High CPU usage can impact the performance and availability of the service, so it's essential to address this issue promptly. By following the steps mentioned above, you should be able to resolve the high CPU usage issue and ensure optimal performance for your MongoDB instance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["DWRuribot2Nbqi6hmWGxwMSWd5Q"]
+      }
+    ]
+  }
+}
