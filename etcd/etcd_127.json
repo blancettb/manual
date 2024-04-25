@@ -1,0 +1,36 @@
+{
+  "name": "Frequent leader changes seen in last minute",
+  "description": "Detects high number of leader changes in last minute",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Increase the election timeout value: By default, the election timeout is set to 10 seconds. You can increase this value to 30 seconds or more to prevent frequent leader changes. To do this, modify the `etcdctl` configuration by executing the following command:
+```
+etcdctl set /etc/etcd/etcd.conf election-timeout=30
+```
+2. Check for network connectivity issues: Frequent leader changes could be caused by network connectivity problems. Ensure that all nodes in the cluster have proper network connectivity and are able to communicate with each other.
+3. Monitor the cluster health: Regularly monitor the health of the etcd cluster using tools like Prometheus or Grafana. This will help identify any potential issues before they become critical.
+4. Update the etcd version: If the problem persists, consider updating the etcd version to the latest stable release. Sometimes, compatibility issues between versions can cause unexpected behavior.
+5. Reconfigure the cluster: In case of severe performance issues or network instability, you may need to reconfigure the cluster by adding more nodes or changing the data distribution strategy.
+
+By following these steps, you should be able to improve the stability of your etcd cluster and reduce the frequency of leader changes.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["9fk2W2cJXWpbpbfXyYhkRw_rxyg"]
+      }
+    ]
+  }
+}
