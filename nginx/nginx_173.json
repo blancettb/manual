@@ -1,0 +1,32 @@
+{
+  "name": "Nginx is failing with SSL handshakes",
+  "description": "Nginx has a problem with failed SSL handshakes",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Ensure that your server has a valid SSL certificate and that it is correctly installed. You can check this by running the command "openssl s_client -connect example.com:443" in a terminal, where "example.com" is your website's domain name. If the output shows that the certificate is valid, then everything is set up correctly.
+2. Check if there are any errors in your Nginx configuration file related to SSL. Open the file "/etc/nginx/sites-available/your-site-name" and look for any lines containing "error" or "invalid." If you find any, correct them immediately.
+3. Make sure that the "listen" directive in your Nginx configuration file is set correctly. It should be something like "listen 443 ssl;". Without the "ssl" part, Nginx will not be able to handle SSL connections.
+4. If you're still experiencing issues, try restarting Nginx and Apache (if you're using Apache as a reverse proxy) to ensure that any temporary problems have been resolved. You can do this by running the commands "systemctl restart nginx" and "systemctl restart apache2" respectively.
+5. If none of these steps work, you may need to contact your web hosting provider for further assistance. They may be able to provide more specific guidance based on your setup.
+
+I hope this helps! Let me know if you have any other questions.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["VXP_Xg2GZDzpdXU5Cu46MTU08ss"]
+      }
+    ]
+  }
+}
