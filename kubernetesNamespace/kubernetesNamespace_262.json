@@ -1,0 +1,48 @@
+{
+  "name": "Allocatable memory requests too low",
+  "description": "Requested Memory to Available memory ratio is approaching the configured threshold.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Increase the requested memory**: You can increase the memory request for your pod by modifying the `requests` field in the pod's YAML configuration file. However, keep in mind that increasing the memory request may also increase the resource utilization and potentially lead to higher costs.
+
+   Example YAML configuration with increased memory request:
+   ```yaml
+   apiVersion: v1
+   kind: Pod
+   metadata:
+     name: my-pod
+   spec:
+     containers:
+       - name: my-container
+         resources:
+           requests:
+             memory: "2Gi"
+   ```
+
+2. **Reduce the number of running pods**: If you have many pods running simultaneously, it might be necessary to reduce the number of active pods to allocate more resources to each remaining pod. This can be achieved by rescheduling or terminating less critical pods.
+
+   You can use commands like `kubectl delete` or `kubectl drain` to remove specific pods or drain all pods from a node, respectively. Be cautious when using these commands, as they can impact the overall system performance and stability.
+
+3. **Optimize your application**: Review your application's resource usage and look for opportunities to optimize its behavior. For example, you can implement memory caching, reduce data redundancy, or scale down certain functionalities during periods of low demand. By optimizing your application, you can reduce the memory requirements and alleviate the pressure on the Kubernetes cluster.
+
+4. **Monitor and analyze the cluster**: Regularly monitor the Kubernetes cluster's resource usage and identify any potential bottlenecks or issues. Tools like Prometheus, Grafana, and Heapster can help you gather and visualize essential metrics related to CPU, memory, and network usage. Analyzing this data can help you identify trends, detect anomalies, and take proactive measures to address any resource allocation problems before they become critical.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["zf2pVZNUCVt-2W-S99edwrMBFWo"]
+      }
+    ]
+  }
+}
