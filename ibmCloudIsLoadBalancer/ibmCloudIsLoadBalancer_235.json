@@ -1,0 +1,33 @@
+{
+  "name": "High rate of 4xx responses",
+  "description": "Checks for high percentage of 4xx responses",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "   a. Check your application logs and network traffic for any error messages or abnormal behavior.
+   b. Investigate if there are any issues with your API Gateway, such as misconfigured routes or slow response times.
+   c. Ensure that your load balancer is properly configured and not causing any connection timeouts or other issues.
+   d. If the problem persists, consider increasing the timeout settings in your application code or using a more robust error handling mechanism.
+
+Additionally, you can use tools like New Relic APM or Splunk to analyze the performance and errors in your application. These tools can help identify bottlenecks, slow requests, and other issues that may be contributing to the high rate of 4xx responses.
+
+If you continue to experience issues, it would be helpful to provide more context about your environment, including the specific services and versions being used, as well as any relevant error messages or stack traces. This information will help me provide more targeted assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["fpW4ZzQUSmXw9eovhgWoU5Dex6w"]
+      }
+    ]
+  }
+}
