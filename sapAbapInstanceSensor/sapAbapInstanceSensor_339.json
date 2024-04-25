@@ -1,0 +1,31 @@
+{
+  "name": "Error(s) detected in Inbound IDOC.",
+  "description": "Inbound IDOC error detected.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the SAP ERP system for any error messages related to the IDOC. You can do this by navigating to transaction SM30 and searching for the IDOC in question.
+2. If no errors are found, check the IDOC structure itself for any issues. You can use the SAP ERP's Message Browser (transaction se38) to display the structure of the IDOC.
+3. If you find any issues with the IDOC structure, correct them using the appropriate tools provided by your SAP ERP system.
+4. Once the IDOC structure is corrected, restart the data transfer process.
+
+If the problem persists after following these steps, it might be a good idea to contact your SAP ERP or ABAP support team for further assistance. They will be able to help you diagnose and resolve any underlying issues more efficiently.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["ITWf4CSku-J7C4oZUJj4qkFndDM"]
+      }
+    ]
+  }
+}
