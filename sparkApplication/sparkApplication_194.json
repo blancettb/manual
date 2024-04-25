@@ -1,0 +1,42 @@
+{
+  "name": "Failed tasks on executor",
+  "description": "Number of failed tasks on an executor exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the number of failed tasks and compare it with the maximum number of allowed failures for the executor as specified in the Spark configuration.
+   You can find this value by looking at the `spark.executor.failures.max` parameter in the Spark configuration.
+
+2. If the number of failed tasks is greater than the allowed threshold, you can either reduce the number of active tasks or increase the number of executors.
+   Reducing the number of active tasks might help if there are too many concurrent tasks running on the executor, causing resource contention.
+   Increasing the number of executors can distribute the workload more evenly across multiple nodes, potentially reducing the load on each node and preventing any single node from becoming overwhelmed.
+
+3. Monitor the executor's memory usage and CPU utilization. If the executor is consistently consuming excessive resources, it could lead to performance issues and increased failure rates.
+   You can use tools like YARN ResourceManager or Spark's built-in monitoring capabilities to check the resource usage of your executors.
+
+4. Investigate any recent changes to the codebase or cluster configuration that might have introduced new issues.
+   It's possible that a bug or compatibility issue has been introduced, which could be contributing to the high number of failed tasks.
+
+5. If none of the above steps provide a solution, consider increasing the `spark.scheduler.mode` parameter to allow the scheduler to handle more failures gracefully.
+   This can help prevent potential job stalls or crashes due to excessive task failures.
+
+By following these steps, you should be able to diagnose and address the issue of failed tasks on an executor in Apache Spark.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["5rzGZY3Y043zTVQEMtHdobv728w"]
+      }
+    ]
+  }
+}
