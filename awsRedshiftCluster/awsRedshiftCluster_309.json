@@ -1,0 +1,33 @@
+{
+  "name": "Cluster Health Status.",
+  "description": "Cluster Health Status Check.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Validate that your VPC and security groups are properly configured.
+ 2. Ensure that the cluster is not in an "INACCESSIBLE" state due to network connectivity issues.
+ 3. Check for any recent changes or updates to the cluster configuration, as these might have caused the health status to change.
+ 4. If the issue persists, consider checking the AWS Support Center for any known issues or workarounds related to the Redshift service.
+
+For more information on troubleshooting cluster health issues, refer to the AWS documentation on Troubleshooting Amazon Redshift Clusters.
+
+If you need further assistance, please let me know.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["3IvOYvjRbhnkKLOnUCZsgfJbIYA"]
+      }
+    ]
+  }
+}
