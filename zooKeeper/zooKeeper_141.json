@@ -1,0 +1,32 @@
+{
+  "name": "Maximum request latency is high",
+  "description": "This detector establishes a processing pipeline to check if the maximum request latency is reaching the threshold value.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Increase the timeout for client requests in ZooKeeper. The default timeout is 4 seconds, but you can increase it to 10-15 seconds to allow for slower-than-expected responses from servers.
+2. Verify that your data is being replicated across multiple nodes correctly. If there are any issues with replication, it could lead to increased request latencies.
+3. Check the network connectivity between the client and ZooKeeper server to ensure there are no network-related issues causing delays.
+4. Monitor the load on the ZooKeeper server to ensure it is not overwhelmed by too many concurrent requests.
+5. If the problem persists, consider increasing the number of ZooKeeper servers or adding more resources (CPU, memory) to the existing servers to handle the increased load.
+
+By implementing these steps, you should be able to reduce the Maximum request latency in ZooKeeper.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["2K5mO_e8cf-7FLn21WtSe7uG8X8"]
+      }
+    ]
+  }
+}
