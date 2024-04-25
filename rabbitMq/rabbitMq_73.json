@@ -1,0 +1,33 @@
+{
+  "name": "RabbitMQ has no consumers",
+  "description": "Current number of consumers is equal to the configured NoConsumers count",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the RabbitMQ server logs for any error messages related to consumer counts or queue statuses. These logs can provide valuable information about the cause of the problem.
+2. Verify that the RabbitMQ user and password are correct and up-to-date. Incorrect credentials can prevent consumers from connecting to the RabbitMQ server.
+3. Ensure that the RabbitMQ user has the necessary permissions to access the queues and bindings. If the user does not have the required permissions, the consumers may not be able to connect and process messages.
+4. Review the consumer configuration settings. Make sure that the consumers are started and running correctly, and that they are subscribed to the appropriate queues.
+5. If the issue persists, consider increasing the number of consumers temporarily to allow messages to flow through. This can help identify any potential issues with the consumer code or configuration. Once the issue is resolved, you can then reduce the number of consumers back to the desired level.
+6. If none of the above steps resolve the issue, it may be necessary to restart the RabbitMQ server or check the network connectivity between the consumers and the RabbitMQ server.
+
+By following these steps, you should be able to diagnose and resolve the "RabbitMQ has no consumers" issue.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["w1BpLMvQkV2D6f2QBxTwaLGEvys"]
+      }
+    ]
+  }
+}
