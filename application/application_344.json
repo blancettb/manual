@@ -1,0 +1,33 @@
+{
+  "name": "Sudden increase in latency for a fraction of all requests",
+  "description": "Detects a rapid increase in the given latency KPI percentile relative to the KPIs values in the last 30 minutes. The magnitude of the increase in latency should also exceed the relative and absolute threshold parameters below. This rule only applies for Applications configured to use All Calls KPIs or that have not yet been configured to use by, default, either All Calls or Inbound Calls KPIs.
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Understand the root cause of the issue: Analyze the application logs, network traffic, and system metrics to identify the underlying cause of the sudden increase in latency.
+2. Implement corrective actions: Based on the root cause analysis, implement appropriate corrective actions to address the issue. This may include optimizing database queries, tuning application code, addressing network congestion, or implementing load balancing strategies.
+3. Monitor and validate: After implementing the corrective actions, monitor the application performance and validate whether the latency issues have been resolved.
+4. Adjust monitoring thresholds: Based on the outcome of the monitoring and validation process, adjust the monitoring thresholds for the latency KPI to ensure that they are properly calibrated and able to detect future increases in latency before they become critical.
+5. Provide feedback: Document the resolution steps taken and share the findings with relevant stakeholders to prevent similar occurrences in the future.
+
+By following these steps, you can effectively diagnose and resolve the Sudden increase in latency for a fraction of all requests issue in your application.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["m3tjpf3rfBjDUCXqea5v0HfAqNc"]
+      }
+    ]
+  }
+}
