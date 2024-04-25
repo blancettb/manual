@@ -1,0 +1,31 @@
+{
+  "name": "WebContainer thread pool active threads reached maximum",
+  "description": "This detector establishes a processing pipeline to validate the number of active threads in WebContainer thread pool is reaching maximum limit.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Validate if there are any hung threads by checking the "Thread Dump" for long-running requests or applications. A high number of hung threads can contribute to the WebContainer thread pool reaching its maximum limit.
+2. If hung threads are identified, consider increasing the size of the WebContainer thread pool. You can do this by adding more server processes or increasing the maximum threads per server setting. However, be cautious not to overcommit system resources, as this can lead to performance issues and other problems.
+3. Monitor the application's resource usage, such as CPU, memory, and disk I/O. If the application is consuming excessive resources, consider optimizing its code, reducing its workload, or scaling down its functionality until the resource usage returns to normal levels.
+4. Check if there are any ongoing maintenance activities or updates that could impact the WebContainer thread pool behavior. In some cases, these activities might require adjusting the thread pool settings or configurations.
+5. If none of the above steps resolve the issue, consider investigating the root cause of the high thread count, such as inefficient application code, misconfigured settings, or hardware limitations. Implementing appropriate fixes and optimizations based on the findings will help prevent similar issues from occurring in the future.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["mb1KLIZOtrX9Ai77NlvKIWq3kIQ"]
+      }
+    ]
+  }
+}
