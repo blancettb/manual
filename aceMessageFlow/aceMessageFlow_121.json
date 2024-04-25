@@ -1,0 +1,32 @@
+{
+  "name": "ACE Message Flow Processing Errors",
+  "description": "Number of errors that occur when processing a message.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the error log for more information about the specific error and its cause. The error log can be found in the <ACE_HOME>/logs directory.
+2. Investigate any missing or incorrect configuration settings related to the message flow. This may include issues with the message definition, input/output parameters, or connection settings.
+3. Ensure that the required software components, such as databases or other external systems, are properly installed and configured.
+4. Review the ACE Message Flow documentation for best practices and recommendations for troubleshooting and resolving common issues.
+5. If the problem persists, consider reaching out to the ACE Support team for further assistance. They can provide additional guidance and help diagnose any underlying issues.
+
+By following these steps, you should be able to identify and resolve the ACE Message Flow Processing Errors, ensuring that your message flows are functioning correctly.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["F4werlxe2R2EkichZ5O33CwT-Jg"]
+      }
+    ]
+  }
+}
