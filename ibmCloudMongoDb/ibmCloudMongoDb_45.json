@@ -1,0 +1,31 @@
+{
+  "name": "Percentage of disk space used is too high",
+  "description": "Checks whether the percentage of disk space used exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the current disk usage and free space on your MongoDB server. You can use the command `df -h` in the terminal to view the disk usage for both the data directory and the logs directory.
+2. If the disk usage is close to or over the threshold, consider increasing the size of the data files or the log files. To do this, you can modify the `mongod.conf` file by adding or updating the `dbPath` and/or `logPath` settings. The new values should be larger than the current ones.
+3. After modifying the configuration file, restart the MongoDB service using the command `sudo systemctl restart mongod`.
+4. Monitor the disk usage again after some time to ensure that it remains below the threshold.
+
+If the issue persists, you may need to adjust the threshold value in the monitoring alert or contact the support team for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Ga_SjEnu-LYHZP31_7S3e69r4_8"]
+      }
+    ]
+  }
+}
