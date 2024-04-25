@@ -1,0 +1,38 @@
+{
+  "name": "Flush all command executed",
+  "description": "Detects high number of flush_all command",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the server's load and memory usage: Before executing the Flush all command, ensure that the server has sufficient resources (memory and CPU) to handle the request. You can use monitoring tools like top or htop to check the server's load and free memory.
+
+2. Limit the number of concurrent flushes: To prevent overwhelming the server with too many simultaneous flush requests, consider limiting the number of concurrent flushes. This can be done by setting the max-conns-per-server parameter in your memcached configuration file. The default value is 16, but you can adjust it based on your server's capabilities.
+
+3. Implement an eviction policy: An eviction policy helps manage the memory usage by automatically removing less frequently used items from the cache. By implementing a suitable eviction policy, such as LRU (Least Recently Used), you can ensure that the most relevant data remains in the cache while minimizing the overall memory footprint.
+
+4. Monitor the cache hit rate: Regularly monitor the cache hit rate to identify any potential issues related to the cache's performance. A low cache hit rate might indicate that the cache is not effectively managing its content, and you may need to fine-tune your eviction policy or other settings.
+
+5. Update the memcached version: If you are using an outdated memcached version, it might not support the latest features or optimizations. Consider upgrading to the latest version to take advantage of improvements in handling large numbers of flush requests and overall performance.
+
+6. Adjust the flush interval: If the flush_all command is executed frequently, you can try reducing the flush interval to give the server more time to process requests between flushes. However, be cautious not to set the interval too low, as it could lead to stale data if the server cannot keep up with the update rate.
+
+7. Optimize your application's data access patterns: Ensure that your",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["hSS2WTHDdyV_Fe2s18u1tFLcA_o"]
+      }
+    ]
+  }
+}
