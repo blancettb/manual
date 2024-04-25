@@ -1,0 +1,32 @@
+{
+  "name": "IBM MQ event - Bridge Stopped",
+  "description": "Bridge Stopped From MQ Events",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the queue manager status: Use the command "mqsicreate qmgr" to check if the queue manager is running. If it's not, start it using the command "strmqmgr".
+2. Verify the bridge: Use the command "netstat -an | grep <bridge_name>" to verify that the bridge is up and running. Replace <bridge_name> with the actual name of your bridge.
+3. Review the error logs: Look for any error messages or warnings in the IBM MQ error logs related to the bridge. These logs are typically located in the "<install_dir>/errors" directory.
+4. Investigate network connectivity issues: Ensure that there are no network connectivity problems between the components involved in the bridge.
+5. Restart the bridge: If all else fails, you can restart the bridge using the command "strmqbr <bridge\_name>".
+
+If you continue to experience issues, consider checking the IBM MQ documentation or reaching out to IBM Support for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["47JZRYliE3pyt5vPlWVriRfUYaM"]
+      }
+    ]
+  }
+}
