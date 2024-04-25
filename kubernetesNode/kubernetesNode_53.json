@@ -1,0 +1,32 @@
+{
+  "name": "Allocatable memory too low",
+  "description": "Requested Memory to Available memory ratio is approaching the configured threshold.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the available memory on the node by running the command `free -h`. This will give you an idea of how much physical memory is currently available on the node.
+2. Review the pod specifications and ensure that they are not requesting more memory than what is actually required for their workloads. You can use commands like `kubectl top pods` or `podman top` to view the resource usage of your pods.
+3. If the pods are requesting excessive memory, consider resizing them to fit within the available memory constraints of the node. You can use commands like `kubectl set resources` or `podman resize` to adjust the resource requests and limits of your pods.
+4. If the available memory on the node is still insufficient even after adjusting the pod specifications, you may need to consider adding more memory to the node. This can be done by increasing the size of the node's swap space or adding additional physical memory to the node.
+5. Monitor the memory usage of the node over time and take corrective actions as needed. This will help you identify any trends or patterns in memory consumption and prevent future issues from occurring.
+
+By following these steps, you should be able to resolve the Allocatable memory too low issue and ensure that your Kubernetes cluster remains stable and performant.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["i2Idt-9mX-HufK3UnGZHeea4DnQ"]
+      }
+    ]
+  }
+}
