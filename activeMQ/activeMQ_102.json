@@ -1,0 +1,33 @@
+{
+  "name": "Memory usage is close to the limit",
+  "description": "Detects high memory usage (close to 100% of its limit)",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check if there are any long-running messages or consumers that could be consuming excessive memory. You can use tools like VisualVM or JConsole to identify these issues.
+2. If you find such messages or consumers, consider stopping or reducing their activity to free up memory.
+3. Another potential cause could be large message sizes. You can adjust the message delivery mode in ActiveMQ to reduce the size of messages being delivered. By default, it is set to "Blocking", which may consume more memory due to larger message copies. You can change it to "Non-Blocking" to avoid this issue.
+4. If the issue persists, you can increase the maximum heap size for ActiveMQ by modifying the `activemq.xml` file. To do this, locate the `<heapSize>` element in the file and increase its value. However, keep in mind that increasing the heap size requires careful consideration as it can impact the overall system performance.
+5. Lastly, if none of the above steps help, you can consider restarting the ActiveMQ broker to reset its memory usage. This should only be considered as a last resort, as it may impact the availability of your messaging system.
+
+By following these steps, you should be able to resolve the high memory usage issue in ActiveMQ.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["KfqADndqTCPlwynY7TyWG196a08"]
+      }
+    ]
+  }
+}
