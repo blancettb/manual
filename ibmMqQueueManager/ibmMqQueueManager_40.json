@@ -1,0 +1,29 @@
+{
+  "name": "IBM MQ Publish/Subscribe Engine status",
+  "description": "Check the IBM MQ Publish/Subscribe Engine status.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check if the queue manager is started and running. You can use the command "netstat -an | grep <queue\_manager\_name>" in a command prompt to check if there are any listening ports for the queue manager. If no ports are listed, it means that the queue manager is not running.
+2. If the queue manager is already started, try stopping and restarting it. To do this, open a command prompt and run the command "stopmqm <queue\_manager\_name>". After stopping the queue manager, wait for a few moments before starting it again using the command "startmqm <queue\_manager\_name>".
+3. If the problem persists after restarting the queue manager, check the logs for any error messages or warnings related to the IBM MQ Publish/Subscribe Engine. You can find the logs in the "<installation\_directory>/wmq/log" directory. Look for any entries related to the IBM MQ Publish/Subscribe Engine and investigate them to determine the cause of the issue.
+4. If you cannot resolve the issue yourself, consider contacting your system administrator or IBM support for further assistance. They may be able to provide more specific guidance based on your environment and configuration.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["bUsCYaxd8TVvgnQo7OC8lnEodwc"]
+      }
+    ]
+  }
+}
