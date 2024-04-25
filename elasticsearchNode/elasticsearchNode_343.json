@@ -1,0 +1,33 @@
+{
+  "name": "Heap overallocation",
+  "description": "This rule evaluates whether the heap size setting of the Elasticsearch is too big",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the current heap size and max heap size settings in your Elasticsearch configuration file. You may need to increase the max heap size based on your system's resources and requirements.
+2. Monitor the Elasticsearch logs for any warnings or error messages related to the heap size. These messages can provide more information about potential issues and help you identify the root cause.
+3. If you are using a managed Elasticsearch service, contact the support team for assistance. They can help you analyze the problem and implement a solution tailored to your specific environment.
+4. Consider optimizing your data indexing and query patterns to reduce the load on the Elasticsearch heap. This may include implementing data partitioning, tuning filter queries, or adjusting mapping configurations.
+5. Regularly review and update your Elasticsearch configuration settings to ensure they align with your system's evolving needs and resource availability.
+
+By following these steps, you can effectively manage Heap overallocation in Elasticsearch and maintain optimal performance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["8_TNMoIsKA87DpapxMT9KF7V-S4"]
+      }
+    ]
+  }
+}
