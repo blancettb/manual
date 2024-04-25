@@ -1,0 +1,33 @@
+{
+  "name": "OTel Database status is down.",
+  "description": "The OTel Database is DOWN.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the OTel Database server for any error messages or warnings.
+ 2. Ensure that the database service is running on the server by checking the Windows services list.
+ 3. Restart the OTel Database service if it is not running.
+ 4. Verify that the ODBC driver and JDBC driver are properly installed and configured.
+ 5. Check the network connectivity between the client and the server.
+ 6. If the problem persists, consider checking the database logs for more information.
+
+If you are still experiencing issues after attempting these steps, please contact the IT department for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["4uWZ41hwXwvKeDYjY8bSK8rqFzQ"]
+      }
+    ]
+  }
+}
