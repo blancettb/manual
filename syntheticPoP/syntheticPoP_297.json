@@ -1,0 +1,32 @@
+{
+  "name": "Synthetic PoP status",
+  "description": "Checks the status of Synthetic PoP.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the health of the Synthetic PoP by navigating to the "Monitoring" section and verifying if there are any error messages or warnings related to the Synthetic PoP.
+2. If there are no errors or warnings, check the connectivity between the user's location and the Synthetic PoP by pinging the IP address of the Synthetic PoP from the user's device.
+3. Ensure that the Synthetic PoP is accessible from the internet by using a tool like "whatismyipaddress.com".
+4. If the Synthetic PoP is not reachable from the internet, it might be an issue with the network configuration or firewall rules. You may need to contact your IT department for assistance.
+5. If the Synthetic PoP is reachable but still shows as down, it could be due to an issue with the Synthetic PoP itself. In this case, you should contact the support team for the Synthetic PoP service for further assistance.
+
+It is important to note that the Synthetic PoP status should ideally show as "Up" for optimal performance and reliability. If the Synthetic PoP status remains "Down" for an extended period, it might indicate a more significant issue that requires immediate attention.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["zqQv6u19rdjZ40nhAfecrYjGrac"]
+      }
+    ]
+  }
+}
