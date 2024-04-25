@@ -1,0 +1,33 @@
+{
+  "name": "Maximum number of JDBC connections reached",
+  "description": "This detector establishes a processing pipeline to check the total number of Jdbc connectionsand validates whether the number is reaching the maximum limit for the server configuration.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the current number of JDBC connections: Use the command `netstat -an | grep LISTEN` in the command line to see the current number of active JDBC connections.
+2. Identify the application that is consuming the most connections: Look at the process ID (PID) associated with the highest number of connections and use the command `ps aux | grep <PID>` to find the name of the application.
+3. Increase the maximum number of JDBC connections: If necessary, increase the maximum number of JDBC connections for the GlassFish server by modifying the `domain.xml` file. Find the `jdbc-connection-pool` element and add or modify the `max-size` attribute to set a higher value.
+4. Restart the GlassFish server: After making changes to the `domain.xml` file, restart the GlassFish server to apply the new settings.
+5. Monitor the situation: After increasing the maximum number of JDBC connections, monitor the system to ensure that the number of connections does not exceed the new limit. If it does, consider further increasing the limit or optimizing your application's connection usage.
+
+By following these steps, you should be able to resolve the Maximum number of JDBC connections reached issue in GlassFish.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["vKFnICOO9gwynUJFXgBVDPsDvcw"]
+      }
+    ]
+  }
+}
