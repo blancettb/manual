@@ -1,0 +1,38 @@
+{
+  "name": "RabbitMQ Erlang Processes count is critical",
+  "description": "Detects high number of processes",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Check RabbitMQ Server Health**: Before taking any action, ensure that your RabbitMQ server is running smoothly and there are no underlying issues causing the high process count. You can use tools like `rabbitmqctl status` or the web-based management interface to check the server's health.
+
+ 2. **Limit Consumer Connections**: If the high process count is due to an unusually high number of consumer connections, you can limit the maximum number of concurrent consumers using the `max_clients` setting in the RabbitMQ configuration file. This will help prevent further resource exhaustion and reduce the process count.
+
+ 3. **Implement Connection Timeouts**: By setting connection timeouts for producers and consumers, you can avoid long-lasting blocked connections that may contribute to the high process count. This can be done by modifying the `connection_timeout` and `channel_flow_control_timeout` settings in the RabbitMQ configuration file.
+
+ 4. **Monitor and Manage Message Queues**: Regularly monitor message queues and their associated processes to identify any potential bottlenecks or issues. If necessary, adjust queue parameters such as message delivery modes, prefetch sizes, and memory usage to optimize performance and reduce process counts.
+
+ 5. **Update RabbitMQ Software**: Make sure your RabbitMQ software is up-to-date with the latest patches and updates. Outdated versions may have known bugs or security vulnerabilities that could be contributing to the high process count.
+
+ 6. **Optimize RabbitMQ Configuration**: Review the RabbitMQ configuration file to ensure that it is optimized for your specific use case. This includes adjusting parameters such as thread pools, heap size, and message buffer sizes to accommodate the expected workload.
+
+ 7. **Consider Using RabbitMQ clustering**: If the high process count persists despite your efforts, consider implementing RabbitMQ clustering to distribute the workload across multiple nodes. This can help improve overall system resilience and reduce the impact of individual node failures on the overall process",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["3uFRESojFLylR28xVdFV4IPrp8A"]
+      }
+    ]
+  }
+}
