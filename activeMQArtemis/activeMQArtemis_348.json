@@ -1,0 +1,32 @@
+{
+  "name": "Addresses memory usage is close to the limit",
+  "description": "Detects high memory usage of all addresses (close to 100% of its limit)",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check if there are any messages stuck in the JournalDirectory due to network issues or broker restarts. To do this, navigate to the data directory and look for messages in the JournalDirectory. If there are any, remove them manually.
+2. If the above step does not resolve the issue, consider increasing the journal buffer size. You can increase it by modifying the `journal-buffer-size` parameter in the activemq.xml configuration file. However, be cautious when changing this value as a larger buffer can impact performance.
+3. Another potential solution is to reduce the number of durable subscribers. This can be done by adjusting the `max-connections` and `address-memory-high-watermark` parameters in the activemq.xml configuration file. Reducing the number of durable subscribers can help lower memory usage.
+4. Lastly, if none of the above steps resolve the issue, you may need to restart the broker. This should only be considered as a last resort, as it will result in a temporary disruption of service.
+
+These steps can help you diagnose and address the Addresses memory usage is close to the limit issue in activeMQ Artemis.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["baBiD8bngYO5BN8UR2kaJp6rzwQ"]
+      }
+    ]
+  }
+}
