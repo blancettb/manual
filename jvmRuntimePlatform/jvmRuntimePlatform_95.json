@@ -1,0 +1,32 @@
+{
+  "name": "Perm Gen is full (PS)",
+  "description": "This detector establishes a processing pipeline to detect the maximum Perm Gen PS Pools utilized.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Analyze the heap dump and identify the Perm Gen space that is causing the problem. You can use tools like VisualVM or YourKit to analyze the heap dump and find the Perm Gen space with the highest used size.
+2. Reduce the Perm Gen space size by decreasing the initial and maximum sizes of the Perm Gen space using the -XX:PermSize and -XX:MaxPermSize options in the JVM arguments. However, be cautious when reducing these values as it may impact the overall performance of the application.
+3. If reducing the Perm Gen space size does not help, consider increasing the survivor space ratio to allow more objects to survive between collections. You can do this by setting the -XX:SurvivorRatio option in the JVM arguments. A higher survivor space ratio can help reduce the frequency of Perm Gen collections.
+4. If the issue persists, consider reclaiming memory from the Metaspace, which is another type of Java heap used for storing class metadata. You can increase the Metaspace size using the -XX:MetaspaceSize option in the JVM arguments.
+5. Lastly, if none of the above steps work, you might need to consider other solutions such as optimizing your code, reducing object allocation rates, or increasing the available system memory.
+
+It's important to note that adjusting JVM settings requires careful consideration and testing to ensure that the changes don't negatively impact the overall performance of the application. Always monitor the application's behavior after making any adjustments to determine if the Perm Gen issue has been resolved.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["2PXPfUgf7caOa-2t5Cly8P-Oy7w"]
+      }
+    ]
+  }
+}
