@@ -1,0 +1,45 @@
+{
+  "name": "Pending reads",
+  "description": "This rule checks whether the thread pool handling read requests is queueing up operations",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Increase the number of threads in the thread pool used for handling read requests. By default, Cassandra uses a single-threaded reader, which can lead to performance issues when dealing with high read traffic. To increase the number of threads, modify the `cassandra.yaml` configuration file and add the following line under the `request_handler` section:
+
+   ```
+   num_threads: <number_of_threads>
+   ```
+
+   Replace `<number_of_threads>` with the desired number of threads. A common choice is to set this value to 64 or higher.
+
+2. Optimize your data model and query strategy. In some cases, optimizing your data model and query strategy can help reduce the number of pending reads. This may involve denormalizing your data model, using secondary indices, or adjusting the consistency level of your queries.
+
+3. Monitor your system's resource usage. Keep an eye on CPU, memory, and disk usage on the nodes hosting your Cassandra cluster. If any node becomes overwhelmed, it could lead to increased pending reads. You might need to scale up your hardware resources (CPU, RAM, or storage) to accommodate the increased workload.
+
+4. Check for network-related issues. Slow or unreliable networks can cause delays in reading data from Cassandra nodes, leading to pending reads. Ensure that your network infrastructure is properly configured and optimized for low latency and high throughput.
+
+5. Update your Cassandra version. If you are experiencing persistent pending reads issues, consider upgrading to a newer version of Cassandra. Newer versions often include performance improvements and bug fixes that could help address pending reads concerns.
+
+6. Tune your compaction strategy. An overly aggressive compaction strategy can lead to increased pending reads as the system tries to merge small files and optimize storage. Adjusting the compaction threshold or frequency can help alleviate these issues.
+
+7. Use",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["AuPMHuQUxe3UC9TwO4cY3OSprh8"]
+      }
+    ]
+  }
+}
