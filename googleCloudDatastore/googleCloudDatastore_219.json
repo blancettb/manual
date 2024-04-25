@@ -1,0 +1,33 @@
+{
+  "name": "GCP Datastore request count increase",
+  "description": "Datastore request count increased significantly in last 30 minutes.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Check for any suspicious activities**: Ensure there are no unauthorized access attempts or abnormal data modification activities.
+ 2. **Examine your code for potential issues**: Look for any error handling mechanisms that might be causing repeated requests. Also, ensure your code is not performing unnecessary queries or mutations.
+ 3. **Optimize your queries and mutations**: Use the least amount of queries and mutations necessary to fulfill your application's requirements. This can help reduce the overall request count.
+ 4. **Monitor query performance**: Monitor the execution time and resource utilization of your queries. Long-running or resource-intensive queries can contribute to an increased request count.
+ 5. **Resize your instance or app engine project**: If the issue persists even after optimizing, consider resizing your instance or app engine project based on your traffic patterns and resource availability.
+ 6. **Contact Google Cloud Support**: If none of the above steps resolve the issue, contact Google Cloud Support for further assistance. They can provide more specific guidance based on your situation and environment.
+
+By following these steps, you should be able to diagnose and address the cause of the increased GCP Datastore request count.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["jJvwT0MTetYbCptBKsPU1gN09dA"]
+      }
+    ]
+  }
+}
