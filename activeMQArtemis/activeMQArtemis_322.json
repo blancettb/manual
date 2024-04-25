@@ -1,0 +1,32 @@
+{
+  "name": "ActiveMQ Artemis has no consumers",
+  "description": "Current number of consumers is equal to the configured NoConsumers count",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the network and ensure that the broker is running.
+ 2. Verify that the user is allowed to connect to the queue manager by checking the access control settings.
+ 3. If using a clustered setup, check if there are any network connectivity issues between nodes.
+ 4. Increase the number of consumers in the configuration file or use the ActiveMQ Artemis web console to increase the number of consumers.
+ 5. If the problem persists, consider restarting the ActiveMQ Artemis broker.
+
+If you're still experiencing issues after trying these steps, it might be helpful to consult the official ActiveMQ Artemis documentation or seek assistance from the community forums.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["-Za8Rsf6VwQLT6ZffGbUfD8zguA"]
+      }
+    ]
+  }
+}
