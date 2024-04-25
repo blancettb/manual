@@ -1,0 +1,31 @@
+{
+  "name": "Sudden increase in erroneous call rate",
+  "description": "Detects a rapid increase in the values of the erroneous call rate metric relative to the values in the last 10 minutes. The magnitude of the increase in erroneous call rate should also exceed the relative and absolute threshold parameters below.
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Review the data source and ensure that it is providing accurate and consistent information.
+2. Investigate any potential issues with the system or application that may be contributing to the increased error rate.
+3. Adjust the relative and absolute threshold parameters if necessary, based on your specific use case and requirements.
+4. Implement corrective actions to address the underlying causes of the erroneous calls.
+5. Monitor the erroneous call rate metric and other relevant metrics to ensure that the issue has been fully resolved and that the system is stable.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["2kEfyFXXRheJL7PTwwZoQcGXiII"]
+      }
+    ]
+  }
+}
