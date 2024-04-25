@@ -1,0 +1,40 @@
+{
+  "name": "Varnish hit rate is low",
+  "description": "Varnish hit rate is very low.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Increase Varnish instance size**: If your Varnish instance is not sized appropriately for your traffic volume, it may result in a low hit rate. You can increase the instance size based on your requirements and available resources.
+
+ 2. **Improve backend response time**: Slow backend responses can significantly impact Varnish's ability to cache requests. Optimizing backend performance by implementing caching strategies, optimizing database queries, or reducing server response times can help improve the hit rate.
+
+ 3. **Examine Varnish configuration**: Ensure that your Varnish configuration is optimized for your use case. This includes setting appropriate cache settings, such as cache timeout, compression, and SSL offloading. Also, verify that the VCL (Varnish Configuration Language) rules are correctly written and optimized.
+
+ 4. **Monitor Varnish stats**: Regularly monitor Varnish's performance metrics, such as hit rate, latency, and throughput, to identify any potential issues. Tools like Varnishstat or Prometheus can be used for this purpose.
+
+ 5. **Update Varnish version**: Keeping your Varnish version up-to-date can help ensure that you're taking advantage of the latest features and improvements. It might also address any known bugs or issues that could be impacting the hit rate.
+
+ 6. **Investigate network connectivity issues**: If the Varnish instance cannot connect to the backend servers, it will not be able to serve cached content. Verify that there are no network connectivity issues between Varnish and the backend servers.
+
+ 7. **Check for resource contention**: Resource contention on the same physical machine can negatively affect Varnish's performance. Ensure that the Varnish instance has sufficient CPU, memory, and disk I/O resources to handle the expected traffic volume.
+
+ 8. **Consider load balancing**: If you're using multiple backend servers, consider implementing a load balancer to distribute traffic more evenly",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["4qsdsanoZMvz8J-VaLTdI03zWpo"]
+      }
+    ]
+  }
+}
