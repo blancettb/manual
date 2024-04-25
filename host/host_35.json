@@ -1,0 +1,33 @@
+{
+  "name": "Permanent TCP retransmissions",
+  "description": "Checks whether the host has an unusual high number of TCP retransmission.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check network connectivity: Ensure that the host is properly connected to the network and that there are no physical or logical issues with the connection.
+ 2. Review system resources: Verify that the host has sufficient memory, CPU, and network resources to handle the workload.
+ 3. Investigate application behavior: Analyze the application's behavior and ensure that it is not causing unnecessary retransmissions. This may involve tuning application parameters or adjusting its interaction with the network.
+ 4. Implement appropriate network optimization techniques: Based on your findings, implement network optimization techniques such as traffic shaping, quality of service (QoS), or congestion control algorithms to improve network performance and reduce retransmissions.
+ 5. Monitor network health: Regularly monitor network health and performance metrics to identify potential issues before they become critical. This will help in maintaining optimal network conditions and reducing the likelihood of retransmissions.
+ 6. Consult documentation and support resources: Refer to the relevant documentation and support resources for your specific networking hardware and software to ensure that you are following best practices and using the most up-to-date configurations.
+
+By following these steps, you should be able to effectively address Permanent TCP retransmissions and improve overall network performance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["rWzyRb0MElOc7iFs9OgUqS6acg4"]
+      }
+    ]
+  }
+}
