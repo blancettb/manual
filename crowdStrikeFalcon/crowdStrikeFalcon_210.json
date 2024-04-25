@@ -1,0 +1,36 @@
+{
+  "name": "CrowdStrike agent is in reduced functionality mode",
+  "description": "Checks to see if a CrowdStrike agent is running in a reduced functionality mode",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. First, ensure that the CrowdStrike Falcon agent service is running by checking its status using the command "sudo systemctl status crowdstrike-falcon-agent". If it's not running, start it by executing "sudo systemctl start crowdstrike-falcon-agent".
+
+2. Next, check if there are any failed or stuck processes related to the CrowdStrike Falcon agent. You can do this by running the command "journalctl -f | grep crowdstrike" in the terminal. This will display any recent logs related to the CrowdStrike Falcon agent. Look for any error messages or indications of stuck processes.
+
+3. If there are any failed or stuck processes, you can try restarting the CrowdStrike Falcon agent by executing "sudo systemctl restart crowdstrike-falcon-agent".
+
+4. If the problem persists, you may need to investigate further by checking the CrowdStrike Falcon agent logs located at "/var/log/crowdstrike-falcon-agent/". These logs can provide more information about the cause of the reduced functionality and potential solutions.
+
+5. In some cases, you might need to contact CrowdStrike Support for assistance. They can help you diagnose and resolve any issues with your CrowdStrike Falcon setup.
+
+Remember to always follow best practices for security when dealing with system administration tasks, such as changing system settings or running commands as root.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["TELzfG-Rtlzrqx84LnjTUFePaQA"]
+      }
+    ]
+  }
+}
