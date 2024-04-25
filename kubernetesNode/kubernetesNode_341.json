@@ -1,0 +1,33 @@
+{
+  "name": "Kubernetes Node condition status",
+  "description": "When a node reports Bad Condition state for more than one minute",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the node's logs and events for any relevant error messages or warnings. This can help identify the root cause of the problem.
+2. Update the node's software packages and kernel to the latest version. Outdated software can sometimes cause issues with node conditions. You can use the command `sudo apt-get update && sudo apt-get upgrade` for Ubuntu systems or `yum update` for RHEL-based systems.
+3. Review the node's resource utilization, such as CPU, memory, and disk usage. If the node is overloaded, it may not be able to handle the workload effectively, leading to bad condition statuses. You can use commands like `top`, `htop`, or `iotop` to view resource utilization.
+4. Ensure that the node has sufficient network connectivity and is able to communicate with other nodes in the cluster. Use commands like `ping`, `curl`, or `telnet` to test network connectivity.
+5. If the issue persists, consider rebooting the node. A reboot can often resolve transient issues caused by software bugs or configuration problems. However, ensure that there are no pending updates or critical tasks running on the node before rebooting.
+6. If none of the above steps resolve the issue, you may need to contact your cloud provider or Kubernetes support for further assistance. They can help you diagnose and address any underlying hardware or infrastructure issues.
+
+Remember to monitor the node's condition after implementing any changes or fixes. This will help ensure that the issue has been fully resolved and prevent similar problems from occurring in the future.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["03nIj_lPbGsXw2vCDQekJGXb9Wk"]
+      }
+    ]
+  }
+}
