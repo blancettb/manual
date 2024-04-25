@@ -1,0 +1,35 @@
+{
+  "name": "Kafka request handler thread is under high load",
+  "description": "Checks whether the Kafka request handler is under high load.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Increase the number of partitions in your Kafka cluster: By increasing the number of partitions, you can distribute the data more evenly across the brokers, reducing the load on each broker and improving overall performance.
+2. Adjust the replication factor: The replication factor determines how many copies of each message are stored in the cluster. A higher replication factor can improve fault tolerance but may also increase the load on the brokers. You can adjust the replication factor based on your specific requirements and available resources.
+3. Optimize your producer and consumer configurations: Producer and consumer configurations such as buffer sizes, batch sizes, andlinger periods can significantly impact the load on the Kafka request handler. Optimizing these settings can help reduce the load and improve performance.
+4. Monitor and analyze Kafka metrics: Monitoring various Kafka metrics such as request rate, response time, and error rates can help identify potential bottlenecks and areas of high load. Analyzing these metrics can provide insights into how to optimize your Kafka setup and improve performance.
+5. Upgrade your Kafka version: If you're using an older version of Kafka, upgrading to a newer version may provide improvements in performance and stability, which could help alleviate high load issues.
+6. Scale up or down your Kafka cluster: If necessary, you can scale up or down your Kafka cluster to balance the workload and ensure that all brokers are not overwhelmed by heavy traffic.
+7. Implement load balancing: Load balancing can help distribute the workload across multiple Kafka instances, improving performance and preventing any single instance from becoming a bottleneck.
+8. Add more nodes to your Kafka cluster: Adding more nodes to your Kafka cluster can help distribute the workload and improve performance, especially in large-scale deployments.
+9. Configure network settings: Ensuring that your network settings are optimized can help prevent network congestion and improve performance. This includes configuring network buffer sizes, socket time",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["VC8gJSEYiNYs5AMtK26zbCzAu2Q"]
+      }
+    ]
+  }
+}
