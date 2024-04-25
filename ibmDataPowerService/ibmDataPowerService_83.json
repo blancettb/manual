@@ -1,0 +1,30 @@
+{
+  "name": "IBM DataPower Service status",
+  "description": "Checks the DataPower Service status.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the network connection between your application and the IBM DataPower Service.
+ 2. Ensure that the IBM DataPower Service is running and accepting connections.
+ 3. Verify that the SSL certificate for the IBM DataPower Service is valid and trusted by your application.
+ 4. If the problem persists, check the logs for the IBM DataPower Service to identify any error messages or warnings.
+ 5. If necessary, contact the support team for the IBM DataPower Service for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["WSvW6xHPF351BpZpNVFrMo_jR6w"]
+      }
+    ]
+  }
+}
