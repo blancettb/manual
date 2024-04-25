@@ -1,0 +1,35 @@
+{
+  "name": "Sudden increase in latency of inbound calls",
+  "description": "Detects a rapid increase in the given latency KPI percentile relative to the KPIs values in the last 30 minutes. The magnitude of the increase in latency should also exceed the relative and absolute threshold parameters below. This rule only applies for Applications configured to use Inbound Calls KPIs or that have not yet been configured to use by, default, either All Calls or Inbound Calls KPIs.
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Review the call flow and network infrastructure to identify any potential issues causing increased latency.
+2. Investigate any recent changes in the system, such as software updates, configuration changes, or new integrations.
+3. Check if there are any known issues or maintenance windows related to your telephony provider or communication channels.
+4. If the problem persists, consider implementing a solution that involves splitting the traffic across multiple servers or regions to distribute the load and reduce latency.
+5. Monitor the latency KPI over time to ensure that it returns to normal levels after implementing the solution.
+
+If the issue continues to persist, you may want to contact support for further assistance.
+
+Additionally, you can refer to the provided documentation for more information about the rule and its settings: <https://yourdomain.com/path/to/documentation/rule/Sudden%20Increase%20in%20Latency%20of%20Inbound%20Calls>",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["NLNlk8R0kCkuAOU4xE029Yspe3c"]
+      }
+    ]
+  }
+}
