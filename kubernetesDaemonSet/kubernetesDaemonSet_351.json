@@ -1,0 +1,32 @@
+{
+  "name": "Available replicas is less than desired replicas",
+  "description": "Checks whether the total number of available replicas is less than the number of desired replicas. This indicates that the Kubernetes DaemonSet is missing replica pods.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the status of the daemon set and its associated pods. Use the command `kubectl get ds <daemonset-name>` to view the current status. Look for any events or conditions that indicate issues with the replicas.
+2. If there are no apparent issues, increase the desired replicas value in the DaemonSet configuration file. You can do this by modifying the YAML file and updating the desiredReplicas field. Save the changes and apply them using `kubectl apply -f <daemonset-file>.yaml`.
+3. After making the change, allow some time for the new replicas to be created. It might take a few minutes for the DaemonSet to scale up the number of replicas based on the updated configuration.
+4. Verify that the problem has been resolved by checking the DaemonSet's status again. The Available replicas should now be greater than or equal to the desired replicas.
+5. If the issue persists, consider investigating other potential causes, such as resource exhaustion or network connectivity problems.
+
+By following these steps, you should be able to resolve the Available replicas is less than desired replicas issue in your Kubernetes DaemonSet.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["CUlufK4Lz853ngRoEXSjTdod6Lg"]
+      }
+    ]
+  }
+}
