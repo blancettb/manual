@@ -1,0 +1,33 @@
+{
+  "name": "ActiveMQ Artemis has no connections",
+  "description": "Current number of connections is equal to the configured NoConnections count",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the network and ensure that the broker is running on the expected host and port.
+ 2. Verify that the user running the broker has the necessary permissions to create connections.
+ 3. Inspect the logs for any error messages related to connection attempts.
+ 4. If there are no errors, consider increasing the default maximum number of connections in the `artemis.yml` configuration file.
+ 5. If the problem persists, you may need to increase the value of the `maxConnections` property in the `core-site.xml` configuration file.
+ 6. Restart the ActiveMQ Artemis broker and check if the issue is resolved.
+
+If none of these steps resolve the issue, it might be a good idea to consult the official ActiveMQ Artemis documentation or seek assistance from the community forums.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["ZiNnqTChlzvSOrmQ9yPGUDqAmQw"]
+      }
+    ]
+  }
+}
