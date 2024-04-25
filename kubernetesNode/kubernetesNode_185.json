@@ -1,0 +1,31 @@
+{
+  "name": "Allocatable CPU too low",
+  "description": "Requested CPU to Available capacity ratio is approaching the configured threshold.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the CPU usage on the node by running the command `kubectl top nodes`. This will show you the current CPU usage for each node in your cluster.
+2. If the CPU usage is high on one or more nodes, consider adding more CPUs to those nodes. You can do this by adding new machines to your cluster or resizing existing machines.
+3. If adding more CPUs is not an option, you can reduce the workload on the nodes with high CPU usage. This can be done by scaling down certain applications or services, or by implementing load balancing to distribute the workload more evenly across the nodes.
+4. Monitor the CPU usage over time to ensure that it remains below the configured threshold. If the CPU usage continues to be high, you may need to take further action, such as adding more nodes to your cluster or upgrading to a larger machine type.
+
+By following these steps, you should be able to resolve the Allocatable CPU too low issue and ensure that your Kubernetes cluster is running smoothly.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["UXte46Mn22vyt6I1wKJ9y7KZMFM"]
+      }
+    ]
+  }
+}
