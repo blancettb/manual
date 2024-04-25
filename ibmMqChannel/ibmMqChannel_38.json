@@ -1,0 +1,35 @@
+{
+  "name": "IBM MQ Channel InDoubt status",
+  "description": "Check whether IBM MQ Channel is currently in doubt.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. First, ensure that the channel is properly connected and that both the client and server have started their channels.
+2. If the channel is already connected but still in doubt, you can attempt to resolve the issue by restarting the channel on one or both sides. This can be done by stopping and restarting the IBM MQ queue manager, or by disconnecting and reconnecting to the channel using the appropriate API.
+3. If the channel remains in doubt after restarting it, you may need to check for any errors or warnings in the system log related to the channel. These could provide more information about the cause of the issue.
+4. If none of these steps resolve the issue, you may need to contact IBM Support for further assistance.
+
+Additional context:
+
+* IBM MQ Channel InDoubt status indicates that a channel is unable to establish a connection to its partner channel due to a lack of synchronization between them.
+* This status can occur when there are network issues, connectivity problems, or other factors preventing the channels from communicating with each other.
+* To resolve this issue, it's important to first ensure that the channels are properly configured and that there are no network or connectivity issues. If the problem persists, you can try restarting the channels or checking for any errors or warnings in the system log.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["F_LmBwygtD_kaVVeuBVVC4Ze2Js"]
+      }
+    ]
+  }
+}
