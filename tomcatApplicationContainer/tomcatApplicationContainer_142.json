@@ -1,0 +1,32 @@
+{
+  "name": "Sudden increase in the number of session",
+  "description": "This rule checks for a sudden increase in the number of sessions.
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your application logs and server metrics to identify any unusual patterns or spikes in the number of sessions.
+2. If you find any suspicious activity, investigate the root cause, such as code changes, configuration issues, or third-party integrations.
+3. Once you have identified the cause, take appropriate action to address it, such as rolling back code changes, fixing configuration errors, or disabling problematic third-party integrations.
+4. After addressing the issue, monitor your application logs and server metrics to ensure that the number of sessions returns to normal levels.
+
+If you are still experiencing problems, you may want to consider increasing the threshold value for this rule or adjusting the time window to better match your specific use case. You",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["qNkrZgYejzNahC06ZB_upS5x70w"]
+      }
+    ]
+  }
+}
