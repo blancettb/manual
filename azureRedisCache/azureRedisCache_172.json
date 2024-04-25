@@ -1,0 +1,36 @@
+{
+  "name": "Azure Redis Cache client connections are getting closer to max connections limit",
+  "description": "Number of Azure Redis Cache Client Connections is reaching the max connections limit.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "   1. Increase the number of connections in the Azure Redis Cache: You can increase the number of connections by modifying the connection limit in the Azure Redis Cache settings. This can be done by navigating to the cache's settings and adjusting the value for the 'max connections' setting. Keep in mind that increasing the number of connections may also increase the load on your cache server and potentially impact performance.
+
+   2. Implement connection pooling: Connection pooling is a technique used to manage and reuse connections between clients and servers. By implementing connection pooling, you can help ensure that connections are reused efficiently and that the overall number of active connections remains within the allowed limit.
+
+   3. Monitor cache usage and connection patterns: Regularly monitor the usage and connection patterns of your Azure Redis Cache to identify any potential issues or bottlenecks. This can help you take proactive measures to prevent the number of connections from reaching the max limit.
+
+   4. Use a caching strategy: Implementing a caching strategy can help you optimize the use of your Azure Redis Cache and prevent the number of connections from reaching the max limit. A well-designed caching strategy can help you manage data access and distribution effectively, ensuring that your cache remains responsive and efficient.
+
+   5. Consider using a dedicated Redis cloud instance: If your application requires high availability and low latency, consider migrating to a dedicated Redis cloud instance. Dedicated instances offer higher connection limits and better performance compared to standard Azure Redis Cache instances.
+
+By following these steps, you can effectively address the issue of Azure Redis Cache client connections being close to the max connections limit and ensure optimal performance and stability for your application.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["jEzHD-Y088HA3FUK7P_iPnjL6nE"]
+      }
+    ]
+  }
+}
