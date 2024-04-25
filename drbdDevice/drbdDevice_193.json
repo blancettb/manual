@@ -1,0 +1,32 @@
+{
+  "name": "Drbd quorum status",
+  "description": "Check if this device has DRBD quorum.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. First, check if the node is part of a cluster by running the command `drbdadm ping` and verifying that it returns "ok". If not, add the node to the cluster using the command `drbdadm add <device> <node_name>`.
+2. Next, ensure that the DRBD devices are properly configured and synchronized. You can use the command `drbdsetup --status` to check the status of the devices.
+3. If the devices are synchronized but the quorum status remains unresolved, you may need to manually adjust the quorum settings. To do this, first, stop the DRBD service on both nodes with the command `systemctl stop drbd@<device>`. Then, modify the quorum settings in the /etc/drbd.conf file on each node. The default quorum size is 3% of the total disk space. You can increase or decrease this value based on your requirements. Save the changes and restart the DRBD service on both nodes with the command `systemctl start drbd@<device>`.
+
+If you still encounter issues, consider checking the DRBD logs for more information. You can access the logs by running the command `journalctl -f | grep drbd` on the node experiencing the problem.
+
+By following these steps, you should be able to resolve the Drbd quorum status issue and ensure that your DRBD devices are properly configured and synchronized.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["DxAnn6ULHw-PFB6SVM0BhYgmWbU"]
+      }
+    ]
+  }
+}
