@@ -1,0 +1,32 @@
+{
+  "name": "IBM DataPower Appliance percentage of CPU usage",
+  "description": "IBM DataPower appliance cpu usage is getting closer to 100%.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check for any running long-lasting or resource-intensive tasks on the appliance. If such tasks are found, ensure they are completed or terminated.
+ 2. Verify if there are any misbehaving services or applications that might be consuming excessive resources. You can check the system logs for any error messages or warnings related to high CPU usage.
+ 3. Inspect the network traffic patterns and ensure that there are no unusual spikes in traffic that could be causing high CPU load.
+ 4. If the problem persists, consider increasing the memory allocation for the IBM DataPower Appliance. This can help alleviate some of the CPU pressure by allowing the appliance to handle more concurrent connections or requests. However, this should be done with caution as overprovisioning can lead to other issues.
+ 5. Lastly, if none of the above steps resolve the issue, it may indicate a hardware failure or configuration problem with the appliance. In this case, contact IBM Support for further assistance.
+
+It's important to note that regular monitoring of CPU usage can help prevent such issues from occurring in the first place. By keeping an eye on CPU usage trends, you can identify potential problems early on and take proactive measures to mitigate them.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["cQJ9sK6dPBNlTaIEaborY7Ch4Ew"]
+      }
+    ]
+  }
+}
