@@ -1,0 +1,36 @@
+{
+  "name": "RabbitMQ network partition detected",
+  "description": "RabbitMQ cluster has experienced a network partition. There is a risk of losing data.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Check Network Connectivity**: Ensure that all nodes in the RabbitMQ cluster are able to communicate with each other over the network. You can use tools like `ping` or `telnet` to check connectivity between nodes.
+
+2. **Restart Nodes**: If there are any issues with network connectivity, you may need to restart the affected nodes. This will help in re-establishing the network connections and resolving the partition.
+
+3. **Update Cluster Configuration**: In some cases, the network partition might be caused by an incorrect configuration in the RabbitMQ cluster. You may need to update the configuration to ensure that all nodes are able to communicate with each other.
+
+4. **Use Erlang Network Diagnostic Tools**: Erlang, which is the underlying technology used by RabbitMQ, provides diagnostic tools that can help identify network issues. You can use these tools to diagnose and resolve network related problems in the RabbitMQ cluster.
+
+5. **Monitor Cluster Health**: After taking the above steps, it's important to monitor the health of the RabbitMQ cluster to ensure that the network partition has been resolved and no further issues arise. You can use tools like RabbitMQ Management plugin or third-party monitoring solutions to monitor the cluster health.
+
+By following these steps, you should be able to resolve the RabbitMQ network partition detected issue and ensure that your RabbitMQ cluster is running smoothly.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["k3VfKvSnXA6Ik_h9mr3rRBHcVZE"]
+      }
+    ]
+  }
+}
