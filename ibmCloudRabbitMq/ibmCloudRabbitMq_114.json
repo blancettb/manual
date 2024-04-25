@@ -1,0 +1,32 @@
+{
+  "name": "Memory usage too high",
+  "description": "Checks whether the memory usage exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the RabbitMQ server's logs for any error messages or warnings related to memory consumption.
+2. If there are no specific error messages, try increasing the rabbitmq\_user\_memory and rabbitmq\_admin\_memory settings in the RabbitMQ configuration file (usually located at /etc/rabbitmq/rabbitmq.config) to allow for more memory usage. However, keep in mind that increasing these values may also increase the risk of running out of memory if not managed properly.
+3. Monitor the RabbitMQ server's memory usage over time using tools like top or htop to identify any sudden spikes in memory consumption.
+4. If the memory usage continues to be an issue, consider upgrading your system's hardware resources (CPU, RAM) to accommodate the increased memory requirements of the RabbitMQ server.
+5. Implement proper resource management practices, such as regularly stopping and starting the RabbitMQ server when it is not in use, and monitoring its resource usage to prevent excessive memory consumption.
+
+By following these steps, you should be able to resolve the Memory usage too high issue on your IBM Cloud RabbitMQ server.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["czPI-LCNYJhUvA-J6oHAYven_28"]
+      }
+    ]
+  }
+}
