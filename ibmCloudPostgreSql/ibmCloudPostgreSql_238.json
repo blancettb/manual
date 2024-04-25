@@ -1,0 +1,40 @@
+{
+  "name": "Database is encountering transaction deadlocks",
+  "description": "Warns if the rate of deadlocks is greater than 0",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Identify the query or queries that are causing the deadlock. You can use the following command to view the queries and related information:
+```sql
+SELECT * FROM pg_stat_activity;
+```
+
+ 2. Analyze the identified queries to determine if they can be modified to avoid deadlocks. If necessary, rewrite the queries to use explicit transactions or serializable access levels.
+
+ 3. Increase the maximum number of connections for your database instance. This can help reduce the likelihood of deadlocks occurring due to resource contention. To increase the maximum number of connections, execute the following command:
+```sql
+ALTER DATABASE mydb SET max_connections = <new_max_connections>;
+```
+
+ 4. Monitor the database's performance and deadlock rates after implementing these changes. If the deadlock rate remains high, consider further optimizing your application's queries or using alternative strategies to prevent deadlocks.
+
+It is important to note that preventing deadlocks requires careful consideration of your application's design and usage patterns. By following best practices such as committing transactions promptly and avoiding long-running queries, you can significantly reduce the risk of deadlocks in your PostgreSQL databases.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["zrU0_8Gh-kATXfupkL-AVWnfSDs"]
+      }
+    ]
+  }
+}
