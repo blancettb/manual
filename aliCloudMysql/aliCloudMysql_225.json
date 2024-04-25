@@ -1,0 +1,36 @@
+{
+  "name": "Average CPU Usage",
+  "description": "Ratio between Used and CPU usage limit is greater than the configured ratio threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your MySQL configuration settings. Ensure that the 'innodb_buffer_pool_size' is set appropriately for your workload and hardware resources. A larger buffer pool can help reduce I/O wait times and improve overall performance.
+ 2. Monitor your MySQL server's load average. If it consistently remains high, it could indicate that your system is overloaded and may require additional resources or optimization.
+ 3. Review your queries and database schema. Identify any resource-intensive queries or inefficient database designs that might be contributing to the high CPU usage. You can use tools like EXPLAIN PLAN to analyze query execution plans and identify potential bottlenecks.
+ 4. Adjust your MySQL thread count. Increasing the number of threads can improve concurrency and reduce CPU usage in some cases. However, this should be done with caution, as an excessive number of threads can lead to increased memory usage and other issues.
+ 5. Optimize your database schema. This includes normalizing the database, using appropriate indexing strategies, and minimizing the use of temporary tables. Properly optimizing your database schema can significantly improve query performance and reduce CPU usage.
+ 6. Consider using a more powerful hardware platform. If your current setup cannot handle the workload efficiently, upgrading to a more powerful server with higher CPU, RAM, and storage resources might be necessary.
+ 7. Implement caching mechanisms. Utilizing caching solutions like InnoDB or MyISAM caching can help alleviate pressure on the buffer pool and reduce I/O wait times, leading to lower CPU usage.
+ 8. Regularly update your MySQL software. Keeping your MySQL version up-to-date ensures that you have access to the latest performance improvements and bug fixes.
+ 9. Consult with a MySQL expert. If you are still experiencing high CPU usage after attempting these troubleshooting steps, consider consulting with a MySQL expert or support team for further assistance.
+
+By following these steps, you should be able to",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["e75cGZn3CRpiyT2fvRjHCZXrNwM"]
+      }
+    ]
+  }
+}
