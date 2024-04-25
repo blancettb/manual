@@ -1,0 +1,37 @@
+{
+  "name": "Ratio of consumed and provisioned writes is critical",
+  "description": "Detects high ratio of consumed and provisioned writes",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Review your read/write patterns: Make sure that your application's read and write operations are balanced. If there is an imbalance, it could lead to a high ratio of consumed and provisioned writes. Adjust your application's design accordingly to ensure that reads and writes are evenly distributed.
+
+
+
+2. Increase your provisioned write capacity: If you find that your application consistently consumes more writes than your provisioned capacity allows, you may need to increase your provisioned write capacity. This will give your application the necessary resources to handle the increased write traffic. Keep in mind that increasing provisioned capacity also comes with additional costs.
+
+
+
+3. Monitor and adjust: Regularly monitor the ratio of consumed and provisioned writes to ensure that it remains within acceptable limits. If the ratio becomes consistently high, consider implementing the above steps or exploring other solutions such as adding more nodes to your DynamoDB table.
+
+By following these steps, you can help maintain optimal performance and cost efficiency for your DynamoDB-based applications.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["x8P8SXXF4RGtauPg2KBlEjnHKGY"]
+      }
+    ]
+  }
+}
