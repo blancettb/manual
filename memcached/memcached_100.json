@@ -1,0 +1,60 @@
+{
+  "name": "Number of queued connections increases",
+  "description": "Detects high number of queued connections",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Increase the maximum number of connections**: You can modify the `maxconn` parameter in your memcached configuration file to allow more concurrent client connections. However, be cautious not to set it too high, as it may lead to resource exhaustion and other issues.
+
+   Example configuration change for Apache Memcached on Unix-based systems:
+
+   ```
+   maxconns 512
+   ```
+
+   For Windows, the equivalent setting is:
+
+   ```
+   max_connections = 512
+   ```
+
+ 2. **Improve connection handling timeouts**: If clients are taking too long to disconnect from the server, they might keep their connections open longer than necessary. This can lead to queuing and increased latency for other clients. To address this, you can adjust the connection timeout settings in your memcached configuration file.
+
+   Example configuration change for Apache Memcached on Unix-based systems:
+
+   ```
+   tcp_keepalive_time 60
+   ```
+
+   For Windows, the equivalent setting is:
+
+   ```
+   tcp_keepalive = 60
+   ```
+
+ 3. **Optimize your application's connection management**: Ensure that your application properly manages connections and handles errors or exceptions related to connection establishment or teardown. This includes closing connections promptly after use and avoiding excessive connection attempts.
+
+ 4. **Monitor and analyze connection usage**: Regularly monitor your memcached server's connection usage and identify any patterns or trends that may indicate potential bottlenecks or performance issues. Tools like `netstat`, `top`, or third-party monitoring solutions can help with this analysis.
+
+ 5. **Consider using a load balancer or auto-scaling group**: If you're running multiple memcached servers, using a load balancer or auto-scaling group can help distribute traffic more evenly across your servers and prevent any single server from becoming overwhelmed.
+
+ 6. **Update your memcached software**: Make sure your memcached software",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["gL6rVt_KCVgt9GB9R-yRJIe7JL4"]
+      }
+    ]
+  }
+}
