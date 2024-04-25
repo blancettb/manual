@@ -1,0 +1,33 @@
+{
+  "name": "Disk utilization percent over 5 minute interval too high",
+  "description": "Checks whether the disk utilization over a 5 minute interval exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the current disk usage and identify if any particular process or application is consuming excessive disk space. You can use commands like `df` for Linux-based systems or ` diskutil` for macOS to view the disk usage.
+2. If a specific process or application is identified as the cause, consider optimizing its performance or resource consumption. This may involve adjusting its configuration settings, updating software, or terminating unnecessary tasks.
+3. Monitor the disk utilization over time to ensure that it remains below the configured threshold. You can use monitoring tools like Prometheus or Grafana to set up alerts for when the disk utilization exceeds the desired level.
+4. Regularly review and update the disk utilization thresholds based on your system's requirements and available resources. This will help prevent future issues caused by excessive disk utilization.
+5. If the issue persists despite your efforts, consider increasing the size of the database's data files or adding more storage to the system. However, this should be done with caution, as it can have significant implications for the overall system performance and resource allocation.
+
+By following these steps, you can effectively address the ibmCloudPostgreSql issue of high disk utilization and maintain optimal system performance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["HX0FfdPm6rtcv1cf4QiGatT16a8"]
+      }
+    ]
+  }
+}
