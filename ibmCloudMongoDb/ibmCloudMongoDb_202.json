@@ -1,0 +1,33 @@
+{
+  "name": "Percentage of oplog bytes used is too high",
+  "description": "Checks whether the percentage of oplog used bytes exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. First, check the current usage of your oplog by running the command `db.oplogSize().heapUsed`. This will give you an estimate of how much space is being used by the oplog.
+2. Next, compare this value to the maximum allowed size for your oplog as specified in your MongoDB configuration. The default maximum size is typically around 10-20% of the total database size.
+3. If the oplog usage is found to be excessive, consider increasing the maximum oplog size or decreasing the frequency of oplog compaction. Compacting the oplog more frequently can help reduce the overall size of the oplog, but it may also increase the risk of data loss in case of a system failure.
+4. To increase the maximum oplog size, you can modify the `oplogSizeMax` parameter in your MongoDB configuration. However, keep in mind that a larger oplog can potentially impact write performance and should be used judiciously.
+5. If you are still experiencing issues with oplog usage, you may want to consider monitoring the oplog usage over time and taking corrective action as needed. This might include adjusting the oplog size, compaction settings, or other parameters based on your specific use case and workload.
+
+By following these steps, you can effectively manage oplog usage and prevent potential issues with your MongoDB database.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["8cW3MsD-hDZAEKcej76yp8VdTBw"]
+      }
+    ]
+  }
+}
