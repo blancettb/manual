@@ -1,0 +1,32 @@
+{
+  "name": "Elasticsearch cluster status",
+  "description": "This rule monitors the status of Elasticsearch cluster",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the network connectivity between nodes in your Elasticsearch cluster.
+ 2. Ensure that all nodes are running the same version of Elasticsearch.
+ 3. Verify that no nodes are in an unhealthy state by checking their logs and status pages.
+ 4. If the problem persists, consider increasing the number of replicas or data nodes in your cluster to improve performance and availability.
+ 5. Lastly, if none of the above steps resolve the issue, you may need to contact Elasticsearch support for further assistance.
+
+For more information on troubleshooting Elasticsearch issues, you can refer to the official Elasticsearch documentation here: <https://www.elastic.co/guide/en/elasticsearch/client/java-api/current/index.html>",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["KNTJLER3aZt1vH4KHVupNeLjh0E"]
+      }
+    ]
+  }
+}
