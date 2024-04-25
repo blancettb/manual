@@ -1,0 +1,33 @@
+{
+  "name": "Erroneous call rate too high",
+  "description": "Detects a constantly high erroneous call rate when the average value within the last four minutes is above the given threshold value.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your network and device connectivity to ensure they are stable and functioning properly.
+ 2. Review your application logs for any error messages or warnings that may provide insight into the cause of the high erroneous call rate.
+ 3. Investigate potential issues with your application code, such as improper data handling or validation, which could lead to incorrect call rates.
+ 4. Ensure that your application is adhering to any specified rate limits or quotas.
+ 5. If the issue persists, consider increasing the threshold value for the erroneous call rate in your monitoring system to reduce the number of false positives. However, be cautious not to set the threshold too low, which may result in overlooking genuine issues.
+ 6. Monitor your system's performance over time to identify any trends or patterns that may indicate underlying problems or require further investigation.
+
+By following these steps, you should be able to diagnose and address the Erroneous call rate too high issue in your application.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Lnmw7K5WGEzmReLtPpP8f_YwWf0"]
+      }
+    ]
+  }
+}
