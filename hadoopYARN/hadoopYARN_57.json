@@ -1,0 +1,35 @@
+{
+  "name": "Resource manager is reporting lost node",
+  "description": "Detects if resource manager is reporting lost nodes",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the application master logs for any error messages related to the lost node. These logs are typically located in the /user/hadoop-yarn/logs/application_<app\_id> directory. If there are any errors, investigate and address them accordingly.
+2. Verify that the lost node is indeed unreachable from the Resource Manager. You can do this by checking the nodemanager logs on the lost node for any error messages or indications of issues.
+3. If the lost node remains unresponsive and no error messages are found, consider restarting the Resource Manager to see if that resolves the issue. To do this, follow these steps:
+
+   a. Stop the Resource Manager using the command `sudo service hadoop-resource-manager stop`.
+   b. Start the Resource Manager again using the command `sudo service hadoop-resource-manager start`.
+4. If the problem persists after restarting the Resource Manager, check the Hadoop cluster's configuration settings. Specifically, ensure that the 'yarn.nodemanager.addresses' property is correctly set and that the Resource Manager can communicate with all the nodes in the cluster.
+5. If the issue continues, consider checking the network connectivity between the Resource Manager and the lost node. Ensure that there are no firewall rules or network issues preventing communication.
+6. Lastly, if none of the above steps resolve the issue, you may want to contact Cloudera Support for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Lqt_5T01_bPZwJoLzvjvYkYvDb0"]
+      }
+    ]
+  }
+}
