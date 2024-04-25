@@ -1,0 +1,33 @@
+{
+  "name": "Varnish is out of worker threads",
+  "description": "Varnish is out of worker threads",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your Varnish configuration and ensure that the number of worker threads is set appropriately based on your system's resources and traffic load. A common recommendation is to have at least twice as many worker threads as your CPU cores.
+2. Monitor your Varnish logs for any error messages or warnings related to thread exhaustion. These messages can provide valuable information about the cause of the issue.
+3. If you are running Varnish in a virtualized environment, consider increasing the number of worker threads allocated to the Varnish instance. This can help alleviate pressure on the system and prevent thread exhaustion.
+4. Review your network infrastructure and ensure that it can handle the expected traffic load without causing performance issues. Overloaded networks can lead to increased demand for Varnish worker threads, leading to thread exhaustion.
+5. Consider implementing caching strategies that can reduce the amount of traffic directed to Varnish, thereby reducing the strain on its worker threads. For example, you could implement browser-side caching or distribute traffic across multiple Varnish instances.
+6. If the issue persists, you may need to consider upgrading your Varnish installation to a version with a larger default worker thread limit. However, this should be considered a last resort, as it may require additional resources and potentially impact other aspects of your system.
+
+By following these steps, you can effectively address the Varnish is out of worker threads issue and ensure optimal performance for your web application.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Oo_VkZ7cpBggdNfdtaDG_OP6ak4"]
+      }
+    ]
+  }
+}
