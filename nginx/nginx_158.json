@@ -1,0 +1,36 @@
+{
+  "name": "Nginx is dropping connections",
+  "description": "Nginx is dropping connections",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Check server load**: If your server has high traffic or too many concurrent connections, it may result in dropped connections. You can check the server load using the command "top" on Linux systems or " Task Manager" on Windows systems. If the load is very high, consider increasing the server's resources (CPU, RAM) or optimizing your application to reduce the load.
+
+2. **Increase connection limits**: By default, Nginx has a limit of around 100 connections per server. If you need to handle more connections, you can increase this limit by modifying the `nginx.conf` file. To do this, locate the `listen` directive and add the `accept_mutex` option with a value higher than the current limit. For example, if you want to allow 1000 concurrent connections, you would change the line `listen 80;` to `listen 80 accept_mutex=1000;`.
+
+3. **Use a load balancer**: If you are running multiple instances of your application behind a load balancer, the load balancer might be causing the issue by overwhelming the backend servers. In this case, you can configure the load balancer to distribute traffic more evenly among the servers or increase the number of servers behind the load balancer.
+
+4. **Improve application performance**: If your application is slow or resource-intensive, it can cause connection drops. You can improve application performance by optimizing code, reducing database queries, caching frequently used data, or using asynchronous processing techniques.
+
+5. **Use TCP\_USER\_TIMEOUT and TCP\_KEEPALIVE settings**: These settings can help prevent idle connections from being closed. The `TCP\_USER\_TIMEOUT` setting specifies the amount of time Nginx will wait for data before closing a connection, while the `TCP\_KEEPALIVE` setting enables periodic connection checks to detect dead connections.
+
+6. **Monitor connection rates**: Keep an eye on",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Wcp7QpmCUJ5w8QohZf_m_Cbm-38"]
+      }
+    ]
+  }
+}
