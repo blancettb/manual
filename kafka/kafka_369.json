@@ -1,0 +1,33 @@
+{
+  "name": "Kafka request handler thread is under high load",
+  "description": "Checks whether the Kafka request handler is under high load.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Increase the number of partitions in your Kafka topic: By increasing the number of partitions in your Kafka topic, you can distribute the data across more threads, thereby reducing the load on each individual thread. This can be done by modifying the `topic_partitions` parameter in your Kafka configuration file.
+2. Adjust the fetch.max.wait.ms and session.timeout.ms parameters: These parameters control how long the consumer waits for messages before giving up and timing out. Increasing these values can help reduce the frequency of requests and improve overall performance. You can adjust these parameters by modifying the corresponding configurations in your Kafka client library.
+3. Implement error handling and retries: Implementing proper error handling and retry mechanisms can help manage high loads and prevent individual threads from being overwhelmed. By implementing retry logic, you can ensure that failed requests are attempted again, potentially reducing the impact of individual failures on overall performance.
+4. Monitor and analyze Kafka metrics: Regularly monitoring and analyzing Kafka metrics can help identify potential bottlenecks and areas of high load. Tools like Apache JMX or Prometheus can be used to collect and visualize Kafka metrics, providing valuable insights into system behavior.
+5. Optimize producer and consumer configurations: Optimizing producer and consumer configurations can help improve overall performance and reduce load on the Kafka request handler thread. For example, you can adjust the buffer size, batch size, or message serialization settings to better match your use case and hardware requirements.
+6. Use a dedicated Kafka cluster: If your application requires high availability and scalability, consider using a dedicated Kafka cluster instead of a single node setup. A dedicated cluster can provide better performance and more resources for handling high loads.
+7. Upgrade your Kafka version: If you're experiencing performance issues with an older Kafka version, consider upgrading to a newer version. Newer versions often include performance improvements and optimizations",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["GSe6ECx90p1JpAc3W9vPbDvVqP0"]
+      }
+    ]
+  }
+}
