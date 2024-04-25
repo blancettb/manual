@@ -1,0 +1,30 @@
+{
+  "name": "IBM MQ event - Queue Service Interval High",
+  "description": "Queue Service Interval High From MQ Events",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the queue manager's workload and ensure it is not overloaded. A high workload can lead to increased service intervals.
+2. Review the channel's configuration. An incorrectly configured channel can cause performance issues and result in high service intervals.
+3. Monitor the queue depth and adjust as necessary. If the queue depth is too high, it can cause delays in message processing and increase service intervals.
+4. Investigate any potential problems with the application or system that is sending messages to the queue. Slow-performing applications or systems can contribute to high service intervals.
+5. If the problem persists, consider implementing queue monitoring and analysis tools to identify any bottlenecks or other underlying issues. These tools can help you diagnose and address the root cause of the high service interval problem.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["lPLPXExj5LCXbaGqGYfJ8j4XYnk"]
+      }
+    ]
+  }
+}
