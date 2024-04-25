@@ -1,0 +1,32 @@
+{
+  "name": "IBM MQ Queue depth",
+  "description": "IBM MQ Queue depth.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "   1. Check the queue manager's configuration: Ensure that the maximum queue depth is set high enough to accommodate your expected message volume.
+   2. Adjust the channel's flow control settings: You can increase or decrease the flow control threshold and prefetch count to better manage the number of messages in the queue.
+   3. Monitor queue usage: Regularly check the queue depth and monitor for any patterns or trends that may indicate an issue.
+   4. Implement a message persistence strategy: Persisting messages to disk can help prevent message loss in case of unexpected queue manager restarts or failures.
+   5. Use a message broker: A message broker can help manage message flow, prioritize messages, and ensure message delivery in a distributed system.
+
+If you still encounter issues with the IBM MQ Queue depth after trying these steps, it would be helpful to provide more context about your environment and specific problem. This will allow me to provide more targeted assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["v1q4d2Agkv_8UsZiOzWe_ajkYrY"]
+      }
+    ]
+  }
+}
