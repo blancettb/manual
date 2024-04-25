@@ -1,0 +1,31 @@
+{
+  "name": "IBM MQ event - Channel Conversion Error",
+  "description": "Channel Conversion Error From MQ Events",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the channel's configuration: Ensure that the channel is properly configured with the correct connection details, such as hostname, port number, and authentication information.
+2. Validate the message format: Inspect the message format being sent through the channel. Make sure it adheres to the expected structure and content, including any necessary headers and data fields.
+3. Investigate network connectivity issues: Verify that the network infrastructure between your applications and the IBM MQ server is functioning correctly. This includes checking firewall rules, network latency, and ensuring that the IBM MQ client libraries are up-to-date.
+4. Review error logs: Analyze the IBM MQ error logs for more detailed information about the Channel Conversion Error. This may provide insights into the root cause of the problem and help you identify appropriate solutions.
+5. Update IBM MQ client libraries: If necessary, update the IBM MQ client libraries on your application servers to ensure they are compatible with the IBM MQ server version in use.
+6. Consult IBM Support: If you continue to experience issues, consider reaching out to IBM Support for further assistance. They can help diagnose and troubleshoot the problem, and may provide additional guidance based on your specific environment and configuration.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["5DOPTVK_om7Cn52MooUYCTnp5sU"]
+      }
+    ]
+  }
+}
