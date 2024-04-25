@@ -1,0 +1,31 @@
+{
+  "name": "CPU Steal Time exceeded",
+  "description": "Checks on a secondly moving window, whether there is too much CPU stolen between running processes or by the hypervisor / host OS. This rule checks if the CPU Usedis greater than the `Min CPU Used percentage` before evaluating the condition.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Monitor system resources and identify any resource-intensive applications or services that may be causing the high CPU usage.
+ 2. Adjust the priorities of these applications or services to ensure they do not consume excessive CPU resources.
+ 3. Check for any misconfigured settings or conflicting software that might be causing the CPU steal time to increase.
+ 4. If the issue persists, consider upgrading your hardware or adding more physical cores to your system to improve overall performance and reduce CPU steal time.
+
+For further assistance, you can refer to the official documentation or contact the support team of the specific operating system or hardware you are using. They can provide more tailored guidance based on your environment and configuration.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["qQKuuH-lc-VuZuogFYk3cdeEHSA"]
+      }
+    ]
+  }
+}
