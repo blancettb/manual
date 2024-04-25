@@ -1,0 +1,34 @@
+{
+  "name": "Too many connections reset",
+  "description": "This rule checks the number of connection resets to be above the given threshold in the given time window",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your server's resources and ensure that it has enough memory and processes to handle the expected traffic.
+2. Optimize your PHP scripts by minimizing their complexity, reducing database queries, and using caching mechanisms.
+3. Implement connection pooling in your application to limit the number of open connections and reduce resource usage.
+4. Monitor your server's logs for any patterns or spikes in connection resets, which could indicate an underlying issue.
+5. If the problem persists, consider increasing the timeout value in your php.ini file to give the FPM more time to handle requests before closing connections. However, this should be used as a last resort since it can potentially lead to other issues.
+
+Additionally, if you are running Nginx in front of php-fpm, you can increase the client_max_body_size and max_execution_time settings in your nginx.conf file to improve performance and stability.
+
+If none of these steps resolve the issue, you may need to investigate further by checking for any errors in your application code, reviewing system logs, or seeking assistance from a professional server administrator.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["fKB9sHz4JPzC8tdH7wWX_6n6aUY"]
+      }
+    ]
+  }
+}
