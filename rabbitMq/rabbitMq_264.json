@@ -1,0 +1,30 @@
+{
+  "name": "More messages are being produced than consumed",
+  "description": "Detects when a queue is filling with unacknowledged messages",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your RabbitMQ server's configuration and ensure that it is set up correctly for message delivery and consumption. This includes checking the maximum number of queues, connections, and channels.
+2. Verify that your application code is properly handling message acknowledgement. Make sure that messages are being acknowledged as soon as they are processed, either through the `ack()` method or by implementing proper error handling.
+3. If the problem persists, consider increasing the number of consumers in your application. This can help to reduce the backlog of unacknowledged messages and prevent the queue from filling up.
+4. Monitor your RabbitMQ server's logs for any errors or warnings related to message delivery or consumption. These can provide valuable insights into the cause of the issue.
+5. If none of these steps resolve the issue, you may need to investigate further by reviewing your application's network traffic, checking for potential deadlocks, or consulting the RabbitMQ documentation for more advanced troubleshooting techniques.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["xrp2CS3ds0AyqooQw9UigpLezXw"]
+      }
+    ]
+  }
+}
