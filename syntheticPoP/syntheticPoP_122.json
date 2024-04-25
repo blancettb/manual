@@ -1,0 +1,30 @@
+{
+  "name": "HTTP playback engine status",
+  "description": "Checks the status of Synthetic PoP playback engine.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the network connection: Ensure that your network connection is stable and functioning properly. A weak or unstable connection may cause issues with the HTTP playback engine.
+2. Verify the Synthetic PoP configuration: Make sure that the Synthetic PoP is correctly configured, including the correct URL, authentication credentials, and any other required settings.
+3. Monitor the Synthetic PoP: Keep an eye on the Synthetic PoP's performance and error logs. If there are any errors or warnings, investigate them immediately to prevent further issues.
+4. Update the Synthetic PoP: If necessary, update the Synthetic PoP to the latest version to ensure that it has all the necessary features and bug fixes.
+5. Reach out to support: If none of the above steps resolve the issue, consider reaching out to the support team for assistance. Provide them with detailed information about the problem, including any error messages or log entries. This will help the support team diagnose and address the issue more efficiently.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["KSagK2gkDpUW-Z5GXm79jNjg2oI"]
+      }
+    ]
+  }
+}
