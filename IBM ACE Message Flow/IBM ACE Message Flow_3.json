@@ -1,0 +1,38 @@
+{
+  "name": "ACE Message Flow Thread Utilization",
+  "description": "Monitor the thread utilization in each message flow",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the number of active threads in the ACE Message Flow using the command 'netstat -an | grep <port>'. This will show you the number of active threads listening on the specified port.
+2. If the number of active threads is high, it might indicate that the message flow is consuming too many resources. You can try increasing the number of threads allocated to the message flow by modifying the 'MAXTASKS' parameter in the ACE Message Flow's descriptor. However, be cautious not to allocate more threads than your system can handle.
+3. Another potential cause could be an inefficient SQL statement or procedure in the message flow. You can use tools like SQL Developer or Management Studio to analyze and optimize these statements.
+4. If the problem persists, consider reviewing the overall system configuration, including memory and CPU usage. Ensure that the system has sufficient resources to support the message flow.
+5. Lastly, if none of the above steps resolve the issue, you may need to contact IBM Support for further assistance.
+
+Additional details:
+
+* The ACE Message Flow Thread Utilization issue can occur due to various reasons such as high workload, inefficient SQL statements, insufficient system resources, etc.
+* Monitoring the thread utilization in each message flow helps in identifying the root cause of the issue.
+* Increasing the number of threads allocated to the message flow can help in handling higher workloads but should be done carefully considering the system's capacity.
+* Optimizing SQL statements and procedures in the message flow can lead to improved performance and reduced resource consumption.
+* Regularly monitoring and analyzing the ACE Message Flow Thread Utilization can help in maintaining optimal system performance and preventing future issues.",
+        "secured": false
+    }
+],
+  "staticId": "",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["zxjVUoEMOnNukFj2fJeQBjv9xNs"]
+      }
+    ]
+  }
+}
