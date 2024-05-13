@@ -1,0 +1,32 @@
+{
+  "name": "Event Stream has more than the recommended number of connected Kafka clients",
+  "description": "Checks whether the number of connected Kafka clients exceeds the recommended maximum",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Verify the current number of connected Kafka clients by running the command `kafka-topics.sh --topic <topic_name> --describe`. This will provide information about the number of active consumer and producer clients for the specified topic.
+2. If the number of connected clients is higher than the recommended limit, you can disconnect some clients manually. To do this, use the command `kafka-topics.sh --topic <topic_name> --alter --topic-config max.connections=<new_max_connections>`. Replace `<topic_name>` with the name of your topic and `<new_max_connections>` with the desired maximum number of connections.
+3. After disconnecting some clients, restart the Kafka server using the command `sudo systemctl restart kafka`.
+4. Once the Kafka server has been restarted, check if the number of connected clients is within the recommended limit.
+
+It's important to note that increasing the maximum number of connections may expose your Kafka cluster to potential risks, such as increased latency or reduced throughput. Therefore, it's crucial to monitor the number of connected clients and adjust the maximum number of connections accordingly.",
+        "secured": false
+    }
+],
+  "staticId": "",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["kLC5kTFUUM4HiMWEkqlggo6dF-s"]
+      }
+    ]
+  }
+}
