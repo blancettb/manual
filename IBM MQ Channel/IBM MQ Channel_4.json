@@ -1,0 +1,29 @@
+{
+  "name": "IBM MQ Channel status",
+  "description": "Check the IBM MQ Channel status.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. First, check if the channel is in the correct state by running the command "mqstat -c <channel\_name>" and verifying that the channel is in the expected state (e.g., OPEN or CLOSED).
+2. If the channel is not in the correct state, use the command "strmqmgr" to stop and start the channel to bring it back online. The command would be something like "strmqmgr stop <channel\_name> && strmqmgr start <channel\_name>".
+3. If the channel is already in the correct state but still experiencing issues, you may need to check the queue manager's logs for any error messages. You can do this by navigating to the queue manager's log directory and looking for any recent error logs related to the channel.
+4. If you are unable to resolve the issue yourself, consider contacting your system administrator or IBM Support for further assistance. They can help you diagnose and troubleshoot the problem, including checking for any known issues with the version of IBM MQ you are using.",
+        "secured": false
+    }
+],
+  "staticId": "",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["zRqtnwNFCwyZ1c9KPsjhfj5AWBI"]
+      }
+    ]
+  }
+}
