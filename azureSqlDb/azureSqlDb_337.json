@@ -1,0 +1,36 @@
+{
+  "name": "Database status",
+  "description": "Checks the Azure SQL Database Status.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check for any error messages or warnings in the Azure portal or through the Azure SQL Database Management Studio. These messages may provide information on how to resolve the problem.
+2. If there are no error messages, try restarting the Azure SQL Database service. This can often resolve transient issues.
+3. Verify that the firewall rules are configured correctly to allow access to the Azure SQL Database. You can check the firewall rules by navigating to the Azure portal and selecting the SQL Database service.
+4. If the issue persists, you may need to contact Microsoft Support for further assistance. They can help you diagnose and troubleshoot the problem.
+
+Additional details:
+
+* The most common reason for this issue is misconfiguration of firewall rules or network settings.
+* It's important to ensure that the firewall rules allow traffic from both internal and external networks, as well as specific IP addresses if necessary.
+* If the database is in a resource group, make sure that the resource group has the correct access control policies set.
+* If using Managed Instance, ensure that the VNet peering is properly configured between the management and data disks.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["mqiUlgIfuYxwKY12zLXQucr68Yk"]
+      }
+    ]
+  }
+}

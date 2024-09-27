@@ -1,0 +1,32 @@
+{
+  "name": "Pending mutations",
+  "description": "This rule checks whether the thread pool handling write requests is queueing up operations",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check for any open connections or sessions that might be causing the issue. If there are any, ensure they are properly closed.
+2. Verify that the keyspace and column family mentioned in the error message exist and have the correct permissions.
+3. Inspect the consistency level settings for the keyspace and column family. Ensure they are set appropriately based on your application's requirements.
+4. If the issue persists, consider increasing the request timeout value for the client. This can help avoid timeouts when performing writes.
+5. Lastly, if none of the above steps resolve the issue, you may want to check for any recent changes in your Cassandra configuration or network setup. It could be that an update has introduced compatibility issues that are causing the pending mutations.
+
+If you continue to experience problems after trying these steps, it would be helpful to gather more information about the error message and the specific version of Cassandra you are using. This will allow us to better assist you and provide targeted guidance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["rvPnkUFXVLCg5F6EAKpBH2BfQ6o"]
+      }
+    ]
+  }
+}

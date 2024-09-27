@@ -1,0 +1,32 @@
+{
+  "name": "Percentage of memory used is too high",
+  "description": "Checks whether the percentage of memory used exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check if there are any long-running queries or processes that could be consuming excessive memory. You can use the command `ps -A|grep postgres` to view active PostgreSQL connections and processes. If any process is using significantly more memory than expected, you can consider terminating it or optimizing its query.
+2. Review your database schema and ensure that it is optimized for your workload. This may involve reorganizing tables, adding indexes, or adjusting column sizes. A well-optimized schema can help reduce memory usage and improve overall performance.
+3. Monitor your database system's resource utilization over time. Tools like `top`, `htop`, or `sar` can help you track memory usage, CPU usage, and other relevant metrics. By identifying trends and patterns in these metrics, you can detect potential issues before they become critical.
+4. Adjust the PostgreSQL configuration parameters to optimize memory usage. For example, you can increase the maximum memory allocation for each connection (`max_connections`) or adjust the shared memory size (`shm_size`). However, it is essential to test these changes carefully to avoid negatively impacting performance.
+5. Consider using a managed PostgreSQL service like IBM Cloud Databases for PostgreSQL, which offers built-in monitoring, automatic tuning, and other features designed to help you manage memory usage effectively.
+
+By following these steps, you should be able to identify and address the root cause of the high memory usage issue, ensuring that your PostgreSQL database runs smoothly and efficiently.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["fDD9OL90jAbzQ6Itm1q0hDOvrl0"]
+      }
+    ]
+  }
+}

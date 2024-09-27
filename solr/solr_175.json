@@ -1,0 +1,36 @@
+{
+  "name": "Solr cache hit rate is low",
+  "description": "Solr hit rate is below the configured threshold percentage",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Increase the size of the query result cache**: By increasing the size of the query result cache, you can allow more data to be stored in memory for faster access. This can help improve the cache hit rate and reduce the number of requests sent to the Solr server. To increase the cache size, modify the `queryResultCacheSize` parameter in the Solrconfig.xml file.
+
+ 2. **Optimize your search queries**: Ensuring that your search queries are optimized can help improve the cache hit rate. This includes using appropriate filters, sorting, and limiting clauses to reduce the amount of data returned by each query. Additionally, using the `dismax` query parser with a `tiebreaker` can help improve the ranking of relevant documents and increase the likelihood of hits in the cache.
+
+ 3. **Tune the merge policy**: The merge policy determines how Solr merges shards (index segments) during indexing and querying. Tuning the merge policy can help optimize the cache hit rate. You default merge policy may not be optimal for your specific use case. You can experiment with different merge policies, such as `expungeDeletes`, `optimize`, or `tuned`, to find the one that best suits your needs.
+
+ 4. **Enable caching for dynamic fields**: Dynamic fields are those that are added to the index on-the-fly during query time. Enabling caching for these fields can help improve the cache hit rate by storing the results of complex field expressions in memory. To enable caching for dynamic fields, add the `cache.dynamicField.enable` parameter to the Solrconfig.xml file and set its value to `true`.
+
+ 5. **Check for and fix any issues with the schema**: An incorrectly defined schema can lead to poor cache performance. Make sure that your schema is properly configured, including defining all required fields and ensuring that they are indexed.
+
+ 6. **Monitor and analyze cache usage**:",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["jNPl4USjPzPiCmu44XhtTV7dq8I"]
+      }
+    ]
+  }
+}

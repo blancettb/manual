@@ -1,0 +1,30 @@
+{
+  "name": "Availability",
+  "description": "Availability is less than the configured ratio threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the network connectivity between the client and AliCloudOss.
+ 2. Ensure that the Alibaba Cloud OSS instance has sufficient capacity and is not overloaded.
+ 3. Verify the configuration of the Alibaba Cloud OSS access control policy.
+ 4. Investigate any potential issues with the data replication or synchronization mechanisms.
+ 5. If the problem persists, consider contacting the Alibaba Cloud Support team for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["q6z7oM-iqDHKd7K_bTJEAkigtuE"]
+      }
+    ]
+  }
+}

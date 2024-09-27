@@ -1,0 +1,34 @@
+{
+  "name": "Pending compactions",
+  "description": "This rule checks whether pending compactions are increasing.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Analyze the current state of your Cassandra cluster and identify the nodes with the highest number of pending compactions.
+2. Investigate the cause of the pending compactions, such as increased data churn, network issues, or resource constraints.
+3. Take appropriate action based on the root cause:
+   - If it's due to increased data churn, consider implementing data archival strategies or optimizing write operations to reduce the rate of data changes.
+   - If it's due to network issues, ensure that your network infrastructure is properly configured and optimized for Cassandra.
+   - If it's due to resource constraints, monitor and optimize resource usage on the affected nodes.
+4. Monitor the Cassandra cluster closely after taking corrective actions to ensure that the pending compactions do not recur.
+
+By addressing the underlying causes of pending compactions, you can improve the overall performance and stability of your Cassandra cluster.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["QKybCsryI2c5bajXAT66jMGreXE"]
+      }
+    ]
+  }
+}

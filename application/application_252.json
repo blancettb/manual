@@ -1,0 +1,33 @@
+{
+  "name": "Sudden increase in latency for a fraction of inbound requests",
+  "description": "Detects a rapid increase in the given latency KPI percentile relative to the KPIs values in the last 30 minutes. The magnitude of the increase in latency should also exceed the relative and absolute threshold parameters below. This rule only applies for Applications configured to use Inbound Calls KPIs or that have not yet been configured to use by, default, either All Calls or Inbound Calls KPIs.
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Understand the root cause of the latency increase. This could be due to various reasons such as increased traffic, resource contention, or issues with the application code.
+2. Investigate the application logs and metrics to identify any patterns or spikes in latency during the observed period.
+3. If necessary, implement corrective actions to address the identified issues, such as scaling up the application servers, optimizing database queries, or refactoring the application code.
+4. Monitor the latency KPIs closely after implementing the corrective actions to ensure that the issue has been resolved and that the latency remains within acceptable levels.
+5. If the issue persists, consider using a different monitoring solution or tool that provides more detailed insights into the application performance and latency.
+
+Additionally, it is recommended to set up alerts for the latency KPIs so that you can be notified immediately if there are any further increases in latency. This will help you to quickly identify and address any potential issues before they impact the user experience.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["QojeCWBvOvv8jbMWuPCZK-QsL30"]
+      }
+    ]
+  }
+}

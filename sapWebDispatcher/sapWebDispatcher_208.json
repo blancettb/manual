@@ -1,0 +1,29 @@
+{
+  "name": "Missing Metrics",
+  "description": "Missing metrics for entity",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "   1. Check the entity and its related attributes to ensure they are not empty or null.
+   2. Verify that the metric is enabled in the system settings.
+   3. If the problem persists, consider checking the logs for any error messages or warnings related to the missing metric.
+   4. If necessary, contact the support team for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["mDu9xGNWO3taZzlb3KRhWaM69_Q"]
+      }
+    ]
+  }
+}

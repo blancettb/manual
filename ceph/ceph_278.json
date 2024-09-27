@@ -1,0 +1,36 @@
+{
+  "name": "Osd(s) near full capacity state",
+  "description": "Some of osd(s) are near full",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Monitor the system for any signs of stress or resource contention. Identify if there are any active jobs or processes consuming excessive resources.
+
+ 2. If there is no apparent reason for the Osd(s) being near full, consider adding more storage to the cluster. This can help alleviate the pressure on the existing Osd(s).
+
+ 3. Optimize your data layout and replication strategy. By redistributing data more evenly across the cluster and adjusting replication factors, you can reduce the load on individual Osd(s) and improve overall performance.
+
+ 4. Regularly monitor and analyze the Ceph health status and metrics. This will help you identify potential issues before they become critical and allow you to take proactive measures to prevent Osd(s) from reaching full capacity.
+
+ 5. Keep your Ceph monitors and cluster software up-to-date. Regular updates ensure that you have access to the latest features, bug fixes, and optimizations, which can help improve the performance and stability of your Ceph cluster.
+
+By following these steps, you can effectively manage and maintain your Ceph cluster, ensuring that all Osd(s) remain in a healthy and operational state.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["1NxoD6bQT0zbItIN-f0eK8OwaDU"]
+      }
+    ]
+  }
+}

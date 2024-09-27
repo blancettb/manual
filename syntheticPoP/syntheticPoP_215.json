@@ -1,0 +1,33 @@
+{
+  "name": "Browserscript playback engine status",
+  "description": "Checks the status of Synthetic PoP playback engine.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check if the browser is compatible with the playback engine version. Ensure that the browser and playback engine versions are compatible to avoid any issues.
+2. Verify the network connection. A stable and reliable internet connection is necessary for the proper functioning of the playback engine.
+3. Inspect the playback log for any error messages or warnings. The playback log can provide valuable information about the cause of the problem.
+4. If the issue persists, consider restarting the playback engine and the browser to reset any potential issues.
+5. Update the playback engine if there are any available updates. Outdated versions may cause compatibility issues with certain browsers or software configurations.
+6. Consult the official documentation or support resources for further assistance.
+
+By following these steps, you should be able to resolve the Browserscript playback engine status issue and ensure smooth operation of your playback engine.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["YBsLKU6rkf48B2G863QhAsELHFE"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Capacity limit while rebalancing",
+  "description": "This rule further characterizes Elasticsearch node being at the capacity limit by checking whether the node is relocating shards at the time of being at the capacity limit.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Increase the number of nodes in your cluster: By adding more nodes to your cluster, you can distribute the workload and alleviate the pressure on any single node, thereby preventing the Capacity limit while rebalancing error.
+
+
+
+2. Adjust the number of data nodes in your cluster: If you have too many data nodes, it might be causing the Elasticsearch node to become overwhelmed. You can reduce the number of data nodes to ease the load on each individual node. However, this should be done with caution as it may impact the overall performance and availability of your cluster.
+
+
+
+3. Monitor the cluster's resource usage: Regularly monitor the CPU, memory, and disk usage of your nodes to identify any potential bottlenecks or spikes in usage. By addressing these issues promptly, you can prevent them from leading to the Capacity limit while rebalancing error.
+
+
+
+4. Optimize your indices: Use proper indexing techniques, such as creating nested indices, using multi-field mapping, and optimizing query filters, to improve the efficiency of your Elasticsearch queries and reduce the strain on your nodes.
+
+
+
+5. Upgrade your Elasticsearch version: If you are running an older version of Elasticsearch, consider upgrading to a newer one. Newer versions often include improvements in performance, stability, and resource management that can help prevent the Capacity limit while rebalancing error.
+
+
+
+6. Tune your Elasticsearch settings: Adjust the Elasticsearch settings, such as the number of open indices, index lifecycle management policies, and merge operations, to optimize the performance of your cluster and prevent the Capacity limit while rebalancing error.
+
+
+
+7. Implement data redistribution policies: Use data redistribution policies, such as data rolling upgrades or data rebalancing, to redistribute data across nodes and prevent any single node from becoming overwhelmed.
+
+
+
+8. Add more storage to your nodes: Increasing the storage capacity of",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["_rpsrwS8-0EMecn00euPbLmFkHY"]
+      }
+    ]
+  }
+}

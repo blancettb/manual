@@ -1,0 +1,35 @@
+{
+  "name": "Sudden increase in latency of all calls",
+  "description": "Detects a rapid increase in the given latency KPI percentile relative to the KPIs values in the last 30 minutes. The magnitude of the increase in latency should also exceed the relative and absolute threshold parameters below. This rule only applies for Applications configured to use All Calls KPIs or that have not yet been configured to use by, default, either All Calls or Inbound Calls KPIs.
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Understand the root cause of the latency increase. This could be due to various reasons such as increased network traffic, resource contention, or application bugs.
+2. Once you understand the cause, take appropriate action to address it. For example, if the issue is due to network traffic, you can implement traffic management strategies like load balancing or rate limiting. If the issue is due to resource contention, you can optimize your application's resource usage. If the issue is due to application bugs, you can fix them through code optimization or testing.
+3. After taking corrective actions, monitor the latency KPI again to ensure that it has returned to normal levels.
+
+It's important to note that this rule is designed to detect sudden increases in latency, but it doesn't provide information about the specific causes of the increase. To get detailed insights into the cause, you may need to use additional tools and techniques, such as network monitoring, application profiling, or log analysis.
+
+Additionally, this rule is not retroactive, meaning it won't detect historical spikes in latency. It only detects new, sudden increases in latency relative to the KPIs values in the last 30 minutes.
+
+Lastly, this rule is not intended to replace regular monitoring and alerting practices. It's meant to complement these practices by providing an additional layer of alerting for sudden, unexpected increases in latency.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Ag2SirEQ2WOhSwo67Pz66P9Pp-g"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "CPU Utilization too high.",
+  "description": "Checks whether the cluster has excessive CPU utilization",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check for any queries or workloads that are consuming a disproportionate amount of resources. You can use the query editor in the AWS Management Console to identify these queries and take appropriate action, such as optimizing or canceling them.
+2. Ensure that your cluster is properly sized and configured. This includes checking the number of nodes, the instance type, and the storage configuration. If necessary, adjust the settings to ensure that the cluster is able to handle the workload efficiently.
+3. Monitor the cluster's resource usage over time. This will help you to identify trends and patterns, and to detect any sudden spikes in CPU utilization.
+4. Review the system logs for any error messages or warnings related to CPU utilization. These may provide clues about the cause of the issue and suggest potential solutions.
+5. If the issue persists after attempting these steps, you may need to contact Amazon Web Services (AWS) Support for further assistance. They can help you to diagnose and resolve any underlying issues, and provide guidance on best practices for managing your Redshift clusters.
+
+By following these steps, you should be able to resolve the CPU Utilization too high. issue and ensure that your Redshift cluster is running smoothly and efficiently.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["vcCuhAJ23oov-AH1YJM7ix_9GdE"]
+      }
+    ]
+  }
+}

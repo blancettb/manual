@@ -1,0 +1,33 @@
+{
+  "name": "IBM MQ event - Channel SSL Error",
+  "description": "Channel SSL Error From MQ Events",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the SSL configuration on both the client and server sides. Ensure that the certificates are installed correctly and that the keystores and truststores are set up properly.
+2. Verify that the client and server are using compatible SSL/TLS versions and cipher suites.
+3. If using a self-signed certificate, consider generating a new one or obtaining an official one from a trusted Certificate Authority (CA).
+4. Ensure that the IBM MQ client and server have the same time settings. This is important for proper encryption and decryption of data.
+5. If the problem persists, consider restarting the IBM MQ broker and queue manager to reset any potential issues.
+6. As a last resort, you may need to contact IBM Support for further assistance.
+
+For more information on resolving this issue, refer to the IBM MQ documentation or contact IBM Support.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["0EhdDdWZjPa5UXveT4O6E7DKD4Q"]
+      }
+    ]
+  }
+}

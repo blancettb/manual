@@ -1,0 +1,38 @@
+{
+  "name": "CPU spends significant time waiting for input/output",
+  "description": "Checks whether the system spends significant time waiting for input/output.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "   1. Check for and address any disk I/O bottlenecks: Ensure that your storage subsystem is not overloaded or experiencing high latency. You can monitor disk I/O performance using tools like iostat or sar. If necessary, upgrade your storage hardware or optimize your storage configuration.
+
+   2. Optimize application I/O behavior: Some applications may have inefficient I/O patterns that contribute to high wait times. You can profile your applications using tools likeoprofile or valgrind to identify potential issues. Consider optimizing data access patterns, reducing buffer sizes, or using caching mechanisms to improve I/O efficiency.
+
+   3. Adjust process scheduling policies: If your system is experiencing high I/O wait times due to resource contention, you can adjust process scheduling policies to favor I/O-bound workloads. For example, you can increase the nice value for I/O-bound processes or use a real-time kernel to prioritize I/O operations.
+
+   4. Monitor system load and available resources: Keep an eye on system load and available resources, such as CPU, memory, and disk I/O capacity. If the system is heavily loaded, it might not have enough resources to handle all tasks efficiently, leading to high I/O wait times. You can consider adding more resources or optimizing resource allocation to improve overall performance.
+
+   5. Update drivers and firmware: Make sure that your system's drivers and firmware are up-to-date. Outdated drivers can cause performance issues, including high I/O wait times. Install the latest drivers and firmware from the manufacturer's website or using your operating system's update manager.
+
+   6. Check for hardware conflicts: Ensure that there are no hardware conflicts that could be causing I/O wait times. You can use tools like lshw or hwloc to identify potential hardware conflicts and resolve them by updating drivers, adjusting settings, or adding additional hardware if needed.
+
+",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["2n9EJg8feV0xRMwL7c8URG0Uono"]
+      }
+    ]
+  }
+}

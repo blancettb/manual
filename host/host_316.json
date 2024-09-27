@@ -1,0 +1,41 @@
+{
+  "name": "GPU memory usage is close to the limit",
+  "description": "GPU memory usage is greater than the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Reduce the batch size**: Decreasing the batch size during inference can help lower the GPU memory usage. This is because a smaller batch size means fewer input images need to be processed simultaneously, reducing the overall memory demand. However, this may also increase the computation time.
+
+2. **Reshape your input data**: Transforming your input data into a more compact format can help reduce the memory footprint. For example, if your input images are currently in 4D or higher dimensions, consider reshaping them into a 2D matrix before feeding them into the model.
+
+3. **Upgrade your hardware**: If possible, invest in additional GPU memory or upgrade your current GPU to one with a larger memory capacity. This will provide you with more headroom for handling larger batches and more complex models.
+
+4. **Optimize your model architecture**: Review your model architecture to identify potential memory bottlenecks. You might be able to make adjustments that reduce memory usage without significantly impacting performance. Some techniques include:
+   - Using convolutional layers with smaller filter sizes
+   - Implementing pooling operations to reduce spatial dimensions
+   - Utilizing activation functions like ReLU (Rectified Linear Unit) instead of more computationally expensive alternatives
+
+5. **Tune hyperparameters**: Adjusting learning rates, regularization coefficients, or other hyperparameters can help optimize memory usage. Lowering these values may help reduce memory consumption while maintaining similar levels of performance.
+
+6. **Distributed training**: If your model is too large to fit within the available GPU memory even after trying the above methods, consider distributed training using multiple GPUs. This approach allows you to split the model across multiple devices, effectively distributing the memory load and enabling you to train larger models.
+
+By applying these strategies, you should be able to improve GPU memory usage and prevent issues related to it from arising.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["UUWkU2btks4tWRjDleEKSoBcMTs"]
+      }
+    ]
+  }
+}

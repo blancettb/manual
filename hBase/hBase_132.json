@@ -1,0 +1,34 @@
+{
+  "name": "Significant increase in flush queue length",
+  "description": "This rule checks for a sudden increase in the length of the flush queue. When triggered, this can be an indication of a lack of RAM or that flushes are faster than disks can handle.
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your Hadoop cluster's available memory and ensure it is not fully utilized. If necessary, add more memory to the cluster.
+2. Monitor the disk usage of your Hadoop cluster. If the disk space is almost full, consider adding more storage to the cluster.
+3. Optimize your Hadoop cluster's configuration settings. For example, you can adjust the value of `flush_size` in the Hadoop configuration file to reduce the number of data blocks being flushed at once.
+4. Implement a caching strategy to alleviate the pressure on the flush queue. This can involve using a caching layer like Redis or Ehcache to store frequently accessed data temporarily.
+5. Investigate any ongoing maintenance or updates to the Hadoop cluster that may have caused performance issues.
+6. If none of the above steps resolve the issue, consider reducing the frequency of data flushing or increasing the size of the flush queue in the Hadoop configuration file. However, be cautious when making these changes as they can impact overall system performance.
+
+For more information on troubleshooting Hadoop issues, you can refer to the official Apache Hadoop documentation or consult with a Hadoop expert.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["dAVvSLr4A_SPl9mABf5b8I7605I"]
+      }
+    ]
+  }
+}

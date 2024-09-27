@@ -1,0 +1,45 @@
+{
+  "name": "Memory allocation analysis",
+  "description": "Redis server is causing external memory fragmentation",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Increase the amount of memory allocated to Redis by adding the following line to your redis.conf file:
+
+   ```
+   maxmemory-policy simple_lru
+   ```
+
+   This will ensure that Redis does not allocate more memory than specified in the configuration file.
+
+2. If increasing the memory limit does not help, you can also try reducing the maximum number of clients allowed to connect to Redis. This can be done by setting the maxclients parameter in the redis.conf file. For example, to set the maximum number of clients to 100:
+
+   ```
+   maxclients 100
+   ```
+
+3. Another solution is to use the `CONFIG GET` command to check the current configuration settings and see if there are any conflicting or redundant settings that could be contributing to the memory allocation problem.
+
+4. If none of these solutions work, you may need to consider other options such as upgrading your hardware or using a different caching solution altogether.
+
+It's important to note that excessive memory usage can lead to performance issues and potential data loss. Therefore, it's crucial to monitor Redis memory usage and take appropriate action when necessary.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["7DFKl4KGkOmejI75S8MciiTt27s"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "Connections on datasources run out",
+  "description": "This detector establishes a processing pipeline to detect the number of available connections on datasources in the given time window and checks if the total number of connections is about to reach the threshold value.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Increase the maximum number of connections for your datasource:
+   - Log into your JBoss AS instance as the 'root' user.
+   - Navigate to the `$JBOSS_HOME/standalone/configuration` directory.
+   - Open the `datasource.xml` file using a text editor.
+   - Locate the `maxActive` attribute within the `<datasource>` element.
+   - Change the value to a higher number, such as 500.
+   - Save the changes and restart your JBoss AS instance.
+
+2. If increasing the maximum number of connections does not resolve the issue, consider reducing the connection timeout for your datasource:
+   - Log into your JBoss AS instance as the 'root' user.
+   - Navigate to the `$JBOSS_HOME/standalone/configuration` directory.
+   - Open the `datasource.xml` file using a text editor.
+   - Locate the `connectionTimeout` attribute within the `<datasource>` element.
+   - Change the value to a lower number, such as 5000.
+   - Save the changes and restart your JBoss AS instance.
+
+3. If neither of these solutions works, you may need to adjust the application's behavior to handle the limited number of connections more efficiently. This could involve implementing connection pooling, batching requests, or adjusting the application's read/write patterns.
+
+4. Lastly, if none of the above steps help, you might want to consider upgrading to a newer version of JBoss AS, as this issue might have been resolved in later versions.
+
+These are some general steps that you can follow to troubleshoot and resolve the "Connections on datasources run out" error in JBoss AS. However, depending on your specific configuration and requirements, additional steps or modifications might be necessary. Always ensure that",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["JIhZ4_RSvAB6-cjci4uQW64jp_I"]
+      }
+    ]
+  }
+}

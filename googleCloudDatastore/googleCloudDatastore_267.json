@@ -1,0 +1,38 @@
+{
+  "name": "GCP Datastore request count drop",
+  "description": "Datastore request count dropped significantly in last 30 minutes.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Check for any recent updates or maintenance**: Google Cloud may have recently applied updates or maintenance that could affect the performance of your Datastore requests. Check the official documentation for any announcements related to Datastore.
+   
+2. **Investigate network connectivity issues**: Ensure that your application has proper network connectivity to the GCP Datastore. You can use tools like "curl" or "wget" from the command line to test connectivity and ensure that there are no firewall rules blocking access.
+
+3. **Review query performance**: Analyze your Datastore queries to identify if they are causing the high request count. You can use the Datastore Admin API's `List entities` method to check the number of entities fetched by each query. If a particular query is consistently fetching a large number of entities, consider optimizing it.
+
+4. **Increase instance capacity**: If the issue persists, you can consider increasing the capacity of your Datastore instance. This can be done by creating a new instance with higher read/write capacity limits or adjusting the settings of your existing instance.
+
+5. **Monitor and analyze usage patterns**: Keep an eye on Datastore usage patterns during the time when the request count dropped. This can help you identify potential causes and prevent similar occurrences in the future.
+
+6. **Contact Google Cloud Support**: If none of the above steps resolve the issue, consider reaching out to Google Cloud Support for further assistance. They can provide more specific guidance based on your situation and logs.
+
+By following these steps, you should be able to diagnose and address the issue of a sudden decrease in GCP Datastore request count.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["qjz_RcZGz1j4KHegBBJyDj-99zQ"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "The Instana Agent contains a vulnerable Log4j library",
+  "description": "The Instana Agent contains a vulnerable Log4j library (via Pax Logging), CVE-2021-44228 and CVE-2021-45046",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Identify the affected component: The affected component is Pax Logging, which is used by the Instana Agent for logging purposes.
+2. Update the Log4j library: To update the Log4j library, follow the instructions provided in the [official Apache Log4j vulnerability response](https://logging.apache.org/log4j/2.x/security.html). This typically involves downloading the latest version of Log4j, applying the necessary patches, and rebuilding the affected components.
+3. Validate the fix: After updating the Log4j library, restart the Instana Agent and verify that the issue has been resolved. You can check if the agent is running with the vulnerable Log4j library by running the command `java -jar /path/to/instana-agent.jar --version`. If the agent is running with the updated Log4j library, you will see a message similar to "Pax Logging using version 2.17.1."
+
+As a temporary solution while updating the Log4j library, you can also disable the use of Log4j by setting the `LOG4J_OPTS` environment variable to `-Dlog4j.configuration=log4j2.properties` in the Instana Agent's configuration file (`$INSTANA_HOME/etc/instana/com.instana.agent.main.config.Agent.cfg`). However, this is not a recommended long-term solution, as it may prevent the agent from functioning correctly.
+
+For more information on how to manage and mitigate Log4j vulnerabilities, refer to the official [Apache Log4j Security Vulnerabilities](https://logging.apache.org/log4j/2.x/security.html) page.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["CDaN4p7eOawEWLHY3fDHt9M1HSk"]
+      }
+    ]
+  }
+}

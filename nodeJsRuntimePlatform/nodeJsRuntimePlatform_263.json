@@ -1,0 +1,33 @@
+{
+  "name": "Garbage collection activity high",
+  "description": "This rule checks whether the time spent in GC in the given window is above the given threshold.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. **Inspect memory usage**: Use tools like Visual Studio Code's "Memory Profiler" extension or Chrome DevTools' "Profiles" tab to identify which part of your application is consuming the most memory. This can help you determine if there are any memory leaks or problematic code patterns.
+2. **Optimize event loop**: The event loop is responsible for managing timers and callbacks. If it becomes stuck, it can lead to increased garbage collection activity. To optimize the event loop, ensure that your application handles timers and callbacks efficiently and avoids long-lasting callbacks.
+3. **Reduce maximum script execution time**: By reducing the maximum script execution time, you can prevent long-running scripts from causing excessive garbage collection. Keep in mind that reducing this setting may impact the performance of your application.
+4. **Update dependencies**: Outdated dependencies can sometimes cause memory leaks or other issues leading to high garbage collection activity. Make sure all your dependencies are up-to-date.
+5. **Review your code**: Carefully review your code for any potential memory leak patterns, such as using `new` operators without properly disposing of resources or creating multiple instances of objects without releasing them when they're no longer needed.
+6. **Use a profiling tool**: Consider using a profiling tool like flamegraph or v8 profile to identify the root cause of the high garbage collection activity. These tools can provide detailed insights into the performance of your application and help you diagnose and resolve bottlenecks.
+7. **Consider increasing heap size**: If you're still experiencing high garbage collection activity even after optimizing your application, you might need to increase the heap size allocated to your Node.js process. However, keep in mind that increasing the heap size can impact the performance of your application, so it should be done carefully. You can use the command line flag `--max_old_space_size` to adjust the heap size.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["BHg3kPVshnhstljb8bHiOOh27Nk"]
+      }
+    ]
+  }
+}

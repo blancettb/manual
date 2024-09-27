@@ -1,0 +1,33 @@
+{
+  "name": "High heap usage",
+  "description": "This rule checks the heap usage of the Elasticsearch node together with the recent workload characteristics in order to detect the heap usage to be too high.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the JVM settings: Ensure that the -Xms and -Xmx settings are set appropriately for your application's requirements. The -Xms setting should be lower than the -Xmx setting. For example, if -Xmx is set to 512m, then -Xms should be set to 256m.
+2. Adjust the indices size: You can reduce the number of open indices or adjust the index size by using the Index Lifecycle Management (ILM) feature. This can help decrease the memory consumption of your Elasticsearch cluster.
+3. Optimize query filters: Use more specific query filters to reduce the amount of data processed by Elasticsearch. This can help decrease the memory consumption of your Elelasticsearch cluster.
+4. Increase the Elasticsearch heap size: If the previous steps do not resolve the issue, you can increase the Elasticsearch heap size by modifying the `jvm.options` file. However, this should be done with caution as it can potentially impact the overall system performance.
+5. Monitor the heap usage: Regularly monitor the heap usage of your Elasticsearch node to ensure that it remains within acceptable limits. You can use tools like VisualVM or the Elasticsearch monitoring API to track the heap usage over time.
+
+By following these steps, you should be able to resolve the High heap usage issue in Elasticsearch.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["hncoCQOTSXrZlA-KW6j7qpiLEEg"]
+      }
+    ]
+  }
+}

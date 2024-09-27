@@ -1,0 +1,31 @@
+{
+  "name": "Active connection usage",
+  "description": "Active connections ratio exceeds the configured active connections ratio threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "   1. Identify the source of the high active connection usage by monitoring the system's resource utilization and identifying any suspicious patterns or spikes in connection activity.
+   2. Adjust the max_connections parameter in your PostgreSQL configuration file to a lower value, which will limit the maximum number of concurrent connections. However, keep in mind that reducing this value may impact the overall performance and responsiveness of your database system.
+   3. Monitor the system's resource utilization after adjusting the max\_connections parameter to ensure that the active connection usage is within the desired range.
+   4. If the issue persists, consider implementing connection pooling or load balancing techniques to distribute the workload more evenly across multiple servers or application instances. This can help prevent individual servers from becoming overwhelmed and reduce the likelihood of active connection usage issues.
+
+It is important to note that these are general suggestions, and the specific solution required may depend on the underlying cause of the high active connection usage. Always monitor your database system closely and address any issues promptly to maintain optimal performance and availability.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["MZxEYdSZYkFVX_OT4zJhoP999gM"]
+      }
+    ]
+  }
+}

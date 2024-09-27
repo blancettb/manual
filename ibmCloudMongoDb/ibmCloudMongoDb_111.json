@@ -1,0 +1,32 @@
+{
+  "name": "Disk utilization percent over 5 minute interval too high",
+  "description": "Checks whether the disk utilization over a 5 minute interval exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the current disk usage and identify if any particular database is consuming a significant amount of space. You can use the command `db.runCommand({"stats": 1})` in MongoDB to get detailed information about the disk usage for each database.
+2. If a specific database is identified as the source of the high disk usage, consider optimizing its storage structure. You can use the command `db.runCommand({"forceIndexes": "myDatabase"})` to create or rebuild indexes on that database, which can help improve query performance and reduce disk usage.
+3. If the high disk usage is not attributed to a single database, review the overall disk usage across all databases. You may need to adjust the retention policies for your databases to ensure they are not keeping unnecessary data. You can use the command `db.runCommand({"adminCheckin": 1})` to check the retention settings for all databases.
+4. If the high disk usage persists after implementing the above steps, you may need to increase the size of your MongoDB shards. Sharding can help distribute the data more evenly across multiple servers, reducing the load on individual databases and improving overall performance. However, this should be done with caution, as increasing the shard size may also increase the time required to perform certain operations.
+
+By following these steps, you should be able to address the high disk utilization issue and optimize your MongoDB setup accordingly.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["WZNmfyYSSfcFx9p0xrKNY7lBvNc"]
+      }
+    ]
+  }
+}

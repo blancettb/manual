@@ -1,0 +1,32 @@
+{
+  "name": "Request valid rate",
+  "description": "Valid request is less than the configured ratio threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the configuration of the OSS bucket's access control list (ACL) and ensure that the ACL allows for the minimum required permissions for your application.
+ 2. Verify that the Alibaba Cloud CDN domain name used in your application points to the correct CNAME entry associated with the OSS bucket.
+ 3. Ensure that the SSL certificate used for the CDN domain name is valid and trusted by the client devices.
+ 4. If the issue persists, consider increasing the timeout period for requests to the OSS bucket or adjusting the rate limit settings to allow for more requests per unit time. However, be cautious not to exceed the maximum allowed rate limit.
+ 5. Monitor the Request valid rate metric over time to identify any trends or patterns that may indicate underlying issues with the OSS bucket or its configurations.
+
+For more advanced troubleshooting, you can contact Alibaba Cloud Support for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["NwI6lpUO5SO4TMCqdU3x89Z5vAQ"]
+      }
+    ]
+  }
+}

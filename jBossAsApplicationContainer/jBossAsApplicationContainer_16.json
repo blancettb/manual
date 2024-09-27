@@ -1,0 +1,40 @@
+{
+  "name": "ConnectionPool is running out of connections",
+  "description": "This detector establishes a processing pipeline to detect the used connections ratio and checks if it is about to reach the threshold value.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Increase the maximum number of connections in the Connection Pool: You can do this by modifying the `maxConnections` parameter in the `<connection-pool>` element of your configuration file. The default value is usually around 100. If you need to allow more concurrent users, you can increase this value accordingly. However, keep in mind that a higher value may also increase the risk of resource contention and potential performance issues.
+
+ 2. Adjust the connection timeout: By increasing the connection timeout, you can give the application more time to establish a connection before it's considered abandoned. This can help prevent unnecessary evictions from the Connection Pool. The default timeout value is typically 30 seconds. You can modify the timeout value in the `<connection-pool>` element using the `connectionTimeout` attribute.
+
+ 3. Monitor the application's usage patterns: Keep an eye on the application's resource consumption and identify any bottlenecks or abnormal usage patterns. This can help you determine if there are any underlying issues causing the Connection Pool to run out of connections.
+
+ 4. Implement connection pooling best practices: Ensure that your application follows connection pooling best practices, such as closing connections promptly after use and avoiding excessive connection creation.
+
+ 5. Consider using a connection pool monitoring tool: Tools like VisualVM (for Java) or other third-party tools can help you monitor your Connection Pool and identify potential issues before they become critical.
+
+ 6. Optimize your database queries: Efficient database queries can significantly reduce the load on your Connection Pool. Be sure to optimize your SQL statements, use prepared statements, and leverage caching when possible.
+
+ 7. Scale your infrastructure: If the issue persists even after implementing the above steps, consider scaling your infrastructure by adding more servers or resources to handle increased traffic.
+
+By following these steps, you should be able to resolve the ConnectionPool is running out of connections issue in your jBossAsApplicationContainer environment.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["2XxzwtHuw77ayGKtP0Lp-HRVC2c"]
+      }
+    ]
+  }
+}

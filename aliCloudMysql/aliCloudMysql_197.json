@@ -1,0 +1,32 @@
+{
+  "name": "Average memory Usage",
+  "description": "Ratio between Used and memory usage limit is greater than the configured ratio threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your application's memory usage patterns and identify any resource-intensive operations or bottlenecks.
+ 2. Adjust the `innodb_buffer_pool_size` parameter in your MySQL configuration file to allocate more memory for caching data. This can help reduce the frequency of disk I/O and improve overall performance.
+ 3. Monitor your system's memory usage over time and adjust the `innodb_buffer_pool_size` parameter accordingly based on your observations.
+ 4. If the issue persists, consider increasing the size of your MySQL instance or adding more resources (such as CPU or RAM) to your hosting environment.
+ 5. You may also want to review your database schema and query patterns to ensure they are optimized for memory usage efficiency.
+
+If you need further assistance, please let me know.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["DZR1WTReoUeaVcIBfvIy3tj1SSU"]
+      }
+    ]
+  }
+}

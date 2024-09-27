@@ -1,0 +1,32 @@
+{
+  "name": "CPU credit balance reaching zero",
+  "description": "Checks if the CPU credit balance is getting closer to Zero.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "   1. Increase the number of vCPUs allocated to your RDS instance. This will provide more processing power for your application, allowing it to handle higher workloads and potentially reduce the likelihood of CPU credit balance exhaustion.
+   2. Monitor your RDS instance's CPU utilization and adjust the vCPU allocation accordingly. If the CPU utilization remains high even with increased vCPUs, consider scaling up the memory size of your RDS instance as well.
+   3. Review your application's workload and query patterns. If your application consistently requires high CPU resources, you may need to optimize your queries or redesign your application architecture to better distribute the workload.
+   4. Check for any resource-intensive processes running on your EC2 instances that might be consuming excessive CPU credits. If found, terminate or limit these processes to prevent them from affecting your RDS instance's performance.
+   5. Keep your RDS instance software up-to-date. Regular updates often include bug fixes and performance improvements that could help address CPU credit balance issues.
+
+By following these steps, you should be able to resolve the AWS RDS CPU credit balance reaching zero issue and ensure optimal performance for your application.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["-e_iVsT3YY-vly5mq-eVAk9r0Y8"]
+      }
+    ]
+  }
+}

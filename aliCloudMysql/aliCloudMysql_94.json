@@ -1,0 +1,27 @@
+{
+  "name": "Average Connection Usage",
+  "description": "Ratio between Used and Connections limit is greater than the configured ratio threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your application's connection handling logic to ensure that it does not create too many connections simultaneously. This can be done by monitoring the number of active connections in your application logs or using tools like MySQL Workbench's "Show Processlist" feature.
+2. Adjust the connection limits for your application based on your specific requirements and the expected concurrent user load. You",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["qS5-DGlkg7nv7vaF46CuLgo55jY"]
+      }
+    ]
+  }
+}

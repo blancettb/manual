@@ -1,0 +1,30 @@
+{
+  "name": "A sudden increase in secret reads count",
+  "description": "Secret read count suddenly increased",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Review recent changes: Check if there have been any recent changes to the vault or its policies that could explain this increase.
+ 2. Investigate access patterns: Analyze who has accessed the secrets and how frequently they have done so. This can help identify any unusual or suspicious activity.
+ 3. Validate access permissions: Ensure that users have the appropriate access levels and permissions for the secrets they are accessing.
+ 4. Monitor for unusual behavior: Keep an eye out for any other signs of unusual activity, such as failed login attempts or unexpected network traffic.
+ 5. Contact support: If you cannot resolve the issue yourself, contact the support team for assistance. They will be able to investigate further and provide guidance on how to address the problem.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["yhdrIOj2JvOnqE3J59nS2_NJphM"]
+      }
+    ]
+  }
+}

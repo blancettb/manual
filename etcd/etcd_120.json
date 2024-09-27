@@ -1,0 +1,35 @@
+{
+  "name": "Abnormally high disk wal fsync duration",
+  "description": "Detects high disc was fsync duration",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. First, ensure that your etcd version is up-to-date. If not, update it by running the command `etcdctl set cluster-version 3.4.5`.
+
+ 2. Next, check if there are any corrupted data directories in your etcd cluster. You can do this by running the command `etcdctl ls /var/lib/etcd/wal/` and verifying that all the files have a size of 0. If any file has a non-zero size, you should repair the corrupted directory using the command `etcdctl repair <directory_path>`.
+
+ 3. If the above steps do not resolve the issue, you may want to consider increasing the number of wal files for your etcd cluster. To do this, run the command `etcdctl set wal.dir /var/lib/etcd/wal/wal<n>` where <n> represents the desired number of wal files.
+
+ 4. Lastly, restart the etcd service to apply the changes.
+
+
+[",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Tr5fUjQn98LhuuYYWeu7VPAhXzE"]
+      }
+    ]
+  }
+}

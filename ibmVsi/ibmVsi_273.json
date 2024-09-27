@@ -1,0 +1,38 @@
+{
+  "name": "Average CPU usage too high",
+  "description": "Checks whether the average CPU usage exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check if there are any running virtual machines consuming excessive CPU resources. You can do this by navigating to the Virtual Machines tab in the vSphere Client and reviewing the CPU utilization for each VM.
+2. If you find that a particular VM is consuming a disproportionate amount of CPU resources, consider taking one or more of the following actions:
+
+   a. Adjust the CPU allocation for the VM. You can do this by right-clicking on the VM in the vSphere Client, selecting Edit Settings, and then adjusting the CPU allocation in the Hardware section.
+   b. Consider resizing the VM's virtual hardware configuration. This may involve adding more memory or increasing the number of CPUs for the VM. However, be cautious not to overprovision resources, as this can lead to performance issues elsewhere in the environment.
+3. Monitor the overall CPU usage in your vCenter Server environment. You can use the vSphere Client to view the CPU usage for all VMs in the environment, or you can use the vSphere API to programmatically retrieve this information.
+4. If the issue persists after addressing the above steps, you may want to consider implementing some best practices for CPU resource management in your vSphere environment. Some potential best practices include:
+
+   a. Regularly reviewing and optimizing CPU resource allocations for VMs.
+   b. Implementing resource pooling and dynamic resource allocation to ensure efficient resource usage across the environment.
+   c. Monitoring CPU usage trends and identifying potential bottlenecks before they become critical.
+
+By following these steps, you should be able to resolve the Average CPU usage too high issue in your vSphere environment.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["5ps3UqlafElSXiV6tqtfW-cnLh8"]
+      }
+    ]
+  }
+}

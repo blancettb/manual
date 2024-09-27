@@ -1,0 +1,31 @@
+{
+  "name": "IBM MQ Queue Manager number of connections",
+  "description": "IBM MQ Queue Manager number of connections.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the current connection limit for the queue manager by running the command "mqsichk qmgr(QUEUE_MANAGER_NAME)" and looking at the value in the "Max Conn" column.
+2. If the current connection limit is too low, increase it by running the command "setmqaut -m QUEUE_MANAGER_NAME -n MAX_CONNECTIONS". Replace "QUEUE_MANAGER_NAME" with the name of your queue manager and "MAX_CONNECTIONS" with the desired new maximum number of connections.
+3. Restart the queue manager for the changes to take effect by running the command "stopmqm QUEUE_MANAGER_NAME" and then "startmqm QUEUE_MANAGER_NAME".
+4. Monitor the queue manager's connection usage over time to ensure that it does not exceed the new maximum limit.
+
+These steps will help you manage the number of connections to your IBM MQ Queue Manager and prevent any potential issues caused by an excessive number of concurrent connections.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["nMz6wnEBWh-7UoWONsk8bYHpKrs"]
+      }
+    ]
+  }
+}

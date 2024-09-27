@@ -1,0 +1,40 @@
+{
+  "name": "GPU usage is close to the limit",
+  "description": "GPU usage is greater than the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Optimize your code**: Ensure that your application's code is optimized for efficient GPU utilization. This may include optimizing data structures, algorithms, and memory access patterns.
+
+ 2. **Increase GPU memory**: If your application requires more memory for processing, consider increasing the GPU memory allocation. This can be done by modifying the system configuration or using memory management libraries that support dynamic memory allocation.
+
+ 3. **Reduce unnecessary computations**: Identify and eliminate unnecessary computations in your application. This can help reduce the overall load on the GPU and improve performance.
+
+ 4. **Utilize multi-GPU configurations**: If your application supports multi-GPU configurations, utilize them to distribute the workload across multiple GPUs. This can help improve GPU utilization and reduce the overall load on each GPU.
+
+ 5. **Monitor GPU temperature and power consumption**: Keep an eye on the GPU temperature and power consumption to ensure they do not exceed their recommended limits. If necessary, take appropriate measures to cool down the GPU or reduce power consumption.
+
+ 6. **Update drivers and software**: Make sure that your GPU drivers and the software stack are up-to-date. Outdated drivers or software can cause unexpected issues and affect GPU performance.
+
+ 7. **Reconfigure resource allocation policies**: If none of the above steps help, consider reconfiguring the resource allocation policies for your application. This may include adjusting thread block, grid, or CUDA kernel configurations to better match the capabilities of your GPU hardware.
+
+By following these steps, you should be able to bring the GPU usage back within the configured threshold and improve the overall performance of your application.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Tv5CRDoJmeHGlZM5-QJnSEyuVTE"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Available replicas is less than desired replicas",
+  "description": "Checks whether the total number of available replicas is less than the number of desired replicas. This indicates that the Kubernetes Deployment is missing replica pods.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Examine pod status**: Check the status of the pods in the Deployment. You may find that some pods are in a "CrashLoopBackOff" state, which means they keep restarting but never become ready. These pods should be addressed first.
+
+ 2. **Investigate resource constraints**: Ensure that the node has sufficient CPU, memory, and storage resources for the desired number of replicas. If not, increase the resources allocated to the node or scale down the Deployment to reduce resource usage.
+
+ 3. **Review update strategy**: Verify that the update strategy in the Deployment configuration is appropriate for your use case. For example, if using RollingUpdate, ensure that enough nodes have been targeted for the update to avoid overloading any single node.
+
+ 4. **Increase replica count**: Gradually increase the number of replicas in the Deployment while monitoring its behavior. This will help identify any potential issues with the new replica set.
+
+ 5. **Retain old replica set**: In some cases, it might be necessary to retain the old replica set until the new ones are fully healthy. You can do this by updating the Deployment's update strategy to "Recreate" instead of "RollingUpdate".
+
+ 6. **Implement health checks**: Add health checks to the Deployment to ensure that new replicas are properly functioning before being considered available.
+
+ 7. **Consider using a load balancer**: If using a load balancer, ensure that it correctly distributes traffic to the replica pods.
+
+ 8. **Monitor and adjust**: Continuously monitor the Deployment's performance and make adjustments as needed.
+
+By following these steps, you should be able to address the issue of Available replicas being less than desired replicas in your Kubernetes Deployment.",
+        "secured": false
+    }
+],
+  "staticId": "",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["n_uKaE23Kp523Xg0Nav_Tei4UMA"]
+      }
+    ]
+  }
+}

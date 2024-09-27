@@ -1,0 +1,28 @@
+{
+  "name": "Individual CPU usage too high",
+  "description": "Checks whether the individual CPU usage exceeds the configured threshold over a one minute interval",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check if there are any suspicious activities or patterns in your virtual machine's resource utilization. This could include running unnecessary processes, high memory consumption, or I/O wait times.
+2. If you find any such issues, consider optimizing your virtual machine's configuration by adjusting settings like CPU shares, memory allocation, or network settings. You",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["9EOtzzMVP70hA6kLWWMSQnolS6Y"]
+      }
+    ]
+  }
+}

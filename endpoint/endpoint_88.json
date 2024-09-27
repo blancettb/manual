@@ -1,0 +1,34 @@
+{
+  "name": "Complete drop in all calls",
+  "description": "Detects a rapid drop to zero (essentially the service is not being called anymore) in the values of the calls KPI metric relative to the values in the last 30 minutes. The magnitude of the drop in calls should also exceed the relative and absolute threshold parameters below.
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Review the data stream settings and ensure that the data stream is properly configured and collecting data.
+ 2. Check the data quality and completeness of the data stream.
+ 3. Validate the accuracy of the metrics used in the rule.
+ 4. Investigate any potential issues with the underlying infrastructure or dependencies that could be impacting the call metrics.
+ 5. If the issue persists, consider adjusting the relative and absolute threshold parameters of the rule to allow for more flexibility in detecting anomalies.
+ 6. Monitor the system closely to identify if the issue reoccurs after making these adjustments.
+
+If none of the above steps resolve the issue, it may indicate a more serious problem with the rule or its configuration. In this case, you may want to contact support for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["IRcNyDMoqs4LHjkD5pzderkqiK4"]
+      }
+    ]
+  }
+}

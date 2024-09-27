@@ -1,0 +1,31 @@
+{
+  "name": "Percentage of memory used is too high",
+  "description": "Checks whether the percentage of memory used exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the current memory usage and ensure it does not exceed the allowed limit. You can use the command `top` or `htop` to view the current memory usage by process.
+2. If the memory usage is within the allowed limit, consider increasing the Elasticsearch heap size. To do this, you can modify the Elasticsearch configuration file located at `/usr/share/elasticsearch/config/elasticsearch.yml`. Look for the `heap_size` setting and increase its value. Save the changes and restart Elasticsearch for the new settings to take effect.
+3. If the memory usage continues to be an issue even after increasing the heap size, you may need to consider scaling up your Elasticsearch cluster. This can be done by adding more nodes to the cluster, which will provide additional resources for handling data.
+4. Monitor the Elasticsearch system logs for any error messages or warnings that may indicate underlying issues causing the high memory usage.
+5. If you are still experiencing problems, consider contacting IBM Support for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["22CSFcGKg9ckDwkxDGRJt5256zk"]
+      }
+    ]
+  }
+}

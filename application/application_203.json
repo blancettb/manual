@@ -1,0 +1,37 @@
+{
+  "name": "Sudden drop in inbound calls",
+  "description": "Detects a rapid drop in the values of the calls KPI metric relative to the values in the last 30 minutes. The magnitude of the drop in calls should also exceed the relative and absolute threshold parameters below. This rule only applies for Applications configured to use Inbound Calls KPIs or that have not yet been configured to use by, default, either All Calls or Inbound Calls KPIs.
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Access the Metric Detail page for the calls KPI metric.
+2. Review the chart for the calls KPI metric.
+3. Analyze the data points in the chart to identify any unusual patterns or spikes.
+4. If necessary, adjust the threshold parameters for the rule to better match your application's behavior.
+5. Save the updated configuration.
+
+It is important to note that this rule is designed to detect significant changes in the call volume, and it may generate false positives or negatives depending on the specific application's behavior. Therefore, it is essential to review the alert and its details carefully and take appropriate action based on the observed issues.
+
+Additionally, if you are unable to resolve the issue after reviewing the alert and adjusting the threshold parameters, you may want to consider investigating other potential causes, such as network connectivity problems, server issues, or third-party integrations.
+
+For more information about the Sudden drop in inbound calls rule and how to configure it, refer to the official documentation provided by the platform.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["a7phRxKTsx6-twJyYjWBjojx5EA"]
+      }
+    ]
+  }
+}

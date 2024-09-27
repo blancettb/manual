@@ -1,0 +1,32 @@
+{
+  "name": "Javascript playback engine status",
+  "description": "Checks the status of Synthetic PoP playback engine.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check network connectivity: Ensure that your network connection is stable and functioning properly. A weak or unstable connection can cause issues with the playback engine's functionality.
+ 2. Verify the Synthetic PoP configuration: Make sure that the Synthetic PoP is correctly configured, including the correct user agent, location, and other relevant details. Incorrect configurations can lead to playback engine errors.
+ 3. Inspect error logs: If an error has occurred, review the error logs for more information about the problem. These logs can provide valuable insights into the root cause of the issue and help you identify appropriate solutions.
+ 4. Update the playback engine: In some cases, updating the playback engine to the latest version may resolve the issue. This ensures that you have access to the most recent bug fixes and improvements.
+ 5. Consult the documentation or support resources: For further assistance, refer to the official documentation or contact the support team for the specific Synthetic PoP solution you are using. They can provide guidance based on your particular setup and situation.
+
+By following these steps, you should be able to diagnose and address any issues related to the Javascript playback engine status in your Synthetic PoP environment.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["4Nxv5-GNmtTHqdyefZkzKVmC6jw"]
+      }
+    ]
+  }
+}

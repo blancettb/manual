@@ -1,0 +1,37 @@
+{
+  "name": "Sudden drop in the number of session",
+  "description": "This rule checks for a sudden drop in the number of sessions.
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the server logs for any error messages or warnings related to the sudden drop in session count.
+2. Verify that the application is running smoothly and there are no exceptions or crashes.
+3. If the application is running fine, check if there are any scheduled maintenance activities or updates that could have caused a temporary decrease in the number of sessions.
+4. Investigate if there are any changes in the user behavior or application usage pattern that might be responsible for the sudden drop in session count.
+5. If none of the above steps provide an answer, consider increasing the monitoring frequency for this rule to get more detailed insights into the situation.
+
+Additionally, you can also refer to the provided documentation for more information about the rule and its configuration options.
+
+If you still encounter issues after trying these suggestions, please let me know and I will be happy to help further.
+
+Thank you!",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["3I7WJKcSV11WSEQytCJxx8B5KII"]
+      }
+    ]
+  }
+}

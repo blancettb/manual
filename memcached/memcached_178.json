@@ -1,0 +1,36 @@
+{
+  "name": "Used bytes by memcached reached maxbytes limit",
+  "description": "Detects high bytes usage",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Identify the source of the high memory usage: Check if there are any long-running scripts or applications that are consuming a significant amount of memory. You can use tools like top, htop, or sar to monitor system resource usage and identify the processes using the most memory.
+
+2. Adjust the maxbytes value: Memcached's maxbytes setting determines the maximum amount of memory it can consume. If the default value is not sufficient for your application's needs, you can increase it. However, be cautious not to set it too high, as it may lead to other issues. To adjust the maxbytes value, modify the configuration file for your memcached server.
+
+3. Monitor memory usage: After making changes to the maxbytes value, monitor memcached's memory usage over time. Use tools like top, htop, or sar to check the current memory usage and ensure that it remains below the new maxbytes limit.
+
+4. Tune your application: If the high memory usage persists even after adjusting the maxbytes value, consider tuning your application to reduce its memory footprint. This might involve optimizing database queries, reducing object sizes, or implementing caching strategies.
+
+5. Increase system resources: If all else fails, you might need to increase the system resources allocated to memcached. This could include increasing the amount of physical memory, adding more CPU cores, or upgrading your hardware infrastructure. However, this should be considered a last resort, as it can be expensive and may not always be necessary.
+
+By following these steps, you should be able to resolve the Used bytes by memcached reached maxbytes limit issue and prevent further memory consumption problems.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["dioaCUGVa-V3S-6l8Qqav2OXZaw"]
+      }
+    ]
+  }
+}

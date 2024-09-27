@@ -1,0 +1,33 @@
+{
+  "name": "Number of queued requests is high",
+  "description": "This detector establishes a processing pipeline to detect the number of queued requests in Zookeeper. It validates whether the number of queued requests is reaching the threshold value.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Increase the session timeout in ZooKeeper: By increasing the session timeout, you can allow more time for clients to perform their operations before timing out. This can help reduce the number of queued requests if the client's request takes longer than expected to complete.
+2. Reduce the maxWait interval in the client code: The maxWait interval specifies how long a client should wait for a response from ZooKeeper before giving up. Reducing this interval can help improve the responsiveness of your application and reduce the number of queued requests if the client frequently waits for a response from ZooKeeper.
+3. Optimize the data structure used for storing queued requests: If the data structure used for storing queued requests is not optimized, it could lead to a high number of queued requests. Optimizing the data structure by using a more efficient algorithm or implementing caching can help reduce the number of queued requests.
+4. Monitor the load on the ZooKeeper server: If the ZooKeeper server is overloaded, it may experience increased latency and a higher number of queued requests. Monitoring the load on the ZooKeeper server can help identify potential bottlenecks and allow you to take corrective actions accordingly.
+5. Implement retry mechanisms: Implementing retry mechanisms can help handle transient issues that may cause an increase in the number of queued requests. By automatically retrying requests after a certain period, you can ensure that your application remains responsive even when facing temporary network issues or other transient problems.
+6. Limit the number of concurrent connections: Limiting the number of concurrent connections to ZooKeeper can prevent resource exhaustion and reduce the number of queued requests. You can implement connection limits using the maxClientCnxns parameter in the ZooKeeper configuration.
+7. Use a load balancer: Using a load balancer can distribute the client traffic across multiple ZooKeeper servers, reducing the load on individual servers and",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["mB60QoFy2J1LXurGRJYSMMwPpiE"]
+      }
+    ]
+  }
+}

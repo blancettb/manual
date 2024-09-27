@@ -1,0 +1,30 @@
+{
+  "name": "Queues pending messages exceeds the limit",
+  "description": "The max number of pending messages for queue is almost used up",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the current number of pending messages in the queue using the command `tibcoemstopic ls <queue_name>`.
+2. If the number of pending messages is close to or over the limit (default is 1000), consider increasing the maximum number of pending messages allowed for the queue. To do this, use the command `tibcoemstopic alter <queue_name> max-messages=<new_limit>`. Replace `<queue_name>` with the name of your queue and `<new_limit>` with the desired new maximum number of pending messages.
+3. If the problem persists after adjusting the maximum number of pending messages, you may need to increase the amount of memory allocated to the application using the `-Xms` and `-Xmx` options in the Java Virtual Machine (JVM) settings. Consult the JVM documentation for instructions on how to adjust these settings.
+
+It's important to note that changing the maximum number of pending messages or JVM settings requires administrative privileges. If you are not an administrator, contact the system administrator for assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["FlX1uOvND2h3_MTlM8dvzNHjfBU"]
+      }
+    ]
+  }
+}

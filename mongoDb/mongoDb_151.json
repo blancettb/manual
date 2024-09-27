@@ -1,0 +1,50 @@
+{
+  "name": "Continuously increasing lock queue length",
+  "description": "This monitors the MongoDb Lock Queue metric and validates if the lock queue size is increasing too fast.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Increase the maximum number of locks allowed per connection in your MongoDB configuration file (mongod.conf). By default, it is set to 100. To modify this value, add the following line to the configuration file:
+
+   ```
+   lockManagerMaxWaitQueueSize: <new_value>
+   ```
+
+   Replace `<new_value>` with the desired maximum number of locks allowed per connection. For example, to increase it to 500, the command would be:
+
+   ```
+   lockManagerMaxWaitQueueSize: 500
+   ```
+
+2. If the issue persists after increasing the maximum number of locks allowed per connection, consider reducing the MongoDB server's maxTimeMS for waiting on locks. This setting determines how long MongoDB will wait for a lock before giving up and returning an error. To modify this value, add the following line to the mongod.conf file:
+
+   ```
+   lockWaitTimeoutMS: <new_value>
+   ```
+
+   Replace `<new_value>` with the desired lock wait timeout. For example, to set it to 5000 ms, the command would be:
+
+   ```
+   lockWaitTimeoutMS: 5000
+   ```
+
+   Keep in mind that changing these settings may impact the overall performance and stability of your MongoDB instance. It is essential to test these changes in a non-production environment before applying them to the production system.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["lSq4FuUCXXIpiZOIHb0NcH46D-s"]
+      }
+    ]
+  }
+}

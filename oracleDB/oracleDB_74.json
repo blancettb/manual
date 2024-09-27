@@ -1,0 +1,31 @@
+{
+  "name": "Total amount of sessions at maximum",
+  "description": "Used sessions ratio exceeds the configured used sessions ratio threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Identify the specific session that is causing the problem by reviewing the SESSIONS table in the Oracle database.
+2. Determine if the session is legitimate or malicious by checking its SESSION\_TYPE and USER\_ID columns. If the SESSION\_TYPE is 'human' or 'bot', and the USER\_ID matches an expected user, then it is likely a legitimate session. However, if the SESSION\_TYPE is 'anonymous' or 'spider', it may be a malicious bot.
+3. If the session is identified as malicious, you can take appropriate action such as blocking the IP address, deleting the session record, or implementing other security measures.
+4. To prevent future occurrences, you can adjust the used sessions ratio threshold in the configuration file. This will help ensure that the total number of sessions does not exceed the allowed limit.
+
+It's important to note that regularly monitoring and analyzing your system's session data can help identify potential issues before they become critical. Additionally, keeping your software up-to-date with the latest security patches and updates can also help protect against known vulnerabilities.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["dDVUE9VFDHONxccgpA1TM-p9M1A"]
+      }
+    ]
+  }
+}

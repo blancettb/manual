@@ -1,0 +1,33 @@
+{
+  "name": "Node status",
+  "description": "This rule checks the node status provided by the Elasticsearch",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the network connection between your client and Elasticsearch nodes.
+ 2. Ensure that the Elasticsearch nodes are running and have the required version installed.
+ 3. Verify that the cluster is healthy by running the command `GET /_cluster/health`.
+ 4. If the problem persists, check the logs of each Elasticsearch node for any error messages or warnings.
+ 5. If necessary, restart the affected Elasticsearch node and verify if the issue is resolved.
+ 6. If the issue still remains unresolved, consider checking the Elasticsearch documentation or contacting their support team for further assistance.
+
+For more information on troubleshooting Elasticsearch issues, you can refer to the official Elasticsearch documentation: <https://www.elastic.co/guide/en/elasticsearch/client/java-api/current/index.html>",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["k6TpCB2XNlW-sFpgA5YKVGYcnC0"]
+      }
+    ]
+  }
+}

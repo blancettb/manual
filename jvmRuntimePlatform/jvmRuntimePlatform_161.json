@@ -1,0 +1,31 @@
+{
+  "name": "Perm Gen is full (G1)",
+  "description": "This detector establishes a processing pipeline to detect the maximum Perm Gen G1 Pools utilized.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Analyze the heap dump and identify the cause of the excessive Perm Gen usage. You might need to reduce the application's memory footprint or increase the Perm Gen size.
+ 2. If the Perm Gen size is not set appropriately, adjust it according to your application's requirements. The default Perm Gen size may not be sufficient for large applications, leading to Perm Gen exhaustion.
+ 3. Monitor the Perm Gen usage over time and make adjustments as needed. It is essential to strike a balance between minimizing Perm Gen usage and ensuring that the application has enough space for its runtime needs.
+ 4. Consider using tools like VisualVM or YourKit to analyze the JVM's performance and identify potential issues related to Perm Gen utilization. These tools can provide valuable insights into the root causes of the problem and help you fine-tune your configuration settings.
+ 5. Keep your Java Runtime Environment (JRE) up-to-date. Regular updates often include bug fixes and improvements that can help address Perm Gen issues more effectively.
+ 6. If the issue persists after attempting these steps, consider seeking assistance from the Oracle Support team or the community forums for further guidance. Provide them with the necessary information, such as the heap dump analysis and relevant configuration settings, to help diagnose and resolve the issue.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["umXyW54S7dq07y0P6u2zkfHwg0I"]
+      }
+    ]
+  }
+}

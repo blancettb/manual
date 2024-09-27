@@ -1,0 +1,29 @@
+{
+  "name": "Missing Metrics",
+  "description": "Missing metrics for entity",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "   1. Check the connection between the data source and the SAP HANA system by navigating to the Data Warehouse Monitor and verifying that the connection is active.
+   2. Ensure that the time range selected in the query includes the relevant data. If necessary, adjust the time range to capture the missing metrics.
+   3. Verify that the required metrics are indeed missing from the query results. You can do this by checking the documentation or specifications for the specific query or report.
+   4. If the issue persists, consider reaching out to the support team for further assistance. They may be able to provide more specific guidance based on the details of your query and system configuration.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["CFuUPtS1TB5o0w_o9g9MITa9t6g"]
+      }
+    ]
+  }
+}

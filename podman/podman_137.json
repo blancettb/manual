@@ -1,0 +1,56 @@
+{
+  "name": "Memory exhausted",
+  "description": "Detects high memory usage",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the current memory usage of your system by running the command `free -h`. This will give you an idea of how much physical and swap memory is currently available.
+2. If you find that you have low memory available, consider closing unnecessary applications or processes to free up some resources. You can also restart your computer if necessary.
+3. If you are using Docker or Podman containers, try reducing the number of running containers or limiting their resource limits. You can do this by modifying the configuration files for the containers. For example, you can change the memory limit in the Docker daemon configuration file (usually located at /etc/docker/daemon.json) by adding or updating the following line:
+
+   ```
+   {
+       "default-ulimit": {
+           "nofile": 1024,
+           "nproc": 512,
+           "memory": "2048m",
+       },
+   }
+   ```
+
+   Make sure to restart the Docker service for these changes to take effect.
+4. If you are using Podman specifically, you can also use the `--cpus` and `--memory` flags when starting a container to specify the CPU and memory limits. For example, to start a container with 1 CPU and 2 GB of memory, you can use the following command:
+
+   ```
+   podman run --cpus=1 --memory=2g myimage
+   ```
+5. Another option is to use the `pstrace` tool to analyze the memory usage of your containers. This can help you identify which containers are consuming the most memory. To use pstrace, first install it if you haven't already:
+
+   ```
+   sudo apt-get update && sudo apt-get install pstrace
+   ```
+
+   Then, run the following command to trace the memory usage of all running containers:
+
+   ```
+   pstrace",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["GSykO6RVanMLP6iXBJH69vHiwcA"]
+      }
+    ]
+  }
+}

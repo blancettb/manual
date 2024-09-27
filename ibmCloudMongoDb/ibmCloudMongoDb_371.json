@@ -1,0 +1,35 @@
+{
+  "name": "MongoDB node status is not healthy",
+  "description": "Checks whether the MongoDB node status is ok",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the MongoDB logs for any error messages or warnings. These logs can be found in the /data/db/mongod.log file on each MongoDB node. Look for any indications of issues with the database or its configuration.
+2. Ensure that the MongoDB nodes are running the expected version. You can check the version by running the command "ps -ef | grep mongod" and looking for the version number displayed. If the version is not as expected, update it using the appropriate MongoDB upgrade procedure.
+3. Check the network connectivity between the MongoDB nodes and other components in the system. Use tools like "ping" or "telnet" to test connectivity. If there are any connectivity issues, troubleshoot and resolve them before proceeding.
+4. Review the MongoDB configuration settings to ensure they are correct. Check the following settings in particular:
+
+   - The data directory path to ensure it is set correctly and has the proper permissions.
+   - The journal size to ensure it is set appropriately based on the system's resources and workload.
+   - The replication factor and arbiter settings to ensure they are configured correctly for high availability and data redundancy.
+5. If the problem persists, consider increasing the log level in the mongod.conf file to debug mode. This will provide more detailed logs which can help identify the root cause of the issue. However, this should be used as a last resort since it can generate a large amount of log data and may impact performance.
+6. If none of the above steps resolve the issue, contact IBM Support for further assistance. Provide them with the relevant log files and details about the problem so they can assist you in diagnosing and resolving the issue.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["ESdaAw4jrsTZmckXg-U5cHjqxc4"]
+      }
+    ]
+  }
+}

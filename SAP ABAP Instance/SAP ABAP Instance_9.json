@@ -1,0 +1,31 @@
+{
+  "name": "Generate Event if File System Usage Crosses a Threshold",
+  "description": "File system utilization has exceeded 80%",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "   1. Check the threshold value and ensure it is set correctly. The default value is 80%.
+   2. Verify that the event receiver is properly configured and activated.
+   3. Confirm that the monitored directory exists and has sufficient space for the expected data.
+   4. If the problem persists, check the SAP ABAP instance's log files for any error messages related to file system usage.
+
+If you are still experiencing issues, consider checking the SAP Note 2927707 for potential solutions or contacting SAP Support for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["hrkjmTUGyOEyzPJepG3_GPU821A"]
+      }
+    ]
+  }
+}

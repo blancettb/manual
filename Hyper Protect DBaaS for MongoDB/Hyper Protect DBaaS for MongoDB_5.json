@@ -1,0 +1,31 @@
+{
+  "name": "Percentage of disk space used is too high",
+  "description": "Checks whether the percentage of disk space used exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the current disk usage and free space on your MongoDB instance. You can use the command `db.runCommand({"fsyncObjects": 1})` to check the disk usage. This command returns the total amount of data that has been written to the disk since the last time the database was started.
+2. If the disk usage is high, consider increasing the size of your MongoDB sharding group or adding more nodes to your cluster. This can help distribute the load and reduce the risk of running out of disk space.
+3. Monitor the disk usage over time to ensure that it does not consistently exceed the configured threshold. You can set up alerts or notifications to notify you if the disk usage exceeds a certain level.
+4. Regularly check the documentation and best practices for Hyper Protect DBaaS for MongoDB to ensure that you are following the recommended configurations and settings for your specific use case.
+5. If the issue persists, contact support for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["jqTpyUrUq57BuX9pk9boeThjLXk"]
+      }
+    ]
+  }
+}

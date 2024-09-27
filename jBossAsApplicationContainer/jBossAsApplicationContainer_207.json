@@ -1,0 +1,33 @@
+{
+  "name": "Average errors on connector too high",
+  "description": "This detector establishes a processing pipeline to detect the number of errors occurred on connectors in the given time window and also checks whether the number of errors is greater than the threshold value.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Analyze the current error rate and determine if it exceeds the acceptable limit. If so, consider increasing the buffer size for the connector to allow for more errors before triggering an alert or taking corrective action.
+2. Check the network traffic and ensure that it does not exceed the expected limits. High network traffic can contribute to increased error rates. You may need to adjust the network settings or implement load balancing to manage the traffic more efficiently.
+3. Investigate any potential issues with the application code or configuration that could be causing the errors. Review the logs and error messages to identify any patterns or trends that may indicate the source of the problem.
+4. Implement proper error handling and logging mechanisms within the application to ensure that errors are properly detected, logged, and handled. This will help you diagnose and address the root cause of the errors more effectively.
+5. Monitor the error rate over time and adjust the thresholds and alerts as needed. The error rate may fluctuate due to various factors, so it's essential to maintain a flexible approach to monitoring and managing the system.
+
+By following these steps, you should be able to reduce the Average errors on connector too high issue and improve the overall stability and performance of your jBossAsApplicationContainer environment.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["bD3UgzP_s9USsIaSh8N6ABRlcqA"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "WebSphere certificate is about to expire",
+  "description": "Remaining days before certificate expiration is less than the threshold value",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Navigate to the WebSphere Administrative Console.
+ 2. Expand Security in the left-hand menu.
+ 3. Select Secure administration and application services.
+ 4. Click on Server certificates.
+ 5. Choose the server certificate that is going to expire soon.
+ 6. Under Additional Properties, click on Manage signers.
+ 7. Select the signer that corresponds to the expired certificate.
+ 8. Choose Remove Signer from the drop-down menu.
+ 9. Save your changes.
+
+After completing these steps, the "WebSphere certificate is about to expire" warning should be resolved. It's important to note that if you are unable to access the administrative console or the above steps do not resolve the issue, you may need to contact your system administrator for further assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["JJuNrDS2zwTCNXRctb7ywllwZG8"]
+      }
+    ]
+  }
+}

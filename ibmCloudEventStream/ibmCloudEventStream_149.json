@@ -1,0 +1,32 @@
+{
+  "name": "Event Stream disk space is nearing capacity if all topics are full",
+  "description": "Checks whether the total amount of disk space committed if all topics were full exceeds what is available",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. First, check the disk usage of your eventstreams by running the command `kubectl top pods -n <namespace> -l component=eventstream`. This will display the used and available disk space for each event stream.
+2. If the disk usage is high, identify the event streams with the highest disk usage by sorting the output by "used". You can then investigate these event streams to determine the cause of the high usage.
+3. Once you have identified the event streams with high disk usage, you can take appropriate action to free up disk space. This may include deleting old or unnecessary data from the event streams, or adjusting the retention policies for the data being stored.
+4. It's also important to regularly monitor the disk usage of your event streams to prevent this issue from recurring. You can set up alerts or notifications to notify you when the disk usage reaches a certain threshold.
+
+By following these steps, you can ensure that your event streams have sufficient disk space to handle the data being stored, and prevent potential issues caused by oversubscription.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["RXj73AeaPeE0qNCIgdg4daCz6L8"]
+      }
+    ]
+  }
+}

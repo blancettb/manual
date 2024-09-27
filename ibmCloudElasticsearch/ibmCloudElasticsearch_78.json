@@ -1,0 +1,31 @@
+{
+  "name": "Percentage of JVM heap used is too high",
+  "description": "Checks whether the JVM heap usage exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the Elasticsearch version and update it if necessary. An outdated version might cause memory-related issues. You can check the Elasticsearch version by running the command `curl -s localhost:9200/_version`.
+2. Increase the JVM heap size for Elasticsearch. To do this, open the Elasticsearch configuration file (elasticsearch.yml) in a text editor and locate the `heap_size` setting. Change the value to a higher number, such as `heap_size: 512m`. Save the changes and restart Elasticsearch for the new settings to take effect.
+3. Monitor the JVM heap usage after increasing the heap size. If the issue persists, consider reducing the indices size or optimizing your data indexing strategy.
+
+If the problem still isn't resolved, you may want to consult Elasticsearch's official documentation or seek assistance from their support team. They can provide more specific guidance based on your environment and use case.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["DV7N4dPd8owFqiYiHbcYRddlhwM"]
+      }
+    ]
+  }
+}

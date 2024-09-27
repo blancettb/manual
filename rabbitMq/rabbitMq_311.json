@@ -1,0 +1,28 @@
+{
+  "name": "RabbitMQ Memory Usage is critical on node",
+  "description": "RabbitMQ Memory Usage rate exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Check RabbitMQ Server Logs**: Look for any error messages or warnings related to memory usage in the server logs. These messages may provide information about the cause of the issue.
+
+2. **Inspect Queues and Channels**: Check the number of messages and channels in use by your application. High numbers of messages or channels can consume significant amounts of memory. You",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["-mpFaSe3P7z5skQI-Ztifv93r08"]
+      }
+    ]
+  }
+}

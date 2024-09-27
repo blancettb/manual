@@ -1,0 +1,32 @@
+{
+  "name": "Disk usage too high",
+  "description": "Checks whether the disk usage exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the RabbitMQ dashboard for any error messages or warnings related to disk space.
+2. If there are no errors, identify the consumer that is consuming the most memory. You can do this by running the command `rabbitmqctl list_consumers` and looking for the consumer with the highest memory usage.
+3. Terminate the identified consumer using the command `rabbitmqctl stop_consumer`. Be sure to terminate the correct consumer, as multiple consumers may be consuming large amounts of memory.
+4. Monitor the disk usage after terminating the consumer. If the disk usage remains high, consider increasing the rabbit\_user\_memory limit for the user that is experiencing the issue. To do this, run the command `rabbitmqctl change_user_vhost rabbit@/ <user> {memory_limit: <new_limit>}`.
+5. If the disk usage continues to be an issue even after adjusting the memory limit, you may need to increase the overall system memory allocated to RabbitMQ. This can be done by modifying the `rabbitmq.server.max_clients` and `rabbitmq.server.max_memory_mb` settings in the RabbitMQ configuration file. However, this should be considered a last resort, as it may impact the performance of other applications running on the system.
+
+By following these steps, you should be able to resolve the Disk usage too high issue in IBM Cloud RabbitMQ.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["q_9L63ae2W6v4AYTtkLNl9au-IQ"]
+      }
+    ]
+  }
+}

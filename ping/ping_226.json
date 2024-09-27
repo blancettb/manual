@@ -1,0 +1,31 @@
+{
+  "name": "Remote target is not reachable",
+  "description": "This rule checks whether the percentage of failed communication attempts in the given sliding window is above the given threshold.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your network connectivity by pinging the remote host from another machine or using an online tool like WhatIsMyIP.org's Ping Test.
+ 2. Ensure that the firewall or any other network security measures are not blocking the connection.
+ 3. If the problem persists, check if there are any issues with the remote host itself, such as resource exhaustion or downtime.
+ 4. If none of these steps resolve the issue, consider increasing the number of retries and the length of the sliding window in the rule to allow for more time for communication attempts.
+
+Additionally, it might be helpful to consult the documentation for your Network Performance Monitoring solution to understand how to properly configure and use the rule for your specific environment.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["jfdCCadGboiGQhEfF508dLuz1GM"]
+      }
+    ]
+  }
+}

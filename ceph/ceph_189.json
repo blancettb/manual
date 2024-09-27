@@ -1,0 +1,40 @@
+{
+  "name": "Osd(s) full capacity state",
+  "description": "Some of osd(s) are full",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Check cluster status**: Use the command `ceph status` to ensure that the overall cluster is healthy and not experiencing any major issues.
+
+2. **Inspect OSD status**: To check the status of individual OSDs, use the command `ceph osd tree`. This command will display the current usage and health status of each OSD in the cluster. Look for any OSDs with high usage percentages or errors.
+
+3. **Identify problematic OSDs**: If you find OSDs with high usage percentages or errors, you should investigate these nodes further. You may need to take them offline temporarily to alleviate the issue.
+
+4. **Take OSDs offline**: To take an OSD offline, use the command `ceph osd down <osd_id>`. Be sure to monitor the cluster while this process is underway to ensure that it remains stable.
+
+5. **Analyze and address the issue**: Once the problematic OSDs have been identified and taken offline, analyze the cluster's performance and identify any underlying causes for the high usage or errors. You may need to adjust configuration settings, such as the number of monitors or the replication factor, to improve the overall health and performance of the cluster.
+
+6. **Bring OSDs back online**: After addressing the issue, you can bring the OSDs back online using the command `ceph osd up <osd_id>`.
+
+7. **Monitor the cluster**: After bringing the OSDs back online, monitor the cluster closely to ensure that it remains stable and that the issue has been fully resolved.
+
+By following these steps, you should be able to resolve the Osd(s) full capacity state issue in your Ceph cluster.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["DamXb45_8rnvUO7SyG_JVSA9jBw"]
+      }
+    ]
+  }
+}

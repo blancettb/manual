@@ -1,0 +1,33 @@
+{
+  "name": "RabbitMQ has no connections",
+  "description": "Current number of connections is equal to the configured NoConnections count",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the RabbitMQ server logs for any error messages or warnings related to connection limits or queue counts.
+2. Verify that the RabbitMQ user and password are correct and up-to-date.
+3. Ensure that the RabbitMQ user has the necessary permissions to access the required queues and exchange.
+4. If the problem persists, consider increasing the maximum number of connections allowed on the RabbitMQ server by modifying the `max_connections` setting in the RabbitMQ configuration file. However, be cautious not to exceed the recommended limit for your specific setup.
+5. Restart the RabbitMQ server to apply the changes.
+6. Monitor the RabbitMQ server closely after restarting it to ensure that the new connection limit is being respected and that there are no further issues with connection availability.
+
+If you're still experiencing problems, you may want to consult the RabbitMQ documentation or seek assistance from the RabbitMQ community forums for more advanced troubleshooting techniques.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["WsiVQ0E5iX6mbGFY2JbrUQW-be4"]
+      }
+    ]
+  }
+}

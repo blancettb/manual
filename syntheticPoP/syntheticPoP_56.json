@@ -1,0 +1,33 @@
+{
+  "name": "Retrieving credentials failed",
+  "description": "Detects backend communication problems.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your internet connection and ensure that it is stable and functioning properly.
+ 2. Verify that the DNS records for the target domain are correctly configured and up-to-date.
+ 3. Confirm that the time on your system is accurate and synchronized with the target domain's time zone.
+ 4. If using a VPN or proxy, try disabling it temporarily and see if the issue persists.
+ 5. Ensure that the SSL/TLS certificates used in the communication are valid and not expired.
+ 6. If the problem still occurs, consider reaching out to the support team of the target service for further assistance.
+
+These steps can help identify and address potential issues related to network connectivity, DNS resolution, time synchronization, and certificate validation.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["TZzpdeaZXOuS1BoGwjTGU5aC9tI"]
+      }
+    ]
+  }
+}

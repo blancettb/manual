@@ -1,0 +1,32 @@
+{
+  "name": "Significant increase in compaction queue length",
+  "description": "This rules check for a sudden increase in the length of the compaction queue. When triggered, this rule indicates that the all regions are growingat a similar rate and need to split/compact at around the same time. This can be addressed by pre-splitting or turning off auto-compactions.
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Pre-split the regions: Before running auto-compactions, you can manually pre-split the regions to distribute the load more evenly and prevent the compaction queue from becoming too long.
+2. Turn off auto-compactions: Alternatively, you can temporarily turn off auto-compactions to give the system some breathing room and prevent the compaction queue from growing excessively long. Once the issue has been resolved, you can then turn auto-compactions back on.
+
+It's important to note that these steps should only be taken as a temporary solution while you investigate the root cause of the issue. Properly addressing the underlying cause is crucial to preventing future occurrences of this problem.
+
+If you're unable to identify the root cause of the issue, consider reviewing your Hadoop configuration, monitoring logs, and analyzing metrics related to compaction performance. This can help you pinpoint any potential issues and take corrective action.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["St4ZrJvMCcF8qhyczPaASY8r0eQ"]
+      }
+    ]
+  }
+}

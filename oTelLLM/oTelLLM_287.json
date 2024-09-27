@@ -1,0 +1,30 @@
+{
+  "name": "OTel LLM response duration has exceeded the specified threshold.",
+  "description": "OTel LLM response duration above a specified threshold.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the system logs for any error messages or warnings related to the OTel LLM process.
+ 2. Review the configuration settings of the OTel LLM process, specifically the maximum response time setting. Ensure that this value is set below the observed threshold.
+ 3. Investigate if there are any resource-intensive operations running in parallel with the OTel LLM process, which could be causing the delay. If so, consider optimizing or rescheduling these operations to reduce the overall load on the system.
+ 4. Monitor the system's performance over time, particularly during peak usage periods, to identify any trends or patterns that may indicate underlying issues contributing to the OTel LLM response duration exceeding the specified threshold.
+ 5. If the problem persists, consider increasing the threshold value for the OTel LLM response duration or implementing other corrective actions as necessary based on your specific use case and requirements.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["5nQcYKvdHWbiJRNrjQw_zQHRsDw"]
+      }
+    ]
+  }
+}

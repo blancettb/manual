@@ -1,0 +1,36 @@
+{
+  "name": "Missing Metrics",
+  "description": "Missing metrics for entity",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "   1. Check the connection between the data source and the CDH cluster by navigating to the "Monitor" tab in the Cloudera Manager and verifying that the connection is active and healthy.
+   2. Verify if the required table or database exists in the CDH cluster by running the command `psql` and connecting to the CDH cluster's postgres instance. Then, run the query `\dt` to list all tables in the current schema.
+   3. If the required table does not exist, create it using the following SQL command:
+      ```sql
+      CREATE TABLE <table\_name> (
+        <column\_name> <data\_type>
+        ...
+      );
+      ```
+   4. After creating the table, restart the Hive service on the CDH cluster to apply the changes.
+   5. Once the Hive service is restarted, check if the missing metrics are now available in the CDP environment.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["8Dfc_Lga7q3Lvp9x3tfORvW_XvQ"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Too many open files",
+  "description": "Open files percentage is greater than the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check if there are any orphaned processes running in the background using the command "ps -A | grep <process\_name>". If found, terminate them using the command "kill -9 <process\_id>".
+2. Increase the maximum number of open files for your user account by adding the following line to your ~/.bashrc file:
+```
+ulimit -n <desired\_number>
+```
+Replace `<desired_number>` with the desired maximum number of open files. Be cautious when increasing this limit, as it can potentially lead to security risks or system instability if not set appropriately.
+3. If the issue persists after attempting the above steps, consider reducing the number of open files for all users on the system by modifying the /etc/security/limits.conf file. Add the following line to the file:
+```
+* soft nofile <desired\_number>
+* hard nofile <desired\_number>
+```
+Replace `<desired_number>` with the desired maximum number of open files for all users. This change will require a system reboot to take effect.
+
+It's essential to monitor open files and adjust limits as needed to prevent potential issues. Keep in mind that specific system configurations and requirements may vary, so these steps should be considered as a starting point and tailored accordingly.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["b9xWk8vYUSVZBqXMWPTrhv2CFKU"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Under-replicated partitions",
+  "description": "Checks whether the number of under-replicated partitions exceeds the expected number.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Increase the number of brokers in your cluster. This will help distribute the data more evenly and reduce the likelihood of under-replication.
+2. Check for any issues with your data distribution strategy. Make sure that the data is being distributed across the partitions in a way that minimizes the risk of under-replication.
+3. Monitor the status of your cluster over time. If the number of under-replicated partitions continues to increase, you may need to take additional steps to address the issue.
+
+If you are still experiencing issues with under-replicated partitions after trying these steps, you may want to consider reaching out to AWS support for further assistance. They can provide more specific guidance based on the details of your situation.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["L3NRzKeo_9NwgMsiiV4SfaqPIO8"]
+      }
+    ]
+  }
+}

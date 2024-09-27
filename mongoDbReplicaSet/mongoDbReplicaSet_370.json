@@ -1,0 +1,32 @@
+{
+  "name": "ReplicaSet has member(s) down",
+  "description": "Detects unreachable (down) ReplicaSet members",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the status of the MongoDB shell: Use the command `rs.status()` to view the status of the ReplicaSet. This will show you the state of all nodes in the set.
+2. Identify the problematic node: Look for any replicas with a status of "disconnected" or "unhealthy". These are the nodes that need attention.
+3. Fix the problematic node: To fix the problem, you can use the ` mongod --checkdb` command on the problematic node to check for corrupted data and repair it if necessary. Alternatively, you can restart the MongoDB service on the node.
+4. Update the configuration: If the issue persists after fixing the problematic node, you may need to update the ReplicaSet configuration to allow the node to rejoin the set. This involves changing the `priority` or `votes` settings for the node.
+5. Monitor the ReplicaSet: After making changes, monitor the ReplicaSet to ensure that all nodes are healthy and functioning properly. You can use the `rs.status()` command again to keep track of the status of each replica.
+
+By following these steps, you should be able to resolve the issue of a ReplicaSet having member(s) down. Remember that maintaining a healthy and well-functioning ReplicaSet is crucial for ensuring high availability and data consistency in your MongoDB deployment.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["vS2sRCmMcQ6RQ96DdCA5CU-Lyr4"]
+      }
+    ]
+  }
+}

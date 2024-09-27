@@ -1,0 +1,32 @@
+{
+  "name": "Elasticsearch status not green",
+  "description": "Checks whether the Elasticsearch cluster status is ok",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the network connectivity between your application and Elasticsearch nodes.
+ 2. Ensure that the Elasticsearch version is up-to-date.
+ 3. Verify the file permissions for the Elasticsearch data directory.
+ 4. Restart the Elasticsearch service.
+ 5. If the problem persists, check the Elasticsearch logs for any error messages.
+
+For more information on troubleshooting Elasticsearch issues, refer to the official Elasticsearch documentation: <https://www.elastic.co/guide/en/elasticsearch/client/java-api/current/index.html>",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["VDBojh569eAYT3ijdYtT4d-KjB4"]
+      }
+    ]
+  }
+}

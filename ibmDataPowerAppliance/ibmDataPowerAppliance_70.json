@@ -1,0 +1,32 @@
+{
+  "name": "IBM DataPower Appliance percentage of system load",
+  "description": "IBM DataPower appliance percentage of system load.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check for any running jobs or long-running transactions that may be consuming excessive resources. You can use the command "netstat -an | grep 644" to check if there are any active network connections using port 644, which is typically used by IBM DataPower appliances. If there are any, you can consider terminating these processes to free up resources.
+2. Review the system logs for any error messages or warnings related to high resource usage. You can use the command "journalctl -f" to view the system logs in real-time. This can help you identify any specific issues causing the high resource usage.
+3. Adjust the configuration settings of your IBM DataPower appliance to optimize its performance and reduce resource usage. For example, you can adjust the buffer sizes, connection limits, or queue depths to better match your workload requirements.
+4. Monitor the system load over time to ensure that it remains at an acceptable level. You can use the command "top" to view the current system load as well as historical data.
+5. If the problem persists, you may need to contact IBM Support for further assistance. They can provide more advanced troubleshooting techniques and potentially resolve the issue remotely.
+
+By following these steps, you should be able to resolve the issue of high system load on your IBM DataPower appliance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["OsbEjrzqHlYR-x6or7kUJt5f8CM"]
+      }
+    ]
+  }
+}

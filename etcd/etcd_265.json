@@ -1,0 +1,44 @@
+{
+  "name": "Abnormally high disk backend commit duration",
+  "description": "Detects high disc backend commit duration",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Increase the number of initial peer nodes in etcd. By default, etcd starts with 3 initial peer nodes. You can increase this value to 5 or more to improve performance and handle higher concurrent requests. To do this, modify the `etcd.initialPeerNodes` parameter in the etcd configuration file.
+
+   Example configuration file with increased initial peer nodes:
+   ```
+   [etc]
+   etcd {
+       initialPeerNodes = 5
+   }
+   ```
+
+2. Optimize raft parameters. Raft is the consensus algorithm used by etcd. Adjusting some raft parameters can help reduce disk I/O and improve commit duration. Some recommended raft parameter values include:
+
+   - `electionTickMs`: Set this to a lower value (e.g., 10) to reduce the frequency of leader elections. A lower value means fewer disk reads during election processes.
+   - `heartbeatTickMs`: Set this to a lower value (e.g., 5) to decrease the frequency of heartbeats. Lower heartbeat frequencies mean less disk activity.
+   - `maxWaitVoteDurationMs`: Set this to a higher value (e.g., 20000) to allow for longer voting periods before declaring a leader. This can prevent unnecessary leader transitions and reduce disk usage.
+
+3. Monitor and tune storage capacity. Regularly monitor your etcd cluster's storage capacity and adjust it as needed. You can use tools like `etcdctl get /health` to view the available disk space. If you find that your cluster is consistently running out of disk space, consider adding more storage to your system or using a larger machine type for your etcd nodes.
+
+4. Use an external database for persistence. Instead of relying on the built-in journaling mechanism for persistence, you can use an external database like CockroachDB or Amazon S3 to store etcd data. This can help",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["kLhDhpcys9Y8K3bJlE08xBH7I1k"]
+      }
+    ]
+  }
+}

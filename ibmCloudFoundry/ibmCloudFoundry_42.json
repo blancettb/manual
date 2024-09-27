@@ -1,0 +1,33 @@
+{
+  "name": "CPU Utilization too high",
+  "description": "Checks whether the application container has excessive CPU utilization",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Monitor the CPU usage of your application container using a monitoring tool like Prometheus or Grafana. These tools will help you identify if there are any spikes in CPU usage that may be causing the issue.
+2. If you find a spike in CPU usage, investigate the cause of the spike. It could be due to an inefficient algorithm, resource-intensive functions, or other factors.
+3. Optimize your code and algorithms to reduce the CPU usage. This might involve rewriting certain parts of the code in a more efficient way, using parallel processing, or optimizing data structures used in the application.
+4. Scale down the application if necessary. If the CPU usage is caused by a large number of concurrent users or requests, scaling down the application can help reduce the load on the CPU.
+5. Check for and address any memory leaks in your application. Memory leaks can cause the CPU usage to increase over time as the system tries to allocate more memory to handle the leak.
+6. Ensure that your application is properly configured for horizontal scaling. If your application is designed to handle a large number of concurrent users or requests, it should be able to scale out horizontally to distribute the workload across multiple instances of the application.
+7. Review your application's architecture and infrastructure setup. Make sure that the resources allocated to the application are sufficient to handle its expected workload.
+8. Consider using a managed service provider like IBM Cloud to handle the scaling and resource allocation for your application. Managed service providers often have tools and expertise to help manage CPU utilization and other performance issues.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["rGt2S9IVcUbuYpw_dsDhcyx6f-I"]
+      }
+    ]
+  }
+}

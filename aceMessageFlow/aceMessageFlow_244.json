@@ -1,0 +1,32 @@
+{
+  "name": "ACE Message Flow Max Elapsed Time",
+  "description": "Monitor the maximum elapsed time spent processing an input message.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the ACE Message Flow settings: Ensure that the maxElapsedTime value is set to a reasonable value based on your application's requirements. If the value is too high, it could cause delays in processing messages.
+2. Optimize the message flow: Analyze the message flow and identify any bottlenecks or inefficiencies. You can optimize the message flow by tuning the configuration parameters, such as buffer sizes, connection pools, and network settings.
+3. Monitor and analyze performance metrics: Regularly monitor the performance of the message flow using tools like Oracle Enterprise Manager or other monitoring solutions. Identify any trends or patterns that may indicate potential issues with the maxElapsedTime value.
+4. Adjust the maxElapsedTime value: Based on the performance metrics and analysis, adjust the maxElapsedTime value accordingly. You may need to experiment with different values to find the optimal setting for your application.
+5. Implement error handling and recovery mechanisms: Implement error handling and recovery mechanisms to prevent or mitigate the impact of exceeded maxElapsedTime values. This can include retry logic, backpressure strategies, and fault tolerance mechanisms.
+6. Consider using asynchronous processing: If the message flow is experiencing high latency due to long-running operations, consider implementing asynchronous processing techniques. This can help reduce the overall processing time and improve the overall performance of the message flow.
+7. Consult Oracle Support: If you are still experiencing issues with the ACE Message Flow Max Elapsed Time, consider contacting Oracle Support for further assistance. They can provide more specific guidance based on your application and environment.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["FEhXOwcMvzS8ozdBFgYLWhTbq3A"]
+      }
+    ]
+  }
+}

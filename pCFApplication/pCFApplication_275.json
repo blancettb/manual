@@ -1,0 +1,33 @@
+{
+  "name": "Volatility in required instances of Cloud Foundry application",
+  "description": "The required number of instances of a Cloud Foundry Application changes frequently.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Monitor application usage and demand: Regularly monitor the application's resource utilization and user traffic. This will help you identify periods of high demand and low resource availability.
+2. Adjust instance scaling policies: Based on your monitoring data, adjust the scaling policies for your application instances. Youimbalanced scaling can lead to Volatility in required instances. You can use tools like the cf scale command or the Cloud Foundry dashboard to manage scaling policies.
+3. Implement autoscaling: Utilize autoscaling features provided by Cloud Foundry to automatically adjust the number of instances based on demand. This can help maintain optimal Volatility in required instances.
+4. Optimize application architecture: Review your application's architecture to ensure it is optimized for performance and resource efficiency. This may involve optimizing code, using more efficient algorithms, or implementing caching strategies.
+5. Monitor and analyze logs: Regularly review application logs to identify any potential issues that may be contributing to Volatility in required instances. This can help you diagnose and address problems before they impact performance.
+6. Use predictive analytics: Leverage predictive analytics tools to forecast future demand for your application and adjust resources accordingly. This can help you proactively manage Volatility in required instances.
+7. Collaborate with development teams: Work closely with development teams to ensure they are aware of the Volatility in required instances and make necessary adjustments to their workloads. This may involve optimizing their code or adjusting their testing procedures.
+8. Consider alternative cloud providers: If the problem persists despite your efforts, consider migrating to a different cloud provider that offers more stable Volatility in required instances. However, this should be a last resort as it may require significant changes to your infrastructure and applications.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["0ajeR1lIs96XRH8CreOrbwSLFk8"]
+      }
+    ]
+  }
+}

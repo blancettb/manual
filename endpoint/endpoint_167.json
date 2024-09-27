@@ -1,0 +1,33 @@
+{
+  "name": "Erroneous call rate too high for a synthetic endpoint",
+  "description": "Detects a constantly high erroneous call rate of a synthetic endpoint when the average value within the last four minutes is above the given threshold value.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the health status of your endpoints regularly and address any issues promptly.
+ 2. Monitor the erroneous call rate metric closely to identify any sudden spikes or trends that may indicate underlying problems.
+ 3. Investigate potential causes for the high error rate, such as network connectivity issues, software bugs, or configuration errors.
+ 4. Implement necessary corrective actions to address the root cause(s) and bring the erroneous call rate back down to an acceptable level.
+ 5. Adjust the threshold value for the erroneous call rate based on your specific use case and requirements, ensuring it remains sensitive enough to detect genuine issues while avoiding false positives.
+ 6. Continuously evaluate and optimize your monitoring and alerting mechanisms to ensure they remain effective in detecting and addressing synthetic endpoint performance issues.
+
+By following these steps, you can effectively manage and maintain the health and performance of your synthetic endpoints, minimizing the risk of erroneous calls and ensuring a positive user experience.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["2UKZmR6QL-_YomH6npQ__ACeF-Q"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Request latency is high",
+  "description": "Checks for high request latency",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the status of your load balancer: Ensure that the load balancer is in the expected state and not experiencing any issues. You can check this by navigating to the load balancer's dashboard and verifying its status.
+
+2. Review your application logs: Analyze the application logs to identify if there are any error messages or abnormal behavior related to latency. This can help you pinpoint the root cause of the issue.
+
+3. Optimize your application code: Identify and address any bottlenecks or performance issues within your application code. This may include optimizing database queries, reducing network calls, or implementing caching strategies.
+
+4. Monitor your application's resource usage: Keep an eye on your application's CPU, memory, and disk usage. If any of these resources are consistently near their maximum capacity, it could lead to increased latency. Consider scaling up your resources accordingly to accommodate higher traffic levels.
+
+5. Investigate network-related issues: If you've tried all the above steps and still cannot resolve the issue, investigate potential network-related problems such as slow network connections, high packet loss, or network congestion.
+
+6. Contact IBM Support: If you're still unable to resolve the issue, consider reaching out to IBM Support for further assistance. They can help you diagnose and troubleshoot the problem, potentially identifying any underlying infrastructure issues.
+
+By following these steps, you should be able to identify and address the root cause of high request latency, ensuring optimal performance for your application.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["GMQdz0TUHgxtDA-sEkCxUwBkdAg"]
+      }
+    ]
+  }
+}

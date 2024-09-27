@@ -1,0 +1,33 @@
+{
+  "name": "Event Stream disk utilisation is nearing capacity",
+  "description": "Checks whether the total amount of disk space exceeds what is available",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the current disk usage and available space on the IBM Cloud event stream instance. You can use the command `ibmcloud schematics workspace get --id <workspace-id>` followed by the `--output json` flag to view the detailed information about the disk utilization.
+2. If the disk utilization is near or over the threshold (usually around 90%), consider increasing the size of the disk by navigating to the "Settings" section of your event stream instance in the IBM Cloud console, then selecting "Change plan" and choosing a larger disk size.
+3. Monitor the disk utilization after making changes to ensure that it remains within the recommended range.
+
+Additionally, if you are using multiple streams, you should be aware of the disk space requirements for each stream. Each stream generates data logs, which contribute to the overall disk utilization. Therefore, if you have many streams, you might need to allocate more disk space to accommodate their data logging needs.
+
+For further assistance, you can contact IBM Support or consult the official IBM Cloud documentation for Event Streams.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Wo_Fai9Uz1vmaa4lOInfxNwUIn4"]
+      }
+    ]
+  }
+}

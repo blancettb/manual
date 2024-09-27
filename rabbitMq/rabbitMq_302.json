@@ -1,0 +1,40 @@
+{
+  "name": "Queues are filling up with messages",
+  "description": "Queues are filling up with messages that are not delivered",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Check RabbitMQ Server Status**: Ensure that the RabbitMQ server is running and healthy. You can use tools like 'rabbitmqctl status' to check the status of the server.
+
+2. **Inspect Queue Length**: Use the RabbitMQ web console or management plugin to inspect the length of the queues. This will help you identify if there are any long-lasting messages causing the issue.
+
+3. **Clear Existing Messages**: If necessary, clear existing messages from the queues. You can do this by stopping the consumer application, manually removing messages using the RabbitMQ web console or management plugin, or restarting the consumer application.
+
+4. **Adjust Consumer Flow Control**: If the issue persists, consider adjusting the flow control settings for the consumers. This can prevent overloading the queue with too many messages at once.
+
+5. **Optimize Message Persistence**: Ensure that message persistence is enabled on the RabbitMQ server. This will ensure that messages are not lost in case of unexpected server restarts.
+
+6. **Monitor Queue Health**: Regularly monitor the health of the queues to avoid future issues. Tools like Apache JMX can be used to monitor the queue metrics.
+
+7. **Update RabbitMQ Software**: Keep the RabbitMQ software up-to-date. Regular updates often include bug fixes and performance improvements that can help resolve such issues.
+
+By following these steps, you should be able to resolve the issue of queues filling up with messages in RabbitMQ.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["nH5vbCdfFhwaBNwLmNzmwlLwfKA"]
+      }
+    ]
+  }
+}

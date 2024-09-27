@@ -1,0 +1,29 @@
+{
+  "name": "CPU usage too high",
+  "description": "Checks whether the CPU usage exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the current CPU usage and identify if it is indeed high. You can use the command `top` or `htop` in Linux or macOS systems to view the real-time CPU usage. If the CPU usage is consistently high (above 80% for example), proceed to the next step.
+2. Analyze the Elasticsearch logs to identify any potential issues causing the high CPU usage. You can use tools like Kibana's Log Analysis feature or Elasticsearch's built-in log analysis capabilities to filter and analyze the logs. Look for any patterns, spikes, or anomalies in the logs that might indicate the root cause of the high CPU usage.
+3. Investigate the JVM settings and ensure they are optimized for your specific workload. Adjusting the garbage collection parameters, heap size, or other JVM settings can help reduce CPU usage. YouUTC",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["90qY9DnkQgdz2Ld3d5hFgoVbhXk"]
+      }
+    ]
+  }
+}

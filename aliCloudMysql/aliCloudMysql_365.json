@@ -1,0 +1,37 @@
+{
+  "name": "Average IOPS Usage",
+  "description": "Ratio between Used and IOPS usage limit is greater than the configured ratio threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Identify the problematic VPS/VM instance by checking the top 5 processes consuming the most IOPS.
+   You can use commands like 'top' or 'htop' in Linux or macOS, or ' Task Manager' in Windows to view the process list and IOPS consumption.
+
+2. Optimize the resource allocation for the identified instance. This may involve increasing the number of CPUs, RAM, or adding more storage space. The goal is to ensure that each process has sufficient resources to maintain its IOPS performance without causing excessive IOPS usage for the entire instance.
+
+3. Monitor the IOPS usage over time to ensure that the average IOPS usage remains below the configured ratio threshold. You can set up alerts or notifications to notify you when the average IOPS usage exceeds the threshold.
+
+4. If the issue persists, consider migrating the database to a different VPS/VM instance with better hardware specifications. This may be necessary if the current instance cannot be optimized to meet the required IOPS performance levels.
+
+5. Keep an eye on any updates or announcements from the cloud provider regarding their recommended IOPS settings or best practices. Cloud providers often provide guidance on optimizing IOPS performance based on their infrastructure and configurations.
+
+By following these steps, you should be able to resolve the Average IOPS Usage issue and ensure optimal performance for your MySQL databases on aliCloud.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["LILNrcY6yJ0g4azHCddB9jIxKq8"]
+      }
+    ]
+  }
+}

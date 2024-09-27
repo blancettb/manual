@@ -1,0 +1,51 @@
+{
+  "name": "Ratio between DB CPU Time and DB Time is low",
+  "description": "Ratio between DB CPU Time and DB Time is below the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Analyze SQL statements using EXPLAIN PLAN statement: This will help identify any inefficient or problematic SQL queries that are causing high CPU usage but not fully utilizing the available database resources. By understanding these issues, you can optimize or rewrite the queries to improve overall performance.
+
+
+
+2. Monitor and adjust parallelism settings: Parallelism can help speed up query execution by dividing tasks among multiple processors or cores. However, if not managed properly, it can also lead to increased CPU usage. Adjusting parallelism settings based on your system's hardware capabilities and workload requirements can help maintain an optimal balance between CPU utilization and overall performance.
+
+
+
+3. Check for missing or outdated Oracle patches and apply them: Regularly applying patches and updates ensures that your Oracle software remains secure and functions optimally. Installing missing patches may address any known bugs or performance issues related to the DB CPU Time and DB Time ratio.
+
+
+
+4. Review AWR (Automatic Workload Repository) reports: AWR reports provide detailed information about your database's performance, including CPU usage, I/O activity, and response times. By analyzing these reports, you can identify trends, patterns, or anomalies that may be contributing to the low ratio between DB CPU Time and DB Time. This information can then be used to fine-tune your database configuration and optimize resource allocation.
+
+
+
+5. Tune index structures: Inefficient index structures can significantly impact the DB CPU Time without necessarily affecting the overall DB Time. Regularly reviewing and optimizing index structures can help ensure that they are sized appropriately and efficiently utilized, thereby improving the overall performance of your database.
+
+
+
+6. Monitor and manage buffer pools: Buffer pools store frequently accessed data in memory, reducing the need for disk access and improving overall database performance. Monitoring and managing buffer pool sizes and hit ratios can help prevent buffer overflow and ensure that the most relevant data is readily available for query processing.
+
+
+
+7. Optimize session parameters",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["4xbxpNWQkb3CAy8mMG78D4N3zas"]
+      }
+    ]
+  }
+}

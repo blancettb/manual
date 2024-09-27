@@ -1,0 +1,28 @@
+{
+  "name": "Missing Metrics",
+  "description": "Missing metrics for entity",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "   1. Check the entity and its related entities to ensure that they have the required metrics assigned.
+   2. If the required metrics are not assigned, assign them to the entity and related entities.
+   3. Save the changes and rerun the query to fetch the updated data.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["EjpunrceVy63ZyA9OYqqnzzWP5E"]
+      }
+    ]
+  }
+}

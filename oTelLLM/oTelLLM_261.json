@@ -1,0 +1,32 @@
+{
+  "name": "OTel LLM status is down.",
+  "description": "The OTel LLM is DOWN.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the system logs for any error messages or warnings related to the OTel LLM service.
+2. Ensure that the OTel LLM service is started and running on the server. You can do this by navigating to the Services window in the operating system and checking if the OTel LLM service is listed as started.
+3. If the problem persists, check the network connectivity between the client and the server. Make sure that there are no firewall or network-related issues preventing communication between the two systems.
+4. Verify that the OTel LLM license is valid and up-to-date. If the license has expired or is invalid, you will need to contact the licensing department to renew or activate the license.
+5. If none of these steps resolve the issue, consider restarting the OTel LLM service and the associated Windows services on the server. This can help to clear any temporary issues or conflicts that may be causing the service to stop functioning properly.
+
+If you continue to experience problems with the OTel LLM after attempting these troubleshooting steps, it is recommended that you contact the IT support team for further assistance. They will be able to investigate the issue further and provide additional guidance or resolution options as needed.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["0CMtRHshlbxG09fpkzoZXwGKjSE"]
+      }
+    ]
+  }
+}

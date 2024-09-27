@@ -1,0 +1,43 @@
+{
+  "name": "Apache child processes are stuck performing DNS lookups",
+  "description": "Detects high usage of server workers by DNS lookup",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check for any suspicious network activity using tools like `tcpdump` or ` wireshark`. This can help identify if there is any unusual network traffic that might be causing the problem.
+2. If no suspicious network activity is found, consider increasing the number of DNS worker threads in your Apache configuration. By default, Apache uses 4 DNS worker threads. You can increase this value to 8 or more depending on your system's resources. The change can be made in the Apache configuration file by adding or modifying the `worker_mgr` settings. Here's an example:
+```bash
+<IfModule mpm_prefork_module>
+    StartServers      8
+    MinSpareThreads  16
+    MaxSpareThreads  32
+    MaxClients      150
+</IfModule>
+```
+3. Alternatively, you can also try reducing the number of keep-alive connections in your Apache configuration. Keep-alive connections can sometimes lead to high DNS lookup usage. To reduce the number of keep-alive connections, modify the `keepalive_timeout` setting in the Apache configuration file. For instance, you can set it to 60 seconds instead of the default 30 seconds.
+```bash
+KeepAliveTimeout 60
+```
+4. Another solution could be to disable certain modules in your Apache configuration that may be consuming excessive resources due to DNS lookups. Some modules that you might want to consider disabling include `mod_deflate`, `mod_gzip`, and `mod_expires`. However, disabling these modules should be done with caution as they play a crucial role in improving web performance.
+5. Lastly, if none of the above solutions work, you may want to consider upgrading your operating system or hardware. A newer OS or more powerful hardware can provide better performance and stability, potentially resolving the DNS lookup issue.
+
+By following these steps, you should be able to diagnose",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["kPLnwR8CMhGJKURa0IYEWufqqKE"]
+      }
+    ]
+  }
+}

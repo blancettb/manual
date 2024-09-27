@@ -1,0 +1,33 @@
+{
+  "name": "Sudden increase in latency of all calls",
+  "description": "Detects a rapid increase in the given latency KPI percentile relative to the KPIs values in the last 30 minutes. The magnitude of the increase in latency should also exceed the relative and absolute threshold parameters below.
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Review the documentation for the Sudden increase in latency of all calls rule.
+2. Check if there are any recent updates or changes to the environment that could be causing the issue.
+3. Investigate the infrastructure and application components that may be contributing to the increased latency.
+4. If necessary, adjust the relative and absolute threshold parameters to better suit your environment.
+5. Implement corrective actions to address the underlying issues causing the latency increase.
+6. Monitor the latency KPI to ensure it returns to normal levels.
+7. Document the resolution process and lessons learned for future reference.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["xyPhAfZMGA0iHwx0B4aw-p8vo8w"]
+      }
+    ]
+  }
+}

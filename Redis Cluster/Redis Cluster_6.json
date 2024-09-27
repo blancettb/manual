@@ -1,0 +1,33 @@
+{
+  "name": "Redis cluster state isn't ok",
+  "description": "Cluster is in inappropriate state",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the Redis logs for any error messages or warnings related to the cluster state. These logs can provide valuable information about the cause of the problem.
+2. Verify that all nodes in the Redis Cluster are running the same version of the software. If there is a difference in version, update all nodes to the latest version to ensure compatibility and avoid potential issues.
+3. Inspect the Redis Cluster configuration to ensure that it is set up correctly. This includes checking the node roles, IP addresses, and ports. Make sure that the configuration matches the expected setup.
+4. Perform a "cluster reshard" command to redistribute the data across the nodes in the cluster. This can help to resolve issues caused by uneven data distribution or misconfigured replication factor.
+5. If the issue persists, consider reducing the number of nodes in the cluster temporarily while you investigate the problem. This can help to simplify the troubleshooting process and identify any potential issues with the current configuration.
+6. If none of the above steps resolve the issue, you may need to contact Redis support for further assistance. Provide them with detailed information about the problem, including any error messages, log entries, and the current configuration settings.
+
+By following these steps, you should be able to diagnose and resolve most Redis Cluster state issues.",
+        "secured": false
+    }
+],
+  "staticId": "",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["gYV69gQWO6hNwmb3My25YFZpSS4"]
+      }
+    ]
+  }
+}

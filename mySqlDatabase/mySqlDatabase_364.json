@@ -1,0 +1,53 @@
+{
+  "name": "MySQL replica IO thread is not running",
+  "description": "MySQL replica I/O thread is not running",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the MySQL service status:
+   - On Windows systems, open the command prompt and type "services.msc" to open the Services window. Look for MySQL services (e.g., MySQL Server 5.7) and ensure they are started.
+   - On Linux or Unix-based systems, use the command "systemctl status mysql" to check the status of the MySQL service.
+
+2. Check the replication user's privileges:
+   Ensure that the replication user has the necessary privileges to access the database and perform replication tasks. You can grant these privileges by executing the following SQL statement as the root user:
+   ```sql
+   GRANT REPLICATION SLAVE ON *.* TO 'replication_user'@'%' IDENTIFIED BY 'password';
+   ```
+
+3. Check the binary logs and position:
+   - Open the MySQL binlog and check if there are any missing or corrupted entries. If so, repair them using the following command:
+     ```sql
+     mysqlbinlog < binary-log-file > repaired-binary-log
+     ```
+   - Check the replication position by querying the INFORMATION\_SCHEMA.INNODB\_REPLICA\_POSITION table:
+     ```sql
+     SELECT * FROM INFORMATION\_SCHEMA.INNODB\_REPLICA\_POSITION;
+     ```
+
+4. Start the MySQL replica I/O thread:
+   If all checks pass, start the MySQL replica I/O thread using the following command:
+   ```sql
+   sudo systemctl start mysql-replica-io
+   ```
+   On Windows, you can restart the MySQL service instead.
+
+By following these steps, you should be able to resolve the issue with the MySQL replica IO thread not running. Keep in mind that specific commands might vary depending on your operating system and",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["3jdHtifRACq73wp5wcMy1ukoJcs"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "RabbitMQ Sockets Usage is critical",
+  "description": "RabbitMQ Socket Usage rate exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Monitoring and Analysis**: Monitor the RabbitMQ server's resource usage, such as CPU, memory, and network traffic. Identify if any single consumer or producer is consuming most of the resources. You can use tools like `rabbitmqctl` or third-party monitoring solutions to analyze the data.
+
+ 2. **Setting Limits**: Set limits on the maximum number of messages that can be sent or received by a consumer or producer. This can be done using the `x-max-length` header in the message properties. For example, you can set a limit of 100 messages for a consumer by adding `x-max-length: 100` in the message properties.
+
+ 3. **Improving Consumer Workload Distribution**: If a single consumer or producer is consuming most of the resources, consider redistributing the workload among multiple consumers or producers. This can help improve the overall performance and stability of the system.
+
+ 4. **Optimizing Message Formats**: Optimize the message format to reduce its size. Use binary formats like AMQP 0-9-1 over TCP instead of text-based formats like AMQP 0-9-1 over HTTP. Additionally, use message serialization techniques like JSON or Protocol Buffers to minimize the size of the payload.
+
+ 5. **Implementing Load Balancing**: Implement load balancing to distribute the incoming messages evenly across multiple consumers or producers. This can help prevent any single component from becoming a bottleneck and improve the overall throughput and availability of the system.
+
+ 6. **Upgrading Hardware and Software**: If the issue persists despite implementing the above steps, consider upgrading the hardware and software components of your RabbitMQ setup. This may include upgrading the RabbitMQ server, RabbitMQ client libraries, or the operating system.
+
+By following these steps, you should be able to resolve the RabbitMQ Sockets Usage is critical issue and improve the overall performance and stability of your RabbitMQ setup.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["uKa6uBjVIKy_1ChxbcdapYafHIw"]
+      }
+    ]
+  }
+}

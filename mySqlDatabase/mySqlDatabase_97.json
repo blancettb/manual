@@ -1,0 +1,33 @@
+{
+  "name": "MySQL replica SQL thread is not running",
+  "description": "MySQL replica SQL thread is not running",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the MySQL error logs for any messages related to the SQL thread. These messages may provide more information about the cause of the problem.
+2. Verify that the MySQL service is running on the slave server. You can do this by running the command "mysql -V" in the MySQL bin directory and checking if the version number is displayed.
+3. If the slave server is running, check the status of the SQL thread using the command "SELECT Thread_ID FROM mysql.gtid_slave;". This will display the ID of the SQL thread associated with the replication process.
+4. To start the SQL thread, use the command "START SLAVE;". This command will initiate the replication process and allow the SQL thread to begin processing queries.
+5. Once the SQL thread has started, you can check its status again using the "SELECT Thread_ID FROM mysql.gtid_slave;" command to ensure that it is now active.
+6. If the problem persists, you may need to investigate further by examining the MySQL error logs or contacting your database administrator for additional support.
+
+It's important to note that if the master server goes down, all slaves will stop accepting updates, and you'll need to restart the slaves to resume replication. Additionally, if the slave server crashes while updating data, it will be marked as crashed in the binary log and ignored by subsequent slaves, so it's essential to have a backup strategy in place to handle such situations.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["piWVO2yi1A0HZxtxb_BXANKl4Ww"]
+      }
+    ]
+  }
+}

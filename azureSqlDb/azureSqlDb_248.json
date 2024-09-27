@@ -1,0 +1,34 @@
+{
+  "name": "The total DTU utilization is getting closer to max DTU limit",
+  "description": "Checks if the Azure SQL Database DTU utilization is reaching max DTU limit.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Review your current DTU utilization and identify any inactive or underutilized databases. You can delete these databases to free up DTUs. However, be cautious as deleting databases may impact application functionality.
+ 2. If you don't have any inactive databases, consider purchasing additional DTUs. This will provide you with more headroom for growth and prevent potential performance issues.
+ 3. Monitor your DTU utilization regularly to ensure that it remains within the recommended range. You can use the Azure portal to view your DTU usage and set up alerts for when it reaches certain thresholds.
+ 4. Optimize your database workloads by optimizing queries, indexes, and storage structures. This can help reduce DTU utilization and improve overall performance.
+ 5. Consider using elastic pools instead of individual databases. Elastic pools allow you to group similar databases together and allocate DTUs more efficiently.
+ 6. If your DTU utilization is consistently high, you might need to adjust your pricing tier. Higher pricing tiers offer higher DTU limits, so this could be an option if your workload requires it.
+ 7. Lastly, if none of the above solutions work, you may need to migrate to a different pricing model, such as vCore-based pricing, which allows for more flexibility in managing DTU utilization.
+
+By following these steps, you should be able to effectively manage your Azure SQL Database DTU utilization and avoid reaching the max DTU limit.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["A5_fr1cQ7dpk28tq91wRfzUFV34"]
+      }
+    ]
+  }
+}

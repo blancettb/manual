@@ -1,0 +1,36 @@
+{
+  "name": "Tablespace space usage is high",
+  "description": "Tablespace used space is bigger than the configured amount of maximum space",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Identify the tablespaces with excessive space usage: You can use the command `SELECT tablespace_name, sum(bytes)/1024/1024 as used_space FROM dba_data_files GROUP BY tablespace_name` to identify tablespaces with high space usage. Replace 'dba\_data\_files' with the appropriate schema if needed. This query will return the tablespace name and the total used space in megabytes for each tablespace.
+
+ 2. Free up space in the identified tablespaces: If any tablespaces have excessive space usage, you can free up space by running the command `ALTER TABLESPACE <tablespace\_name> RELEASE`. Be cautious when releasing space, as it cannot be recovered once it is released.
+
+ 3. Adjust the minimum and maximum size of the tablespaces: You can adjust the minimum and maximum size of the tablespaces using the commands `ALTER DATABASE <database\_name> ALTER TABLESPACE <tablespace\_name> MINIMUM <new\_minimum> MAXIMUM <new\_maximum>` or `ALTER TABLESPACE <tablespace\_name> MINIMUM <new\_minimum> MAXIMUM <new\_maximum>`. Make sure to consider the available disk space and the necessary storage requirements for your database.
+
+ 4. Reorganize table data: If the high space usage is due to fragmented table data, you can reorganize the table data using the command `REORG INDEX <table\_name>`. This will defragment the table and potentially reduce the space usage.
+
+ 5. Monitor tablespace usage regularly: To prevent future issues, monitor tablespace usage regularly and take action before the space usage becomes critical. You can set up alerts or notifications to notify you when the space usage reaches a certain threshold.
+
+By following these steps, you should be able to resolve the high space usage issue in your",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["s9fB8qQP624GE1vEBuzxBexaPZk"]
+      }
+    ]
+  }
+}

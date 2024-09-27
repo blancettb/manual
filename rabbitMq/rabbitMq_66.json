@@ -1,0 +1,31 @@
+{
+  "name": "RabbitMQ Free Disk space is below the limit",
+  "description": "RabbitMQ free disk space drops below the configured limit",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the current disk usage of RabbitMQ by running the command `rabbitmqctl rabbitmqd_disk_usage`. This will provide you with information about the available and used disk space.
+2. If the disk usage is above the limit, consider increasing the disk space allocated to RabbitMQ. You can do this by modifying the `rabbitmq.config` file located in the `/etc/rabbitmq/` directory. To increase the disk space, add or modify the `DiskSpace` setting in the configuration file. The value should be set higher than the current disk usage. For example, if the current disk usage is 100 MB, you can set the `DiskSpace` value to 200 MB.
+3. After making the necessary changes to the configuration file, restart RabbitMQ for the changes to take effect. Run the command `rabbitmq-server restart` to restart RabbitMQ.
+4. Monitor the RabbitMQ Free Disk space to ensure it remains above the limit. You can use the same command as before (`rabbitmqctl rabbitmqd_disk_usage`) to keep track of the disk usage.
+
+By following these steps, you should be able to resolve the RabbitMQ Free Disk space is below the limit issue.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["16dO7yX8Qyf6b6jddFme1kSW7ug"]
+      }
+    ]
+  }
+}

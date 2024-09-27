@@ -1,0 +1,31 @@
+{
+  "name": "Producers and consumer are blocked",
+  "description": "Checks whether producers and consumer are blocked due to partitions being offline.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the status of your Kafka cluster by running the command `kafka-topics.sh --topic <topic> --describe`. This will show you the status of all partitions for the specified topic.
+2. Identify any partitions that are in the "Offline" state. These partitions are causing the producer and consumer to be blocked.
+3. To bring these partitions back online, you can use the command `kafka-topics.sh --alter --topic <topic> --partitions <partition_number> --replication-factor <new_replication_factor> --force`. Replace <topic> with the name of your topic and <partition\_number> with the number of the partition you want to bring back online. Also, replace <new\_replication\_factor> with the desired replication factor for the partition.
+4. After bringing the partitions back online, restart the producer and consumer services to ensure that they are using the updated configuration.
+
+By following these steps, you should be able to resolve the issue of Producers and consumer being blocked due to partitions being offline in your Kafka cluster.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["EWIFJClJswch66BpoyTVWDRP1m8"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Jobs not scheduled for a CronJob",
+  "description": "Job not scheduled within crontab execution window",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. **Check the cronjob configuration**: Ensure that the cronjob is configured correctly, including the job name, schedule, and the command or script to be executed. Make sure that the timezone is set appropriately if necessary.
+2. **Inspect the pod status**: Use the command `kubectl get pods` to view the status of the pod associated with the cronjob. Look for any errors or warnings in the output. If there are no issues, proceed to the next step.
+3. **Examine the event logs**: If there are any events related to the cronjob, examine them to identify any potential problems. You can use the command `kubectl describe pod <pod-name>` to view the event logs.
+4. **Update the container image**: If the cronjob is failing due to an outdated container image, update it to the latest version. You can use the command `kubectl apply -f <cronjob-yaml-file>` to apply the updated YAML file.
+5. **Increase the number of retries**: If the cronjob is failing due to resource exhaustion or other transient issues, consider increasing the number of retries to allow the job to run multiple times until it succeeds. This can be done by modifying the `max attempts` field in the cronjob YAML file.
+6. **Review the system resources**: If the cronjob is still experiencing issues, review the system resources available to the pod. Check if there are any resource limits or requests that may be preventing the job from running as expected. You can use the command `kubectl top pod` to view the resource usage of the pod.
+7. **Investigate network connectivity issues**: If the cronjob is unable to connect to required services or external dependencies, check the network connectivity between the pod and the other components. You can use tools like `ping`, `traceroute`,",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["3pVUtAhXYhokY-ghtlVXHIGBEtE"]
+      }
+    ]
+  }
+}

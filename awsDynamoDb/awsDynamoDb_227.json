@@ -1,0 +1,32 @@
+{
+  "name": "Ratio of consumed and provisioned reads is critical",
+  "description": "Detects high ratio of consumed and provisioned reads",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "   1. Review your read capacity units (RCUs) and provisioned throughput settings. Ensure that your provisioned throughput is set higher than your current RCU usage. DynamoDB uses the RCU as the base for calculating provisioned throughput. If your RCU usage is consistently high, it might indicate that your provisioned throughput is not sufficient.
+   2. Analyze your read patterns and access keys. Make sure that your application is using the least amount of read capacity possible. You can optimize your queries, filter predicates, and use secondary indexes to reduce the number of read operations.
+   3. Monitor your read performance metrics, such as read latency and throughput. If you notice a sudden increase in read latency or a decrease in throughput, it could be an indication of a provisioned throughput shortage.
+   4. Adjust your provisioned throughput based on your workload and access patterns. You can do this by adding or removing RCU units in small increments. It's essential to monitor the impact of these changes on your overall system performance.
+   5. Implement caching strategies to reduce the need for frequent read operations. Caching frequently accessed data can significantly improve read performance and reduce the strain on your provisioned throughput.
+
+By following these steps, you can effectively manage your DynamoDB read capacity and ensure optimal performance for your applications.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["teiZW5iasi_mW7JKm4uBUTebXwQ"]
+      }
+    ]
+  }
+}

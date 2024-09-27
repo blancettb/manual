@@ -1,0 +1,27 @@
+{
+  "name": "Kafka network thread is under high load",
+  "description": "Checks whether the Kafka network thread is under high load.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Increase the number of partitions in your Kafka cluster. This can help distribute the data and workload more evenly across the brokers, reducing the burden on any single broker. You",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["xJSSc4gsRqEdzRlyWYK7tgmx_MI"]
+      }
+    ]
+  }
+}

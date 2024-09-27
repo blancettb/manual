@@ -1,0 +1,44 @@
+{
+  "name": "Usage of open file descriptors is critical",
+  "description": "Detects high usage of open file descriptors",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Limit the number of open file descriptors for etcd by setting the `FILE_DESCRIPTORS` environment variable in your system's configuration. This can be done by adding the following line to your `~/.bashrc` or `~/.profile`:
+   ```
+   export FILE_DESCRIPTORS=<desired_limit>
+   ```
+   Replace `<desired_limit>` with the desired limit on the number of open file descriptors. For example, if you want to set the limit to 1024, use:
+   ```
+   export FILE_DESCRIPTORS=1024
+   ```
+ 2. If you are running etcd as a container, you can also limit the number of open file descriptors by adjusting the `--file-max-num` and `--sysctl-fs.nr_open` options when starting the container. For example, using docker run:
+   ```
+   docker run -it --rm -p 4001:4001 --ulimit=-n <desired_limit> etcd /usr/local/bin/etcd -name my-etcd
+   ```
+   Replace `<desired_limit>` with the desired limit on the number of open file descriptors.
+
+3. Monitor the etcd process to ensure that the open file descriptor usage decreases after implementing these changes. You can use tools like `top`, `htop`, or `sar` to monitor the current number of open file descriptors.
+
+4. If the issue persists, consider increasing the amount of memory available to etcd. Increasing the memory allocation can help reduce the pressure on the file descriptor limit. To do this, modify the `etcd.conf` file and increase the value of the `listen_client_urls` parameter under the `cluster.initialization` section.
+
+5. Lastly, if none of the above steps resolve the issue, you may need to investigate",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Rgceva88TVniFlLGX06fOOXJHqo"]
+      }
+    ]
+  }
+}

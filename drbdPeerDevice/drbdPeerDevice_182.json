@@ -1,0 +1,36 @@
+{
+  "name": "DRBD resource is out of sync",
+  "description": "Check if this DRBD peer is out of sync.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. First, ensure that both nodes hosting the DRBD resources are up-to-date and have the same data. You can do this by running the command 'drbdadm ping' on each node. If the status is "ok", it means that the nodes are connected and have the same data.
+
+ 2. Next, check the consistency of the metadata between the two nodes using the command 'drbdadm inspect'. This will help identify any discrepancies in the configuration or data.
+
+ 3. If there are inconsistencies found, you can use the 'drbdadm resume' command to restart the synchronization process from the last consistent point. However, be cautious when using this command as it may result in data loss if not used correctly.
+
+ 4. If the problem persists after attempting these steps, you may need to investigate further by checking the network connectivity, disk space, and other system resources.
+
+ 5. As a last resort, you can consider resynchronizing the entire volume using the 'drbdadm reconf' command. Be aware that this operation can take a significant amount of time and may impact the performance of your system during the process.
+
+By following these steps, you should be able to resolve most cases of an out-of-sync DRBD resource. Remember to always backup your data before making any changes to the configuration or performing any major repairs.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["rCk99jr4K0Id40I4KXNcKErUOfk"]
+      }
+    ]
+  }
+}

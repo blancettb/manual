@@ -1,0 +1,33 @@
+{
+  "name": "Ceph cluster status",
+  "description": "Cluster is in inappropriate state",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Check the Ceph Monitor**: Ensure that all monitors are running and responsive. You can use the command `ceph monitor status` to check the status of each monitor.
+2. **Inspect the journal**: The Ceph journal can provide valuable information about the cause of the issue. You can review the journal by running the command `journalctl -fu ceph*.service`.
+3. **Review the cluster configuration**: Make sure that the Ceph cluster configuration is correct and up-to-date. You may need to update the configuration file(s) based on the error message or symptoms.
+4. **Restart the Ceph services**: If necessary, restart the Ceph services to apply any changes and resolve the issue. Run the command `systemctl restart ceph-mon, ceph-osd, and ceph-mgr` to restart the Ceph services.
+5. **Check for and install updates**: Ensure that your Ceph packages are up-to-date. You can update the packages using the command `sudo apt-get update && sudo apt-get upgrade`.
+6. **Consult the Ceph documentation**: If you are still experiencing issues, consult the official Ceph documentation for further assistance.
+
+If the problem persists after trying these steps, it might be helpful to gather more information about the issue. You can do this by enabling debug logging for Ceph and reviewing the logs. To enable debug logging, run the command `ceph config set global log_level 10` and then restart the Ceph services. After the services have restarted, you can view the logs by running the command `journalctl -fu ceph*.service`. This should provide more detailed information about the cause of the issue.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["JO3-ClXKzte-4C-qGTPZicazD0Y"]
+      }
+    ]
+  }
+}

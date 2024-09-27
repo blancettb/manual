@@ -1,0 +1,33 @@
+{
+  "name": "Disk fills up faster than it is being purged",
+  "description": "Detects long-term disk capacity problems and fires when the disk is likely to run out of capacity within the next 48 hours. The detector is not firing when the remaining disk space is more than 20% of the total capacity. However, it will fire when the disk space would fill up within the next 48 hours based on the current trend. This trend is computed based on local minima collected over time. When these local minima define a timeframe of at least 4 hours, a linear regression model is fitted on these data points to finally do the long-term forecast.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Analyze the system's disk usage patterns and identify any high-usage applications or processes that may be contributing to the rapid disk filling.
+ 2. Implement measures to optimize or reduce the resource consumption of these high-usage applications or processes.
+ 3. Monitor the disk usage trends over time to ensure that the disk is not filling up at an accelerating rate.
+ 4. If necessary, consider increasing the size of the disk or adding additional disks to the system to provide sufficient capacity for the expected data growth.
+ 5. Regularly review and update the disk space management policies and procedures to ensure they are aligned with the organization's needs and requirements.
+ 6. Consider implementing a disk monitoring solution to help detect and alert you to potential disk space issues before they become critical.
+
+By following these steps, you can help prevent the Disk fills up faster than it is being purged issue and ensure that your system has sufficient disk space to operate effectively.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["v10hQmiYLNiaVGMjWu-kh3g_PjU"]
+      }
+    ]
+  }
+}

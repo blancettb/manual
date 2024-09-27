@@ -1,0 +1,33 @@
+{
+  "name": "High CPU usage",
+  "description": "Evaluates whether the given process is causing high CPU usage on host",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "    1. Identify the problematic process by checking the top or htop command output for processes with high CPU utilization.
+    2. Use the 'ps' command to view detailed information about the process, including its parent process ID (PPID), CPU time consumed, and memory usage.
+    3. Check if the process has any suspicious characteristics, such as high memory consumption, network activity, or I/O operations.
+    4. If the process appears to be consuming excessive resources, consider terminating it using the 'kill' command with the appropriate process ID. However, be cautious when using the 'kill' command, as it may cause unintended consequences if not used correctly.
+    5. If the problem persists after terminating the process, you can try restarting the affected service or application to ensure that it is functioning properly.
+    6. Monitor the system's performance over time to determine if the issue has been resolved and to identify any potential recurring causes.
+
+In summary, identifying and addressing the root cause of high CPU usage is essential to maintaining optimal system performance. By following these steps, you can effectively diagnose and resolve the issue.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["zO3BOPnkN_Sxs0pRTgq2mj6hkU8"]
+      }
+    ]
+  }
+}

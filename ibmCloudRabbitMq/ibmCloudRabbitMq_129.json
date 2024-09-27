@@ -1,0 +1,47 @@
+{
+  "name": "Disk utilization percent over 5 minute interval too high",
+  "description": "Checks whether the disk utilization over a 5 minute interval exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the current disk usage and identify if any processes are consuming excessive amounts of disk space. You can use commands like `df` or `du` in the command line to view the disk usage. If any process is using more than its fair share of disk space, consider stopping or limiting its activity.
+
+
+
+2. Review your RabbitMQ configuration settings. Ensure that the disk_free_limit and disk_total_limit parameters are set appropriately for your workload. These parameters control the maximum amount of disk space used by RabbitMQ. If these limits are not set correctly, RabbitMQ may start consuming excessive disk space.
+
+
+
+3. Monitor the RabbitMQ logs for any warnings or error messages related to disk space exhaustion. If such messages appear, investigate the cause and take appropriate action to address the issue.
+
+
+
+4. Consider increasing the size of the RabbitMQ data directory if it is consistently filling up despite your efforts to limit disk usage. However, be cautious when increasing the data directory size, as it can impact the overall performance and stability of RabbitMQ.
+
+
+
+5. Implement proper resource allocation and scaling strategies for your RabbitMQ cluster. This includes ensuring that the number of nodes and CPU cores are sufficient for your workload, and that resources are distributed evenly across the cluster.
+
+
+
+6. Regularly review and analyze your RabbitMQ usage patterns to identify potential bottlenecks or areas for optimization. By staying proactive, you can prevent disk utilization issues before they become critical.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Jf9mWHmp0Ai3prZvuio-sFtwXaA"]
+      }
+    ]
+  }
+}

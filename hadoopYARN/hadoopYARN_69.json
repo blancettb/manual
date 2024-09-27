@@ -1,0 +1,32 @@
+{
+  "name": "Resource manager is reporting unhealthy node",
+  "description": "Detects if resource manager is reporting unhealthy nodes",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the application master logs for any error messages. These logs are typically located in the /user/hadoop-yarn/logs directory. Look for any exceptions or warnings related to the node being reported as unhealthy.
+2. Verify that the node is indeed unhealthy by checking the ResourceManager's web UI. Navigate to the "Resource Manager" tab and look for any nodes listed as "Unhealthy".
+3. If the node is indeed unhealthy, check the underlying cause. This could be due to various reasons such as network issues, hardware failures, or configuration problems. Once the root cause is identified, take appropriate action to resolve it.
+4. If the node remains unhealthy after verifying its status, consider restarting the ResourceManager service. To do this, first, stop the ResourceManager using the command "sudo systemctl stop hadoop-resourcemanager". Then, start it again using "sudo systemctl start hadoop-resourcemanager".
+5. If the issue persists after trying the above steps, consider checking the Hadoop YARN log files for any further clues. These logs can be found in the /var/log/hadoop-yarn/ directory.
+
+By following these steps, you should be able to diagnose and resolve the issue of the Resource manager reporting unhealthy nodes.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["UtdVx_0sc-QTVQb6MLqM7H7or2E"]
+      }
+    ]
+  }
+}

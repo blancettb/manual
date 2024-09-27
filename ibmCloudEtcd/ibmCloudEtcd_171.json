@@ -1,0 +1,32 @@
+{
+  "name": "Percentage of disk space used is too high",
+  "description": "Checks whether the percentage of disk space used exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Identify the cause: Check if there are any running or pending backups, large log files, or other activities that could be consuming excessive disk space.
+ 2. Adjust the retention policy: You can adjust the retention policy for backups and logs to reduce the amount of data stored. This will help in lowering the disk usage.
+ 3. Clean up old backups: Regularly clean up old backups to ensure they do not consume unnecessary disk space. You can use the command `etcdctl set /registry/healthcheck/config retention.max_backups=<number>` to set the maximum number of backups.
+ 4. Monitor disk usage: Continuously monitor the disk usage to ensure it remains below the configured threshold. You can use the command `etcdctl get /registry/healthcheck/config` to view the current configuration.
+ 5. Contact support: If none of the above steps resolve the issue, consider contacting IBM Support for further assistance.
+
+By following these steps, you should be able to resolve the Percentage of disk space used is too high issue in your IBM Cloud infrastructure.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["AMvJ7U3vSWaUuUdfmrh_NxrpBWI"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Percentage of disk space used is too high",
+  "description": "Checks whether the percentage of disk space used exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the current disk usage and free space on your MongoDB server. You can use the command `df -h` in the terminal to view the disk usage for the entire system or `mongod --dbpath /path/to/your/database --checkpoint` to check the disk usage for a specific database.
+2. If the disk usage is close to or over the threshold, consider increasing the size of the data files or adding more disks to the volume group. This can help alleviate the issue by providing additional disk space for storing data.
+3. Monitor the disk usage regularly to ensure that it remains below the threshold. You can set up alerts or notifications to notify you when the disk usage reaches a certain level.
+4. If the issue persists despite your efforts, you may need to contact IBM Support for further assistance. They can help you diagnose and address any underlying issues related to the MongoDB configuration or hardware resources.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["jqTpyUrUq57BuX9pk9boeThjLXk"]
+      }
+    ]
+  }
+}

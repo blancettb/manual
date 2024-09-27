@@ -1,0 +1,32 @@
+{
+  "name": "Leader elections are too often",
+  "description": "Checks whether there are too many leader elections within a given timeframe.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Increase the session timeout in the producer and consumer configurations. This can help reduce the frequency of leader elections by limiting the duration that a client remains inactive before being forcefully disconnected.
+2. Adjust the replication factor and partition count. A higher replication factor or more partitions can help distribute the load and reduce the likelihood of leader elections.
+3. Monitor the producer and consumer metrics related to election timeouts and re-election rates. Identifying any patterns or trends can help you diagnose the root cause of the issue and take appropriate action.
+4. Optimize your application's code for better performance and resource management. This may include implementing buffering strategies, reducing batch sizes, or tuning the producer and consumer configurations.
+5. Consider using a third-party tool or library to monitor and manage Kafka clusters. These tools can provide insights into cluster health and performance, as well as automate various tasks related to leader elections and rebalancing.
+
+By following these steps, you should be able to improve the overall stability and performance of your Kafka cluster, reducing the frequency of leader elections and improving the user experience.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["bI3CJP78DEp_HSwM1w-pMg-mN3I"]
+      }
+    ]
+  }
+}

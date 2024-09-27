@@ -1,0 +1,42 @@
+{
+  "name": "Journal commits in write lock growing",
+  "description": "This rule monitors the MongoDb Journal Write Locks metric and checks whether the journal write locks are increasing too fast.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check for Slow Queries: Identify any slow-performing queries that could be causing high write lock usage. You can use tools like Explain Plan or the built-in MongoDB profiler to identify these queries.
+   
+2. Optimize Data Structures: Ensure that your data structures are optimized for read/write operations. This may involve re-designing your database schema, using indexes, or implementing partitioning strategies.
+
+3. Adjust Max Lock Timeout: If the issue persists, you can adjust the maxLockTimeout setting in the MongoDB configuration file. A higher value can help prevent excessive write locking. However, keep in mind that this may impact overall system performance.
+
+4. Monitor Journal Size: Keep an eye on the size of the journal. If it becomes excessively large, it could lead to write lock issues. You can implement a strategy to automatically archive old journals or set up alerts when the journal size reaches a certain threshold.
+
+5. Implement MongoDB Tuning: Regularly review and optimize MongoDB's performance settings based on your specific workload and hardware requirements. This includes adjusting buffer sizes, thread pool settings, and other relevant parameters.
+
+6. Consider Sharding: If your MongoDB instance has a large dataset and multiple users, sharding might be a viable solution to distribute the load and reduce write lock contention.
+
+7. Update MongoDB Version: Make sure your MongoDB instance is up-to-date. Newer versions often include performance improvements and bug fixes related to write locks.
+
+8. Consult MongoDB Support: If none of the above steps resolve the issue, consider reaching out to MongoDB support for further assistance. They can provide more specialized guidance based on your specific situation and environment.
+
+By following these steps, you should be able to address the Journal commits in write lock growing issue in MongoDB.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["kUZTA1VeqqRd4C802XzIJ2GJJnU"]
+      }
+    ]
+  }
+}

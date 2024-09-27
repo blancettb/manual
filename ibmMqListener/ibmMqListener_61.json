@@ -1,0 +1,32 @@
+{
+  "name": "IBM MQ Listener status",
+  "description": "Check the IBM MQ Listener status.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check if the listener is running by using the command "netstat -an | grep <listener\_port>". If the listener is not running, start it by using the command "mqsicat run <listener\_name>" and specifying the appropriate port number.
+2. Verify that the queue manager is started and running. You can check this by running the command "ps -ef | grep mqm" and looking for the process with the name "mqm".
+3. Ensure that the user ID under which the listener is running has the necessary permissions to access the queue manager and its associated resources.
+4. Check the IBM MQ error logs for any messages related to the listener. These logs can be found in the /var/mqm/errors directory.
+5. If the problem persists, consider restarting the IBM MQ subsystem or the machine hosting the listener. This can help to reset any potential issues and ensure that the listener is properly configured.
+
+If you are still experiencing issues after trying these steps, please provide more information about the error message or the specific problem you are encountering. This will help me provide more targeted assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["waQCYQqMjaBlYIcObUXTQahZ3Q8"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Vault is sealed",
+  "description": "Vault is sealed",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check if there are any error messages or warnings displayed on the vault's interface. These messages may provide information about the cause of the seal and suggest appropriate actions.
+2. If no error messages are present, attempt to open the vault using the provided credentials (username and password). Make sure that the credentials are entered correctly and that the Caps Lock key is not enabled.
+3. If the vault still remains sealed, consider reaching out to the system administrator or support team for assistance. Provide them with as much detail as possible regarding the issue, including any error messages or steps taken to troubleshoot the problem.
+
+By following these steps, you should be able to resolve the "Vault is sealed" issue and access your vault contents.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["ObG573EGzuwDgdxo3G-e1iO17po"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Erroneous inbound call rate too high",
+  "description": "Detects a constantly high erroneous inbound call rate when the average value within the last four minutes is above the given threshold value. This rule only applies for Applications configured to use Inbound Calls KPIs or that have not yet been configured to use by, default, either All Calls or Inbound Calls KPIs.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the Application log for any error messages or warnings related to the high erroneous inbound call rate.
+2. Verify if there are any issues with the data sources feeding into the application, such as connectivity problems or data quality issues.
+3. Ensure that the application's configuration settings are correctly set up and aligned with your business requirements.
+4. If the issue persists, consider reviewing the historical data of erroneous inbound call rates to identify any patterns or trends that may help diagnose the root cause.
+5. If necessary, adjust the threshold value for the erroneous inbound call rate based on your specific business needs and ensure it falls within the recommended range.
+6. Monitor the application's performance and the erroneous inbound call rate metric over time to determine if the issue has been resolved and whether any further adjustments are required.
+
+By following these steps, you should be able to effectively address the Erroneous inbound call rate too high issue and ensure optimal performance and data accuracy for your application.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["RwRRvJQrW6EcMMZLiCYocQPg1RE"]
+      }
+    ]
+  }
+}

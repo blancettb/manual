@@ -1,0 +1,34 @@
+{
+  "name": "Region server block cache hit ratio is low",
+  "description": "Detects low cache hit ratio",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "   1. Increase the size of the block cache: You can increase the block cache size by modifying the value of the 'hbase.blockcache.size' property in the HBase configuration file. A larger block cache can help improve cache hit ratios. However, be cautious not to set it too high, as it may consume excessive memory resources.
+
+   2. Optimize region server compaction settings: Compacting regions more frequently or optimizing compaction settings can help reduce the number of blocks and improve cache hit ratios. You can modify the 'hbase.regionserver.compaction.minthreshold' and 'hbase.regionserver.compaction.maxthreshold' properties in the HBase configuration file to achieve this.
+
+   3. Adjust the 'hbase.client.scanner.readahead' property: Increasing the readahead size for client scans can help improve cache hit ratios by reducing the frequency of block fetching from the underlying storage.
+
+   4. Monitor and analyze cache usage: Regularly monitor the cache usage and identify any potential issues, such as excessive evictions or cache misses. Addressing these issues can help maintain a healthy cache and improve overall performance.
+
+By implementing these steps, you can effectively address the low cache hit ratio issue in your HBase deployment and optimize its performance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["gUYa_VQH6guE4J4oXAAl76-gLb8"]
+      }
+    ]
+  }
+}

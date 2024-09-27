@@ -1,0 +1,32 @@
+{
+  "name": "Sudden increase in erroneous call rate",
+  "description": "Detects a rapid increase in the values of the erroneous call rate metric relative to the values in the last 10 minutes. The magnitude of the increase in erroneous call rate should also exceed the relative and absolute threshold parameters below. This rule only applies for Applications configured to use All Calls KPIs or that have not yet been configured to use by, default, either All Calls or Inbound Calls KPIs.
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Review the data for the erroneous call rate metric and identify any unusual spikes or trends that may have caused the sudden increase.
+2. Investigate the root cause of the issue, such as changes in the application's configuration, infrastructure, or external factors that may impact the system's performance.
+3. Implement necessary corrective actions to address the underlying issues and prevent future occurrences.
+4. If the issue persists after implementing the corrective actions, consider adjusting the relative and absolute threshold parameters of this rule to better match the specific conditions of your application. You can do this by navigating to the "Settings" section of the rule and modifying the thresholds accordingly.
+
+It is important to note that monitoring and maintaining the health of your application's metrics is crucial for ensuring optimal performance and identifying potential issues before they become critical. By regularly reviewing and analyzing your application's metrics, you can proactively address issues and ensure a high level of service availability.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["XMsT4IXdb-C2ATvI1qoMfvSiUWc"]
+      }
+    ]
+  }
+}

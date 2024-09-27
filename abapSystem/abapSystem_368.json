@@ -1,0 +1,30 @@
+{
+  "name": "Missing Metrics",
+  "description": "Missing metrics for entity",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "   1. Check the data source connection and ensure it is properly configured.
+   2. Verify that the required metrics are selected in the data source settings.
+   3. If using an SAP BW data source, check if the DSOs (Dimensionally Stored Objects) associated with the CDS views have been activated.
+   4. Restart the ABAP System Monitor service to refresh the cached information.
+   5. If the problem persists, consider clearing the browser cache and restarting your system to ensure all caches are refreshed.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["p6Y3Algvr8st2S7rYPlN964OQ-8"]
+      }
+    ]
+  }
+}

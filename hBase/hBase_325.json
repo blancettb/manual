@@ -1,0 +1,42 @@
+{
+  "name": "Difference between number of stores and number of store files is significant",
+  "description": "Detects unusually low or unusually high number of stores",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. First, let's understand what these terms mean. A store in HBase is a single, independently addressable unit of data storage. Store files, on the other hand, are the actual files on disk where the stores are stored. The number of stores refers to the total number of individual units of data storage, while the number of store files indicates the total number of files on disk.
+
+2. If the difference between the number of stores and the number of store files is significant, it could indicate that there might be issues with the file system or the HFile cleaning process. This could lead to performance degradation or even data loss.
+
+3. To investigate this further, you can use the command `hbase org.apache.hadoop.hbase.regionserver.StoreFileCount` to check the number of store files for each region server. You can also use the command `hbase org.apache.hadoop.hbase.regionserver.StoreFlushCount` to check the number of stores being flushed.
+
+4. If the number of store files is significantly higher than the number of stores, it could indicate that the regionserver is experiencing issues with flushing stores to disk. This could be due to various reasons such as insufficient disk space, network issues, or high load on the system.
+
+5. To resolve this issue, you can try increasing the heap size for the HRegionServer by running the command `hbase-site.xml` and adding the following property: `<property>
+<name>hregionserver.heapsize</name>
+<value>n</value>
+</property>`
+
+6. Alternatively, you can also try increasing the 'cleaner.scan.interval' property in the HBase configuration file to allow the cleaner to run more frequently, which can help in reducing the number of store files.
+
+7. If the number of stores is significantly lower than",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["V_gXv7FNNPp5S7i8XnMhwNGGvFQ"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Sudden drop in all calls",
+  "description": "Detects a rapid drop in the values of the calls KPI metric relative to the values in the last 30 minutes. The magnitude of the drop in calls should also exceed the relative and absolute threshold parameters below.
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Review the alert details and ensure that the drop in calls meets the defined criteria (magnitude and duration).
+ 2. Investigate the root cause of the issue, such as network problems, application issues, or hardware failures.
+ 3. Once the root cause is identified, take appropriate action to address it and prevent future occurrences.
+ 4. If the issue persists, consider adjusting the threshold parameters in the rule to better match your environment's conditions.
+
+For more information about this rule and its configuration options, refer to the official documentation.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Non4XuVhWVugfGB-qvvSFKtlzIo"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "IBM DataPower Gateway Peering status",
+  "description": "IBM DataPower gateway peering status.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the network connectivity between the DataPower gateways involved in the peering relationship. Ensure that they are able to communicate with each other using their respective IP addresses and ports.
+2. Verify that the peering policy is correctly configured on both gateways. This includes checking the security settings, authentication mechanisms, and data routing rules associated with the peering relationship.
+3. If the problem persists, consider restarting the IBM DataPower Gateway services on both gateways. This can help to reset any transient issues that may be causing the peering status to become stuck.
+4. As a last resort, if the issue continues to persist, you may need to check the system logs on both gateways for any error messages or warnings that may provide more information about the cause of the problem.
+
+If you are still experiencing issues after trying these steps, it would be recommended to contact IBM Support for further assistance. They will be able to investigate the problem in more detail and provide additional guidance if necessary.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Z0mLkN3NNKDHpu1N2MRT5uoGXSM"]
+      }
+    ]
+  }
+}

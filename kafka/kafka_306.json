@@ -1,0 +1,40 @@
+{
+  "name": "The number of in-sync replicas has shrunk",
+  "description": "Checks whether the number of in-sync replicas has shrunk and did not recover back within the given interval",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Increase the replication factor:
+   The replication factor is the number of brokers that are responsible for storing copies of the data. If the replication factor is too low, it may result in the number of in-sync replicas shrinking. To increase the replication factor, you can modify the Kafka configuration file (usually located at `/etc/kafka/server.properties`). Add or update the `replication.factor` parameter to a higher value, such as 3 or 4. After making this change, restart the Kafka server for the changes to take effect.
+
+2. Add more brokers:
+   If increasing the replication factor does not help, you might need to add more brokers to your Kafka cluster. This will increase the total number of in-sync replicas and help ensure high availability. You can follow the official Kafka documentation to set up additional brokers and configure them to replicate the data from the existing brokers.
+
+3. Check broker status:
+   Before taking any action, it's essential to check the status of your Kafka brokers to identify any potential issues. Use the command `kafka-topics.sh --bootstrap-server <broker_ip>:9092 --topic <topic_name> --describe` to view the status of all topics and their corresponding replicas. This command will help you determine if there are any misconfigurations, network problems, or other issues that could be causing the number of in-sync replicas to shrink.
+
+4. Monitor network connectivity:
+   Ensure that your Kafka brokers and clients have proper network connectivity. If there are any network-related issues, they could potentially cause the number of in-sync replicas to decrease. Check the network settings, firewall rules, and IP addresses to ensure that everything is configured correctly.
+
+5. Update Kafka version:
+   It's possible that the issue is related to an outdated Kafka",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["co7ysd0PEDoa_zx8VZGoMpQj-aA"]
+      }
+    ]
+  }
+}

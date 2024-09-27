@@ -1,0 +1,39 @@
+{
+  "name": "CPU usage too high",
+  "description": "Checks whether the CPU usage exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the current CPU usage and identify if it is indeed high. You can use the command `top` or `htop` in Linux or macOS systems to view the real-time CPU usage. If the CPU usage is consistently high (above 70% for example), then proceed to the next step.
+2. Analyze the PostgreSQL logs to identify any potential issues. You can use the command `pg_ctl -D /var/lib/pgsql/9.5/main -l logfile.log status` to check the logs. Look for any error messages, warnings, or abnormal behavior that might indicate the cause of the high CPU usage.
+3. Investigate slow-queries. Slow queries can significantly impact the overall performance and CPU usage of a database system. You can use the following query to identify slow queries:
+```sql
+SELECT * FROM pg_stat_user_tables WHERE relname = 'your_table_name' AND tuplestore_hits > 1;
+```
+Replace "your\_table\_name" with the name of the table you want to analyze. This query will return information about the most frequently executed queries on the specified table, including their execution time and other relevant details.
+4. Optimize slow queries. Once you have identified slow queries, you can take appropriate actions to optimize them. Some possible optimization techniques include:
+   - Indexing: Create or modify indexes to improve query performance.
+   - Query rewriting: Rewrite inefficient queries using proper SQL syntax and techniques.
+   - Caching: Implement caching mechanisms to reduce the number of repeated computations.
+   - Hardware upgrades: Consider upgrading your hardware resources (CPU, memory, storage) to accommodate the increased workload.
+5. Monitor the system regularly. Regularly monitor the CPU usage and other system metrics to ensure that the issue does not recur. You can use tools like Nag",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["XpLPs3j9sK0WEQLltSTE3BRv7Rc"]
+      }
+    ]
+  }
+}

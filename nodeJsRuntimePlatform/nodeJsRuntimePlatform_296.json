@@ -1,0 +1,31 @@
+{
+  "name": "Health checks are failing",
+  "description": "This rule checks whether there are any failing healthchecks.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the application logs for any error messages related to the health checks. These logs can provide valuable information about what went wrong and how to fix it.
+2. Ensure that the health check scripts are running on the target nodes. If they are not, you may need to modify the script or the deployment process to ensure that they are executed correctly.
+3. Verify that the health check probes are configured correctly. This includes checking the port number, interval, and timeout settings. Make sure that the probes are targeting the correct endpoints and that they are returning expected results.
+4. Check if there are any network connectivity issues between the nodes and the load balancer or other components involved in the health check process.
+5. If the problem persists, consider increasing the log level for the health check module to get more detailed logs. However, be aware that this may also increase the volume of logs, which can make it harder to identify the root cause of the issue.
+6. If none of these steps resolve the issue, you may need to investigate further by checking the application code, network configuration, and system resources. In some cases, you might need to contact the cloud provider's support team for assistance.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["3NKUNN1vCWV-FHI8yrpE8ijqcXc"]
+      }
+    ]
+  }
+}

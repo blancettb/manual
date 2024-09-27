@@ -1,0 +1,34 @@
+{
+  "name": "Frequent restarts of PHP-FPM worker pool",
+  "description": "The rule checks for frequent restarts of a PHP-FPM worker pool by evaluating the number of its restarts in a given time window being above a given threshold.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your system's resources and ensure that your server has enough memory and CPU power to handle the workload. If necessary, upgrade your hardware or allocate more resources to the PHP-FPM process.
+2. Optimize your PHP scripts and their dependencies to reduce the load on the PHP-FPM worker pool. This may include optimizing database queries, reducing the use of large files, or implementing caching strategies.
+3. Implement a monitoring solution to track the health and performance of your PHP-FPM worker pool. This will help you identify potential issues before they become critical and allow you to take action quickly to prevent restarts.
+4. Adjust the value of the `max_execution_time` directive in your PHP configuration to limit the amount of time a script is allowed to run. This can help prevent long-running scripts from causing excessive resource usage and subsequent restarts.
+5. Review your Nginx configuration to ensure that it is properly configured to work with PHP-FPM. In particular, check that the `fastcgi_pass` directive is correctly set up to point to the correct PHP-FPM instance.
+6. If you are using a reverse proxy like NGINX, consider enabling the `proxy_read_timeout` and `proxy_connect_timeout` settings to improve the connection time between the client and the PHP-FPM worker pool.
+7. Update your PHP-FPM version to the latest stable release. Sometimes, compatibility issues with certain PHP versions can lead to frequent restarts.
+8. Check for any open bugs or issues related to PHP-FPM and PHP on your specific OS and version. Updating to a newer version might fix these issues and improve overall stability.
+9. Consider using a managed hosting solution if you are not comfortable managing your own server infrastructure. Managed hosting providers can often provide specialized support and tools to help manage PHP-FPM and other server-side technologies.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["FiHXJzzBQPJfQ4Ze6ab-7B1piJU"]
+      }
+    ]
+  }
+}

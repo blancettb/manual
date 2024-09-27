@@ -1,0 +1,40 @@
+{
+  "name": "SQL Query has failed jobs",
+  "description": "Checks for failed SQL Query jobs",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the job status in the Cloud SQL Console: Log in to your Google Cloud account and navigate to the Cloud SQL Console. Select the desired instance and then click on "Jobs" in the left-hand menu. Here, you should be able to see the status of all ongoing and recent jobs.
+
+2. Analyze the error message: If a job is marked as failed, review the error message provided. This message will typically include information about the specific query that encountered an issue, along with any relevant stack traces or logs.
+
+3. Investigate potential causes: Based on the error message, investigate possible reasons for the failure. Common causes include incorrect query syntax, insufficient privileges, or network connectivity issues.
+
+4. Grant necessary permissions: If the error message indicates that the user does not have sufficient privileges to execute the query, consider granting the required roles or privileges to the appropriate user. You can do this by navigating to the IAM & Admin section in the Cloud SQL Console and adding/editing roles as needed.
+
+5. Validate network connectivity: Ensure that the database server can connect to the external application or service that the query is intended to serve. If there are any networking issues, such as firewall rules or IP address restrictions, check these settings and make any necessary adjustments.
+
+6. Review query execution history: In some cases, the failure might be due to a recurring issue with a particular query. By reviewing the query execution history, you may be able to identify patterns or trends that can help you diagnose and resolve the problem.
+
+7. Re-run the problematic query: After addressing the underlying cause, re-run the problematic query to verify that it executes successfully. If the issue persists, consider revisiting the initial investigation step to ensure that you have identified and addressed all potential root causes.
+
+8. Set up alerts or notifications: To prevent similar issues from occurring in the future, consider setting up",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["MwtrXb9QgNarYj_PQHeUXqbg3Ds"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "An ABAP dump is generated.",
+  "description": "An ABAP runtime error has occurred and resulted in the generation of dump.Please check the severity and take actions accordingly.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the SAP Note for the specific error code or message. This will provide you with the latest information on how to troubleshoot and resolve the issue.
+2. Gather necessary information such as the dump text, log files, and any other relevant data. This information will help you identify the root cause of the problem.
+3. Consult the SAP Application Server documentation for your version to understand the proper shutdown procedure. Make sure to follow this procedure to avoid future issues.
+4. If the issue persists, consider checking the system's hardware and software configurations. Ensure that all components are up-to-date and properly configured.
+5. If the problem continues after attempting these steps, contact SAP Support for further assistance. Provide them with the necessary information and details about the issue.
+
+By following these steps, you should be able to diagnose and resolve the An ABAP dump is generated issue in SAP.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["SRGmkMvPqL5_xX6nGKhzkbebLQo"]
+      }
+    ]
+  }
+}

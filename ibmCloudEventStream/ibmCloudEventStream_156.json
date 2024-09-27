@@ -1,0 +1,35 @@
+{
+  "name": "Event Stream schema registry is nearing capacity",
+  "description": "Checks whether the usage percentage of the schema registry is too high",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. **Check the current usage percentage:** Before taking any action, check the current usage percentage of the schema registry by running the command `ibmcloud schematool events stream usage`. This will give you an idea of how close the schema registry is to its maximum capacity.
+
+2. **Delete unused schemas:** If there are any schemas that are no longer in use, consider deleting them to free up space in the schema registry. You can delete schemas by running the command `ibmcloud schematool events stream delete-schema <schema_name>`. Be sure to only delete schemas that are no longer needed, as removing active schemas may impact your event processing workflows.
+
+3. **Increase the schema registry size:** If the schema registry is still near capacity after checking the usage percentage and deleting unused schemas, you may need to increase the size of the schema registry. You can do this by running the command `ibmcloud schematool events stream resize-registry`. Be aware that increasing the size of the schema registry may take some time and may temporarily impact event processing performance.
+
+4. **Monitor the schema registry usage:** After taking actions to resolve the issue, it's important to monitor the schema registry usage regularly to ensure that it doesn't become overwhelmed again. You can use the command `ibmcloud schematool events stream usage` to keep track of the usage percentage.
+
+By following these steps, you should be able to resolve the issue of the Event Stream schema registry being nearing capacity.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["4HEyw26gg6M4Y7nEaq3N33oFjYI"]
+      }
+    ]
+  }
+}

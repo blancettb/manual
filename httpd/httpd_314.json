@@ -1,0 +1,31 @@
+{
+  "name": "Logging is slowing down Apache HTTPd performance",
+  "description": "Detects high usage of server workers for logging purposes",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Limit the number of active server workers by setting the `worker_connections` parameter in the Apache configuration file. This will help reduce the resource consumption associated with logging.
+2. Implement rate limiting for log requests to prevent excessive resource usage. You can use the `LimitRequestField` and `LimitExcept` directives in the Apache configuration file to set up rate limits.
+3. Optimize your logging configuration by reducing the log level, disabling unnecessary logs, and using more efficient logging formats. This will help minimize the amount of data that needs to be processed and stored.
+4. Monitor the Apache HTTPd logs and server resources regularly to identify any potential issues early on and take appropriate action.
+
+By implementing these steps, you can effectively address the slowdown caused by logging in Apache HTTPd.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Lp5NYSrPEbWlTDGuCqDaGlkZvrk"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "MySQL I/O replication error occurred",
+  "description": "MySQL I/O replication error occurred",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the MySQL server status: Use the command "mysqladmin -ANQ" to check the status of your MySQL server. This command displays information about the replication process and any errors that may have occurred.
+2. Investigate slow query logs: Slow query logs can help identify queries that are causing issues during replication. You can review these logs by running the command "SELECT * FROM performance_schema.slow_queries;". Look for queries that are taking a long time to execute and may be contributing to the replication error.
+3. Optimize problematic queries: If you find queries that are causing issues during replication, you can optimize them to improve performance. This may involve rewriting the query to use more efficient SQL syntax, using indexes, or modifying the query to avoid problematic conditions.
+4. Increase buffer size: The buffer size used for replication can impact its performance. You can increase the buffer size by editing the my.cnf file and adjusting the values for `innodb_log_file_size` and `innodb_log_buffer`. A larger buffer can help improve replication performance in cases where there are large amounts of data being replicated.
+5. Check network connectivity: Replication requires network connectivity between the master and slave servers. Ensure that both servers are able to communicate over the network and that there are no firewall or network-related restrictions preventing communication.
+6. Restart the MySQL service: In some cases, restarting the MySQL service on the master or slave server can help resolve the replication error. To do this, stop the MySQL service, wait for it to shut down completely, and then start it back up.
+7. Check for missing or corrupted tablespaces: Corrupted or missing tablespaces can cause replication errors. You can check for corrupted tablespaces by running the command "CHECK TABLE <tablename> FOR ERRORS;". If any tablespaces are found to be corrupted, you can repair them using",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["fSNtke3LlewGNNK5xehyFoQ39ag"]
+      }
+    ]
+  }
+}

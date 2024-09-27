@@ -1,0 +1,40 @@
+{
+  "name": "RabbitMQ File Descriptors Usage is critical",
+  "description": "File descriptors usage rate exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Monitoring and Analysis**: Monitor the RabbitMQ file descriptor usage using tools like `rabbitmqctl` or third-party monitoring solutions. Analyze the data to identify the source of the problem.
+
+2. **Increasing File Descriptor Limit**: If the analysis reveals that the file descriptor limit is the primary cause, you can increase the limit by modifying the `rabbitmq.config` file. To do this, locate the `file_descriptors_limit` setting and set it to a higher value, such as 512. However, keep in mind that increasing the limit may expose your application to potential resource exhaustion issues if not managed properly.
+
+3. **Implementing Connection Pooling**: Implementing connection pooling can help manage connections more efficiently and reduce the number of file descriptors used. By creating a pool of connections and reusing them when needed, you can minimize the overall impact on the system's resources.
+
+4. **Tuning Message Queue Policies**: Tuning message queue policies, such as message persistence and message timeouts, can help reduce the frequency of file descriptor usage. For instance, reducing message persistence duration or increasing message timeouts can decrease the number of file descriptors required for each message exchange.
+
+5. **Optimizing RabbitMQ Server Configuration**: Reviewing and optimizing the RabbitMQ server configuration can also help improve file descriptor usage. This includes adjusting parameters like the maximum number of consumers per user, the maximum number of messages per channel, and the maximum message size.
+
+6. **Implementing Idle Connection Timeout**: Implementing an idle connection timeout can prevent unnecessary file descriptor usage by disconnecting inactive connections after a certain period of inactivity.
+
+7. **Monitoring and Alerts**: Set up alerts and notifications to monitor file descriptor usage and take action before reaching critical levels. This will allow you to address the issue proactively and prevent potential service disruptions.
+
+",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["8TrxaB4EDmguml9Pbls048WJv3M"]
+      }
+    ]
+  }
+}

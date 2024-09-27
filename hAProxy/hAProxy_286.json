@@ -1,0 +1,61 @@
+{
+  "name": "HAProxy frontend session usage is high",
+  "description": "HAProxy frontend session usage is high",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Adjust session persistence settings**: You can adjust the session persistence settings in HAProxy to reduce the number of sessions. This can be done by setting `session-persist` and `cookie- Persist` options to "no". This will prevent HAProxy from storing client sessions and will only use the in-memory session cache.
+
+   **Example configuration:**
+   ```
+   frontend myfrontend
+     bind *:80
+     default_backend mybackend
+
+   backend mybackend
+     server 127.0.0.1:5000 weight=10
+   ```
+
+   In this example, the `myfrontend` frontend will not store client sessions in its persistent storage, but it will still use the in-memory session cache for each client connection.
+
+ 2. **Increase the size of the in-memory session cache**: By default, HAProxy uses a small in-memory session cache size. Increasing the size of the cache can help reduce the number of sessions and improve overall performance. You can do this by modifying the `haproxy.cfg` file and adjusting the `sessions-size` parameter.
+
+   **Example configuration:**
+   ```
+   global
+     sessions-size 512k
+   ```
+
+   In this example, the global session cache size has been increased to 512 kilobytes (512 KB).
+
+ 3. **Implement session timeout**: Setting a session timeout can help automatically remove stale sessions from the HAProxy server. This can be done by modifying the `haproxy.cfg` file and adjusting the `session-timeout` parameter.
+
+   **Example configuration:**
+   ```
+   frontend myfrontend
+     bind *:80
+     default_backend mybackend
+
+   backend mybackend
+     server 127.0.0.1:5000 weight=10
+       option http-close-on-finish
+       session-timeout 60s",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["wAXosIuZx8FPc8saHUPa3yACD4c"]
+      }
+    ]
+  }
+}

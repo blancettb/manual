@@ -1,0 +1,43 @@
+{
+  "name": "Available replicas is less than desired replicas",
+  "description": "Checks whether the total number of available replicas is less than the number of desired replicas. This indicates that the OpenShift Deployment Config is missing replica pods.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Verify the OpenShift Deployment Config configuration: Ensure that the configuration is correctly defined and saved. Review the YAML file for any errors or inconsistencies.
+
+
+
+2. Check the pod status: Use the command `oc get pods` to check the status of the pods in the deployment config. Look for any pods with a status other than "Running". If there are any failed or terminated pods, investigate the cause and address it accordingly.
+
+
+
+3. Scale the deployment config: You can manually scale the deployment config up to the desired number of replicas using the command `oc adm` or `oc apply`. For example, if your desired replicas is 3 and the current number of available replicas is 1, you can use the command `oc apply -f <deployment_config_file>.yaml --record` to scale the deployment config to 3 replicas.
+
+
+
+4. Clean up old pods: If there are old or unnecessary pods, you can clean them up using the command `oc delete`. Be cautious when deleting pods, as it may impact the overall performance and stability of the system.
+
+
+
+5. Validate the solution: After implementing the above steps, validate that the Available replicas is now equal to or greater than the desired replicas. You can use the command `oc get dc/<deployment_config_name>` to view the current number of available replicas.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["9EYP8_np41FUynDZbsBQ_wHOF6c"]
+      }
+    ]
+  }
+}

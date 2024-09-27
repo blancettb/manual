@@ -1,0 +1,32 @@
+{
+  "name": "Allocatable cpu requests too low",
+  "description": "Requested CPU to Available capacity ratio is approaching the configured threshold.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the current CPU usage and available capacity of your Kubernetes cluster. You can use commands like `kubectl top nodes` or `oc get nodes` to view the CPU usage and available capacity for each node in your cluster.
+2. If the CPU usage is high on some nodes, consider adding more resources (CPU, memory, or storage) to those nodes to increase their capacity. This can be done by resizing the nodes using tools like `kubeadm resize` or `oc adm`.
+3. If the CPU usage is low across the board, you may need to decrease the CPU request limits for some pods. You can do this by modifying the pod specifications in your Kubernetes manifest files. Specifically, you can reduce the CPU request limit for each pod by changing the value of the `cpu` field in the `spec` section of the YAML file.
+4. Another potential solution is to adjust the CPU allocation strategy used by your Kubernetes scheduler. By default, the scheduler uses a "fair" allocation strategy, which may not always provide optimal results for your specific workload. You Youcha Zhang has provided a detailed explanation of different CPU allocation strategies in this Stack Overflow answer: https://stackoverflow.com/a/63582234/13263338. You can try implementing a different strategy, such as "preferredDuringSchedulingIgnoredDuringExecution", to better suit your needs.
+5. Lastly, if none of the above steps resolve the issue, you may want to consider upgrading your Kubernetes version to a newer one that includes bug fixes related to CPU allocation. However, this should be considered a last resort since upgrading to a newer version may also introduce new issues that need to be addressed.
+
+By following these steps, you should be able to resolve the Allocatable cpu requests too low issue and ensure that your Kubernetes cluster is running efficiently.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["KEyKRSu5MfLYu-KNcJUrOY3MC8E"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Gateway is unavailable",
+  "description": "Checks whether the gateway is available",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the status of the VPC and ensure that it is in the 'available' state.
+ 2. Verify that the security group associated with the VPC has the necessary rules allowing traffic from your client.
+ 3. Confirm that the route table associated with the VPC has the correct routes configured.
+ 4. If using a VPN connection, ensure that the VPN connection is established and active.
+ 5. Try restarting the IBM Cloud CLI or the API toolkit if experiencing issues.
+ 6. If the problem persists, contact IBM Support for further assistance.
+
+For more information on troubleshooting this issue, refer to the official IBM Cloud documentation: <https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-gateway-unavailable>",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["qwhLo60yTwCMxGI6OQVBJZtHPus"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Unreachable Cassandra nodes",
+  "description": "This rule checks for unreachable Cassandra nodes.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. **Check network connectivity**: Ensure that the nodes are connected to the network and can communicate with each other. You can use tools like `ping` or `telnet` to check if the nodes can reach each other.
+
+2. **Verify node status**: Use the command-line interface (CLI) of your Cassandra distribution to check the status of the nodes. This can be done using commands like `nodetool status`. This will help you identify any nodes that are in an "unreachable" state.
+
+3. **Restart the problematic node(s)**: If a node is found to be unreachable, you may need to restart it. To do this, first, stop the Cassandra service on the problematic node using the appropriate command. Then, start the service again after verifying that all components have started successfully.
+
+4. **Check for configuration issues**: It's possible that there might be some configuration issue causing the unreachability. Check the configuration files for any misconfigurations related to network settings, data center information, or seed nodes.
+
+5. **Update the cluster schema**: In case of any changes in the cluster setup, such as adding or removing nodes, you might need to update the cluster schema. Use the `cassandra-cli` tool to execute the necessary commands to update the schema.
+
+6. **Rebuild the index**: If the problem persists, you may need to rebuild the index on the problematic node. This can be done using the `rebuild_index` command in the Cassandra CLI.
+
+7. **Consult the official documentation**: For more advanced troubleshooting, refer to the official Cassandra documentation or seek assistance from the community forums.
+
+By following these steps, you should be able to resolve most cases of unreachable Cassandra nodes.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["cKUs6Di7LJoP6Y1KiqL4yFZL6AU"]
+      }
+    ]
+  }
+}

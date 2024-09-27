@@ -1,0 +1,33 @@
+{
+  "name": "IBM MQ event - Queue Depth High",
+  "description": "Queue Depth High From MQ Events",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the queue manager's channel and listener status: Ensure that all channels and listeners are in the expected state, and there are no errors or warnings.
+2. Monitor queue depth: Regularly monitor the queue depth to ensure it does not exceed the maximum limit. You can use the command 'DISPLAY QMGR <QMgrName> QDEPTH' to view the current queue depth for a specific queue manager.
+3. Adjust channel settings: If the queue depth is consistently high, consider adjusting the channel settings, such as increasing the message retrieval interval or reducing the number of messages sent per interval.
+4. Implement message prioritization: If your application supports message prioritization, you can prioritize high-priority messages to be sent first, which may help reduce the overall queue depth.
+5. Review application code: Analyze your application code to identify any potential issues that could lead to excessive message sending or consuming. Look for any infinite loops, deadlocks, or other resource-intensive operations.
+6. Increase system resources: If necessary, increase the available system resources, such as memory or CPU, to accommodate the increased message flow. However, this should be considered as a last resort since it may have a significant impact on the overall system performance.
+7. Implement a queue overflow strategy: Develop a strategy to handle queue overflows, such as implementing a buffer or a redelivery mechanism, to prevent data loss during high-queue-depth situations.
+8. Consult IBM Support: If none of the above steps resolve the issue, consider contacting IBM Support for further assistance. They can provide more specialized guidance based on your specific environment and configuration.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["ivWHsi5JnpqXBzxFfKwLBfdbWsc"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Memory exhausted",
+  "description": "Detects high memory usage",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check for any running background applications or services that may be consuming excessive memory. You can use the top command in Linux or Task Manager in Windows to view currently running processes and their memory consumption. If any process is using an unusually high amount of memory, consider ending it temporarily to free up resources.
+2. Close unnecessary applications and browser tabs. While you're at it, also consider uninstalling any software that you no longer use or need. This will help reduce the overall memory footprint of your system.
+3. Adjust your system's memory settings. In some cases, increasing the amount of available memory (RAM) or adjusting memory allocation settings can help alleviate memory exhaustion issues. However, this should be done with caution as modifying these settings can potentially impact system performance.
+4. Monitor system resource usage regularly. By keeping track of memory consumption, CPU utilization, and disk I/O, you can identify trends and potential bottlenecks before they become critical. Tools like htop, top, and Resource Monitor (Windows) can assist you in monitoring system resources.
+5. Consider using a memory optimization tool. Applications like Memtest86 (for Linux) or Windows Memory Diagnostic Tool can help diagnose and address memory-related issues by identifying and eliminating faulty RAM modules or other hardware components.
+6. Restart your computer. Sometimes, a simple restart can help clear temporary files and reset system resources, which might be sufficient to resolve the memory exhaustion issue.
+7. Update your operating system and drivers. Ensuring that your OS and device drivers are up-to-date can help prevent compatibility issues and improve overall system performance. Outdated software can sometimes cause unexpected memory usage spikes.
+8. Consult system documentation or seek professional assistance. If none of the above steps resolve the issue, you may want to consult the system documentation or contact the manufacturer's support team for further guidance. They can provide more specific advice based on your system configuration and any known issues related to",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["nemIQCOxBVTpqqpjrHfafSpTXGk"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Number of active controllers",
+  "description": "Checks for an unusual number of active controllers in the Kafka cluster.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. **Examine the Kafka Cluster Configuration**: Check the Kafka configuration file to ensure that the number of controller instances is set correctly. If there are too many or too few controller instances, adjust the configuration accordingly.
+2. **Inspect the Logs**: Monitor the Kafka logs to identify any error messages or warnings related to the number of active controllers. These messages can provide valuable information about the cause of the issue and help you diagnose the problem.
+3. **Restart the Controllers**: In some cases, restarting the Kafka controllers can help resolve the issue. To do this, stop the Kafka server process, wait for it to shut down gracefully, and then start it back up.
+4. **Check the Brokers**: Ensure that all brokers in the Kafka cluster are functioning properly. You can use tools like `kafka-topics.sh` or `kafka-streams.sh` to check the status of the brokers.
+5. **Update the Kafka Version**: If you are using an older version of Kafka, consider upgrading to a newer version. Some issues may have been resolved in later versions, which could be causing the number of active controllers issue.
+6. **Rebalance the Cluster**: If the number of active controllers is not consistent across all nodes in the cluster, you may need to rebalance the cluster. This process involves reassigning partitions of data to different brokers, which can help redistribute the workload and resolve the issue.
+7. **Consult the Kafka Documentation**: If none of the above steps resolve the issue, consult the official Kafka documentation for further assistance. The documentation provides detailed information on configuring, troubleshooting, and managing Kafka clusters.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["wA0-FERWGoVfyccjvGDWyJb9E2Q"]
+      }
+    ]
+  }
+}

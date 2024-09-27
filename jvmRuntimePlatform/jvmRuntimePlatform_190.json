@@ -1,0 +1,35 @@
+{
+  "name": "Garbage collection activity high",
+  "description": "This detector establishes a processing pipeline to monitor the Garbage Collection time spent by the JVM Runtime Platform and validates it against the threshold value.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Analyze the Garbage Collection data: Review the detailed Garbage Collection metrics, such as total time spent in Garbage Collection, number of Garbage Collections, and size of objects collected, to identify any patterns or trends that may indicate potential issues.
+2. Adjust the Garbage Collection settings: You can modify the Garbage Collection parameters, such as the young generation size, survivor space ratio, or maximum heap size, to optimize the Garbage Collection process and reduce the frequency and duration of long-lasting Garbage Collections.
+3. Monitor the system resources: Keep an eye on the CPU, memory, and disk usage during peak times to ensure that the system has sufficient resources to handle the workload without experiencing performance degradation due to excessive Garbage Collection.
+4. Tune the application: Optimize your application code to minimize object creation, reduce object sizes, and avoid resource-intensive operations that may prolong Garbage Collection.
+5. Investigate concurrent garbage collection options: Consider enabling Concurrent Garbage Collection (CGC) or Parallel Garbage Collection (PGC) to allow the JVM Runtime Platform to perform Garbage Collection tasks concurrently with other application threads, reducing the overall impact on system performance.
+6. Review the application load: Assess the current application load and adjust the workload distribution if necessary to prevent overloading the system and triggering frequent Garbage Collections.
+7. Check for memory leaks: Inspect your application for memory leaks, which can cause the JVM Runtime Platform to allocate more memory than necessary, leading to increased Garbage Collection activity.
+8. Update the JVM Runtime Platform: Ensure that your JVM Runtime Platform is up-to-date with the latest patches and updates, as newer versions may include improvements and optimizations related to Garbage Collection.
+9. Consult the vendor support: If the issue persists after attempting the above steps, consider reaching out to the vendor's support team for further assistance and guidance.
+",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["v5AzJMoGACvU83wKd5u6Fimgp7k"]
+      }
+    ]
+  }
+}

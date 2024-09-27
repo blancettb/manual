@@ -1,0 +1,33 @@
+{
+  "name": "Member doesn't have leader",
+  "description": "Detects member which does not have a leader",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the etcd logs for any error messages related to leadership or synchronization issues.
+2. Ensure that the etcd cluster is healthy and properly formed by running the command `etcdctl ls` and verifying that all nodes are present and in healthy status.
+3. If the problem persists, you may need to restart the etcd client on the affected node by executing `etcdctl reset` and then `etcdctl set`. This will force the client to re-establish its connection with the etcd server and potentially resolve any transient issues.
+4. If the issue continues after attempting the above steps, it might be due to network connectivity problems. Verify that the node can communicate with other nodes in the cluster using tools like `ping`, `telnet`, or `nc`.
+5. If the problem still isn't resolved, consider increasing the etcd heartbeat interval to allow for more time for the client to detect a new leader. To do this, modify the `etcd.conf` file on each node and update the `heartbeat_interval` value. The default value is 5 seconds, but you can increase it to 10 or 15 seconds for better stability.
+6. Lastly, if none of the above steps help, you may want to check the etcd documentation and community forums for potential solutions or workarounds specific to your version of etcd and environment.
+
+By following these steps, you should be able to diagnose and address the Member doesn't have leader issue in your etcd cluster.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["fUCPSK04fgbgw6nSiqmWxl2KcQ0"]
+      }
+    ]
+  }
+}

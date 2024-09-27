@@ -1,0 +1,40 @@
+{
+  "name": "IBM MQ Channel status",
+  "description": "Check the IBM MQ Channel status.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. First, ensure that the channel is properly configured and started. You can check this by running the command `netstat -an | grep <channel_name>` in your terminal, where <channel_name> is the name of your IBM MQ channel. If the channel is listed as "LISTENING", it means that the channel is properly configured and started.
+
+ 2. Next, check if there are any errors or warnings related to the channel in the IBM MQ error log. You can access the error log by navigating to the IBM MQ installation directory and running the command `mqsicreate errlog <queue_manager_name>`. Then, open the file named `<queue_manager_name>.err` in a text editor. Look for any messages related to the channel and address.
+
+ 3. If there are no errors or warnings in the error log, you can try restarting the channel by running the command `strmgr restart <channel_name>`. This will help reset any issues with the channel.
+
+ 4. If the problem persists, you may need to check the network configuration. Ensure that the network settings for the channel are correct, including the hostname, port number, and security settings. You may also want to check if there are any firewall rules that could be blocking communication to the channel.
+
+ 5. Finally, if none of these steps resolve the issue, you may need to contact IBM Support for further assistance.
+
+Additional details:
+
+* The IBM MQ Channel is responsible for establishing a connection between an application and an IBM MQ queue manager.
+* A common cause of channel-related issues is misconfiguration or problems with the network setup.
+* Regularly checking the channel status and addressing any issues promptly can help prevent more significant problems from occurring.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["T1Lc44QzPUPn8c-7ZHP7lrOI4bE"]
+      }
+    ]
+  }
+}

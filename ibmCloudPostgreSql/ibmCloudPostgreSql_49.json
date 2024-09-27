@@ -1,0 +1,35 @@
+{
+  "name": "Percentage of disk space used is too high",
+  "description": "Checks whether the percentage of disk space used exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. First, check the current disk usage by running the command `df -h`. This will display the disk usage for all mounted partitions. Look for the partition that is using the most space and note its size in GB.
+2. Next, calculate the percentage of disk space used by dividing the used space by the total space and multiplying by 100. For example, if the used space is 10GB and the total space is 20GB, the percentage would be 50%.
+3. Compare the calculated percentage with the threshold value set in your PostgreSQL configuration. If the percentage is higher than the threshold, it indicates that there is a problem with disk space usage.
+4. To address this issue, you can take one or more of the following actions:
+
+   a. Increase the disk space allocated to the PostgreSQL database. You can do this by adding more storage to the server or volume where the PostgreSQL instance is running.
+   b. Reduce the size of the database files. You can do this by running the command `pg_repack` to compress and reorganize the data files. Be aware that this process may take a significant amount of time and could impact performance during the operation.
+   c. Adjust the PostgreSQL configuration settings. You can modify parameters such as `max_connections`, `work_mem`, and `maintenance\_work_mem` to optimize disk I/O and reduce disk space usage. However, changing these settings requires careful consideration and testing to ensure that they do not negatively impact performance.
+5. After taking appropriate action to resolve the issue, monitor the disk space usage regularly to prevent future problems. You can use the same `df -h` command periodically to keep track of disk usage and take corrective action before the percentage reaches the threshold value.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Qmj_JKvj6NnH07o22EWHE8AurSw"]
+      }
+    ]
+  }
+}

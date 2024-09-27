@@ -1,0 +1,33 @@
+{
+  "name": "Disk utilization percent over 5 minute interval too high",
+  "description": "Checks whether the disk utilization over a 5 minute interval exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the current disk usage and identify if any specific process or application is consuming a large amount of disk space. You can use commands like `df` or `htop` to view the disk usage.
+2. If a particular process is identified as the cause, consider optimizing or terminating that process to reduce disk usage.
+3. Review your Elasticsearch configuration settings. Ensure that the index size and number of indices are not excessively high, which could lead to high disk utilization. You can modify the settings by editing the Elasticsearch configuration files.
+4. Monitor the disk utilization over time to ensure that it remains below the configured threshold. You can set up alerts or notifications to notify you when the disk utilization exceeds the threshold.
+5. If the issue persists, consider increasing the allocated disk space for the Elasticsearch cluster. However, this should be done with caution, as excessive disk space allocation can also lead to performance issues.
+
+By following these steps, you can effectively address the ibmCloudElasticsearch Disk utilization percent over 5 minute interval too high issue and optimize the overall performance of your Elasticsearch environment.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["04RYDoE_VAgVG-ZPAxPat5E8W8E"]
+      }
+    ]
+  }
+}

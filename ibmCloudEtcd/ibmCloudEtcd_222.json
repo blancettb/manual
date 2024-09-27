@@ -1,0 +1,33 @@
+{
+  "name": "Disk utilization percent over 5 minute interval too high",
+  "description": "Checks whether the disk utilization over a 5 minute interval exceeds the configured threshold",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": "
+1. Check the system's overall disk usage and identify if any specific process or application is consuming a disproportionate amount of disk space. You can use commands like 'df' or 'htop' to view the current disk usage.
+2. If a particular process or application is identified as the cause, consider optimizing its performance or resource consumption. This may involve adjusting its configuration settings, updating software, or terminating unnecessary tasks.
+3. Monitor the disk utilization metric over time to ensure that it remains below the configured threshold. You can use tools like Prometheus or Grafana to set up alerts for when the disk utilization exceeds the desired level.
+4. Regularly review and update the disk utilization threshold to ensure that it remains appropriate for the system's workload and resources. A too low threshold could lead to excessive disk usage, while a too high threshold might result in false alarms.
+5. Implement proper disk space management practices, such as regularly cleaning up old files, uninstalling unused applications, and defragmenting disks as needed.
+6. Consider using cloud-based storage solutions for infrequent access data or data that does not require real-time access. This can help reduce disk utilization on your local system and improve overall performance.
+7. If the issue persists, consult the system's documentation or contact the support team for further assistance. They may be able to provide more specific guidance based on the system's configuration and usage patterns.",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["XeW_ZbjuEnA6FcOEqKe9VAKBtBE"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "ACE Message Flow Message Errors",
+  "description": "Number of messages that contain errors",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check the error log for more information about the specific error message and its cause. This log can be found in the <ACE_HOME>/repository/logs directory.
+2. Investigate any missing or corrupted components, such as WSDL files or XSD schemas, which may be causing the error.
+3. Ensure that all connections between different components are properly configured and functioning.
+4. Validate the input data against the specified XML schema to ensure it meets the required format and structure.
+5. If the issue persists, consider increasing the logging level for the ACE Message Flow component to capture more detailed information about the error. To do this, modify the appropriate configuration file (e.g., <ACE_HOME>/etc/ace-service.properties) and set the 'log.level' property to a higher value (e.g., 'DEBUG').
+6. Consult the Apache ActiveMQ Artemis documentation and user guides for further assistance with resolving ACE Message Flow issues.
+
+For more details on troubleshooting ACE Message Flow Message Errors, refer to the following resources:
+
+* Apache ActiveMQ Artemis Troubleshooting Guide: <https://activemq.apache.org/artemis/docs/stable/troubleshooting.html>
+* Apache ActiveMQ Artemis User Guides: <https://activemq.apache.org/artemis/docs/stable/user-guide.html>",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["1V9XgNh52rm_p4BfcbWrZUPKSak"]
+      }
+    ]
+  }
+}

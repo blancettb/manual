@@ -1,0 +1,36 @@
+{
+  "name": "Sudden drop in the number of requests",
+  "description": "This rule checks for a sudden drop in the number of client requests
+This rule is powered by a generic sudden drop/increase detector which is based on a modified version of the E-Divisive with Medians (EDM) algorithm for detection of changes in distribution of values of a given metric over the time.",
+  "type": "MANUAL",
+  "tags": [
+     ""
+  ],
+  "fields": [
+    {
+        "name": "content",
+        "description": "Content for manual action",
+        "encoding": "base64",
+        "value": " 1. Check your Varnish configuration: Ensure that the Varnish server is properly configured and running. You may need to check the VCL (Varnish Configuration Language) settings to ensure that there are no issues with caching or request handling.
+2. Monitor Varnish logs: Varnish logs can provide valuable information about any issues related to the server's performance or configuration. Reviewing these logs can help you identify potential problems that may be causing the sudden drop in requests.
+3. Analyze traffic patterns: If the issue persists, analyze traffic patterns to identify any unusual spikes or drops in request volume. This can help you determine if the issue is related to an increase in traffic or if it is a more persistent problem.
+4. Investigate upstream issues: If the issue is not related to Varnish or traffic patterns, investigate upstream issues such as network connectivity problems, application errors, or third-party services that may be impacting the number of requests.
+5. Update Varnish: If none of the above steps resolve the issue, consider updating Varnish to the latest version. Newer versions may include bug fixes or improvements that could address the sudden drop in requests.
+6. Adjust Varnish settings: If updating Varnish does not resolve the issue, you may need to adjust Varnish settings such as cache size, buffer size, or timeout settings to optimize the server's performance and handle the increased load.
+7. Implement load balancing: If the sudden drop in requests is due to high traffic volumes, consider implementing load balancing to distribute the load across multiple servers, preventing any single server from becoming overwhelmed.
+8. Monitor and maintain Varnish: Regularly monitor and maintain Varnish to ensure optimal performance and prevent future issues. This includes regularly checking Varnish logs, updating the Varnish configuration, and addressing any identified issues promptly.
+
+By following these steps, you should be able",
+        "secured": false
+    }
+],
+  "staticId": "containerCPUDebug",
+  "metadata": {
+    "ai": [
+      {
+        "algorithm": "watsonx",
+        "events": ["Cdts7jLrPLswXxfqQsM1reoagbY"]
+      }
+    ]
+  }
+}
